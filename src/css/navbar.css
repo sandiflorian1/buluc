@@ -1,0 +1,22 @@
+.pos-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dot {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.tab-name {
+  font-family: 'Handlee', cursive;
+  cursor: pointer;
+}
+
+

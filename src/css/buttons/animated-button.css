@@ -1,0 +1,68 @@
+.button-wrap {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  text-align: center;
+}
+
+.btn {
+  color: var(--red);
+  cursor: pointer;
+  font-size: 2.25vmax;
+  font-weight: 400;
+  line-height: 2.9296vw;
+  margin: 0 0 2em;
+  max-width: 10.4166vw;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .btn {
+    margin: 0 1em 2em;
+    font-size: 1.041vw;
+  }
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.lined-btn {
+  letter-spacing: 0;
+}
+
+.lined-btn:hover,
+.lined-btn:active {
+  letter-spacing: 0.3255vw;
+}
+
+.lined-btn:after,
+.lined-btn:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.lined-btn:hover:after,
+.lined-btn:hover:before {
+  backface-visibility: hidden;
+  border-color:var(--red);
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.lined-btn:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}

@@ -9,6 +9,9 @@ module.exports = {
       backgroundImage: {
         'main': "url('/src/assets/images/main-bg.png')",
         // 'footer-texture': "url('/img/footer-texture.png')",
+      },
+      screens: {
+        'mb': { 'raw': '(max-width: 900px)' },
       }
     },
     colors: {
@@ -21,20 +24,20 @@ module.exports = {
       },
       'red': {
         light: '#67e8f9',
-        DEFAULT: '#c7362c',
+        DEFAULT: '#f05252',
         dark: '#0e7490',
       },
       white: '#ffffff',
     },
     fontSize: {
-      sm: '1rem',
-      base: '1.5rem',
-      xl: '1.25rem',
-      '2xl': '1.563rem',
-      '3xl': '1.953rem',
-      '4xl': '2.441rem',
-      '5xl': '3.052rem',
-    }
+      sm: '1.04vw',
+      base: '1.5625vw',
+      xl: '1.3020vw',
+      '2xl': '1.5625vw',
+      '3xl': '2.0833vw',
+      '4xl': '2.6041vw',
+      '5xl': '3.125vw',
+    },
   },
   plugins: [],
 }
