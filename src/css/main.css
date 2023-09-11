@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+@import url("./base/typography.css");
 
 :root {
   --red: #f05252;
@@ -8,4 +9,47 @@
 body {
   overflow: hidden;
   color: #4F4F4F;
+}
+
+.bg-peach {
+  background-color: #fef5f0;
+}
+
+.contact .text {
+  padding: 10px 0;
+}
+
+.contact .btn-submit {
+  background-color: #F6772B;
+  font-size: 20px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-top: 15px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.contact input {
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.contact textarea {
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.section-despre {
+  color: white;
+  font-size: 21px;
+}
+
+.absolut-0-0 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

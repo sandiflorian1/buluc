@@ -6,7 +6,7 @@ function SmallNavbar() {
   const { pathname } = window.location;
 
   return(
-    <div className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start'>
+    <header id="header" className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start shadow-lg'>
       <a href="/"><img 
         src="src/assets/images/buluc_loop.gif" 
         alt="buluc-gif" 
@@ -25,7 +25,7 @@ function SmallNavbar() {
           </li>
           ))}
       </ul>
-    </div>
+    </header>
   );
 }
 

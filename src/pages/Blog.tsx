@@ -3,8 +3,8 @@ import MainLayout from "../components/layouts/MainLayout";
 export default function Blog () {
 
   return (
-    <div>
+    <MainLayout title="blog">
       <h1>Blog</h1>
-    </div>
+    </MainLayout>
   );
 }

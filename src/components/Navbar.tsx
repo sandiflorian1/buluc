@@ -3,6 +3,7 @@ import { useHistory  } from "react-router-dom";
 
 import { gsap } from "gsap";
 import { FaBars, FaTimes } from "react-icons/fa";
+import SliderNavbar from "./SliderNavbar";
 
 
 import "../css/navbar.css";
@@ -28,11 +29,11 @@ function Navbar() {
         [dotRef.current], 
         { 
           scale: 1,
-          opacity: 0.1,
+          opacity: 0,
         }, 
         {scale: 150, opacity: 1, duration: 1 }
       );
-      tl.fromTo([openedNavbarRef.current], {  opacity: 0 }, {  opacity: 1, duration: 0.1  });
+      tl.fromTo([openedNavbarRef.current], {  opacity: 0, display: 'none' }, {  opacity: 1, display: 'block', duration: 0.1  });
 
       if(isOpen) {
         tl.play();
@@ -42,41 +43,41 @@ function Navbar() {
     }
   }, [isOpen]);
 
+  const clickOnPage = () => {
+    if (!isOpen) {
+      openNavbar(true); 
+      openFirstTime(true);
+    }
+  }
+
   return(
-    <>
+    <div onClick={() => clickOnPage()} className='cursor-pointer absolut-0-0'>
       <div ref={dotRef} className='dot bg-red' />
 
-      <div ref={openedNavbarRef} className={`pos-absolute w-screen h-screen bg-red flex items-center opacity-0`}>
+      <div ref={openedNavbarRef} className={`pos-absolute w-screen h-screen bg-red flex items-center opacity-0 hidden z-10`}>
         <FaTimes 
-          fontSize={48} 
-          className="fill-white sm:m-10 m-3 sm:text-5xl text-3xl pos-absolute"
+          fontSize={24} 
+          className="fill-white sm:m-5 m-3 pos-absolute cursor-pointer z-20"
           onClick={() => openNavbar(false)}
         />
-        <div className='sm:ml-15 ml-10'>
-          <ul>
-            {links.map(({ link, name }) => (
-              <li key={name}>
-                <div 
-                  onClick={() => goToLink(link)}
-                  className="text-white sm:text-5xl text-3xl tab-name"
-                >
-                  {name}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        
+        <SliderNavbar
+          goToLink={goToLink}
+          links={links}
+          isOpenFirstTime
+        />
       </div>
 
       {(!isOpen) && (
         <nav className='pos-absolute'>
-          <FaBars  
-            className="fill-red sm:m-10 m-3 sm:text-3xl text-2xl cursor-pointer"
-            onClick={() => {openNavbar(true); openFirstTime(true);}}
-          />
+            <FaBars
+              fontSize={24}   
+              className="fill-red sm:m-5 m-3 cursor-pointer"
+              onClick={() => {openNavbar(true); openFirstTime(true);}}
+            />
         </nav>
       )}
-    </>
+    </div>
   );
 }
 
@@ -85,26 +86,30 @@ export default Navbar;
 const links = [
   {
     link: '/despre',
-    name: '.despre',
+    name: 'despre',
   },
   {
     link: '/spectacole',
-    name: '.spectacole',
+    name: 'spectacole',
   },
   {
     link: '/proiecte',
-    name: '.proiecte',
+    name: 'proiecte',
   },
+  // {
+  //   link: '/blog',
+  //   name: 'blog',
+  // },
+  // {
+  //   link: '/sustine',
+  //   name: 'sustine',
+  // },
+  // {
+  //   link: '/contact',
+  //   name: 'contact',
+  // },
   {
-    link: '/blog',
-    name: '.blog',
-  },
-  {
-    link: '/sustine',
-    name: '.sustine',
-  },
-  {
-    link: '/contact',
-    name: '.contact',
+    link: '',
+    name: 'parteneri',
   },
 ]

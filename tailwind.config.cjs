@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     "./index.html",
@@ -8,10 +10,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'main': "url('/src/assets/images/main-bg.png')",
-        // 'footer-texture': "url('/img/footer-texture.png')",
       },
       screens: {
-        'mb': { 'raw': '(max-width: 900px)' },
+        'mb': { 'raw': '(max-width: 700px)' },
       }
     },
     colors: {
@@ -39,5 +40,4 @@ module.exports = {
       '5xl': '3.125vw',
     },
   },
-  plugins: [],
 }

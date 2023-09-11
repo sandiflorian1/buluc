@@ -1,0 +1,24 @@
+p, span, a {
+  font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+  font-family: 'Handlee', cursive;
+  font-size: 3.125vw;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: 'Handlee', cursive;
+}
+
+h4 {
+  font-size: 42px;
+  font-family: 'Handlee', cursive;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

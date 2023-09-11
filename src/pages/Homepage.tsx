@@ -40,12 +40,12 @@ export default function Homepage (props: IHomepageProps) {
           </div>
         </div>
 
-        <div className="absolute top-0 w-full mb:bg-white p-6">
+        <div className="absolute top-0 w-full h-full p-6 mb:p-2">
           <img 
             ref={logoRef}
             src="src/assets/images/buluc_loop.gif" 
             alt="buluc-gif" 
-            className="w-32 z-10"
+            className="w-32 mb:w-24 z-10"
           />
           <Navbar />
         </div>

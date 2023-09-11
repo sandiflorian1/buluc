@@ -19,4 +19,9 @@
   cursor: pointer;
 }
 
+#header {
+  position: relative;
+  z-index: 10;
+}
+
 

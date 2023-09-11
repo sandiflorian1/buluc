@@ -5,7 +5,7 @@ function Footer() {
 	return (
 	<>
 		<div className="footer bg-red mt-auto">
-			<div className="container mx-auto sm:w-[40rem] sm:my-10 my-5">
+			<div className="container mx-auto sm:w-[40rem] sm:py-10 py-5">
 				<div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-3 gap-2 sm:text-start text-center">
 						<div className="sm:text-sm text-xl">CONTACTEAZĂ-NE</div>
 						<div className="sm:text-sm text-xl">URMĂREȘTE-NE</div>
