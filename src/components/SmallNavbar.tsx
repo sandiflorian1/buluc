@@ -8,7 +8,7 @@ function SmallNavbar() {
   return(
     <header id="header" className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start shadow-lg'>
       <a href="/"><img 
-        src="src/assets/images/buluc_loop.gif" 
+        src="/src/assets/images/buluc_loop.gif" 
         alt="buluc-gif" 
         className="w-32"
       /></a>
