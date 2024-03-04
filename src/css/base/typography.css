@@ -1,4 +1,4 @@
-p, span, a {
+p, span, a, li {
   font-family: 'Dosis', sans-serif;
 }
 
@@ -13,8 +13,26 @@ h3 {
 }
 
 h4 {
-  font-size: 42px;
+  font-size: 36px;
   font-family: 'Handlee', cursive;
+}
+
+h5 {
+  font-size: 32px;
+  font-family: 'Handlee', cursive;
+}
+
+h6 {
+  font-size: 28px;
+  font-family: 'Handlee', cursive;
+}
+
+.title {
+  font-family: 'Handlee', cursive;
+}
+
+a {
+  text-underline-offset: 6px;
 }
 
 @media screen and (max-width: 768px) {

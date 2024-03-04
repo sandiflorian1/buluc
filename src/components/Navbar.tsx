@@ -85,12 +85,16 @@ export default Navbar;
 
 const links = [
   {
-    link: '/despre',
-    name: 'despre',
+    link: '/culise',
+    name: 'in culise',
   },
   {
     link: '/spectacole',
-    name: 'spectacole',
+    name: 'in sufragerie',
+  },
+  {
+    link: '/spectacole',
+    name: 'challenge yourself',
   },
   {
     link: '/proiecte',

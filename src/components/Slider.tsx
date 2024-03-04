@@ -9,16 +9,16 @@ interface SlideProps {
     title: string;
     description: string;
     imageUrl: string;
-    // goToLink: () => {};
+    goToLink: () => {};
   }
 
 const SliderContent = ({ 
     number, title, description, imageUrl, 
-    // goToLink, 
+    goToLink, 
 }: SlideProps) => (
     <div 
         className="slider__content" 
-        // onClick={goToLink}
+        onClick={goToLink}
     >
       <div className="slider__text">
         {/* <span>{number}</span> */}
@@ -52,7 +52,7 @@ const MySlider = ({ slides }: {slides: SlideProps[]}) => {
             title={slide.title}
             description={slide.description}
             imageUrl={slide.imageUrl}
-            // goToLink={() => goToLink(slide.link)}
+            goToLink={() => goToLink(slide.link)}
         />
       ))}
         

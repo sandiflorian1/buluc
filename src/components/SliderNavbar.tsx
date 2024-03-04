@@ -20,9 +20,9 @@ function SliderNavbar({
         const tl = gsap.timeline({ paused: true });
         switch (link.name) {
           case 'despre':
-            tl.fromTo(".section-despre", { opacity: 0 }, { opacity: 1, duration: 1 });
-            tl.fromTo(".section-despre img", { scale: 0 }, { scale: 1, duration: 0.5, });
-            tl.fromTo(".section-despre .dott", { scale: 0 }, { scale: 1, duration: 0.5, });
+            tl.fromTo(".section-despre", { opacity: 0 }, { opacity: 1, duration: 0.05 });
+            tl.fromTo(".section-despre img", { scale: 0 }, { scale: 1, duration: 0.02, });
+            tl.fromTo(".section-despre .dott", { scale: 0 }, { scale: 1, duration: 0.02, });
             break;
           case 'spectacole':
             tl.fromTo(".section-spectacole", { opacity: 0 }, { opacity: 1, duration: 0.25 })
@@ -84,7 +84,7 @@ function SliderNavbar({
                   src="src/assets/images/echipa/team.jpg"
                   className="h-[38vw] self-end rounded-[50%]"
                 />
-                <div className="w-[25vw] h-[25vw] rounded-[50%] bg-orange absolute bottom-[-2vw] left-[-16vw] dott" />
+                <div className="w-[20vw] h-[20vw] rounded-[50%] bg-orange absolute bottom-[1vw] left-[30vw] dott" style={{ opacity: 0.8 }} />
               </div>
              
             </div>

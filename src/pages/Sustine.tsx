@@ -7,10 +7,10 @@ export interface ISustineProps {
 export default function Sustine (props: ISustineProps) {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
-    tl.fromTo(".image1", {  opacity: 0 }, {opacity: 1, duration: 1 })
-    .fromTo(".card1", {  opacity: 0 }, {opacity: 1, duration: 1 })
-    .fromTo(".image2", {  opacity: 0 }, {opacity: 1, duration: 1 })
-    .fromTo(".card2", {  opacity: 0 }, {opacity: 1, duration: 1 })
+    tl.fromTo(".image1", {  opacity: 0 }, {opacity: 1, duration: 0.5})
+    .fromTo(".card1", {  opacity: 0 }, {opacity: 1, duration: 0.5})
+    .fromTo(".image2", {  opacity: 0 }, {opacity: 1, duration: 0.5})
+    .fromTo(".card2", {  opacity: 0 }, {opacity: 1, duration: 0.5})
     return () => {
       tl.kill();
     };

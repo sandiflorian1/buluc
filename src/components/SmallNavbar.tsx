@@ -13,7 +13,7 @@ function SmallNavbar() {
         className="w-32"
       /></a>
 
-      <ul className='sm:flex justify-end py-6 mb:w-20'>
+      <ul className='sm:flex justify-end py-6 mb:w-40'>
         {links.map(({ link, name }) => (
           <li key={name} className="px-4 uppercase">
             <Link 
@@ -33,24 +33,28 @@ export default SmallNavbar;
 
 const links = [
   {
-    link: '/despre',
-    name: 'despre',
+    link: '/culise',
+    name: 'culise',
   },
   {
-    link: '/spectacole',
-    name: 'spectacole',
+    link: '/sufragerie',
+    name: 'În sufragerie',
+  },
+  {
+    link: '/challenge_yourself',
+    name: 'challenge yourself',
   },
   {
     link: '/proiecte',
     name: 'proiecte',
   },
   {
-    link: '/blog',
-    name: 'blog',
+    link: '/gazeta',
+    name: 'gazetă',
   },
   {
     link: '/sustine',
-    name: 'sustine',
+    name: 'susține',
   },
   {
     link: '/contact',

@@ -2,7 +2,9 @@ import MainLayout from "../components/layouts/MainLayout";
 import { useRef, useEffect, Ref } from 'react';
 import { gsap } from "gsap";
 import Title from "../components/layouts/Title";
-import "../css/teamMember.css";
+import TeamMemberCard from "../components/cards/TeamMemberCard";
+import { ITeamMember } from "../types/cards/ITeamMember";
+
 import "../css/despre.css";
 
 export interface IDespreProps { }
@@ -25,54 +27,28 @@ const LocatieSection: React.FC = () => {
     <div className="locatie">
       <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8" style={{ maxWidth: '40vw' }}>
         <div className="flex flex-col text-center text-misiune">
-          <p className="mb-1 text-5xl md:text-xl text-center">O casă din 1920 cu trăsături burgheze în inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică. Locația este un spațiu creativ și versatil, ce dispune şi de o terasa exterioară unde ne strângem buluc seară de seară. Poveşti, oameni, experienţe - toate se adună buluc pe Madrid, 4.</p>
+          <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria.png" loading="lazy" alt="locatie" />
+          <p className="mb-1 text-5xl md:text-xl text-center">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate. </p>
         </div>
+      </div>
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria2.jpg" loading="lazy" alt="locatie2" />
+        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria3.jpg" loading="lazy" alt="locatie3" />
+        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria4.jpg" loading="lazy" alt="locatie4" />
       </div>
     </div>
   );
 }
 
-interface TeamMember {
-  imageSrc: string;
-  name: string;
-  role: string;
-  color: string;
-  fondator?: boolean;
-}
-
-const TeamMemberCard: React.FC<TeamMember> = ({ imageSrc, name, role, color, fondator }) => {
-  const circleRef = useRef(null);
-  const dotRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    gsap.to(circleRef.current, { rotation: 360, duration: 1, ease: 'power1.inOut' });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(circleRef.current, { rotation: 125, duration: 1, ease: 'power1.inOut' });
-    gsap.killTweensOf(dotRef.current);
-  };
-
+const ParteneriSection: React.FC = () => {
   return (
-    <div>
-      <div className="round-image-container relative">
-        <div className="image-circle bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${imageSrc})` }}>
-          <div className="circle" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={circleRef}>
-            <div className={`image-dot bg-${color}`} ref={dotRef}></div>
-          </div>
-        </div>
-        <div className={`image-circle-border absolute border-${color}`}>
-          <div className="circle" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <div className="dot" ref={dotRef}></div>
-          </div>
-        </div>
+    <div className="locatie">
+      <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8">
+        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/parteneri.svg" loading="lazy" alt="Team" />
       </div>
-
-      <h5 className="name">{name}</h5>
-      <h6 className="role">{role}{fondator && ', fondator'}</h6>
     </div>
   );
-};
+}
 
 const Despre: React.FC = () => {
   const misiuneRef = useRef(null);
@@ -96,7 +72,6 @@ const Despre: React.FC = () => {
 
       <section id="echipa" className="echipa" ref={echipaRef}>
         <div style={{ paddingTop: "0px" }} className="py-12 md:py-20 flex flex-col">
-          <img className="mx-auto mb-4 maini" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/maini.jpg" loading="lazy" alt="Team" />
           <Title title='oamenii bulúc' />
           <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
             {teamMembers.map((member, index) => (
@@ -114,8 +89,13 @@ const Despre: React.FC = () => {
       </section>
 
       <section id="locatie">
-        <Title title='ținut' />
+        <Title title='loc de joacă' />
         <LocatieSection />
+      </section>
+
+      <section id="parteneri">
+        <Title title='parteneri' />
+        <ParteneriSection />
       </section>
     </MainLayout>
   );
@@ -123,9 +103,9 @@ const Despre: React.FC = () => {
 
 export default Despre;
 
-const teamMembers: TeamMember[] = [
+const teamMembers: ITeamMember[] = [
   {
-    imageSrc: "src/assets/images/echipa/mihaela-mardare.png",
+    imageSrc: "src/assets/images/culise/echipa/mihaela-mardare.png",
     name: "Mihaela Mardare",
     role: " actriță, trainer",
     color: 'red',
@@ -133,7 +113,7 @@ const teamMembers: TeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/echipa/robert-ciupitu.png",
+    imageSrc: "src/assets/images/culise/echipa/robert-ciupitu.png",
     name: "Robert Ciupitu",
     role: "actor, trainer",
     color: 'orange',
@@ -141,7 +121,7 @@ const teamMembers: TeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/echipa/marilena-adam.png",
+    imageSrc: "src/assets/images/culise/echipa/marilena-adam.png",
     name: "Marilena Adam",
     role: "comunicare & social media",
     color: 'red',
@@ -149,35 +129,35 @@ const teamMembers: TeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/echipa/ionut-terteci.png",
+    imageSrc: "src/assets/images/culise/echipa/ionut-terteci.png",
     name: "Ionuț Terteci",
     role: "actor & coordonator tehnic Buluc",
     color: 'orange',
   },
 
   {
-    imageSrc: "src/assets/images/echipa/stefania-techer.png",
+    imageSrc: "src/assets/images/culise/echipa/stefania-techer.png",
     name: "Ștefania Țecher",
     role: "artist fotograf",
     color: 'red',
   },
 
   {
-    imageSrc: "src/assets/images/echipa/andreea-istrate.png",
+    imageSrc: "src/assets/images/culise/echipa/andreea-istrate.png",
     name: "Andreea Istrate",
     role: "coregraf & coordonator event",
     color: 'red',
   },
 
   {
-    imageSrc: "src/assets/images/echipa/cezar-stoica.png",
+    imageSrc: "src/assets/images/culise/echipa/cezar-stoica.png",
     name: "Cezar Stoica",
     role: "graphic designer",
     color: 'orange',
   },
 
   {
-    imageSrc: "src/assets/images/echipa/alexandra.png",
+    imageSrc: "src/assets/images/culise/echipa/alexandra.png",
     name: "Alexandra Florian",
     role: "web designer",
     color: 'red',

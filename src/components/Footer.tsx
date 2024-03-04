@@ -10,9 +10,9 @@ function Footer() {
 						<div className="sm:text-sm text-xl">CONTACTEAZĂ-NE</div>
 						<div className="sm:text-sm text-xl">URMĂREȘTE-NE</div>
 						<div className="sm:text-sm text-xl"><a href="mailto:contact@buluc.org">contact@buluc.org</a></div>
-						<div className="sm:text-sm text-xl flex sm:justify-start justify-center">
-							<a href="https://www.instagram.com/_bulucul/" className="pt-[10px] pr-[1rem]" target="_blank"><FaInstagram /></a>
-							<a href="https://www.facebook.com/bulucorg/" className="pt-[8px]" target="_blank"><FaFacebook /></a>
+						<div className="sm:text-sm text-xl flex sm:justify-start justify-center items-center">
+							<a href="https://www.instagram.com/_bulucul/" className="pr-[1rem]" target="_blank"><FaInstagram size = '16px' /></a>
+							<a href="https://www.facebook.com/bulucorg/" className="" target="_blank"><FaFacebook size = '16px' /></a>
 						</div>
 						<div className="sm:text-sm text-xl"><a href="tel:+40740 993 479">0740 993 479</a></div>
 						<div className="sm:text-sm text-xl">Ⓒ 2023 by Buluc.</div>

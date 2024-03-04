@@ -6,8 +6,8 @@ export interface ISectacoleProps {
 
 export default function Sectacole(props: ISectacoleProps) {
   return (
-    <MainLayout title="spectacole">
-      <div className="pb-20">
+    <MainLayout title="în sufragerie">
+      <div className="pb-20" style={{ cursor: 'pointer'}}>
         <Slider slides={slides} />
       </div>
     </MainLayout>
@@ -20,7 +20,7 @@ const slides = [
     title: 'din intamplare',
     description: 'Descriere pentru spectacol',
     imageUrl: 'src/assets/images/spectacol2.jpg',
-    // link: '/spectacole/dinIntamplare',
+    link: '/spectacol-dinIntamplare',
   },
 
   // {
