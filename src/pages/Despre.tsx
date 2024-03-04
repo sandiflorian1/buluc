@@ -27,14 +27,14 @@ const LocatieSection: React.FC = () => {
     <div className="locatie">
       <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8" style={{ maxWidth: '40vw' }}>
         <div className="flex flex-col text-center text-misiune">
-          <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria.png" loading="lazy" alt="locatie" />
+          <img className="mx-auto mb-4 maini" src={new URL('/src/assets/images/culise/locatie/sufrageria.png', import.meta.url).href} loading="lazy" alt="locatie" />
           <p className="mb-1 text-5xl md:text-xl text-center">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate. </p>
         </div>
       </div>
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria2.jpg" loading="lazy" alt="locatie2" />
-        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria3.jpg" loading="lazy" alt="locatie3" />
-        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/locatie/sufrageria4.jpg" loading="lazy" alt="locatie4" />
+        <img className="mx-auto mb-4 maini" src={new URL('/src/assets/images/culise/locatie/sufrageria2.jpg' , import.meta.url).href} loading="lazy" alt="locatie2" />
+        <img className="mx-auto mb-4 maini" src={new URL('/src/assets/images/culise/locatie/sufrageria3.jpg' , import.meta.url).href} loading="lazy" alt="locatie3" />
+        <img className="mx-auto mb-4 maini" src={new URL('/src/assets/images/culise/locatie/sufrageria4.jpg' , import.meta.url).href} loading="lazy" alt="locatie4" />
       </div>
     </div>
   );
@@ -44,7 +44,7 @@ const ParteneriSection: React.FC = () => {
   return (
     <div className="locatie">
       <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8">
-        <img className="mx-auto mb-4 maini" src="src/assets/images/culise/parteneri.svg" loading="lazy" alt="Team" />
+        <img className="mx-auto mb-4 maini" src={new URL('/src/assets/images/culise/parteneri.svg', import.meta.url).href} loading="lazy" alt="Team" />
       </div>
     </div>
   );
@@ -105,7 +105,7 @@ export default Despre;
 
 const teamMembers: ITeamMember[] = [
   {
-    imageSrc: "src/assets/images/culise/echipa/mihaela-mardare.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/mihaela-mardare.png', import.meta.url).href,
     name: "Mihaela Mardare",
     role: " actriță, trainer",
     color: 'red',
@@ -113,7 +113,7 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/robert-ciupitu.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/robert-ciupitu.png', import.meta.url).href,
     name: "Robert Ciupitu",
     role: "actor, trainer",
     color: 'orange',
@@ -121,7 +121,7 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/marilena-adam.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/marilena-adam.png', import.meta.url).href,
     name: "Marilena Adam",
     role: "comunicare & social media",
     color: 'red',
@@ -129,35 +129,35 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/ionut-terteci.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/ionut-terteci.png', import.meta.url).href,
     name: "Ionuț Terteci",
     role: "actor & coordonator tehnic Buluc",
     color: 'orange',
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/stefania-techer.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/stefania-techer.png', import.meta.url).href,
     name: "Ștefania Țecher",
     role: "artist fotograf",
     color: 'red',
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/andreea-istrate.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/andreea-istrate.png', import.meta.url).href,
     name: "Andreea Istrate",
     role: "coregraf & coordonator event",
     color: 'red',
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/cezar-stoica.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/cezar-stoica.png', import.meta.url).href,
     name: "Cezar Stoica",
     role: "graphic designer",
     color: 'orange',
   },
 
   {
-    imageSrc: "src/assets/images/culise/echipa/alexandra.png",
+    imageSrc: new URL('/src/assets/images/culise/echipa/alexandra.png', import.meta.url).href,
     name: "Alexandra Florian",
     role: "web designer",
     color: 'red',

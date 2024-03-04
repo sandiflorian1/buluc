@@ -1,17 +1,19 @@
 import "../css/buttons/button-navbar.css";
 import { Link } from 'react-router-dom';
 import "../css/navbar.css";
+const imgUrl = new URL('/src/assets/images/buluc_loop.gif', import.meta.url).href;
 
 function SmallNavbar() {
   const { pathname } = window.location;
 
   return(
     <header id="header" className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start shadow-lg'>
-      <a href="/"><img 
-        src="/src/assets/images/buluc_loop.gif" 
+      <a href="/">
+        <img 
+        src={imgUrl}
         alt="buluc-gif" 
-        className="w-32"
-      /></a>
+        className="w-32"/>
+      </a>
 
       <ul className='sm:flex justify-end py-6 mb:w-40'>
         {links.map(({ link, name }) => (

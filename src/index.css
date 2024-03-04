@@ -5,5 +5,5 @@
 @font-face {
   font-family: "Dosis";
   src: local("Dosis"),
-   url("src/assets/fonts/Dosis.ttf") format("truetype");
+   url("/src/assets/fonts/Dosis.ttf") format("truetype");
 }
