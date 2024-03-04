@@ -10,10 +10,7 @@ import Sustine from './pages/Sustine';
 import ChallengeYourself from './pages/ChallengeYourself';
 import "./css/main.css";
 
-interface AppProps {
-}
-
-const App: React.FC<AppProps> = () => {
+const App = () => {
   return (
     <Router>
       <Switch>
