@@ -9,7 +9,7 @@ interface SlideProps {
     title: string;
     description: string;
     imageUrl: string;
-    goToLink: () => {};
+    goToLink: any;
   }
 
 const SliderContent = ({ 

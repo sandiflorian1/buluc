@@ -187,7 +187,7 @@ function SliderNavbar({
 const hidesliders = () => {
   const sliders = document.querySelectorAll('[class^="section"]');
   if(sliders) {
-    sliders.forEach((elem: Element) => {
+    sliders.forEach((elem: any) => {
       elem.style.opacity = 0;
     })
   }

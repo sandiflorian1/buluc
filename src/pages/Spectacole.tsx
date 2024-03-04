@@ -1,8 +1,7 @@
 import MainLayout from "../components/layouts/MainLayout";
 import Slider from '../components/Slider';
 export interface ISectacoleProps {
-}
-
+} 
 
 export default function Sectacole(props: ISectacoleProps) {
   return (
@@ -20,7 +19,7 @@ const slides = [
     title: 'din intamplare',
     description: 'Descriere pentru spectacol',
     imageUrl: 'src/assets/images/spectacol2.jpg',
-    link: '/spectacol-dinIntamplare',
+    goToLink: '/spectacol-dinIntamplare',
   },
 
   // {
