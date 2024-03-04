@@ -1,27 +1,22 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
-import Navbar from '../components/Navbar';
+import SmallNavbar from "../components/SmallNavbar";
 
 export interface IHomepageProps {
 }
 
 export default function Homepage (props: IHomepageProps) {
   const logoRef = useRef<HTMLImageElement | null>(null);
+  const navbarRef = useRef<HTMLImageElement | null>(null);
   const backgroundRef = useRef<HTMLDivElement | null>(null);
   const defRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
-    tl.fromTo(
-      [logoRef.current], 
-      { 
-        scale: 0,
-        opacity: 0.01,
-      }, 
-      {scale: 1, opacity: 1, duration: 1 }
-    );
     tl.fromTo([backgroundRef.current], {  opacity: 0 }, {  opacity: 1, duration: 1  });
     tl.fromTo([defRef.current], { y: "400px", duration: 1 }, { y: 0, duration: 2 });
+    tl.fromTo([navbarRef.current], {  opacity: 0 }, {  opacity: 1, duration: 1  });
+
     return () => {
       tl.kill();
     };
@@ -29,6 +24,10 @@ export default function Homepage (props: IHomepageProps) {
 
   return (
     <>
+      <div ref={navbarRef} style={{ position: 'absolute'}}>
+        <SmallNavbar />
+      </div>
+
       <div className="h-screen w-screen overflow-hidden page">
         <div ref={backgroundRef} className="h-screen mx-[5vw] bg-main bg-center bg-cover flex justify-center h-full">
           <div className="container flex justify-center h-full">
@@ -38,16 +37,6 @@ export default function Homepage (props: IHomepageProps) {
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="absolute top-0 w-full h-full p-6 mb:p-2">
-          <img 
-            ref={logoRef}
-            src="src/assets/images/buluc_loop.gif" 
-            alt="buluc-gif" 
-            className="w-32 mb:w-24 z-10"
-          />
-          <Navbar />
         </div>
       </div>
     </>
