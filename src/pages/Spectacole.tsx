@@ -12,7 +12,7 @@ export default function Sectacole(props: ISectacoleProps) {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
     tl
-      .fromTo("#concerte", {  scale: 0 }, {scale: 1, duration: 0.5})
+      .fromTo("#concerte", {  opacity: 0 }, {opacity: 1, duration: 0.5})
       .fromTo("#improshow", {  opacity: 0, y: '200px' }, { opacity: 1, y: 0, duration: 0.5 })
       .fromTo("#teatru", {  opacity: 0, y: '-200px' }, {opacity: 1, y: 0, duration: 0.5})
     return () => {
@@ -22,7 +22,7 @@ export default function Sectacole(props: ISectacoleProps) {
 
   return (
     <MainLayout title="în sufragerie">
-      <div className="pb-20" style={{ cursor: 'pointer'}}>
+      <div className="pb-20" style={{ cursor: 'pointer'}} >
         {/* <Slider slides={slides} /> */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {activities.map((activity) => (

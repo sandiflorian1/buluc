@@ -20,6 +20,7 @@ const IMAGES = {
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpg', import.meta.url).href,
     cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.jpg', import.meta.url).href,
     teatru: new URL('/src/assets/images/in-sufragerie/teatru/teatru.jpg', import.meta.url).href,
+    dinIntamplare: new URL('/src/assets/images/in-sufragerie/teatru/din-intamplare.jpg', import.meta.url).href,
 }
 
 export default IMAGES;

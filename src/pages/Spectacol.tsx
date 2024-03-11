@@ -1,5 +1,6 @@
 import MainLayout from "../components/layouts/MainLayout"; 
 import { Title, Paragraph, Subtitle } from "../components/layouts";
+import IMAGES from "../assets/Images";
 
 
 export default function Blog () {
@@ -51,7 +52,7 @@ export default function Blog () {
           </Paragraph>
 
           <img
-            src="src/assets/images/din-intamplare.jpg"
+            src={IMAGES.dinIntamplare}
             alt="stagiunea"
             className="mx-8"
             style={{ borderRadius: '8px', width: '45%' }}

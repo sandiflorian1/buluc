@@ -32,7 +32,7 @@ export default function ChallengeYourself () {
           </div>
 
 					<img
-            src="src/assets/images/din-intamplare.jpg"
+            src="src/assets/images/partye.jpg"
             alt="stagiunea"
             className="corner"
           />
@@ -56,7 +56,7 @@ export default function ChallengeYourself () {
           </div>
 
 					{/* <img
-            src="src/assets/images/din-intamplare.jpg"
+            src="src/assets/images/partye.jpg"
             alt="stagiunea"
             className="corner"
           /> */}
@@ -190,7 +190,7 @@ export default function ChallengeYourself () {
           </div>
 
 					<img
-            src="src/assets/images/din-intamplare.jpg"
+            src="src/assets/images/partye.jpg"
             alt="stagiunea"
             className="corner3"
           />
