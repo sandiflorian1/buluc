@@ -10,9 +10,10 @@ export default function MainLayout ({ children, title }: any) {
 
       <section id="title">
           <div 
-            className="w-full flex h-48 sm:h-64 md:h-96 bg-bottom bg-cover bg-no-repeat" 
+            // className="w-full flex h-48 sm:h-64 md:h-96 bg-bottom bg-cover bg-no-repeat" 
+            className="w-full mt-10" 
             // className="w-full flex h-48 sm:h-64 md:h-96 bg-bottom bg-cover bg-no-repeat bg-cover-main-layout" 
-            style={{ backgroundImage: "url(https://buluc.org/wp-content/themes/Buluc/assets/graphics/spectacole-background.jpg)" }}
+            // style={{ backgroundImage: "url(https://buluc.org/wp-content/themes/Buluc/assets/graphics/spectacole-background.jpg)" }}
             // style={{ backgroundImage: `url(src/assets/images/culise/locatie/sufrageria.jpg)` }}
           >
              <Title title={title} />
