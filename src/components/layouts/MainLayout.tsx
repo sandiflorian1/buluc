@@ -2,7 +2,7 @@ import Footer from '../Footer';
 import SmallNavbar from "../SmallNavbar";
 import Title from "./Title";
 
-export default function MainLayout ({ children, title }: any) {
+export default function MainLayout ({ children, title, noPadding }: any) {
 
   return (
     <div className='h-screen overflow-y-scroll overflow-x-hidden'>
@@ -21,7 +21,7 @@ export default function MainLayout ({ children, title }: any) {
       </section>
 
       <div className='w-screen flex justify-center'>
-        <div className='container px-[8%] pb-10'>
+        <div className={`container ${noPadding ? '' : 'px-[8%]'} pb-10`}>
           {children}
         </div>
       </div>

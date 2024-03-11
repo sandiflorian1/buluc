@@ -60,7 +60,7 @@ export default function Blog () {
 
         <Title title='galerie foto' />
 
-        <a href="/spectacole" className="text-purple-600 hover:text-purple-500 underline text-sm">👈 Înapoi la spectacole</a>
+        <a href="/sufragerie" className="text-purple-600 hover:text-purple-500 underline text-sm">👈 Înapoi la spectacole</a>
       </section>
     </MainLayout>
   );

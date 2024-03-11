@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import { useHistory  } from "react-router-dom";
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// import 'slick-carousel/slick/slick-theme.css';
 import "../css/slider.css";
 
 interface SlideProps {
@@ -37,6 +37,9 @@ const MySlider = ({ slides }: {slides: SlideProps[]}) => {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
     };
 
     const history = useHistory();
@@ -44,18 +47,16 @@ const MySlider = ({ slides }: {slides: SlideProps[]}) => {
 
     return (
         <Slider {...settings}>
-
-{slides.map((slide: any) => (
-        <SliderContent
-            key={slide.number}
-            number={slide.number}
-            title={slide.title}
-            description={slide.description}
-            imageUrl={slide.imageUrl}
-            goToLink={() => goToLink(slide.link)}
-        />
-      ))}
-        
+          {slides.map((slide: any) => (
+            <SliderContent
+                key={slide.number}
+                number={slide.number}
+                title={slide.title}
+                description={slide.description}
+                imageUrl={slide.imageUrl}
+                goToLink={() => goToLink(slide.link)}
+            />
+          ))}
         </Slider>
     );
 };

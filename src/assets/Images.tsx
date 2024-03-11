@@ -14,6 +14,12 @@ const IMAGES = {
     echipaAndreeaIstrate: new URL('/src/assets/images/culise/echipa/andreea-istrate.png', import.meta.url).href,
     echipaCezarStoica: new URL('/src/assets/images/culise/echipa/cezar-stoica.png', import.meta.url).href,
     echipaAlexandraFlorian: new URL('/src/assets/images/culise/echipa/alexandra.png', import.meta.url).href,
+    // in sufragerie
+    improshow: new URL('/src/assets/images/in-sufragerie/improshow/improshow.jpg', import.meta.url).href,
+    concerte: new URL('/src/assets/images/in-sufragerie/concerte/concerte.jpg', import.meta.url).href,
+    cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpg', import.meta.url).href,
+    cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.jpg', import.meta.url).href,
+    teatru: new URL('/src/assets/images/in-sufragerie/teatru/teatru.jpg', import.meta.url).href,
 }
 
 export default IMAGES;

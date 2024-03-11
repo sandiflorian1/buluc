@@ -8,6 +8,8 @@ import Proiecte from './pages/Proiecte';
 import Blog from './pages/Blog';
 import Sustine from './pages/Sustine';
 import ChallengeYourself from './pages/ChallengeYourself';
+import Improshow from "./pages/Improshow";
+import Concerte from "./pages/Concerte";
 import "./css/main.css";
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/sustine" component={Sustine} />
         <Route path="/contact" component={Contact} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />
+        <Route path="/improshow" component={Improshow} />
+        <Route path="/concerte" component={Concerte} />
       </Switch>
     </Router>
     );

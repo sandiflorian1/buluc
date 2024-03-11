@@ -1,32 +1,61 @@
 import MainLayout from "../components/layouts/MainLayout";
 import Slider from '../components/Slider';
+import IMAGES from "../assets/Images";
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { gsap } from "gsap";
+
 export interface ISectacoleProps {
 } 
 
 export default function Sectacole(props: ISectacoleProps) {
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: 0 });
+    tl
+      .fromTo("#concerte", {  scale: 0 }, {scale: 1, duration: 0.5})
+      .fromTo("#improshow", {  opacity: 0, y: '200px' }, { opacity: 1, y: 0, duration: 0.5 })
+      .fromTo("#teatru", {  opacity: 0, y: '-200px' }, {opacity: 1, y: 0, duration: 0.5})
+    return () => {
+      tl.kill();
+    };
+  });
+
   return (
     <MainLayout title="în sufragerie">
       <div className="pb-20" style={{ cursor: 'pointer'}}>
-        <Slider slides={slides} />
+        {/* <Slider slides={slides} /> */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          {activities.map((activity) => (
+            <Link 
+              id={activity.id}
+              key={activity.id}
+              to={activity.link}
+            >
+               <img className="mx-auto mb-4" src={activity.image} loading="lazy" alt={activity.id} />
+            </Link>
+          ))}
+        </div>
       </div>
     </MainLayout>
   );
 }
 
-const slides = [
+const activities = [
   {
-    number: 1,
-    title: 'din intamplare',
-    description: 'Descriere pentru spectacol',
-    imageUrl: 'src/assets/images/spectacol2.jpg',
-    goToLink: '/spectacol-dinIntamplare',
+    id: "improshow",
+    image: IMAGES.improshow,
+    link: '/improshow',
   },
 
-  // {
-  //   number: 2,
-  //   title: 'The Producers',
-  //   description: 'The top apple producers around the world are China, United States, Turkey, Poland and Italy.',
-  //   imageUrl: 'https://images.unsplash.com/photo-1458011170811-0c83ce240f99?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8b4e45d40741267302ef75900c03b756&auto=format&fit=crop&w=800&q=90',
-  // },
+  {
+    id: "concerte",
+    image: IMAGES.concerte,
+    link: '/concerte',
+  },
+  {
+    id: "teatru",
+    image: IMAGES.teatru,
+    link: '/spectacol-dinIntamplare',
+  },
   
 ];
