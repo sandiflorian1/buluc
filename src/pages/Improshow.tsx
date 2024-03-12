@@ -1,42 +1,37 @@
 import MainLayout from "../components/layouts/MainLayout";
-import Slider from '../components/Slider';
+import { useRef, useEffect, Ref } from 'react';
+import { gsap } from "gsap";
 import IMAGES from "../assets/Images";
 
-export interface IImproshowProps {
-} 
+export interface IImproshowProps { }
 
-export default function Improshow(props: IImproshowProps) {
+
+const Improshow: React.FC = () => {
+  const improshowRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: 0 });
+    tl.fromTo(improshowRef.current, { opacity: 0 }, { opacity: 1, duration: 1 })
+
+    return () => {
+      tl.kill();
+    };
+  });
+
   return (
-    <MainLayout title="improshow">
-      <div className="pb-20">
-        <Slider slides={slides} />
-      </div>
+    <MainLayout title="@The Improshow">
+      <section id="improshow" ref={improshowRef}>
+        <div>
+          <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8" style={{ maxWidth: '50vw' }}>
+            <div className="flex flex-col text-center">
+              <p className="mb-1 text-5xl md:text-xl text-center">Challenge Yourself @The Improshow este un concept ce aduce în sufrageria de pe Madrid 4  un curs cu apucături de Improshow. Mai bine zis o ședință în care ne “jucăm” exact ca la un curs obișnuit doar ca adăugăm atmosfera de Improshow în sufragerie (evident), dar nu oricum ci în pijamale. </p>
+              <p className="mb-1 text-5xl md:text-xl text-center">Ședința include 2h30 de jocuri, distracție & socializare toate într-o atmosferă de Improshow realizate prin intermediul unor tehnici teatrale ce te vor ajuta să-ți antrenezi creativitatea, viteza de reacție și te vor învăța să lucrezi cu emoțiile. </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
-}
+};
 
-const slides = [
-  {
-    number: 1,
-    title: 'Tabara DoAct',
-    description: 'Timp de o săptămână pătrundem într-un mic laborator de teatru în cadrul căruia construim un spectacol de la 0 pornind de la text şi mişcare scenică la decor, costume și repetiții.',
-    imageUrl: 'src/assets/images/doAct.jpg',
-    goToLink: '/',
-  },
-
-  {
-    number: 2,
-    title: 'Jazz in sufragerie',
-    description: 'De obicei, când te afli la liceu, lumea ta e formată din multe întrebări legate de ce vei face după absolvire, iar când vrei să aplici la o facultate cu profil artistic, apar și mai multe întrebări.',
-    imageUrl: 'src/assets/images/jazz.jpg',
-    goToLink: '/',
-  },
-
-  {
-    number: 3,
-    title: '@The Party',
-    description: 'Ce este Challenge Yourself @The Party? Un curs cu apucături de party🤭 mai bine zis o ședință în care ne “jucăm” exact ca la un curs obișnuit doar ca adăugăm și 🍷🍿 și atmosfera de party în sufragerie (evident).',
-    imageUrl: 'src/assets/images/party.jpg',
-    goToLink: '/',
-  },
-];
+export default Improshow;

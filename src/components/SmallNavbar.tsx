@@ -43,7 +43,7 @@ const links = [
     name: 'În sufragerie',
   },
   {
-    link: '/challenge_yourself',
+    link: '/menu-challenge-yourfelf',
     name: 'challenge yourself',
   },
   {

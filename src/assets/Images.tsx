@@ -21,6 +21,9 @@ const IMAGES = {
     cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.jpg', import.meta.url).href,
     teatru: new URL('/src/assets/images/in-sufragerie/teatru/teatru.jpg', import.meta.url).href,
     dinIntamplare: new URL('/src/assets/images/in-sufragerie/teatru/din-intamplare.jpg', import.meta.url).href,
+    party: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
+    office: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
+    challengeYourself: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
 }
 
 export default IMAGES;

@@ -1,5 +1,5 @@
 import MainLayout from "../components/layouts/MainLayout"; 
-import { Title, Paragraph, Subtitle } from "../components/layouts";
+import { Title, Paragraph } from "../components/layouts";
 import IMAGES from "../assets/Images";
 
 
@@ -61,7 +61,7 @@ export default function Blog () {
 
         <Title title='galerie foto' />
 
-        <a href="/sufragerie" className="text-purple-600 hover:text-purple-500 underline text-sm">👈 Înapoi la spectacole</a>
+        <a href="/sufragerie" className="text-purple-600 hover:text-purple-500 underline text-sm">👈 Înapoi in sufragerie</a>
       </section>
     </MainLayout>
   );
