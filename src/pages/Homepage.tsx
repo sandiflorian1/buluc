@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
-import SmallNavbar from "../components/SmallNavbar";
+import Navbar from "../components/Navbar";
 
 export interface IHomepageProps {
 }
@@ -25,7 +25,7 @@ export default function Homepage (props: IHomepageProps) {
   return (
     <>
       <div ref={navbarRef} style={{ position: 'absolute'}}>
-        <SmallNavbar />
+        <Navbar />
       </div>
 
       <div className="h-screen w-screen overflow-hidden page">

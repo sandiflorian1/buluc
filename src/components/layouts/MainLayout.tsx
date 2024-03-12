@@ -1,12 +1,12 @@
 import Footer from '../Footer';
-import SmallNavbar from "../SmallNavbar";
+import Navbar from "../Navbar";
 import Title from "./Title";
 
 export default function MainLayout ({ children, title, noPadding }: any) {
 
   return (
     <div className='h-screen flex flex-col justify-between overflow-y-auto overflow-x-hidden'>
-      <SmallNavbar />
+      <Navbar />
 
       <div>
         {title && 
