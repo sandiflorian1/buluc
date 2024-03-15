@@ -14,9 +14,9 @@ const MisiuneSection: React.FC = ({ ref }: any) => {
   return (
     <div className="misiune">
       <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8" style={{ maxWidth: '50vw' }}>
-        <div className="flex flex-col text-center text-misiune">
-          <p className="mb-1 text-5xl md:text-xl text-center">Misiunea noastră este să dezvoltăm un spațiu, un loc în care oamenii să se adune în număr cât mai mare pentru a face și pentru a vedea artă.</p>
-          <p className="mb-1 text-5xl md:text-xl text-center">Ne dorim să realizăm trecerea de la un spectacol de teatru la o întreagă experiență creativă, cu care publicul să se întâlnească de fiecare dată când ne strângem buluc.</p>
+        <div className="flex flex-col text-misiune">
+          <p className="mb-1 text-5xl md:text-xl">Misiunea noastră este să dezvoltăm un spațiu, un loc în care oamenii să se adune în număr cât mai mare pentru a face și pentru a vedea artă.</p>
+          <p className="mb-1 text-5xl md:text-xl">Ne dorim să realizăm trecerea de la un spectacol de teatru la o întreagă experiență creativă, cu care publicul să se întâlnească de fiecare dată când ne strângem buluc.</p>
         </div>
       </div>
     </div>
@@ -30,8 +30,8 @@ const LocatieSection: React.FC = () => {
         <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria} loading="lazy" alt="locatie" />
 
         <div className="flex flex-col md:flex-row mx-auto pb-8 md:pb-8" style={{ maxWidth: '60vw' }}>
-          <div className="flex flex-col text-center text-misiune">
-            <p className="mb-1 text-5xl md:text-xl text-center">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate.  </p>
+          <div className="flex flex-col text-misiune">
+            <p className="mb-1 text-5xl md:text-xl">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate.  </p>
           </div>
         </div>
       </div>

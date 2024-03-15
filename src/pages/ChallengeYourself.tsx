@@ -1,5 +1,4 @@
 import MainLayout from "../components/layouts/MainLayout"; 
-import { Title, Paragraph, Subtitle } from "../components/layouts";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 
 
@@ -21,14 +20,7 @@ export default function ChallengeYourself () {
             <div className="corner-circle c2 bg-white" />
           </div>
           <div>
-            <h3 className="title font-bold text-red">
-              <span className="text-orange">.</span>
-              unde & cand?
-            </h3>
-
-            <p className="mb-1 text-5xl md:text-xl font-bold"> Str. Madrid nr.4 (zona Dorobanți) - Buluc </p>
-            <p className="mb-1 text-5xl md:text-xl font-bold"> În fiecare LUNI </p>
-            <p className="mb-1 text-5xl md:text-xl font-bold"> de la 18:30 - 20:00 </p>
+           
           </div>
 
 					<img
