@@ -3,9 +3,10 @@ type BlogCard = {
     text: string,
     title: string,
     cardClass: string,
+    link?: string,
 }
 function BlogCard({ data }: { data: BlogCard }) {
-    const { imgURL, text, title, cardClass } = data;
+    const { imgURL, text, title, cardClass, link } = data;
     return (
         <div className={`bg-white ${cardClass}`}>
             <div className={`rounded-lg shadow-lg m-4`}>
@@ -15,7 +16,7 @@ function BlogCard({ data }: { data: BlogCard }) {
                         {title}
                     </h2>
                     <p className="text-purple-700 mb-2">{text}</p>
-                    <a href="#" className="text-purple-600 hover:text-purple-500 underline text-sm">citeste mai mult 👉</a>
+                    <a href={link} className="text-purple-600 hover:text-purple-500 underline text-sm">citeste mai mult 👉</a>
                 </div>
             </div>
         </div>
