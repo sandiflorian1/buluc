@@ -12,6 +12,7 @@ import Concerte from "./pages/Concerte";
 import MenuPage from "./pages/MenuPage";
 import Party from "./pages/Party";
 import Office from "./pages/Office";
+import Cafeluta from './pages/Cafeluta';
 
 import "./css/main.css";
 import IMAGES from "./assets/Images";
@@ -24,7 +25,8 @@ const App = () => {
         <Route path="/culise" component={Despre} />
         <Route path="/spectacol-dinIntamplare" component={Spectacol}  />
         <Route path="/proiecte" component={Proiecte} />
-        <Route path="/gazeta" component={Blog} />
+        <Route path="/gazeta" component={Blog} exact/>
+        <Route path="/gazeta/buna-dimineata-la-cafeluta" component={Cafeluta} />
         <Route path="/sustine" component={Sustine} />
         <Route path="/contact" component={Contact} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />

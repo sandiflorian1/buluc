@@ -1,0 +1,11 @@
+.article {
+    p {
+        padding: theme('spacing.1');
+
+        svg {
+            display: inline;
+            margin-right: theme('spacing.1');
+            margin-top: -4px;
+        }
+    }
+}
