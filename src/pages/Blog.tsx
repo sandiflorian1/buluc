@@ -4,8 +4,8 @@ import BlogCard from "../components/cards/BlogCard";
 export default function Blog () {
 
   return (
-    <MainLayout title="blog">
-      <div className="container mx-auto w-50">
+    <MainLayout>
+      <div className="container mx-auto w-50 py-20">
         <div className="flex flex-wrap justify-center">
           {data.map((card) => (
             <BlogCard

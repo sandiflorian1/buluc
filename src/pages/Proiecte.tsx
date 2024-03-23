@@ -6,8 +6,8 @@ export interface ISectacoleProps {
 
 export default function Sectacole(props: ISectacoleProps) {
   return (
-    <MainLayout title="proiecte">
-      <div className="pb-20">
+    <MainLayout>
+      <div className="py-20">
         <Slider slides={slides} />
       </div>
     </MainLayout>

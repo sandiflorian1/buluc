@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { gsap } from "gsap";
+import { motion } from "framer-motion";
 import "../../css/cards/TeamMemberCard.css";
 import { ITeamMember } from '../../types/cards/ITeamMember';
   
@@ -17,7 +18,13 @@ const TeamMemberCard: React.FC<ITeamMember> = ({ imageSrc, name, role, color, fo
   };
 
   return (
-    <div>
+    <motion.div
+      className='team-member-card'
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="round-image-container relative">
         <div className="image-circle bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${imageSrc})` }}>
           <div className="circle" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={circleRef}>
@@ -33,7 +40,7 @@ const TeamMemberCard: React.FC<ITeamMember> = ({ imageSrc, name, role, color, fo
 
       <h5 className="name">{name}</h5>
       <h6 className="role">{role}{fondator && ', fondator'}</h6>
-    </div>
+    </motion.div>
   );
 };
 

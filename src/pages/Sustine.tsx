@@ -17,8 +17,8 @@ export default function Sustine (props: ISustineProps) {
   });
 
   return (
-    <MainLayout title="sustine">
-      <div className="ugl_fix grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pb-20">
+    <MainLayout>
+      <div className="ugl_fix grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-20">
         <div className="flex flex-col">
           <img className="mx-auto mb-8 image1" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/35.jpg" loading="lazy" alt="Image 1" />
           <div className="relative flex h-full card1">

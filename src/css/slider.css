@@ -35,7 +35,7 @@
 
 .slider__content .slider__text span {
   font-weight: 600;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   background: linear-gradient(151deg, #f05252 0%, #f6772b 50%, rgba(252, 176, 69, 1) 100%);
   border-radius: 50%;
   line-height: 35px;
@@ -61,7 +61,8 @@
 }
 
 .slider__content .slider__text p {
-  line-height: 2;
+  line-height: 1.5vw;
+  padding-top: 0.5rem;
 }
 
 .slider__content .slider__image {
@@ -121,4 +122,11 @@
 
 .slick-active .slider__image img {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__content .slider__text {
+    width: 40%;
+    padding: 1.25rem 1.5rem;
+  }
 }

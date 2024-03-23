@@ -21,9 +21,8 @@ const SliderContent = ({
         onClick={goToLink}
     >
       <div className="slider__text">
-        {/* <span>{number}</span> */}
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className='mb:hidden'>{description}</p>
       </div>
       <figure className="slider__image">
         <img src={imageUrl} alt={`Slide ${number}`} />

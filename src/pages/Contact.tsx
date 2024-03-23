@@ -17,8 +17,8 @@ export default function Contact(props: IContactProps) {
   });
 
   return (
-    <MainLayout title="despre">
-      <div className="contact pb-8 flex items-center flex-wrap justify-between">
+    <MainLayout>
+      <div className="contact py-20 flex items-center flex-wrap justify-between">
         <div className="w-full md:w-[45%]">
           <div className="bg-peach my-auto py-8 px-4 md:py-12 md:px-8 rounded-br-3xl">
             <h4 className="text md:text-left">Conectează-te cu noi!</h4>
