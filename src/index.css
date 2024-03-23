@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
-  font-family: "Dosis";
-  src: local("Dosis"),
-   url("/src/assets/fonts/Dosis.ttf") format("truetype");
+  font-family: "Poppins";
+  src: local("Poppins"),
+   url("/src/assets/fonts/Poppins.ttf") format("truetype");
 }

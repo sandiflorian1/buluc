@@ -13,8 +13,6 @@ import MenuPage from "./pages/MenuPage";
 import Party from "./pages/Party";
 import Office from "./pages/Office";
 import Cafeluta from './pages/Cafeluta';
-
-import "./css/main.css";
 import IMAGES from "./assets/Images";
 
 const App = () => {

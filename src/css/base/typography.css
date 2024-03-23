@@ -1,29 +1,35 @@
 p, span, a, li {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
 }
 
 h1 {
   font-family: 'Handlee', cursive;
-  font-size: 3.125vw !important;
+  font-size: 3.25vw;
+}
+
+h2 {
+  font-family: 'Handlee', cursive;
+  font-size: 3.125vw;
 }
 
 h3 {
-  font-size: 3vw !important;
+  font-size: 3vw;
   font-family: 'Handlee', cursive;
 }
 
 h4 {
-  font-size: 2.5vw !important;
+  font-size: 2.5vw;
   font-family: 'Handlee', cursive;
 }
 
 h5 {
-  font-size: 2vw !important;
+  font-size: 2vw;
   font-family: 'Handlee', cursive;
 }
 
 h6 {
-  font-size: 1.5vw !important;
+  font-size: 1.5vw;
   font-family: 'Handlee', cursive;
 }
 
@@ -35,8 +41,36 @@ a {
   text-underline-offset: 6px;
 }
 
+.text-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 @media screen and (max-width: 768px) {
+  p, span, a, li {
+    font-size: 0.75rem;
+  }
+
   h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
   }
 }
