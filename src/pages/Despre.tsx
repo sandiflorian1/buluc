@@ -1,6 +1,5 @@
 import MainLayout from "../components/layouts/MainLayout";
-import { useRef, useEffect, Ref } from 'react';
-import { gsap } from "gsap";
+import { motion } from "framer-motion";
 import Title from "../components/layouts/Title";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import { ITeamMember } from "../types/cards/ITeamMember";
@@ -13,10 +12,9 @@ export interface IDespreProps { }
 const MisiuneSection: React.FC = ({ ref }: any) => {
   return (
     <div className="misiune">
-      <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8" style={{ maxWidth: '50vw' }}>
+      <div className="flex flex-col md:flex-row mx-auto" style={{ maxWidth: '50vw' }}>
         <div className="flex flex-col text-misiune">
-          <p className="mb-1 text-5xl md:text-xl">Misiunea noastră este să dezvoltăm un spațiu, un loc în care oamenii să se adune în număr cât mai mare pentru a face și pentru a vedea artă.</p>
-          <p className="mb-1 text-5xl md:text-xl">Ne dorim să realizăm trecerea de la un spectacol de teatru la o întreagă experiență creativă, cu care publicul să se întâlnească de fiecare dată când ne strângem buluc.</p>
+          <p className="mb-1">Misiunea noastră este să dezvoltăm un spațiu, un loc în care oamenii să se adune în număr cât mai mare pentru a face și pentru a vedea artă. Ne dorim să realizăm trecerea de la un spectacol de teatru la o întreagă experiență creativă, cu care publicul să se întâlnească de fiecare dată când ne strângem buluc.</p>
         </div>
       </div>
     </div>
@@ -25,17 +23,17 @@ const MisiuneSection: React.FC = ({ ref }: any) => {
 
 const LocatieSection: React.FC = () => {
   return (
-    <div className="locatie">
+    <div className="locatie" >
       <div className="relative">
         <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria} loading="lazy" alt="locatie" />
 
         <div className="flex flex-col md:flex-row mx-auto pb-8 md:pb-8" style={{ maxWidth: '60vw' }}>
           <div className="flex flex-col text-misiune">
-            <p className="mb-1 text-5xl md:text-xl">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate.  </p>
+            <p className="mb-1">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate.  </p>
           </div>
         </div>
       </div>
-     
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria2} loading="lazy" alt="locatie2" />
         <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria3} loading="lazy" alt="locatie3" />
@@ -56,28 +54,30 @@ const ParteneriSection: React.FC = () => {
 }
 
 const Despre: React.FC = () => {
-  const misiuneRef = useRef(null);
-  const echipaRef = useRef(null);
-
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: 0 });
-    tl.fromTo(misiuneRef.current, { opacity: 0 }, { opacity: 1, duration: 1 })
-      .fromTo(echipaRef.current, { opacity: 0 }, { opacity: 1, duration: 1 });
-
-    return () => {
-      tl.kill();
-    };
-  });
-
   return (
-    <MainLayout title="misiune">
-      <section id="misiune" ref={misiuneRef}>
+    <MainLayout>
+      <motion.section 
+        id="misiune"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+        className="mt-10"
+      >
+        <Title title='misiune' />
         <MisiuneSection />
-      </section>
+      </motion.section>
 
-      <section id="echipa" className="echipa" ref={echipaRef}>
+      <section id="echipa" className="echipa">
         <div style={{ paddingTop: "0px" }} className="py-12 md:py-20 mt-8 flex flex-col">
-          <Title title='oamenii bulúc' />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Title title='oamenii bulúc' />
+          </motion.div>
           <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
             {teamMembers.map((member, index) => (
               <TeamMemberCard
@@ -93,15 +93,27 @@ const Despre: React.FC = () => {
         </div>
       </section>
 
-      <section id="locatie" >
+      <motion.section id="locatie"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+      >
         <Title title='loc de joacă' />
         <LocatieSection />
-      </section>
+      </motion.section>
 
-      <section id="parteneri" className="mt-8">
+      <motion.section 
+        id="parteneri" 
+        className="mt-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }} 
+        transition={{ duration: 0.5 }}
+      >
         <Title title='parteneri' />
         <ParteneriSection />
-      </section>
+      </motion.section>
     </MainLayout>
   );
 };
@@ -164,7 +176,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaAlexandraFlorian,
     name: "Alexandra Florian",
-    role: "web designer",
+    role: "web developer",
     color: 'red',
   },
 ];
