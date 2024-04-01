@@ -223,3 +223,7 @@ ul.yourself {
   position: fixed;
   opacity: 0.2;
 }
+
+header {
+  background: white;
+}
