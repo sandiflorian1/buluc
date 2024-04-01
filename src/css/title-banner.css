@@ -1,0 +1,17 @@
+.img-banner {
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #f05252;
+    border-radius: 1.5rem;
+}
+
+.bg-text {
+    padding: 3vw;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 9%, rgba(255,255,255,0) 100%);
+}
+
+.has-slider .bg-text {
+    color: black;
+}

@@ -1,5 +1,5 @@
 .team-member-card {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .round-image-container {
@@ -50,17 +50,15 @@
 
 .name {
     font-family: 'Poppins', sans-serif;
-    font-size: 26px;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 15px;
     font-weight: 600;
 }
 
 .role {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: -3px;
 }
 
 @media screen and (max-width: 768px) {

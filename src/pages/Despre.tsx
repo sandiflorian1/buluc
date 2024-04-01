@@ -1,4 +1,5 @@
 import MainLayout from "../components/layouts/MainLayout";
+import ContainerComponent from '../components/layouts/ContainerComponent';
 import { motion } from "framer-motion";
 import Title from "../components/layouts/Title";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
@@ -6,17 +7,19 @@ import { ITeamMember } from "../types/cards/ITeamMember";
 import IMAGES from "../assets/Images";
 
 import "../css/despre.css";
+import TitleBanner from "../components/layouts/TitleBanner";
 
 export interface IDespreProps { }
 
 const MisiuneSection: React.FC = ({ ref }: any) => {
   return (
     <div className="misiune">
-      <div className="flex flex-col md:flex-row mx-auto" style={{ maxWidth: '50vw' }}>
-        <div className="flex flex-col text-misiune">
-          <p className="mb-1">Misiunea noastră este să dezvoltăm un spațiu, un loc în care oamenii să se adune în număr cât mai mare pentru a face și pentru a vedea artă. Ne dorim să realizăm trecerea de la un spectacol de teatru la o întreagă experiență creativă, cu care publicul să se întâlnească de fiecare dată când ne strângem buluc.</p>
-        </div>
-      </div>
+      <TitleBanner 
+        title="misiune"
+        text={MisiuneText}
+        bgBluredImg={IMAGES.sufrageria}
+        // bgImg={IMAGES.sufrageria2}
+      />
     </div>
   );
 }
@@ -24,59 +27,63 @@ const MisiuneSection: React.FC = ({ ref }: any) => {
 const LocatieSection: React.FC = () => {
   return (
     <div className="locatie" >
-      <div className="relative">
-        <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria} loading="lazy" alt="locatie" />
-
-        <div className="flex flex-col md:flex-row mx-auto pb-8 md:pb-8" style={{ maxWidth: '60vw' }}>
-          <div className="flex flex-col text-misiune">
-            <p className="mb-1">Ne strângem buluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică din anul 1920. Un loc care te duce înapoi în timp doar de la primii pași făcuți în casă. Un spațiu care îmbină elemente pline de istorie și tradiție: plafon înalt, ferestre mari care permit luminii naturale să pătrundă în încăperi & pardoseli care răsună. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate.  </p>
-          </div>
-        </div>
-      </div>
-    
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria2} loading="lazy" alt="locatie2" />
-        <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria3} loading="lazy" alt="locatie3" />
-        <img className="mx-auto mb-4 maini" src={IMAGES.sufrageria4} loading="lazy" alt="locatie4" />
-      </div>
+      <TitleBanner 
+        title="loc de joaca"
+        text={LocDeJoacaText}
+        bgBluredImg={IMAGES.sufrageria}
+        images={[IMAGES.sufrageria, IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6, IMAGES.sufrageria7]}
+      />
     </div>
   );
 }
 
 const ParteneriSection: React.FC = () => {
+  const parteneri = [0,1,2,3,4,5,6,7];
   return (
-    <div className="locatie">
-      <div className="flex flex-col md:flex-row mx-auto py-8 md:py-8">
-        <img className="mx-auto mb-4 maini" src={IMAGES.parteneri} loading="lazy" alt="Team" />
+    <ContainerComponent className="locatie">
+      <div className="mx-[10vw] flex flex-col">
+        <div className="ml-[5vw]">
+          <Title title='parteneri' position="start"/>
+        </div>
+
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-8">
+          {parteneri.map((index) => { 
+            const imgName = `partener${index}` as keyof typeof IMAGES;
+            return(
+              <div className="my-auto px-4">
+                <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
+              </div>
+          )})}
+        </div>
       </div>
-    </div>
+    </ContainerComponent>
   );
 }
 
 const Despre: React.FC = () => {
   return (
-    <MainLayout>
+    <MainLayout noPadding>
       <motion.section 
         id="misiune"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.5 }}
-        className="mt-10"
       >
-        <Title title='misiune' />
         <MisiuneSection />
       </motion.section>
 
-      <section id="echipa" className="echipa">
-        <div style={{ paddingTop: "0px" }} className="py-12 md:py-20 mt-8 flex flex-col">
+      <ContainerComponent id="echipa">
+        <div className="mt-8 flex flex-col">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5 }}
           >
-            <Title title='oamenii bulúc' />
+            <div className="ml-[7vw]">
+              <Title title='oamenii bulúc' position="start"/>
+            </div>
           </motion.div>
           <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
             {teamMembers.map((member, index) => (
@@ -91,7 +98,7 @@ const Despre: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </ContainerComponent>
 
       <motion.section id="locatie"
         initial={{ opacity: 0 }}
@@ -99,7 +106,6 @@ const Despre: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
-        <Title title='loc de joacă' />
         <LocatieSection />
       </motion.section>
 
@@ -111,7 +117,6 @@ const Despre: React.FC = () => {
         viewport={{ once: true, amount: 0.5 }} 
         transition={{ duration: 0.5 }}
       >
-        <Title title='parteneri' />
         <ParteneriSection />
       </motion.section>
     </MainLayout>
@@ -146,27 +151,6 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: IMAGES.echipaIonutTerteci,
-    name: "Ionuț Terteci",
-    role: "actor & coordonator tehnic Buluc",
-    color: 'orange',
-  },
-
-  {
-    imageSrc: IMAGES.echipaStefaniaTecher,
-    name: "Ștefania Țecher",
-    role: "artist fotograf",
-    color: 'red',
-  },
-
-  {
-    imageSrc: IMAGES.echipaAndreeaIstrate,
-    name: "Andreea Istrate",
-    role: "coregraf & coordonator event",
-    color: 'red',
-  },
-
-  {
     imageSrc: IMAGES.echipaCezarStoica,
     name: "Cezar Stoica",
     role: "graphic designer",
@@ -179,4 +163,28 @@ const teamMembers: ITeamMember[] = [
     role: "web developer",
     color: 'red',
   },
+
+  {
+    imageSrc: IMAGES.echipaAndreeaIstrate,
+    name: "Andreea Istrate",
+    role: "coregraf & coordonator event",
+    color: 'red',
+  },
+
+  {
+    imageSrc: IMAGES.echipaStefaniaTecher,
+    name: "Ștefania Țecher",
+    role: "artist fotograf",
+    color: 'red',
+  },
+
+  {
+    imageSrc: IMAGES.echipaIonutTerteci,
+    name: "Ionuț Terteci",
+    role: "actor & coordonator tehnic Buluc",
+    color: 'orange',
+  },
 ];
+
+const LocDeJoacaText = "Ne strângem #bnuluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. O locație de care te vei îndrăgosti așa cum am făcut și noi prima dată când i-am pășit pragul. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
+const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."

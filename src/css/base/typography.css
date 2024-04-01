@@ -5,16 +5,16 @@ p, span, a, li {
 
 h1 {
   font-family: 'Handlee', cursive;
-  font-size: 3.25vw;
+  font-size: 3.125vw;
 }
 
 h2 {
   font-family: 'Handlee', cursive;
-  font-size: 3.125vw;
+  font-size: 3vw;
 }
 
 h3 {
-  font-size: 3vw;
+  font-size: 2.75vw;
   font-family: 'Handlee', cursive;
 }
 
@@ -24,12 +24,12 @@ h4 {
 }
 
 h5 {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: 'Handlee', cursive;
 }
 
 h6 {
-  font-size: 1.5vw;
+  font-size: 1.125vw;
   font-family: 'Handlee', cursive;
 }
 
