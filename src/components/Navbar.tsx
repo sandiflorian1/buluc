@@ -56,7 +56,7 @@ function Navbar() {
   const { pathname } = window.location;
   const [isOpen, toggleOpen] = useCycle(false, true);
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement | null>(null);
 
   return(
     <header id="header" className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start shadow-lg'>
