@@ -40,7 +40,7 @@ const LocatieSection: React.FC = () => {
 const ParteneriSection: React.FC = () => {
   const parteneri = [0,1,2,3,4,5,6,7];
   return (
-    <ContainerComponent className="locatie">
+    <ContainerComponent>
       <div className="mx-[10vw] flex flex-col">
         <div className="ml-[5vw]">
           <Title title='parteneri' position="start"/>
@@ -50,7 +50,7 @@ const ParteneriSection: React.FC = () => {
           {parteneri.map((index) => { 
             const imgName = `partener${index}` as keyof typeof IMAGES;
             return(
-              <div className="my-auto px-4">
+              <div className="my-auto px-4" key={index}>
                 <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
               </div>
           )})}

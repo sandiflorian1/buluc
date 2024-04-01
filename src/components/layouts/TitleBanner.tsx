@@ -30,11 +30,9 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
             {images && (
               <Slider {...settings}>
                 {images.map((img) => (
-                  // <div className="h-[60vh] w-100 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
-                  <div className="h-[60vh] w-full">
+                  <div className="h-[60vh] w-full" key={img}>
                     <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
                   </div>
-                  // <img src={img} className="h-[60vh] w-100"/>
                 ))}
               </Slider>
             )}
