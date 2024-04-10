@@ -1,14 +1,78 @@
 import MainLayout from "../components/layouts/MainLayout";
-import Slider from '../components/Slider';
+import Slider from 'react-slick';
+import IMAGES from "../assets/Images";
+import { motion, useInView } from "framer-motion";
+import { useRef } from 'react';
+
 export interface ISectacoleProps {
 }
 
+const settings = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+};
+
 
 export default function Sectacole(props: ISectacoleProps) {
+
   return (
     <MainLayout>
-      <div className="py-20">
-        <Slider slides={slides} />
+      <div className="my-20">
+        {slides.map(({number, title, description, goToLink, imageUrl, images}) =>  {
+           const ref = useRef(null);
+           const isInView = useInView(ref, { once: true, amount: 0.1 });
+           const isMobile = window.matchMedia("(max-width: 768px)").matches;
+           const cardVariants = {
+            hidden: {
+              opacity: 0,
+              ...!isMobile && { x: number%2 ? 500 : -500 },
+            },
+            visible: {
+              opacity: 1,
+              ...!isMobile && { x: 0 },
+              transition: {
+                delay: 0.2,
+                duration: 0.5,
+              },
+            },
+          };
+          return (
+            <motion.div 
+              id={`id-card-${number}`}
+              className={`min-h-[36vh] rounded-[1rem] shadow-lg flex mb:flex-col row ${number%2 === 0 && 'flex-row-reverse'} m-10`}
+              ref={ref}
+              variants={cardVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              key={title}
+            >
+              <div className="p-6 w-[45%] mb:w-full">
+                <h2 className="title title-h1">
+                  <span className="text-orange text-3xl">.</span>{title}
+                </h2>
+                <p className="mb-2">{description}</p>
+                <a href={goToLink} className="hover:text-orange underline flex justify-end">citeste mai mult 👉</a>
+              </div>
+
+              {images !== undefined ? (
+                <div className="w-[45vw] h-[38vh] mb:h-[38vh] mb:w-[80vw]">
+                  <Slider {...settings}>
+                    {images.map((img) => (
+                      <div className="w-[40vw] h-[38vh]" key={img}>
+                        <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              ) : (
+              <div className="bg-cover bg-no-repeat bg-center w-[55%] mb:h-[50vh] mb:w-full" style={{ backgroundImage: `url(${imageUrl})` }} />
+              )}
+            </motion.div>
+        )})}
       </div>
     </MainLayout>
   );
@@ -17,25 +81,40 @@ export default function Sectacole(props: ISectacoleProps) {
 const slides = [
   {
     number: 1,
-    title: 'Tabara DoAct',
-    description: 'Timp de o săptămână pătrundem într-un mic laborator de teatru în cadrul căruia construim un spectacol de la 0 pornind de la text şi mişcare scenică la decor, costume și repetiții.',
-    imageUrl: 'src/assets/images/doAct.jpg',
+    title: 'the creARTive generation',
+    description: 'este un proiect educațional pentru adolescenți, sub forma unui Podcast live, cu public - care vorbește despre curaj, autenticitate și despre libertatea de a alege propriul drum, despre despre ce înseamnă o profesie artistică în România și cum putem transforma aptitudinile în instrumente de care ne putem ajuta să facem trecerea de la pasiune la profesie.',
+    imageUrl: IMAGES.creartive,
     goToLink: '/',
   },
 
   {
     number: 2,
-    title: 'Jazz in sufragerie',
-    description: 'De obicei, când te afli la liceu, lumea ta e formată din multe întrebări legate de ce vei face după absolvire, iar când vrei să aplici la o facultate cu profil artistic, apar și mai multe întrebări.',
-    imageUrl: 'src/assets/images/jazz.jpg',
+    title: 'să luăm bullying-ul la roast',
+    description: 'este un proiect care are ca scop principal prevenirea manifestărilor de tip bullying în mediul adolescenților și conștientizarea propriului rol prin dezbateri și prin paralela dintre bullying si roast,  toate acestea realizate sub consilierea unui psiholog în cadrul unor interviuri cu 3 invitați speciali: Adrian Nicolae, Alexandru Minculescu și Maria Popovici',
+    imageUrl: IMAGES.bulling,
     goToLink: '/',
   },
 
   {
     number: 3,
-    title: '@The Party',
-    description: 'Ce este Challenge Yourself @The Party? Un curs cu apucături de party🤭 mai bine zis o ședință în care ne “jucăm” exact ca la un curs obișnuit doar ca adăugăm și 🍷🍿 și atmosfera de party în sufragerie (evident).',
-    imageUrl: 'src/assets/images/party.jpg',
+    title: 'flashmob la cafea',
+    description: 'Ne-am adunat #buluc în cartier, la Boiler Coffee Shop unde am dat trezirea la cafea pe ritmuri de salsa.',
+    imageUrl: 'src/assets/images/doAct.jpg',
+    goToLink: 'https://www.youtube.com/watch?v=lSRIJk16Jd0',
+    images: [IMAGES.flashmob1, IMAGES.flashmob2, IMAGES.flashmob3]
+  },
+  {
+    number: 4,
+    title: 'tabăra DOACT',
+    description: 'Tabăra de teatru pentru adolescenții cu vârsta cuprinsă între 14-19 creată special pentru a construi o comunitate de tineri mult mai pregătiți pentru momentul în care decid să-și urmeze pasiunea pentru artă.',
+    imageUrl: IMAGES.doact,
+    goToLink: '/',
+  },
+  {
+    number: 5,
+    title: 'zoomTalks',
+    description: 'ZoomTalks este un proiect cultural apărut în pandemie din dorința de a oferi liceenilor pasionați de teatru și film o viziune asupra facultăților de teatru din România.',
+    imageUrl: '',
     goToLink: '/',
   },
 ];

@@ -10,7 +10,7 @@ type TitleBannerType = {
 }
 
 export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }: TitleBannerType) {
-
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -39,6 +39,18 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
           </div>
           
           <div className="h-full flex flex-col justify-end ">
+            {!isMobile &&(<div className="bg-text">
+                <h1><span className="text-red text-3xl">.</span>{title}</h1>
+                <p>
+                  {text}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {isMobile && (
+          <div className="h-full flex flex-col justify-end">
             <div className="bg-text">
               <h1><span className="text-red text-3xl">.</span>{title}</h1>
               <p>
@@ -46,8 +58,10 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
               </p>
             </div>
           </div>
-        </div>
+        )}
       </div>
+
+      
     </div>
   );
 }

@@ -36,6 +36,14 @@ const IMAGES = {
     party: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     office: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     challengeYourself: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
+
+    //proiecte
+    creartive: new URL('/src/assets/images/proiecte/creartive.jpg', import.meta.url).href,
+    bulling: new URL('/src/assets/images/proiecte/bulling.jpg', import.meta.url).href,
+    flashmob1: new URL('/src/assets/images/proiecte/flashmob1.jpg', import.meta.url).href,
+    flashmob2: new URL('/src/assets/images/proiecte/flashmob2.jpg', import.meta.url).href,
+    flashmob3: new URL('/src/assets/images/proiecte/flashmob3.jpg', import.meta.url).href,
+    doact: new URL('/src/assets/images/proiecte/doact.jpg', import.meta.url).href,
 }
 
 export default IMAGES;
