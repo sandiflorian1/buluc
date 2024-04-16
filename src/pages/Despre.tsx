@@ -11,14 +11,15 @@ import TitleBanner from "../components/layouts/TitleBanner";
 
 export interface IDespreProps { }
 
-const MisiuneSection: React.FC = ({ ref }: any) => {
+const MisiuneSection: React.FC = () => {
   return (
     <div className="misiune">
       <TitleBanner 
         title="misiune"
         text={MisiuneText}
         bgBluredImg={IMAGES.sufrageria}
-        // bgImg={IMAGES.sufrageria2}
+        bgImg={IMAGES.sufrageria2}
+        colorText="black"
       />
     </div>
   );
@@ -30,8 +31,9 @@ const LocatieSection: React.FC = () => {
       <TitleBanner 
         title="loc de joaca"
         text={LocDeJoacaText}
+        colorText="white"
         bgBluredImg={IMAGES.sufrageria}
-        images={[IMAGES.sufrageria, IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6, IMAGES.sufrageria7]}
+        images={[IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6]}
       />
     </div>
   );
@@ -60,6 +62,33 @@ const ParteneriSection: React.FC = () => {
   );
 }
 
+const People = ({ members, title }: {members:  ITeamMember[], title: string } ) => (
+<div className="mt-8 flex flex-col">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="ml-[7vw]">
+        <Title title={title} position="start"/>
+      </div>
+    </motion.div>
+    <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
+      {members.map((member, index) => (
+        <TeamMemberCard
+          key={index}
+          imageSrc={member.imageSrc}
+          name={member.name}
+          role={member.role}
+          color={member.color}
+          fondator={member.fondator}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 const Despre: React.FC = () => {
   return (
     <MainLayout noPadding>
@@ -74,30 +103,15 @@ const Despre: React.FC = () => {
       </motion.section>
 
       <ContainerComponent id="echipa">
-        <div className="mt-8 flex flex-col">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="ml-[7vw]">
-              <Title title='oamenii bulúc' position="start"/>
-            </div>
-          </motion.div>
-          <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard
-                key={index}
-                imageSrc={member.imageSrc}
-                name={member.name}
-                role={member.role}
-                color={member.color}
-                fondator={member.fondator}
-              />
-            ))}
-          </div>
-        </div>
+        <People 
+          members={teamMembers} 
+          title='oamenii buluc' 
+        />
+
+        {(colaboratori && <People 
+          members={colaboratori} 
+          title='colaboratori' 
+        />)}
       </ContainerComponent>
 
       <motion.section id="locatie"
@@ -186,5 +200,7 @@ const teamMembers: ITeamMember[] = [
   },
 ];
 
-const LocDeJoacaText = "Ne strângem #bnuluc într-o casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. O locație de care te vei îndrăgosti așa cum am făcut și noi prima dată când i-am pășit pragul. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
+const colaboratori: ITeamMember[] | null = null;
+
+const LocDeJoacaText = "O casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
 const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."

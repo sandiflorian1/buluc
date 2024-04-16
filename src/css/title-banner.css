@@ -3,15 +3,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 2px solid #f05252;
+    /* border: 2px solid #f05252; */
     border-radius: 1.5rem;
 }
 
 .bg-text {
     padding: 1.5vw 3vw;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 28%, rgba(255,255,255,0) 100%);
 }
 
 .has-slider .bg-text {
-    color: black;
+    
 }

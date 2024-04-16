@@ -22,7 +22,7 @@ export default function Sectacole(props: ISectacoleProps) {
   return (
     <MainLayout>
       <div className="my-20">
-        {slides.map(({number, title, description, goToLink, imageUrl, images}) =>  {
+        {slides.map(({number, title, description, goToLink, imageUrl, images, imageWidths}) =>  {
            const ref = useRef(null);
            const isInView = useInView(ref, { once: true, amount: 0.1 });
            const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -50,16 +50,16 @@ export default function Sectacole(props: ISectacoleProps) {
               animate={isInView ? "visible" : "hidden"}
               key={title}
             >
-              <div className="p-6 w-[45%] mb:w-full">
-                <h2 className="title title-h1">
+              <div className={`p-6 ${imageWidths[0]} mb:w-full`}>
+                <h4 className="title title-h1 pb-4">
                   <span className="text-orange text-3xl">.</span>{title}
-                </h2>
+                </h4>
                 <p className="mb-2">{description}</p>
-                <a href={goToLink} className="hover:text-orange underline flex justify-end">citeste mai mult 👉</a>
+                <a href={goToLink} className="hover:text-orange underline flex justify-end pt-4">citeste mai mult 👉</a>
               </div>
 
               {images !== undefined ? (
-                <div className="w-[45vw] h-[38vh] mb:h-[38vh] mb:w-[80vw]">
+                <div className={`${imageWidths[1]} h-[38vh] mb:h-[38vh] mb:w-[80vw]`}>
                   <Slider {...settings}>
                     {images.map((img) => (
                       <div className="w-[40vw] h-[38vh]" key={img}>
@@ -69,7 +69,7 @@ export default function Sectacole(props: ISectacoleProps) {
                   </Slider>
                 </div>
               ) : (
-              <div className="bg-cover bg-no-repeat bg-center w-[55%] mb:h-[50vh] mb:w-full" style={{ backgroundImage: `url(${imageUrl})` }} />
+              <div className={`bg-cover bg-no-repeat bg-center ${imageWidths[1]} mb:h-[50vh] mb:w-full`} style={{ backgroundImage: `url(${imageUrl})` }} />
               )}
             </motion.div>
         )})}
@@ -85,6 +85,7 @@ const slides = [
     description: 'este un proiect educațional pentru adolescenți, sub forma unui Podcast live, cu public - care vorbește despre curaj, autenticitate și despre libertatea de a alege propriul drum, despre despre ce înseamnă o profesie artistică în România și cum putem transforma aptitudinile în instrumente de care ne putem ajuta să facem trecerea de la pasiune la profesie.',
     imageUrl: IMAGES.creartive,
     goToLink: '/',
+    imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 
   {
@@ -93,6 +94,7 @@ const slides = [
     description: 'este un proiect care are ca scop principal prevenirea manifestărilor de tip bullying în mediul adolescenților și conștientizarea propriului rol prin dezbateri și prin paralela dintre bullying si roast,  toate acestea realizate sub consilierea unui psiholog în cadrul unor interviuri cu 3 invitați speciali: Adrian Nicolae, Alexandru Minculescu și Maria Popovici',
     imageUrl: IMAGES.bulling,
     goToLink: '/',
+    imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 
   {
@@ -101,7 +103,8 @@ const slides = [
     description: 'Ne-am adunat #buluc în cartier, la Boiler Coffee Shop unde am dat trezirea la cafea pe ritmuri de salsa.',
     imageUrl: 'src/assets/images/doAct.jpg',
     goToLink: 'https://www.youtube.com/watch?v=lSRIJk16Jd0',
-    images: [IMAGES.flashmob1, IMAGES.flashmob2, IMAGES.flashmob3]
+    images: [IMAGES.flashmob1, IMAGES.flashmob2, IMAGES.flashmob3],
+    imageWidths: ['w-[45%]', 'w-[45vw]'],
   },
   {
     number: 4,
@@ -109,6 +112,7 @@ const slides = [
     description: 'Tabăra de teatru pentru adolescenții cu vârsta cuprinsă între 14-19 creată special pentru a construi o comunitate de tineri mult mai pregătiți pentru momentul în care decid să-și urmeze pasiunea pentru artă.',
     imageUrl: IMAGES.doact,
     goToLink: '/',
+    imageWidths: ['w-[45%]', 'w-[55%]'],
   },
   {
     number: 5,
@@ -116,5 +120,6 @@ const slides = [
     description: 'ZoomTalks este un proiect cultural apărut în pandemie din dorința de a oferi liceenilor pasionați de teatru și film o viziune asupra facultăților de teatru din România.',
     imageUrl: '',
     goToLink: '/',
+    imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 ];

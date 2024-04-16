@@ -6,10 +6,11 @@ type TitleBannerType = {
   bgImg?: string, 
   title?: string, 
   text?: string,
+  colorText?: string,
   images?: string[],
 }
 
-export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }: TitleBannerType) {
+export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, colorText }: TitleBannerType) {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const settings = {
     slidesToShow: 1,
@@ -24,7 +25,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
     <div className={`w-screen relative ${images && 'has-slider'}`}>
       <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] z-[-1]" style={{ backgroundImage: `url(${bgBluredImg})`, filter: "blur(10px)" }} />
 
-      <div className="px-[20vw] py-[5vw]">
+      <div className="px-[20vw] py-[5vw] mb:px-[10vw]">
         <div className="img-banner relative overflow-hidden" style={{ backgroundImage: `url(${bgImg})` }}>
           <div className="absolute top-0 bottom-o right-0 left-0 z-[-1]">
             {images && (
@@ -38,10 +39,10 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
             )}
           </div>
           
-          <div className="h-full flex flex-col justify-end ">
+          <div className="h-full flex flex-col justify-end">
             {!isMobile &&(<div className="bg-text">
-                <h1><span className="text-red text-3xl">.</span>{title}</h1>
-                <p>
+                <h1 className={`text-${colorText}`}><span className="text-red text-3xl mb:text-[2rem]">.</span>{title}</h1>
+                <p className={`text-${colorText}`}>
                   {text}
                 </p>
               </div>
@@ -52,7 +53,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images }
         {isMobile && (
           <div className="h-full flex flex-col justify-end">
             <div className="bg-text">
-              <h1><span className="text-red text-3xl">.</span>{title}</h1>
+              <h1><span className="text-red text-3xl mb:text-[2rem]">.</span>{title}</h1>
               <p>
                 {text}
               </p>

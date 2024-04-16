@@ -6,7 +6,6 @@ const IMAGES = {
     sufrageria4: new URL('/src/assets/images/culise/locatie/Carolia-6-min.jpg' , import.meta.url).href,
     sufrageria5: new URL('/src/assets/images/culise/locatie/Carolia-10-min.jpg' , import.meta.url).href,
     sufrageria6: new URL('/src/assets/images/culise/locatie/Carolia-9-min.jpg' , import.meta.url).href,
-    sufrageria7: new URL('/src/assets/images/culise/locatie/Carolia-2-min.jpg' , import.meta.url).href,
     parteneri: new URL('/src/assets/images/culise/parteneri.svg', import.meta.url).href,
     // echipa
     echipaMihaelaMardare: new URL('/src/assets/images/culise/echipa/mihaela-mardare.png', import.meta.url).href,
