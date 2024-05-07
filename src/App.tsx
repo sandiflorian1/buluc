@@ -44,37 +44,43 @@ export default App;
 const sufragetieActivities = [
   {
     id: "improshow",
-    image: IMAGES.improshow,
+    text: "improshow",
     link: '/improshow',
+    description: "blabla"
   },
 
   {
     id: "concerte",
-    image: IMAGES.concerte,
+    text: "concerte",
     link: '/concerte',
+    description: "blabla"
   },
   {
     id: "teatru",
-    image: IMAGES.teatru,
+    text: "teatru",
     link: '/spectacol-dinIntamplare',
+    description: "blabla"
   },
 ];
 
 const challengeActivities = [
   {
     id: "party",
-    image: IMAGES.party,
+    text: "party",
     link: '/party',
+    description: "blabla"
   },
 
   {
     id: "office",
-    image: IMAGES.office,
+    text: "office",
     link: '/office',
+    description: "blabla"
   },
   {
     id: "teatru",
-    image: IMAGES.challengeYourself,
+    text: '',
     link: '/challenge_yourself',
+    description: "blabla"
   },
 ];

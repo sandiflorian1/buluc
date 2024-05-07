@@ -19,7 +19,7 @@ const MisiuneSection: React.FC = () => {
         text={MisiuneText}
         bgBluredImg={IMAGES.sufrageria}
         bgImg={IMAGES.sufrageria2}
-        colorText="black"
+        colorText="white"
       />
     </div>
   );
