@@ -28,13 +28,42 @@ const IMAGES = {
     // in sufragerie
     improshow: new URL('/src/assets/images/in-sufragerie/improshow/improshow.jpg', import.meta.url).href,
     concerte: new URL('/src/assets/images/in-sufragerie/concerte/concerte.jpg', import.meta.url).href,
-    cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpg', import.meta.url).href,
-    cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.jpg', import.meta.url).href,
+    cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpeg', import.meta.url).href,
+    cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.jpeg', import.meta.url).href,
     teatru: new URL('/src/assets/images/in-sufragerie/teatru/teatru.jpg', import.meta.url).href,
     dinIntamplare: new URL('/src/assets/images/in-sufragerie/teatru/din-intamplare.jpg', import.meta.url).href,
     party: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     office: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     challengeYourself: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
+
+    // concerte
+    jazzAnadi1: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi1.jpeg', import.meta.url).href,
+    jazzAnadi2: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi2.jpeg', import.meta.url).href,
+    jazzAnadi3: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi3.jpeg', import.meta.url).href,
+    jazzAnadi4: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi4.jpeg', import.meta.url).href,
+    jazzAnadi5: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi5.jpeg', import.meta.url).href,
+    jazzAnadi6: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi6.jpeg', import.meta.url).href,
+    jazzAnadi7: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi7.jpeg', import.meta.url).href,
+    jazzAnadi8: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi8.jpeg', import.meta.url).href,
+
+    jazzSorina1: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina1.jpeg', import.meta.url).href,
+    jazzSorina2: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina2.jpeg', import.meta.url).href,
+    jazzSorina3: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina3.jpeg', import.meta.url).href,
+    jazzSorina4: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina4.jpeg', import.meta.url).href,
+    jazzSorina5: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina5.jpeg', import.meta.url).href,
+    jazzSorina6: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina6.jpeg', import.meta.url).href,
+    jazzSorina7: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina7.jpeg', import.meta.url).href,
+    jazzSorina8: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina8.jpeg', import.meta.url).href,
+
+    dinIntamplare1: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare1.jpg', import.meta.url).href,
+    dinIntamplare2: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare2.jpg', import.meta.url).href,
+    dinIntamplare3: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare3.jpg', import.meta.url).href,
+    dinIntamplare4: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare4.jpg', import.meta.url).href,
+    dinIntamplare5: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare5.jpg', import.meta.url).href,
+    dinIntamplare6: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare6.jpg', import.meta.url).href,
+    dinIntamplare7: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare7.jpg', import.meta.url).href,
+    dinIntamplare8: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare8.jpg', import.meta.url).href,
+
 
     //proiecte
     creartive: new URL('/src/assets/images/proiecte/creartive.jpg', import.meta.url).href,

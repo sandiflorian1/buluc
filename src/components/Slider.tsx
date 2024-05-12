@@ -1,33 +1,36 @@
 import Slider from 'react-slick';
-import { useHistory  } from "react-router-dom";
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import "../css/slider.css";
 
 interface SlideProps {
     number: number;
     title: string;
-    description: string;
     imageUrl: string;
-    goToLink: any;
+    description: any;
+    galery: any;
+    width: string;
   }
 
 const SliderContent = ({ 
-    number, title, description, imageUrl, 
-    goToLink, 
+  number, title, description, imageUrl, galery, width
 }: SlideProps) => (
+  <div>
     <div 
-        className="slider__content" 
-        onClick={goToLink}
+        className={`slider__content mb:flex-col ${width}`} 
     >
       <div className="slider__text">
-        <h3>{title}</h3>
-        <p className='mb:hidden'>{description}</p>
+        <h3 className='pb-5'>{title}</h3>
+        {description}
       </div>
       <figure className="slider__image">
         <img src={imageUrl} alt={`Slide ${number}`} />
       </figure>
     </div>
+
+    <div>
+     {galery}
+    </div>
+  </div>
   );
 
 const MySlider = ({ slides }: {slides: SlideProps[]}) => {
@@ -36,14 +39,8 @@ const MySlider = ({ slides }: {slides: SlideProps[]}) => {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
     };
-
-    const history = useHistory();
-    const goToLink = (link: string) => history.push(link);
-
+    const width = slides.length > 1 ? 'w-[85%]' : 'mb:mx-10';
     return (
         <Slider {...settings}>
           {slides.map((slide: any) => (
@@ -53,7 +50,8 @@ const MySlider = ({ slides }: {slides: SlideProps[]}) => {
                 title={slide.title}
                 description={slide.description}
                 imageUrl={slide.imageUrl}
-                goToLink={() => goToLink(slide.link)}
+                galery={slide.galery}
+                width={width}
             />
           ))}
         </Slider>

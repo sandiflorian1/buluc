@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Homepage from "./pages/Homepage";
 import Contact from './pages/Contact';
 import Despre from './pages/Despre';
-import Spectacol from './pages/Spectacol';
+import Spectacole from './pages/Spectacole';
 import Proiecte from './pages/Proiecte';
 import Blog from './pages/Blog';
 import Sustine from './pages/Sustine';
@@ -21,7 +21,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Homepage} />
         <Route path="/culise" component={Despre} />
-        <Route path="/spectacol-dinIntamplare" component={Spectacol}  />
+        <Route path="/spectacole" component={Spectacole}  />
         <Route path="/proiecte" component={Proiecte} />
         <Route path="/gazeta" component={Blog} exact/>
         <Route path="/gazeta/buna-dimineata-la-cafeluta" component={Cafeluta} />
@@ -43,23 +43,16 @@ export default App;
 
 const sufragetieActivities = [
   {
-    id: "improshow",
-    text: "improshow",
-    link: '/improshow',
-    description: "blabla"
-  },
-
-  {
     id: "concerte",
-    text: "concerte",
+    text: "serate",
     link: '/concerte',
-    description: "blabla"
+    description: "blabla serate bla bla serate blabla heiiiii si aici am nevoie de un text mai lung"
   },
   {
     id: "teatru",
     text: "teatru",
-    link: '/spectacol-dinIntamplare',
-    description: "blabla"
+    link: '/spectacole',
+    description: "blabla teatru niste text mai lung pentru a descrie sectiunea teatru, bla bla, inca cateva cuvinte ca tre sa testez cum arata textul asta mai lung"
   },
 ];
 

@@ -193,7 +193,7 @@ export default function ChallengeYourself () {
 			</section>
 
       <section id="traineri">
-				<div className="w-full mt-40 flex flex-column items-center">
+				<div className="w-full mt-40 flex flex-col items-center">
             <h3 className="title font-bold text-orange">
               .traineri
             </h3>

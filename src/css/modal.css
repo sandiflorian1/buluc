@@ -1,0 +1,17 @@
+.backdrop.show {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.content {
+    background-color: black;
+}

@@ -16,7 +16,7 @@ export default function Homepage (props: IHomepageProps) {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
     // tl.fromTo([backgroundRef.current], {  opacity: 0 }, {  opacity: 1, duration: 1  });
-    tl.fromTo([navbarRef.current], {  y: "-200px", duration: 1 }, {  y: 0, duration: 1, delay: 5  });
+    tl.fromTo([navbarRef.current], {  y: "-200px", duration: 1 }, {  y: 0, duration: 1, delay: 3  });
 
     return () => {
       tl.kill();
