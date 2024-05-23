@@ -7,8 +7,8 @@ interface SlideProps {
     title: string;
     imageUrl: string;
     description: any;
-    galery: any;
-    width: string;
+    galery?: any;
+    width?: string;
   }
 
 const SliderContent = ({ 
