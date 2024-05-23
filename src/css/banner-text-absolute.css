@@ -35,6 +35,7 @@
     height: 100%;
 }
 
+
 .banner-text-absolute .image.left {
     margin-left: auto;
 }
@@ -42,3 +43,26 @@
 .banner-text-absolute .image.right {
     margin-right: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .banner-text-absolute .text-wrapper {
+        position: inherit;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-text-absolute .image {
+        margin: 0 auto;
+        height: 100vw;;
+    }
+    
+    .text-wrapper.left {
+        left: 0;
+    }
+    
+    .text-wrapper.right {
+        right: 0;
+    }
+  }
