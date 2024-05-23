@@ -28,8 +28,7 @@ export default function Concerte(props: IConcerteProps) {
     <MainLayout>
       <div className="container pt-20" ref={ref}>
         <div className="pb-20 mb:w-[100vw]">
-          <Slider slides={slides}>
-          </Slider>
+          <Slider slides={slides} />
         </div>
       </div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />

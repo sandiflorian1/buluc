@@ -28,8 +28,7 @@ export default function Spectacole(props: ISpectacoleProps) {
     <MainLayout>
       <div className="container pt-20" ref={ref}>
         <div className="pb-20 mb:w-[100vw]">
-          <Slider slides={slides}>
-          </Slider>
+          <Slider slides={slides} />
         </div>
         {/* <a href="/sufragerie" className="text-purple-600 hover:text-purple-500 underline">👈 Înapoi in sufragerie</a> */}
       </div>
