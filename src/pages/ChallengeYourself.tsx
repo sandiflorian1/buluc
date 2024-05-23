@@ -202,8 +202,7 @@ export default function ChallengeYourself () {
         </div>
       </div>
 
-      <a aria-label="Chat on WhatsApp" href="https://wa.me/1XXXXXXXXXX"> 
-      <img alt="Chat on WhatsApp" src="WhatsAppButtonGreenLarge.png" />
+      <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/1XXXXXXXXXX"> 
       </a>
 
 

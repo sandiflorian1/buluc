@@ -12,14 +12,14 @@ export default function Spectacole(props: ISpectacoleProps) {
   const [currentImage, setcurrentImage] = useState(false);
   const ref  = useRef<HTMLImageElement | null>(null);
 
-  const onImageClick = (image:any) => {
+  const onImageClick = (image: any) => {
     setcurrentImage(image);
     setModalOpen(true);
   }
 
   useEffect(() => {
     const images = ref.current?.querySelectorAll('.galery img');
-    images?.forEach((image) => {
+    images?.forEach((image: any) => {
       image.addEventListener('click', () => (onImageClick(image?.src)))
     })
   })

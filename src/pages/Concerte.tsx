@@ -19,7 +19,7 @@ export default function Concerte(props: IConcerteProps) {
 
   useEffect(() => {
     const images = ref.current?.querySelectorAll('.galery img');
-    images?.forEach((image) => {
+    images?.forEach((image: any) => {
       image.addEventListener('click', () => (onImageClick(image?.src)))
     })
   })
