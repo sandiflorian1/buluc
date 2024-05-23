@@ -8,9 +8,10 @@ type TitleBannerType = {
   text?: string,
   colorText?: string,
   images?: string[],
+  fullScreen?: boolean,
 }
 
-export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, colorText }: TitleBannerType) {
+export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, colorText, fullScreen }: TitleBannerType) {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const settings = {
     slidesToShow: 1,
@@ -22,8 +23,8 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
 };
 
   return (
-    <div className={`w-screen relative ${images && 'has-slider'}`}>
-      <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] z-[-1]" style={{ backgroundImage: `url(${bgBluredImg})`, filter: "blur(10px)" }} />
+    <div className={`${fullScreen && 'w-screen'} relative ${images && 'has-slider'}`}>
+      {bgBluredImg && <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] z-[-1]" style={{ backgroundImage: `url(${bgBluredImg})` }} />}
 
       <div className="px-[20vw] py-[5vw] mb:px-[10vw]">
         <div className="img-banner relative overflow-hidden" style={{ backgroundImage: `url(${bgImg})` }}>

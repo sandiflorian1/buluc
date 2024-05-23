@@ -1,0 +1,44 @@
+.banner-text-absolute {
+    position: relative;
+}
+
+.banner-text-absolute .text-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    top: 0;
+}
+
+.text-wrapper.left {
+    left: 0;
+}
+
+.text-wrapper.right {
+    right: 0;
+}
+
+
+.banner-text-absolute .text {
+    background-color: rgba(255, 255, 255, 0.707);
+    border-radius: 1.5rem;
+    padding: 20px;
+}
+
+.banner-text-absolute .image {
+    width: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.5rem;
+    height: 100%;
+}
+
+.banner-text-absolute .image.left {
+    margin-left: auto;
+}
+
+.banner-text-absolute .image.right {
+    margin-right: auto;
+}

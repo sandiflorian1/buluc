@@ -13,7 +13,9 @@ import MenuPage from "./pages/MenuPage";
 import Party from "./pages/Party";
 import Office from "./pages/Office";
 import Cafeluta from './pages/Cafeluta';
+import BlogZoomtalks from './pages/BlogZoomtalks';
 import IMAGES from "./assets/Images";
+import Experience from './pages/Experience';
 
 const App = () => {
   return (
@@ -24,7 +26,8 @@ const App = () => {
         <Route path="/spectacole" component={Spectacole}  />
         <Route path="/proiecte" component={Proiecte} />
         <Route path="/gazeta" component={Blog} exact/>
-        <Route path="/gazeta/buna-dimineata-la-cafeluta" component={Cafeluta} />
+        <Route path="/gazeta-buna-dimineata-la-cafeluta" component={Cafeluta} />
+        <Route path="/gazeta-zoomtalks" component={BlogZoomtalks} />
         <Route path="/sustine" component={Sustine} />
         <Route path="/contact" component={Contact} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />
@@ -34,6 +37,7 @@ const App = () => {
         <Route path="/menu-challenge-yourfelf" render={(props) => <MenuPage {...props} options={challengeActivities} />} />
         <Route path="/party" component={Party} />
         <Route path="/office" component={Office} />
+        <Route path="/experience" component={Experience} />
       </Switch>
     </Router>
     );

@@ -16,6 +16,9 @@ const IMAGES = {
     echipaAndreeaIstrate: new URL('/src/assets/images/culise/echipa/andreea-istrate.png', import.meta.url).href,
     echipaCezarStoica: new URL('/src/assets/images/culise/echipa/cezar-stoica.png', import.meta.url).href,
     echipaAlexandraFlorian: new URL('/src/assets/images/culise/echipa/alexandra.png', import.meta.url).href,
+    team: new URL('/src/assets/images/culise/echipa/team.jpg', import.meta.url).href,
+    teamBlur: new URL('/src/assets/images/culise/echipa/team-blur.png', import.meta.url).href,
+
     //parteneri
     partener0: new URL('/src/assets/images/culise/parteneri/0.png', import.meta.url).href,
     partener1: new URL('/src/assets/images/culise/parteneri/1.png', import.meta.url).href,
@@ -35,6 +38,22 @@ const IMAGES = {
     party: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     office: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
     challengeYourself: new URL('/src/assets/images/challenge/challenge-yourself/challenge.png', import.meta.url).href,
+    CYImage1: new URL('/src/assets/images/challenge/challenge-yourself/image1.jpeg', import.meta.url).href,
+    CYImage2: new URL('/src/assets/images/challenge/challenge-yourself/image2.jpeg', import.meta.url).href,
+    CYImage3: new URL('/src/assets/images/challenge/challenge-yourself/image3.jpeg', import.meta.url).href,
+    CYImage4: new URL('/src/assets/images/challenge/challenge-yourself/image4.jpeg', import.meta.url).href,
+    CYImage5: new URL('/src/assets/images/challenge/challenge-yourself/image5.jpeg', import.meta.url).href,
+    CYImage6: new URL('/src/assets/images/challenge/challenge-yourself/image6.jpeg', import.meta.url).href,
+    CYImage8: new URL('/src/assets/images/challenge/challenge-yourself/image8.jpeg', import.meta.url).href,
+
+    Show1: new URL('/src/assets/images/challenge/challenge-yourself/show1.jpeg', import.meta.url).href,
+    Show2: new URL('/src/assets/images/challenge/challenge-yourself/show2.jpeg', import.meta.url).href,
+    Show3: new URL('/src/assets/images/challenge/challenge-yourself/show3.jpeg', import.meta.url).href,
+    Show4: new URL('/src/assets/images/challenge/challenge-yourself/show4.jpeg', import.meta.url).href,
+    Show5: new URL('/src/assets/images/challenge/challenge-yourself/show5.jpeg', import.meta.url).href,
+    Show6: new URL('/src/assets/images/challenge/challenge-yourself/show6.jpeg', import.meta.url).href,
+    Show7: new URL('/src/assets/images/challenge/challenge-yourself/show7.jpeg', import.meta.url).href,
+
 
     // concerte
     jazzAnadi1: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi1.jpeg', import.meta.url).href,
@@ -72,6 +91,11 @@ const IMAGES = {
     flashmob2: new URL('/src/assets/images/proiecte/flashmob2.jpg', import.meta.url).href,
     flashmob3: new URL('/src/assets/images/proiecte/flashmob3.jpg', import.meta.url).href,
     doact: new URL('/src/assets/images/proiecte/doact.jpg', import.meta.url).href,
+
+    //gazeta
+    zoomtalks: new URL('/src/assets/images/gazeta/zoomtalks.jpg', import.meta.url).href,
+    people: new URL('/src/assets/images/gazeta/people.jpg', import.meta.url).href,
+
 }
 
 export default IMAGES;

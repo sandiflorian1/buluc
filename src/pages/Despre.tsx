@@ -17,8 +17,8 @@ const MisiuneSection: React.FC = () => {
       <TitleBanner 
         title="misiune"
         text={MisiuneText}
-        bgBluredImg={IMAGES.sufrageria}
-        bgImg={IMAGES.sufrageria2}
+        bgBluredImg={IMAGES.teamBlur}
+        bgImg={IMAGES.team}
         colorText="white"
       />
     </div>
@@ -34,6 +34,7 @@ const LocatieSection: React.FC = () => {
         colorText="white"
         bgBluredImg={IMAGES.sufrageria}
         images={[IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6]}
+        fullScreen
       />
     </div>
   );

@@ -31,7 +31,7 @@ export default function Homepage (props: IHomepageProps) {
 
       <div className="h-screen w-screen overflow-hidden page">
         <div ref={backgroundRef} className="h-screen bg-center bg-cover flex justify-center items-center">
-            <div ref={defRef} className='mx-[15vw]'>
+            <div ref={defRef} className='mx-[30vw]'>
               <Typewriter text={text} speed={17} className='text-xl mb:text-5xl' />
             </div>
         </div>

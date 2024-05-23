@@ -22,7 +22,7 @@ export default function Sectacole(props: ISectacoleProps) {
   return (
     <MainLayout>
       <div className="my-20">
-        {slides.map(({number, title, description, goToLink, imageUrl, images, imageWidths}) =>  {
+        {projects.map(({number, title, description, goToLink, imageUrl, images, imageWidths}) =>  {
            const ref = useRef(null);
            const isInView = useInView(ref, { once: true, amount: 0.1 });
            const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -63,13 +63,13 @@ export default function Sectacole(props: ISectacoleProps) {
                   <Slider {...settings}>
                     {images.map((img) => (
                       <div className="w-[40vw] h-[38vh]" key={img}>
-                        <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
+                        <div className="h-full image-cover" style={{ backgroundImage: `url(${img})` }} />
                       </div>
                     ))}
                   </Slider>
                 </div>
               ) : (
-              <div className={`bg-cover bg-no-repeat bg-center ${imageWidths[1]} mb:h-[50vh] mb:w-full`} style={{ backgroundImage: `url(${imageUrl})` }} />
+              <div className={`image-cover ${imageWidths[1]} mb:h-[50vh] mb:w-full`} style={{ backgroundImage: `url(${imageUrl})` }} />
               )}
             </motion.div>
         )})}
@@ -78,7 +78,7 @@ export default function Sectacole(props: ISectacoleProps) {
   );
 }
 
-const slides = [
+const projects = [
   {
     number: 1,
     title: 'the creARTive generation',
@@ -118,7 +118,7 @@ const slides = [
     number: 5,
     title: 'zoomTalks',
     description: 'ZoomTalks este un proiect cultural apărut în pandemie din dorința de a oferi liceenilor pasionați de teatru și film o viziune asupra facultăților de teatru din România.',
-    imageUrl: '',
+    imageUrl: IMAGES.zoomtalks,
     goToLink: '/',
     imageWidths: ['w-[45%]', 'w-[55%]'],
   },

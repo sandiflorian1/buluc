@@ -66,7 +66,7 @@ function Navbar() {
             <img 
             src={IMAGES.logo}
             alt="buluc-gif" 
-            className="w-32"/>
+            className="h-[5rem]"/>
           </a>
 
           <ul className='sm:flex justify-end py-6 mb:w-40'>
@@ -139,7 +139,7 @@ const links = [
     name: 'În sufragerie',
   },
   {
-    link: '/menu-challenge-yourfelf',
+    link: '/challenge_yourself',
     name: 'challenge yourself',
   },
   {
