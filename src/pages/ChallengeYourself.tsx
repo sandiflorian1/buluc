@@ -1,39 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import MainLayout from "../components/layouts/MainLayout"; 
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import SimpleSlider from '../components/SimpleSlider';
 import IMAGES from "../assets/Images";
-
-const FadeInViewPortAnimation = ({ children, className, ...props }: any) => {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.5 }}
-      {...props}
-    >
-      {children}
-    </motion.div>
-  );
-};
- 
-const ScaleViewPortAnimation = ({ children, className, ...props }: any) => {
-  return (
-    <motion.div
-      className={className}
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.5 }}
-      {...props}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { FadeInViewPortAnimation, ScaleViewPortAnimation } from "../components/animations/Animations";
 
 export default function ChallengeYourself () {
   return (
@@ -42,17 +14,17 @@ export default function ChallengeYourself () {
         <FadeInViewPortAnimation
           className="py-20"
         >
-          <a href="/experience">
+          <Link to="/experience">
             <h3 className="title font-bold text-orange">
               @The Experience
             </h3>
-          </a>
+          </Link>
 
-          <a href="/office">
+          <Link to="/office">
             <h3 className="title font-bold text-orange">
               @The Office
             </h3>
-          </a>
+          </Link>
         </FadeInViewPortAnimation>
 
         <BannerTextAbsolute
