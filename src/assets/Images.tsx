@@ -54,6 +54,12 @@ const IMAGES = {
     Show6: new URL('/src/assets/images/challenge/challenge-yourself/show6.jpeg', import.meta.url).href,
     Show7: new URL('/src/assets/images/challenge/challenge-yourself/show7.jpeg', import.meta.url).href,
 
+    Office1: new URL('/src/assets/images/challenge/office/office1.jpeg', import.meta.url).href,
+    Office2: new URL('/src/assets/images/challenge/office/office2.jpeg', import.meta.url).href,
+    Office3: new URL('/src/assets/images/challenge/office/office3.jpeg', import.meta.url).href,
+    Office4: new URL('/src/assets/images/challenge/office/office4.jpeg', import.meta.url).href,
+    Office5: new URL('/src/assets/images/challenge/office/office5.jpeg', import.meta.url).href,
+    Office6: new URL('/src/assets/images/challenge/office/office6.jpeg', import.meta.url).href,
 
     // concerte
     jazzAnadi1: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi1.jpeg', import.meta.url).href,
