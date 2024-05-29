@@ -55,7 +55,8 @@
 
     .banner-text-absolute .image {
         margin: 0 auto;
-        height: 100vw;;
+        height: 100vw;
+        width: 85%;
     }
     
     .text-wrapper.left {
