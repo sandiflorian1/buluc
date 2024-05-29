@@ -61,6 +61,16 @@ const IMAGES = {
     Office5: new URL('/src/assets/images/challenge/office/office5.jpeg', import.meta.url).href,
     Office6: new URL('/src/assets/images/challenge/office/office6.jpeg', import.meta.url).href,
 
+    Experience1: new URL('/src/assets/images/challenge/experince/experience1.jpeg', import.meta.url).href,
+    Experience2: new URL('/src/assets/images/challenge/experince/experience2.jpeg', import.meta.url).href,
+    // Experience3: new URL('/src/assets/images/challenge/experince/experience3.jpeg', import.meta.url).href,
+    Experience4: new URL('/src/assets/images/challenge/experince/experience4.jpeg', import.meta.url).href,
+    Experience5: new URL('/src/assets/images/challenge/experince/experience5.jpeg', import.meta.url).href,
+    Experience6: new URL('/src/assets/images/challenge/experince/experience6.jpeg', import.meta.url).href,
+    Experience7: new URL('/src/assets/images/challenge/experince/experience7.jpeg', import.meta.url).href,
+    Experience8: new URL('/src/assets/images/challenge/experince/experience8.jpeg', import.meta.url).href,
+
+
     // concerte
     jazzAnadi1: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi1.jpeg', import.meta.url).href,
     jazzAnadi2: new URL('/src/assets/images/in-sufragerie/concerte/JazzAnadi2.jpeg', import.meta.url).href,

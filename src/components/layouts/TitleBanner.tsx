@@ -1,5 +1,6 @@
 import "../../css/title-banner.css";
 import Slider from 'react-slick';
+import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../animations/Animations";
 
 type TitleBannerType = {
   bgBluredImg?: string, 
@@ -27,7 +28,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
       {bgBluredImg && <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] z-[-1]" style={{ backgroundImage: `url(${bgBluredImg})` }} />}
 
       <div className="px-[20vw] py-[5vw] mb:px-[10vw]">
-        <div className="img-banner relative overflow-hidden" style={{ backgroundImage: `url(${bgImg})` }}>
+        <FadeInViewPortAnimation className="img-banner relative overflow-hidden" style={{ backgroundImage: `url(${bgImg})` }}>
           <div className="absolute top-0 bottom-o right-0 left-0 z-[-1]">
             {images && (
               <Slider {...settings}>
@@ -42,19 +43,19 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
           
           <div className="h-full flex flex-col justify-end">
             {!isMobile &&(<div className="bg-text">
-                <h1 className={`text-${colorText}`}><span className="text-red text-3xl mb:text-[2rem]">.</span>{title}</h1>
+                <h1 className={`text-${colorText}`}>{title}</h1>
                 <p className={`text-${colorText}`}>
                   {text}
                 </p>
               </div>
             )}
           </div>
-        </div>
+        </FadeInViewPortAnimation>
 
         {isMobile && (
           <div className="h-full flex flex-col justify-end">
             <div className="bg-text">
-              <h1><span className="text-red text-3xl mb:text-[2rem]">.</span>{title}</h1>
+              <h1>{title}</h1>
               <p>
                 {text}
               </p>
