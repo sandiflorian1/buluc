@@ -6,8 +6,10 @@ import { FadeInViewPortAnimation, ScaleViewPortAnimation } from "../components/a
 
 export default function Roast() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  const width = isMobile ? '400' : '620';
-  const height = isMobile ? '315' : '415'
+  const isTablet = window.matchMedia("(max-width: 1200px)").matches;
+  const width = isMobile ? '400' : (isTablet ? '360' : '420');
+  const height = isMobile ? '285' : '315'
+
   return (
     <MainLayout className="px-20">
       <div className="w-full mb:px-8 mb:w-[100vw] pt-20">
@@ -52,19 +54,19 @@ export default function Roast() {
         </FadeInViewPortAnimation>
 
         <div className="columns-3 gap-6 mb:columns-1 mb-20">
-          <ScaleViewPortAnimation><img src={IMAGES.roast1} className="rounded-[2rem]"></img> </ScaleViewPortAnimation>
-          <ScaleViewPortAnimation><img src={IMAGES.roast2} className="rounded-[2rem]"></img></ScaleViewPortAnimation>
-          <ScaleViewPortAnimation><img src={IMAGES.roast3} className="rounded-[2rem]"></img></ScaleViewPortAnimation>
+          <ScaleViewPortAnimation><img src={IMAGES.roast1} className="rounded-[2rem] mb:my-4"></img> </ScaleViewPortAnimation>
+          <ScaleViewPortAnimation><img src={IMAGES.roast2} className="rounded-[2rem] mb:my-4"></img></ScaleViewPortAnimation>
+          <ScaleViewPortAnimation><img src={IMAGES.roast3} className="rounded-[2rem] mb:my-4"></img></ScaleViewPortAnimation>
         </div>
 
         <div className="columns-2 gap-6 mb:columns-1 mb-20">
-          <ScaleViewPortAnimation className="flex justify-center">
+          <ScaleViewPortAnimation className="flex justify-center py-4">
             <iframe width={width} height={height}
               src="https://www.youtube.com/embed/23dK88ntwwQ">
             </iframe>
           </ScaleViewPortAnimation>
 
-          <ScaleViewPortAnimation className="flex justify-center">
+          <ScaleViewPortAnimation className="flex justify-center py-4">
             <iframe width={width} height={height}
               src="https://www.youtube.com/embed/3X53YqZo1Fs">
             </iframe>
