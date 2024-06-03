@@ -102,11 +102,30 @@ const IMAGES = {
 
     //proiecte
     creartive: new URL('/src/assets/images/proiecte/creartive.jpg', import.meta.url).href,
+    creative1: new URL('/src/assets/images/proiecte/creative1.jpeg', import.meta.url).href,
+    creative2: new URL('/src/assets/images/proiecte/creative2.jpeg', import.meta.url).href,
+    creative3: new URL('/src/assets/images/proiecte/creative3.jpeg', import.meta.url).href,
+    creative4: new URL('/src/assets/images/proiecte/creative4.jpeg', import.meta.url).href,
     bulling: new URL('/src/assets/images/proiecte/bulling.jpg', import.meta.url).href,
+    roast1: new URL('/src/assets/images/proiecte/roast1.jpeg', import.meta.url).href,
+    roast2: new URL('/src/assets/images/proiecte/roast2.jpeg', import.meta.url).href,
+    roast3: new URL('/src/assets/images/proiecte/roast3.jpeg', import.meta.url).href,
+    roast4: new URL('/src/assets/images/proiecte/roast4.jpeg', import.meta.url).href,
+    roast5: new URL('/src/assets/images/proiecte/roast5.jpeg', import.meta.url).href,
+
     flashmob1: new URL('/src/assets/images/proiecte/flashmob1.jpg', import.meta.url).href,
     flashmob2: new URL('/src/assets/images/proiecte/flashmob2.jpg', import.meta.url).href,
     flashmob3: new URL('/src/assets/images/proiecte/flashmob3.jpg', import.meta.url).href,
     doact: new URL('/src/assets/images/proiecte/doact.jpg', import.meta.url).href,
+    doact1: new URL('/src/assets/images/proiecte/doact1.jpeg', import.meta.url).href,
+    doact2: new URL('/src/assets/images/proiecte/doact2.jpeg', import.meta.url).href,
+    doact3: new URL('/src/assets/images/proiecte/doact3.jpeg', import.meta.url).href,
+    doact4: new URL('/src/assets/images/proiecte/doact4.jpeg', import.meta.url).href,
+    doact5: new URL('/src/assets/images/proiecte/doact5.jpeg', import.meta.url).href,
+    doact6: new URL('/src/assets/images/proiecte/doact6.jpeg', import.meta.url).href,
+    doact7: new URL('/src/assets/images/proiecte/doact7.jpeg', import.meta.url).href,
+    doact8: new URL('/src/assets/images/proiecte/doact8.jpeg', import.meta.url).href,
+
 
     //gazeta
     zoomtalks: new URL('/src/assets/images/gazeta/zoomtalks.jpg', import.meta.url).href,

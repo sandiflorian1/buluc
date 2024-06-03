@@ -10,12 +10,16 @@ import ChallengeYourself from './pages/ChallengeYourself';
 import Improshow from "./pages/Improshow";
 import Concerte from "./pages/Concerte";
 import MenuPage from "./pages/MenuPage";
-import Party from "./pages/Party";
 import Office from "./pages/Office";
 import Cafeluta from './pages/Cafeluta';
 import BlogZoomtalks from './pages/BlogZoomtalks';
 import IMAGES from "./assets/Images";
 import Experience from './pages/Experience';
+import Creative from './pages/Creative';
+import Zoomtalks from "./pages/Zoomtalks";
+import Roast from './pages/Roast';
+import Doact from './pages/Doact';
+
 
 const App = () => {
   return (
@@ -35,9 +39,12 @@ const App = () => {
         <Route path="/concerte" component={Concerte} />
         <Route path="/sufragerie" render={(props) => <MenuPage {...props} options={sufragetieActivities} />} />
         <Route path="/menu-challenge-yourfelf" render={(props) => <MenuPage {...props} options={challengeActivities} />} />
-        <Route path="/party" component={Party} />
         <Route path="/office" component={Office} />
         <Route path="/experience" component={Experience} />
+        <Route path="/thecreativegeneration" component={Creative} />
+        <Route path="/roast" component={Roast} />
+        <Route path="/doact" component={Doact} />
+        <Route path="/zoomtalks" component={Zoomtalks} />
       </Switch>
     </Router>
     );

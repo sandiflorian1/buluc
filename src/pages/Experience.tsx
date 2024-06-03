@@ -25,10 +25,11 @@ const Experience: React.FC = () => {
       <FadeInViewPortAnimation>
         <TitleBanner
           title="@The Experience"
-          text={"The Challenge Yourself @EXPERIENCE - este o călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
+          text={"O călătorie artisticăa unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
           bgBluredImg={IMAGES.Experience1}
           bgImg={IMAGES.Experience2}
           colorText="white"
+          textClass="text-bg"
         />
       </FadeInViewPortAnimation>
 
@@ -49,7 +50,7 @@ const Experience: React.FC = () => {
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
           <div className="col-start-1 col-end-3 mb:col-end-7">
             <h4 className="title pb-4 text-red">
-              Pentru cine este?
+              PENTRU CINE ESTE?
             </h4>
             <ul className="list-disc pl-8">
               <li>pentru cei care competiția este ghidată de adrenalină</li>
@@ -161,7 +162,7 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20">
+      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-4">
         <h4 className="title pb-4 text-orange">
           Cum mă înscriu?
         </h4>
@@ -169,9 +170,9 @@ const Experience: React.FC = () => {
       </FadeInViewPortAnimation>
 
       <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20">
-        <h1 className="title pb-4 text-orange text-center">
+        <h4 className="title pb-4 text-orange">
           LOCURI LIMITATE
-        </h1>
+        </h4>
       </FadeInViewPortAnimation>
 
     </MainLayout>

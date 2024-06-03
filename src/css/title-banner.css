@@ -11,6 +11,12 @@
     padding: 1.5vw 3vw;
 }
 
+.text-bg {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6909357492997199) 62%, rgba(4, 2, 2, 0.07749037114845936) 100%);
+    padding: 12px;
+    border-radius: 1.5rem;
+}
+
 .has-slider .bg-text {
     
 }
