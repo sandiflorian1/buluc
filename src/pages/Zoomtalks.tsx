@@ -18,12 +18,12 @@ export default function Doact() {
         </BannerTextAbsolute>
 
         <ScaleViewPortAnimation className="columns-2 mb:columns-1 gap-8 mb-20">
-          <div>
+          <div className="bg-white br p-6">
             <p>
               Fiind o comunitate foarte implicată, ulterior a apărut ZoomClass - care avea în centrul atenției workshop-uri de dezvoltare personală prin teatru, organizate atât fizic, cât și online cu adolescenți din diferite orașe ale României.
             </p>
           </div>
-          <div>
+          <div className="bg-white br p-6">
             <p>
               În prezent proiectul „ZoomTalks” generează conținut educațional online pe Instagram cu informații despre teatru, dar și despre diferite proiecte culturale sau educaționale pentru adolescenți.
             </p>

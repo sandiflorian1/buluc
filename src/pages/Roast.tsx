@@ -16,7 +16,7 @@ export default function Roast() {
         <BannerTextAbsolute
           imageURL={IMAGES.bulling}
           direction="left"
-          className="h-[30vw] pb-20 mb:h-auto"
+          className="h-[35vw] pb-20 mb:h-auto"
           title="Să Luăm Bullying-ul la Roast"
         >
           <p className="">
@@ -25,7 +25,7 @@ export default function Roast() {
         </BannerTextAbsolute>
 
         <FadeInViewPortAnimation className="grid grid-cols-2 mb:grid-cols-1 gap-8 mb-20">
-          <div>
+          <div className="bg-white br p-6">
             <p className="pb-4">
               Ne-am gândit să avem o abordare diferită a subiectului, așa că am pus în lumină două subiecte actuale cu care un adolescent se întâlnește în viața de zi cu zi. Principalul subiect este <span className="text-orange">bullying-ul</span> în lumea adolescenților și al doilea subiect este  <span className="text-orange">roast-ul</span>
               , un fenomen venit din Statele Unite ale Americii care face o trecere fină între insultă și umor.
@@ -47,7 +47,7 @@ export default function Roast() {
           <div className="overflow-hidden">
             <SimpleSlider
               images={[IMAGES.roast4, IMAGES.roast5]}
-              className="w-[30vw] h-[30vw] br overflow-hidden"
+              className="w-[30vw] h-[32vw] br overflow-hidden"
             ></SimpleSlider>
           </div>
 

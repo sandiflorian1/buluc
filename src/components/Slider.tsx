@@ -16,7 +16,7 @@ const SliderContent = ({
 }: SlideProps) => (
   <div>
     <div
-      className={`slider__content shadow-lg mb:flex-col ${width}`}
+      className={`slider__content shadow-lg mb:flex-col bg-white ${width}`}
     >
       <div className="slider__text">
         <h3 className='pb-5'>{title}</h3>

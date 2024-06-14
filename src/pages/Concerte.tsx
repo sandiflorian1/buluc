@@ -33,10 +33,6 @@ export default function Concerte(props: IConcerteProps) {
           <Slider slides={slides} />
         </FadeInAnimation>
       </div>
-
-      <div className='flex justify-center'>
-        <Link to="/sufragerie" className="text-purple-600 hover:text-purple-500 underline text-center w-full">👈 Înapoi in sufragerie</Link>
-      </div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>
   );

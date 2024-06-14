@@ -1,6 +1,5 @@
 import MainLayout from "../components/layouts/MainLayout";
-import { useRef, useEffect } from 'react';
-import { gsap } from "gsap";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import SimpleSlider from '../components/SimpleSlider';
 import IMAGES from "../assets/Images";
@@ -12,7 +11,7 @@ export interface IOfficeProps { }
 const Office: React.FC = () => {
   return (
     <MainLayout title="The Office">
-      <div>
+      <div className="pt-10">
         <BannerTextAbsolute
             imageURL={IMAGES.Office6}
             direction="left"
@@ -31,7 +30,7 @@ const Office: React.FC = () => {
             ></SimpleSlider>
           </div>
 
-          <div className="col-end-7 col-span-2 mb:col-span-7 my-auto">
+          <div className="col-end-7 col-span-2 mb:col-span-7 my-auto bg-white p-6 br">
             <p className="">
               În cadrul acestui workshop dinamic și interactiv, participanții vor fi conduși printr-o serie de exerciții și activități teatrale care îi vor provoca să-și exploreze și să-și depășească limitele, să-și îmbunătățească abilitățile de comunicare și să-și dezvolte încrederea în sine.
             </p>
@@ -39,7 +38,7 @@ const Office: React.FC = () => {
         </FadeInViewPortAnimation>
 
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
-          <div className="col-start-1 col-end-3 mb:col-end-7">
+          <div className="col-start-1 col-end-3 mb:col-end-7 bg-white p-6 br">
             <h4 className="title pb-4 text-red">
               Obiective:
             </h4>
@@ -52,7 +51,7 @@ const Office: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-end-7 col-span-4 mb:col-span-7">
+          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white p-6 br">
             <h4 className="title pb-4 text-red">
               Ce beneficii are acest workshop:
             </h4>
@@ -72,7 +71,7 @@ const Office: React.FC = () => {
           </div>  
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="pb-20">
+        <FadeInViewPortAnimation className="mb-20 bg-white p-6 br">
             <h3 className="text-red">
               Traineri
             </h3>
@@ -82,7 +81,7 @@ const Office: React.FC = () => {
 
         <FadeInViewPortAnimation>
           <div className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
-            <div className="col-start-1 col-end-7">
+            <div className="col-start-1 col-end-7 bg-white p-6 br">
               <h4 className="text-red">
                 Unde se întâmpla?
               </h4>
@@ -90,22 +89,43 @@ const Office: React.FC = () => {
               <p> Ne adaptăm în funcție de nevoile companiei tale, dar dacă vrei să ieși din atmosfera de birou și să te deconectezi pe bune - poți alege varianta de a ne strânge buluc la noi acasă. </p>
             </div>
 
-            <div className="col-start-1 col-end-5 mb:col-end-7">
+            <div className="col-start-1 col-end-3 mb:col-end-7 bg-white p-6 br">
               <p>
                 <span className="text-orange pr-2"> la noi ACASĂ: în sufrageria de pe str. Madrid 4.</span>
                 Într-o casă din 1920 cu trăsături burgheze în inima Capitalei amplasată în zona Dorobanți într-o vilă interbelică. O locație de care te vei îndrăgosti așa cum am făcut și noi prima dată când i-am pășit pragul. Un spațiu creativ si versatil, ce dispune şi de o terasa exterioară unde ne adunăm buluc seară de seară.
               </p>
             </div>
 
-            <div className="col-end-7 col-span-2 mb:col-span-7">
+            <div className="col-start-3 col-span-2 mb:col-span-7 bg-white p-6 br">
               <p>
                 <span className="text-orange pr-2"> la noi ACASĂ:</span>
                 la birou, în cadrul companiei tale
               </p>
+            </div>
+
+            <div className="col-end-7 col-span-2 mb:col-span-7 bg-white p-6 br">
               <p className="text-orange">in teambuilding</p>
             </div>
           </div>
         </FadeInViewPortAnimation>
+
+        <div className="w-full flex justify-center pb-20">
+          <div className="whatsapp-btn mr-10">
+            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40743760430" className="flex">
+              <FaWhatsapp size='30px' className="pr-2" /> 
+              <p className="pt-1">Chat on WhatsApp</p>
+            </a>
+          </div>
+
+          <div className="bg-red email-btn">
+            <a href="mailto:someone@example.com" className="flex">
+              <FaEnvelope size='30px' className="pr-2" /> 
+              <p className="pt-1">Trimite-ne un email</p>
+            </a>
+          </div>
+
+        </div>
+
       </div>
     </MainLayout>
   );

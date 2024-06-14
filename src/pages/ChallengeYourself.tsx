@@ -1,4 +1,4 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import MainLayout from "../components/layouts/MainLayout";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
@@ -7,10 +7,12 @@ import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, ScaleViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 
 export default function ChallengeYourself() {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   return (
     <MainLayout noPadding>
       <FadeInAnimation className="w-full py-20">
-        <h1 className="text-center text-[6.5vw]">
+        <h1 className="text-center text-[6.5vw] mb:text-[8.5vw]">
           Challenge Yourself
         </h1>
         <h3 className="text-center">
@@ -38,7 +40,7 @@ export default function ChallengeYourself() {
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage3}
           direction="left"
-          className="h-[25vw] pb-20 mb:h-auto mx-[12%]"
+          className="h-[32vw] pb-20 mb:h-auto mx-[12%]"
           title="Unde se întâmplă?"
         >
           <p className="">
@@ -46,7 +48,7 @@ export default function ChallengeYourself() {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 pb-20 mx-[12%]">
+        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mx-[12%] mb:mx-[6%] bg-white br p-8">
           <div className="">
             <h4 className="title pb-4 text-red">
               Unde și când ne pot fi de folos tehnicile teatrale?
@@ -110,39 +112,36 @@ export default function ChallengeYourself() {
 
 
         <FadeInViewPortAnimation className="mb-20">
-          <div className="w-[100vw] relative">
+          <div className="w-[100vw] relative mb:w-full">
             <SimpleSlider
-              images={[IMAGES.Show1, IMAGES.Show2, IMAGES.Show3, IMAGES.Show4, IMAGES.Show5, IMAGES.Show6, IMAGES.Show7]}
+              images={[IMAGES.Show4, IMAGES.Show2, IMAGES.Show3, IMAGES.Show1, IMAGES.Show5, IMAGES.Show7, IMAGES.Show8, IMAGES.Show9]}
               className="w-[100vh] h-[80vh] overflow-hidden"
             ></SimpleSlider>
-
-            <div className="absolute bottom-0 p-10">
-              <h4 className="title pb-4 text-white">
+            <div className="absolute w-[30vw] bottom-0 left-[20vw] pb-20 mb:relative mb:w-full mb:left-0 mb:bg-white mb:p-8">
+              <h4 className="title pb-4 text-white mb:text-red">
                 Ce urmează după cele 3 luni de curs?
               </h4>
 
-              <p className="pb-4 text-white">
+              <p className="pb-4 text-white mb:text-black">
                 La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="text-orange">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
               </p>
 
-              <p className="pb-4 text-white">Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
+              <p className="pb-4 text-white mb:text-black">Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
             </div>
 
           </div>
-
-          <div className="overflow-hidden">
-
-          </div>
-
         </FadeInViewPortAnimation>
 
         <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
+          <div className="bg-white p-10">
           <h3 className="text-red">
             Traineri
           </h3>
 
           <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: Mella şi Robert. Ei au terminat Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
 
+          </div>
+         
           <div id="members" className="flex mb:inline gap-10 justify-center my-10">
             <TeamMemberCard
               key={1}
@@ -160,41 +159,31 @@ export default function ChallengeYourself() {
         </FadeInViewPortAnimation>
 
         <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
-          <h4 className="title text-red pb-4">
+          <h4 className="title text-red px-10">
             Alege varianta care ți se potrivește și contactează-ne.
           </h4>
 
-          <div className="flex mb:inline gap-10 justify-center my-4">
-            <ScaleViewPortAnimation className="p-10 border-[20px] border-orange rounded-full mb:mb-10">
-              <h5 className="text-center font-bold pb-4">
-                VARIANTA 1 - PLATA LUNARA
-              </h5>
-              <p className="text-center">
-                4 sedinte/ luna
-              </p>
-              <p className="text-center">
-                o sedinta/ saptamana
-              </p>
+          <div className="flex mb:inline gap-10 justify-center my-4 mx-auto">
+            <ScaleViewPortAnimation className="p-10 bg-orange rounded-full mb:mb-10">
+              <h5 className="text-center text-white"> VARIANTA 1 </h5>
+              <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
+              <p className="text-center text-white"> 4 sedinte/ luna </p>
+              <p className="text-center text-white"> o sedinta/ saptamana </p>
             </ScaleViewPortAnimation>
 
-            <ScaleViewPortAnimation className="p-10 border-[20px] border-red rounded-full mx-[12%]">
-              <h5 className="text-center font-bold pb-4">
-                VARIANTA 2 - PLATA INTEGRALA MODUL
-              </h5>
+            <ScaleViewPortAnimation className="p-10 bg-red rounded-full mb:mb-10">
+              <h5 className="text-center text-white"> VARIANTA 2 </h5>
+              <h5 className="text-center text-white pb-4"> PLATA INTEGRALA MODUL </h5>
 
-              <p className="text-center">
-                12 sedinte/ 3 luni
-              </p>
-              <p className="text-center">
-                o sedinta/ saptamana
-              </p>
+              <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
+              <p className="text-center text-white"> o sedinta/ saptamana </p>
             </ScaleViewPortAnimation>
 
           </div>
           <p className="text-center text-black">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varinata aleasa</p>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="pb-20 mx-[12%]">
+        <FadeInViewPortAnimation className="mb-20 mx-[12%] bg-white br p-10">
           <div className="grid grid-cols-1 mb:grid-cols-1 gap-8">
             <div>
               <h4 className="text-orange">
@@ -221,14 +210,20 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <div className="w-full flex justify-center">
-          <div className="bg-green whatsapp-btn">
+        <div className="w-full flex justify-center pb-20">
+          <div className="whatsapp-btn mr-10">
             <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40743760430" className="flex">
               <FaWhatsapp size='30px' className="pr-2" /> 
               <p className="pt-1">Chat on WhatsApp</p>
             </a>
           </div>
 
+          <div className="bg-red email-btn">
+            <a href="mailto:someone@example.com" className="flex">
+              <FaEnvelope size='30px' className="pr-2" /> 
+              <p className="pt-1">Trimite-ne un email</p>
+            </a>
+          </div>
         </div>
 
       </div>

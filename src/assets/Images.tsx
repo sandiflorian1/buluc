@@ -49,8 +49,8 @@ const IMAGES = {
     CYImage8: new URL('/src/assets/images/challenge/challenge-yourself/image8.jpeg', import.meta.url).href,
     CYImage9: new URL('/src/assets/images/challenge/challenge-yourself/image9.jpeg', import.meta.url).href,
     CYImage10: new URL('/src/assets/images/challenge/challenge-yourself/image10.jpeg', import.meta.url).href,
-    CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.jpg', import.meta.url).href,
-    CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.jpg', import.meta.url).href,
+    CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.jpeg', import.meta.url).href,
+    CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.jpeg', import.meta.url).href,
 
 
     Show1: new URL('/src/assets/images/challenge/challenge-yourself/show1.jpeg', import.meta.url).href,
@@ -58,8 +58,10 @@ const IMAGES = {
     Show3: new URL('/src/assets/images/challenge/challenge-yourself/show3.jpeg', import.meta.url).href,
     Show4: new URL('/src/assets/images/challenge/challenge-yourself/show4.jpeg', import.meta.url).href,
     Show5: new URL('/src/assets/images/challenge/challenge-yourself/show5.jpeg', import.meta.url).href,
-    Show6: new URL('/src/assets/images/challenge/challenge-yourself/show6.jpeg', import.meta.url).href,
     Show7: new URL('/src/assets/images/challenge/challenge-yourself/show7.jpeg', import.meta.url).href,
+    Show8: new URL('/src/assets/images/challenge/challenge-yourself/show8.jpeg', import.meta.url).href,
+    Show9: new URL('/src/assets/images/challenge/challenge-yourself/show9.jpeg', import.meta.url).href,
+    
 
     Office1: new URL('/src/assets/images/challenge/office/office1.jpeg', import.meta.url).href,
     Office2: new URL('/src/assets/images/challenge/office/office2.jpeg', import.meta.url).href,
@@ -116,6 +118,7 @@ const IMAGES = {
     creative3: new URL('/src/assets/images/proiecte/creative3.jpeg', import.meta.url).href,
     creative4: new URL('/src/assets/images/proiecte/creative4.jpeg', import.meta.url).href,
     bulling: new URL('/src/assets/images/proiecte/bulling.jpg', import.meta.url).href,
+    bullingMB: new URL('/src/assets/images/proiecte/bullingMB.jpeg', import.meta.url).href,
     roast1: new URL('/src/assets/images/proiecte/roast1.jpeg', import.meta.url).href,
     roast2: new URL('/src/assets/images/proiecte/roast2.jpeg', import.meta.url).href,
     roast3: new URL('/src/assets/images/proiecte/roast3.jpeg', import.meta.url).href,

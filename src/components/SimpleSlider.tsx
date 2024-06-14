@@ -9,7 +9,7 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 5000,
   pauseOnHover: true,
 };
 
@@ -19,7 +19,7 @@ export default function SimpleSlider({ images, className }: ISimpleSliderProps) 
     <Slider {...settings}>
       {images.map((img) => (
           <div className={className}>
-            <div className="h-full image-cover br" style={{ backgroundImage: `url(${img})` }} />
+            <div className="h-full image-cover" style={{ backgroundImage: `url(${img})` }} />
           </div>
       ))}
     </Slider>

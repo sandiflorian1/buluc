@@ -1,4 +1,5 @@
 import MainLayout from "../components/layouts/MainLayout";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { useRef, useEffect, Ref } from 'react';
 import { gsap } from "gsap";
 import TitleBanner from "../components/layouts/TitleBanner";
@@ -30,7 +31,6 @@ const Experience: React.FC = () => {
           bgBluredImg={IMAGES.Experience1}
           bgImg={IMAGES.Experience1}
           colorText="white"
-          // textClass="text-bg"
         />
       </FadeInViewPortAnimation>
 
@@ -39,7 +39,7 @@ const Experience: React.FC = () => {
           imageURL={IMAGES.Experience4}
           direction="left"
           className="h-[35vw] pb-20"
-          title="Ce am pregătit?"
+          title="CE AM PREGĂTIT?"
         >
           <p className="">
             Competitivitatea stă la baza acestei experiențe și te va teleporta direct într-un bootcamp artistic careva îmbina relaxarea cu ateliere de expresie corporală, teatru, activități ce presupun depășirea barierelor, și multă joacă Pe tot parcursul probelor & atelierelor vei aduna puncte care vor conta la finalul călătoriei. Pregătim multe surprize și un podium care abia așteaptă să fie cucerit.
@@ -49,7 +49,7 @@ const Experience: React.FC = () => {
 
       <div className="mx-[12%] mb:mx-6">
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
-          <div className="col-start-1 col-end-3 mb:col-end-7">
+          <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
             <h4 className="title pb-4 text-red">
               PENTRU CINE ESTE?
             </h4>
@@ -61,7 +61,7 @@ const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-end-7 col-span-4 mb:col-span-7">
+          <div className="col-end-7 col-span-4 mb:col-span-7  bg-white br p-6">
             <h4 className="title pb-4 text-red">
               CE ESTE INCLUS
             </h4>
@@ -98,13 +98,13 @@ const Experience: React.FC = () => {
 
       <div className="mx-[12%] mb:mx-6 pb-20">
         <div className="columns-2 gap-10">
-          <SlideViewPortAnimation direction="up" className="pb-6">
+          <SlideViewPortAnimation direction="up" className="p-6 bg-white">
             <h4 className="text-orange">Drumeție cu liv tu visit</h4>
             <p>Împreună cu LIV TU VISIT  - creatori de explorări urbane și experiențe turistice inedite - vom parcurge un traseu pe munții Coziei - cu istorie & legende.</p>
           </SlideViewPortAnimation>
           <SlideViewPortAnimation><img src={IMAGES.Experience9}></img></SlideViewPortAnimation>
           <SlideViewPortAnimation><img src={IMAGES.Experience6}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation className="pt-6">
+          <SlideViewPortAnimation className="p-6 bg-white">
             <h4 className="text-orange">Foc de tabără</h4>
             <p>Ne strângem buluc seara, la foc de tabără, în jurul poveștilor sub cerul înstelat și sub privirile atente ale vârfului Cozia. Un moment de de conectare și de regăsire a simplității și a frumuseții vieții chiar la poalele muntelui.</p>
           </SlideViewPortAnimation>
@@ -184,19 +184,36 @@ const Experience: React.FC = () => {
           </div>
         </FadeInViewPortAnimation>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-4">
-        <h4 className="title pb-4 text-orange">
-          Cum mă înscriu?
-        </h4>
-        <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
+      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 p-4 pb-20">
+        <div className="w-[50%] mb-w[100%] bg-white p-6 br">
+          <h4 className="title pb-4 text-orange">
+            Cum mă înscriu?
+          </h4>
+          <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
+        </div>
       </FadeInViewPortAnimation>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20">
-        <h4 className="title pb-4 text-orange">
+      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-10">
+        <h4 className="title pb-4 text-orange text-center">
           LOCURI LIMITATE
         </h4>
       </FadeInViewPortAnimation>
 
+      <div className="w-full flex justify-center pb-20">
+        <div className="whatsapp-btn mr-10">
+          <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40743760430" className="flex">
+            <FaWhatsapp size='30px' className="pr-2" /> 
+            <p className="pt-1">Chat on WhatsApp</p>
+          </a>
+        </div>
+
+        <div className="bg-red email-btn">
+          <a href="mailto:someone@example.com" className="flex">
+            <FaEnvelope size='30px' className="pr-2" /> 
+            <p className="pt-1">Trimite-ne un email</p>
+          </a>
+        </div>
+      </div>
     </MainLayout>
   );
 };
