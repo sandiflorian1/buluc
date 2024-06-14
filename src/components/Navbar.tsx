@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import { motion, useCycle } from "framer-motion";
 import IMAGES from "../assets/Images";
@@ -57,72 +57,123 @@ function Navbar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const containerRef = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLImageElement | null>(null);
 
-  return(
-    <header id="header" className='sm:flex justify-between w-screen px-[2vw] items-center mb: justify-start shadow-lg'>
+  useEffect(() => {
+    const miniMenu = ref.current?.querySelector('li.has-menu');
+    miniMenu?.addEventListener('mouseover', () => {
+      const menu = miniMenu.querySelector('.menu');
+      if (menu) {
+        menu.style.opacity = 1;
+      }
+    })
+
+    miniMenu?.addEventListener('mouseleave', () => {
+      const menu = miniMenu.querySelector('.menu');
+      if (menu) {
+        menu.style.opacity = 0;
+      }
+    })
+  })
+
+  return (
+    <header ref={ref} id="header" className='sm:flex justify-between w-screen px-[2vw] items-center shadow-lg fixed mb:relative'>
       {!isMobile && (
         <>
           <a href="/">
-            <img 
-            src={IMAGES.logo}
-            alt="buluc-gif" 
-            className="h-[5rem]"/>
+            <img
+              src={IMAGES.logo}
+              alt="buluc-gif"
+              className="h-[5rem]" />
           </a>
 
           <ul className='sm:flex justify-end py-6 mb:w-40'>
-            {links.map(({ link, name }) => (
-              <li key={name} className="px-4 uppercase">
-                <Link 
+            {links.map(({ link, name, miniMenu }) => (
+              <li key={name} className={`px-4 uppercase ${miniMenu && 'has-menu'}`}>
+                <Link
                   to={link}
                   className={`sm:text-sm text-3xl btn-navbar ${pathname.includes(link) ? 'selected' : ''}`}
                 >
                   {name}
                 </Link>
+                {miniMenu &&
+                  <div className="menu opacity-0 shadow-md">
+                    <ul>
+                      {miniMenu.map(({ link, name }) => (
+                        <li key={name} className="px-4 pb-2 capitalize">
+                          <Link
+                            to={link}
+                            className={`sm:text-sm text-3xl btn-navbar ${pathname.includes(link) ? 'selected' : ''}`}
+                          >
+                            {name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>}
               </li>
-              ))}
+            ))}
           </ul>
         </>
-       )}
+      )}
 
-      { isMobile && (
+      {isMobile && (
         <motion.nav
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-        custom={containerRef?.current?.offsetHeight}
-        ref={containerRef}
-      >
-        <div className="mb:flex w-full justify-between">
-          <a href="/">
-            <img 
-            src={IMAGES.logo}
-            alt="buluc-gif" 
-            className="w-32"/>
-          </a>
-          <MenuToggle toggle={() => toggleOpen()} />
-        </div>
-        <motion.div variants={sidebar} />
-        <motion.ul variants={variants1} style={{ display: isOpen ? 'block' : 'none', width: 'fit-content'}} className="p-5">
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+          custom={containerRef?.current?.offsetHeight}
+          ref={containerRef}
+        >
+          <div className="mb:flex w-full justify-between">
+            <a href="/">
+              <img
+                src={IMAGES.logo}
+                alt="buluc-gif"
+                className="w-32" />
+            </a>
+            <MenuToggle toggle={() => toggleOpen()} />
+          </div>
+          <motion.div variants={sidebar} />
+          <motion.ul variants={variants1} style={{ display: isOpen ? 'block' : 'none', width: 'fit-content' }} className="p-5">
             <>
-              {links.map(({link ,name}) => (
-                <motion.li
-                  variants={variants}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  key={name}
-                >
-                  <Link 
-                    to={link}
-                    className={`sm:text-sm text-3xl btn-navbar ${pathname.includes(link) ? 'selected' : ''}`}
+              {links.map(({ link, name, miniMenu }) => (
+                <>
+                  <motion.li
+                    variants={variants}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    key={name}
                   >
-                    {name}
-                  </Link>
-                </motion.li>
+                    <Link
+                      to={link}
+                      className={`btn-navbar capitalize ${pathname.includes(link) ? 'selected' : ''}`}
+                    >
+                      {name}
+                    </Link>
+                  </motion.li>
+                  {miniMenu &&
+                    miniMenu.map(({ link, name }) => (
+                      <motion.li
+                        variants={variants}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        key={name}
+                      >
+                        <Link
+                          to={link}
+                          className={`btn-navbar capitalize ${pathname.includes(link) ? 'selected' : ''}`}
+                        >
+                          {name}
+                        </Link>
+                      </motion.li>
+                    ))}
+                </>
               ))}
             </>
           </motion.ul>
-      </motion.nav>
+        </motion.nav>
       )}
-     
+
     </header>
   );
 }
@@ -141,6 +192,16 @@ const links = [
   {
     link: '/challenge_yourself',
     name: 'challenge yourself',
+    miniMenu: [
+      {
+        link: '/experience',
+        name: ' @The Experience',
+      },
+      {
+        link: '/office',
+        name: '@The Office',
+      },
+    ],
   },
   {
     link: '/proiecte',

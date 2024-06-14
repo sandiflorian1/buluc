@@ -26,10 +26,10 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
 
   return (
     <div className={`${fullScreen && 'w-screen'} relative ${images && 'has-slider'}`}>
-      {bgBluredImg && <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] z-[-1]" style={{ backgroundImage: `url(${bgBluredImg})` }} />}
+      {bgBluredImg && <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] mb:h-[50vw] z-[-1] shadow-lg" style={{ backgroundImage: `url(${bgBluredImg})` }} />}
 
       <div className="px-[20vw] py-[5vw] mb:px-[10vw]">
-        <FadeInViewPortAnimation className="img-banner relative overflow-hidden" style={{ backgroundImage: `url(${bgImg})` }}>
+        <FadeInViewPortAnimation className="img-banner relative overflow-hidden shadow-lg" style={{ backgroundImage: `url(${bgImg})` }}>
           <div className="absolute top-0 bottom-o right-0 left-0 z-[-1]">
             {images && (
               <Slider {...settings}>
@@ -54,7 +54,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
         </FadeInViewPortAnimation>
 
         {isMobile && (
-          <div className="h-full flex flex-col justify-end">
+          <div className="h-full flex flex-col justify-end bg-white mb:p-[5vw] br">
             <div className="bg-text">
               <h1>{title}</h1>
               <p>

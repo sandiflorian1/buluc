@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from "../components/layouts/MainLayout";
 import Modal from "../components/Modal";
 import Slider from '../components/Slider';
 import IMAGES from "../assets/Images";
+import { FadeInAnimation } from "../components/animations/Animations";
 
 export interface IConcerteProps {
 } 
@@ -27,9 +29,9 @@ export default function Concerte(props: IConcerteProps) {
   return (
     <MainLayout>
       <div className="container pt-20" ref={ref}>
-        <div className="pb-20 mb:w-[100vw]">
+        <FadeInAnimation className="mb-20 mb:w-[100vw]">
           <Slider slides={slides} />
-        </div>
+        </FadeInAnimation>
       </div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>
@@ -42,8 +44,8 @@ const Description = () => {
       <p>”All-that-Jazz … and more” este un concept care reunește mai multe genuri muzicale cântate în note de jazz alături de ANADI. O cântăreață extravagantă din anii `20 care a fost văzută cu proprietarul unei case burgheze de pe strada Madrid 4. Ziarele roiau în jurul ideii cum că cei 2 trăiau o poveste de dragoste, în timp ce ea își dorea să ajungă un star și să aibă propriul show. Oamenii o refuzau. Inclusiv el. Lumea întreaga era plina de nu. Lucrurile nu au ieșit cum a vrut ea, dar nici pentru el nu a ieșit prea grozav.  Cine zice ca nu-i și crima o arta? Te aşteaptă o seară de JAZZ reinterpretat alături de ANADI pe 13 Octombrie la 20:00 pe str. Madrid 4</p>
       <p>Evenimentul face parte din proiectul Stagiunea din sufragerie în colaborare cu Carolia Social House.</p>
       <br/>
-      <p>VOCE: ANADI - DIANA OPREA </p>
-      <p>PIAN :  VASI COVE </p>
+      <p><span className='text-orange pr-2'>VOCE:</span> ANADI - DIANA OPREA </p>
+      <p><span className='text-orange pr-2'>PIAN:</span>  VASI COVE </p>
     </div>
   )
 }
@@ -52,8 +54,9 @@ const Description2 = () => {
   return (
     <div>
       <p>Jazz în Sufragerie într-o casă interbelică încărcată de poveste și de mister care a găzduit de-a lungul anilor multe petreceri boierești. Ne strângem #buluc într-un univers completat de note muzicale, atmosfera anilor ‘20 și o experiență care te va învălui încă de la primii pași. Un eveniment ce promite să-ți încânte simțurile și să-ți trezească pasiunea pentru jazz într-un cadru intim și sofisticat. Alături de Sorina Rotaru & Alexandru Olteanu te așteaptă o atmosferă plină de eleganță și rafinament, unde luminile calde și muzica de jazz te vor îndemna să te pierzi în farmecul acestei arte atemporale. </p>
-      <p>VOCE: SORINA ROTARU  </p>
-      <p>PIAN: ALEXANDRU OLTEANU </p>
+      <br/>
+      <p><span className='text-orange pr-2'>VOCE:</span> SORINA ROTARU  </p>
+      <p><span className='text-orange pr-2'>VOCE:</span> ALEXANDRU OLTEANU </p>
     </div>
   )
 }
@@ -61,13 +64,13 @@ const Description2 = () => {
 const SorinaImages1 = [
   IMAGES.jazzSorina1,
   IMAGES.jazzSorina2,
-  IMAGES.jazzSorina5,
   IMAGES.jazzSorina6,
+  IMAGES.jazzSorina8,
 ];
 
 const SorinaImages2 = [
   IMAGES.jazzSorina7,
-  IMAGES.jazzSorina8,
+  IMAGES.jazzSorina5,
   IMAGES.jazzSorina3,
   IMAGES.jazzSorina4,
 ];

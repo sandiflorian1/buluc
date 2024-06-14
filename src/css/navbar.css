@@ -4,24 +4,24 @@
   right: 0;
 }
 
-.dot {
-  position: absolute;
-  top: 40px;
-  left: 30px;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  opacity: 0;
-}
-
 .tab-name {
   font-family: 'Handlee', cursive;
   cursor: pointer;
 }
 
 #header {
-  position: relative;
   z-index: 10;
+}
+
+li.has-menu {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  background-color: white;
+  padding: 0.5rem;
+  z-index: 100;
 }
 
 

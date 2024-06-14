@@ -29,7 +29,7 @@ export default function BannerTextAbsolute({ imageURL, title, children, directio
       className={`banner-text-absolute ${className} mb:h-auto`}
     >
       {direction === 'right' && (
-        <div className={`image ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
+        <div className={`image shadow-lg ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
       )}
 
       <motion.div
@@ -38,17 +38,17 @@ export default function BannerTextAbsolute({ imageURL, title, children, directio
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="text">
-          <h4 className="title pb-4 text-orange">
+        <div className="text shadow-lg">
+          {title && <h4 className="title pb-4 text-orange">
             {title}
-          </h4>
+          </h4>}
 
           {children}
         </div>
       </motion.div>
 
       {direction === 'left' && (
-        <div className={`image ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
+        <div className={`image shadow-lg ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
       )}
     </motion.div>
   );

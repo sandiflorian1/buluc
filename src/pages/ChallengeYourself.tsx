@@ -1,40 +1,34 @@
-import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
-import MainLayout from "../components/layouts/MainLayout"; 
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import MainLayout from "../components/layouts/MainLayout";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import SimpleSlider from '../components/SimpleSlider';
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation, ScaleViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation, ScaleViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 
-export default function ChallengeYourself () {
+export default function ChallengeYourself() {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   return (
-    <MainLayout className="px-20">
+    <MainLayout noPadding>
+      <FadeInAnimation className="w-full py-20">
+        <h1 className="text-center text-[6.5vw] mb:text-[8.5vw]">
+          Challenge Yourself
+        </h1>
+        <h3 className="text-center">
+          curs de dezvoltare persoanal prin tehnici teatrale
+        </h3>
+      </FadeInAnimation>
+
       <div className="w-full mb:px-8 mb:w-[100vw]">
-        <FadeInViewPortAnimation
-          className="py-20"
-        >
-          <Link to="/experience">
-            <h3 className="title font-bold text-orange">
-              @The Experience
-            </h3>
-          </Link>
-
-          <Link to="/office">
-            <h3 className="title font-bold text-orange">
-              @The Office
-            </h3>
-          </Link>
-        </FadeInViewPortAnimation>
-
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage1}
           direction="right"
-          className="h-[30vw] mb-20 mb:h-auto"
+          className="h-[30vw] mb-20 mb:h-auto mx-[12%]"
         >
           <p className="pb-2">
             Challenge Yourself este așa cum spune și numele -
-            <span className="text-orange"> o provocare, o încercare de a te autodepasi, dar și o relaxare activă care are ca scop formarea unei pauze în viețile noastre. </span> 
+            <span className="text-orange"> o provocare, o încercare de a te autodepasi, dar și o relaxare activă care are ca scop formarea unei pauze în viețile noastre. </span>
             Ne întâlnim o dată pe săptămână într-o casă interbelică unde, cu ajutorul tehnicilor teatrale, încercăm să ne deconectăm de la haosul zilnic și să ne conectăm mai mult cu propria persoană.
           </p>
 
@@ -46,7 +40,7 @@ export default function ChallengeYourself () {
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage3}
           direction="left"
-          className="h-[25vw] pb-20 mb:h-auto"
+          className="h-[32vw] pb-20 mb:h-auto mx-[12%]"
           title="Unde se întâmplă?"
         >
           <p className="">
@@ -54,7 +48,7 @@ export default function ChallengeYourself () {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-2 mb:grid-cols-1 gap-8 pb-20">
+        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mx-[12%] mb:mx-[6%] bg-white br p-8">
           <div className="">
             <h4 className="title pb-4 text-red">
               Unde și când ne pot fi de folos tehnicile teatrale?
@@ -63,7 +57,6 @@ export default function ChallengeYourself () {
               Aproape în fiecare moment în care trebuie să lucrăm cu emoția, imaginația și creativitatea, cu noi înșine dar și în relație cu ceilalți.
             </p>
 
-            <p className="pb-2">Mai simplu spus, <span className="text-orange">ne folosesc în fiecare zi:</span></p>
             <ul className="list-disc pl-8">
               <li className="text-red pl">atunci când ne dorim sa fim productivi</li>
               <li className="text-orange">când vrem să avem o gândire pozitivă</li>
@@ -75,10 +68,7 @@ export default function ChallengeYourself () {
             <h4 className="title pb-4 text-red">
               Cum te va schimba acest curs?
             </h4>
-            <p>Aproape în fiecare moment în care trebuie să lucrăm cu emoția, imaginația și creativitatea, cu noi înșine dar și în relație cu ceilalți.
-            </p>
 
-            <p className="pb-4">Mai simplu spus, ne folosesc în fiecare zi:</p>
             <ul className="list-disc pl-8">
               <li>Vei vedea de ce ești capabil cu adevărat prin ascultarea si gestionarea propriului corp;</li>
               <li>Îți vei îmbunătăți încrederea prin gestionarea emoțiilor;</li>
@@ -92,98 +82,112 @@ export default function ChallengeYourself () {
           </div>
         </FadeInViewPortAnimation>
 
-        <div className="grid grid-cols-3 gap-6 w-full h-[30vw] mb-20">
-          <ScaleViewPortAnimation className="image-cover br" style={{ backgroundImage: `url(${IMAGES.CYImage4})`}}></ScaleViewPortAnimation>
-          <ScaleViewPortAnimation className="image-cover br" style={{ backgroundImage: `url(${IMAGES.CYImage8})`}}></ScaleViewPortAnimation>
-          <ScaleViewPortAnimation className="image-cover br" style={{ backgroundImage: `url(${IMAGES.CYImage6})`}}></ScaleViewPortAnimation>
+        <div className="galery w-full mb-20 px-[12%]">
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+              {Galery1.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src={image}
+                    alt={`image ${index + 1}`}
+                    className="h-full"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+              {Galery2.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src={image}
+                    alt={`image ${index + 1}`}
+                    className="h-full"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
 
-        <FadeInViewPortAnimation className="grid grid-cols-2 mb:grid-cols-1 gap-8 mb-20">
-          <div>
-            <h4 className="title pb-4 text-red">
-              Ce urmează după cele 3 luni de curs?
-            </h4>
-
-            <p className="pb-4">
-              La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="text-orange">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
-            </p>
-
-            <p>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
-          </div>
-
-          <div className="overflow-hidden">
+        <FadeInViewPortAnimation className="mb-20">
+          <div className="w-[100vw] relative mb:w-full">
             <SimpleSlider
-              images={[IMAGES.Show1, IMAGES.Show2, IMAGES.Show3, IMAGES.Show4, IMAGES.Show5, IMAGES.Show6, IMAGES.Show7]}
-              className="w-[30vw] h-[30vw] br overflow-hidden"
+              images={[IMAGES.Show4, IMAGES.Show2, IMAGES.Show3, IMAGES.Show1, IMAGES.Show5, IMAGES.Show7, IMAGES.Show8, IMAGES.Show9]}
+              className="w-[100vh] h-[80vh] overflow-hidden"
             ></SimpleSlider>
-          </div>
+            <div className="absolute w-[30vw] bottom-0 left-[20vw] pb-20 mb:relative mb:w-full mb:left-0 mb:bg-white mb:p-8">
+              <h4 className="title pb-4 text-white mb:text-red">
+                Ce urmează după cele 3 luni de curs?
+              </h4>
 
+              <p className="pb-4 text-white mb:text-black">
+                La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="text-orange">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
+              </p>
+
+              <p className="pb-4 text-white mb:text-black">Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
+            </div>
+
+          </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0">
-            <h3 className="text-red">
-              Traineri
-            </h3>
+        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
+          <div className="bg-white p-10">
+          <h3 className="text-red">
+            Traineri
+          </h3>
 
-            <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: Mella şi Robert. Ei au terminat Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
+          <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: Mella şi Robert. Ei au terminat Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
 
+          </div>
+         
           <div id="members" className="flex mb:inline gap-10 justify-center my-10">
             <TeamMemberCard
               key={1}
-              imageSrc={IMAGES.echipaMihaelaMardare}
+              imageSrc={IMAGES.CYTeam1}
               name=""
               color="red"
             />
             <TeamMemberCard
-                key={2}
-                imageSrc={IMAGES.echipaRobertCiupitu}
-                name=""
-                color="orange"
-              />
+              key={2}
+              imageSrc={IMAGES.CYTeam2}
+              name=""
+              color="orange"
+            />
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0">
-            <h4 className="title text-red pb-4">
-              Alege varianta care ți se potrivește și contactează-ne.
-            </h4>
+        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
+          <h4 className="title text-red px-10">
+            Alege varianta care ți se potrivește și contactează-ne.
+          </h4>
 
-            <div className="flex mb:inline gap-10 justify-center my-4">
-              <ScaleViewPortAnimation className="p-10 border-[20px] border-orange rounded-full mb:mb-10">
-                <h5 className="text-center font-bold pb-4">
-                  VARIANTA 1 - PLATA LUNARA
-                </h5>
-                <p className="text-center">
-                  4 sedinte/ luna
-                </p>
-                <p className="text-center">
-                  o sedinta/ saptamana
-                </p>
-              </ScaleViewPortAnimation>
+          <div className="flex mb:inline gap-10 justify-center my-4 mx-auto">
+            <ScaleViewPortAnimation className="p-10 bg-orange rounded-full mb:mb-10">
+              <h5 className="text-center text-white"> VARIANTA 1 </h5>
+              <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
+              <p className="text-center text-white"> 4 sedinte/ luna </p>
+              <p className="text-center text-white"> o sedinta/ saptamana </p>
+            </ScaleViewPortAnimation>
 
-              <ScaleViewPortAnimation className="p-10 border-[20px] border-red rounded-full">
-                <h5 className="text-center font-bold pb-4">
-                  VARIANTA 2 - PLATA INTEGRALA MODUL
-                </h5>
+            <ScaleViewPortAnimation className="p-10 bg-red rounded-full mb:mb-10">
+              <h5 className="text-center text-white"> VARIANTA 2 </h5>
+              <h5 className="text-center text-white pb-4"> PLATA INTEGRALA MODUL </h5>
 
-                <p className="text-center">
-                  12 sedinte/ 3 luni
-                </p>
-                <p className="text-center">
-                  o sedinta/ saptamana
-                </p>
-              </ScaleViewPortAnimation>
+              <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
+              <p className="text-center text-white"> o sedinta/ saptamana </p>
+            </ScaleViewPortAnimation>
 
-            </div>
-            <p className="text-center text-black">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varinata aleasa</p>
+          </div>
+          <p className="text-center text-black">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varinata aleasa</p>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="pb-20">
-          <div className="grid grid-cols-2 mb:grid-cols-1 gap-8">
+        <FadeInViewPortAnimation className="mb-20 mx-[12%] bg-white br p-10">
+          <div className="grid grid-cols-1 mb:grid-cols-1 gap-8">
             <div>
               <h4 className="text-orange">
-                Cursul challenge yourself:
+                Ce ar trebui sa stii:
               </h4>
 
               <ul className="list-disc pl-8">
@@ -191,24 +195,52 @@ export default function ChallengeYourself () {
                 <li>funcționează sub forma unui abonament, iar ședințele nu se pot recupera</li>
                 <li>se achită în prima ședință a fiecărei luni</li>
               </ul>
-              
+
             </div>
 
             <div>
               <h4 className="text-orange">
-                Cum îmi rezerv locul? 
+                Cum îmi rezerv locul?
               </h4>
               <p>
-                <span className="text-red font-bold">Locul se consideră rezervat după achitarea avansului nerambursabil în valoare de 100 de lei (avans ce acoperă prima ședință)</span>. Acesta se scade automat din plata primei luni sau plata întregului modul. 
+                <span className="text-red font-bold">Locul se consideră rezervat după achitarea avansului nerambursabil în valoare de 100 de lei (avans ce acoperă prima ședință)</span>. Acesta se scade automat din plata primei luni sau plata întregului modul.
               </p>
             </div>
 
           </div>
         </FadeInViewPortAnimation>
 
-        <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/1XXXXXXXXXX"> 
-        </a>
+        <div className="w-full flex justify-center pb-20">
+          <div className="whatsapp-btn mr-10">
+            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40743760430" className="flex">
+              <FaWhatsapp size='30px' className="pr-2" /> 
+              <p className="pt-1">Chat on WhatsApp</p>
+            </a>
+          </div>
+
+          <div className="bg-red email-btn">
+            <a href="mailto:someone@example.com" className="flex">
+              <FaEnvelope size='30px' className="pr-2" /> 
+              <p className="pt-1">Trimite-ne un email</p>
+            </a>
+          </div>
+        </div>
+
       </div>
     </MainLayout>
   );
 }
+
+const Galery1 = [
+  IMAGES.CYImage2,
+  IMAGES.CYImage9,
+  IMAGES.CYImage10,
+  IMAGES.CYImage7,
+];
+
+const Galery2 = [
+  IMAGES.CYImage4,
+  IMAGES.CYImage5,
+  IMAGES.CYImage6,
+  IMAGES.CYImage8,
+];

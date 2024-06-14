@@ -18,7 +18,7 @@
   margin: auto;
   position: relative;
   max-height: 90%;
-  border: 2px solid #f05252;
+  /* border: 2px solid #f05252; */
   border-radius: 1.5rem;
   padding: 2rem;
 }
@@ -37,14 +37,6 @@
   font-size: 2em;
   display: inline-block;
   margin-bottom: 0;
-}
-
-.slider__content .slider__text h3:after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  display: block;
-  background: linear-gradient(151deg, #f05252 0%, #f6772b 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .slider__content .slider__image {

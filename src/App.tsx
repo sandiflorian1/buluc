@@ -57,13 +57,13 @@ const sufragetieActivities = [
     id: "concerte",
     text: "serate",
     link: '/concerte',
-    description: "blabla serate bla bla serate blabla heiiiii si aici am nevoie de un text mai lung"
+    description: "SERÁTĂ, serate, s. f. Reuniune, întrunire cu caracter muzical, literar etc.; spec. petrecere de seară cu dans."
   },
   {
     id: "teatru",
     text: "teatru",
     link: '/spectacole',
-    description: "blabla teatru niste text mai lung pentru a descrie sectiunea teatru, bla bla, inca cateva cuvinte ca tre sa testez cum arata textul asta mai lung"
+    description: "TEÁTRU s. n. I. 1. arta de a reprezenta în fața unui public un spectacol dramatic, muzical, coregrafic etc."
   },
 ];
 

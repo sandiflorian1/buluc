@@ -1,6 +1,20 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
 
+const FadeInAnimation = ({ children, className, ...props }: any) => {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 const FadeInViewPortAnimation = ({ children, className, ...props }: any) => {
     return (
       <motion.div
@@ -62,4 +76,9 @@ const SlideViewPortAnimation = ({ children, className, direction, ...props }: an
     );
   };
 
-export { FadeInViewPortAnimation, ScaleViewPortAnimation, SlideViewPortAnimation }
+export { 
+  FadeInViewPortAnimation, 
+  ScaleViewPortAnimation, 
+  SlideViewPortAnimation, 
+  FadeInAnimation, 
+}

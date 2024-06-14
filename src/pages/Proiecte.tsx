@@ -23,14 +23,14 @@ export default function Sectacole(props: ISectacoleProps) {
   return (
     <MainLayout>
       <div className="my-20">
-        {projects.map(({number, title, description, goToLink, imageUrl, images, imageWidths}) =>  {
-           const ref = useRef(null);
-           const isInView = useInView(ref, { once: true, amount: 0.1 });
-           const isMobile = window.matchMedia("(max-width: 768px)").matches;
-           const cardVariants = {
+        {projects.map(({ number, title, description, goToLink, imageUrl, images, imageWidths }) => {
+          const ref = useRef(null);
+          const isInView = useInView(ref, { once: true, amount: 0.1 });
+          const isMobile = window.matchMedia("(max-width: 768px)").matches;
+          const cardVariants = {
             hidden: {
               opacity: 0,
-              ...!isMobile && { x: number%2 ? 500 : -500 },
+              ...!isMobile && { x: number % 2 ? 500 : -500 },
             },
             visible: {
               opacity: 1,
@@ -42,9 +42,9 @@ export default function Sectacole(props: ISectacoleProps) {
             },
           };
           return (
-            <motion.div 
+            <motion.div
               id={`id-card-${number}`}
-              className={`min-h-[36vh] rounded-[1rem] shadow-lg flex mb:flex-col row ${number%2 === 0 && 'flex-row-reverse'} m-10`}
+              className={`min-h-[36vh] rounded-[1rem] shadow-lg flex mb:flex-col row bg-white ${number % 2 === 0 && 'flex-row-reverse'} m-10`}
               ref={ref}
               variants={cardVariants}
               initial="hidden"
@@ -53,12 +53,20 @@ export default function Sectacole(props: ISectacoleProps) {
             >
               <div className={`p-6 ${imageWidths[0]} mb:w-full`}>
                 <h4 className="title title-h1 pb-4">
-                  <span className="text-orange text-3xl">.</span>{title}
+                  {title}
                 </h4>
                 <p className="mb-2">{description}</p>
-                <Link to={goToLink} className="hover:text-orange underline flex justify-end pt-4">
-                  citeste mai mult 👉
-                </Link>
+                {number === 3 ? (
+                  <a href={goToLink} className="hover:text-orange underline flex justify-end pt-4" target="_blank">
+                    Vezi video 👉
+                  </a>
+                ) : (
+                  <Link to={goToLink} className="hover:text-orange underline flex justify-end pt-4">
+                    citeste mai mult 👉
+                  </Link>
+                )}
+
+
               </div>
 
               {images !== undefined ? (
@@ -72,10 +80,11 @@ export default function Sectacole(props: ISectacoleProps) {
                   </Slider>
                 </div>
               ) : (
-              <div className={`image-cover ${imageWidths[1]} mb:h-[50vh] mb:w-full`} style={{ backgroundImage: `url(${imageUrl})` }} />
+                <div className={`image-cover ${imageWidths[1]} mb:h-[50vh] mb:w-full`} style={{ backgroundImage: `url(${imageUrl})` }} />
               )}
             </motion.div>
-        )})}
+          )
+        })}
       </div>
     </MainLayout>
   );
@@ -105,6 +114,7 @@ const projects = [
     description: 'Ne-am adunat #buluc în cartier, la Boiler Coffee Shop unde am dat trezirea la cafea pe ritmuri de salsa.',
     imageUrl: 'src/assets/images/doAct.jpg',
     goToLink: 'https://www.youtube.com/watch?v=lSRIJk16Jd0',
+    textLink: 'Vezi video',
     images: [IMAGES.flashmob1, IMAGES.flashmob2, IMAGES.flashmob3],
     imageWidths: ['w-[45%]', 'w-[45vw]'],
   },
