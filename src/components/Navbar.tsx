@@ -62,16 +62,16 @@ function Navbar() {
   useEffect(() => {
     const miniMenu = ref.current?.querySelector('li.has-menu');
     miniMenu?.addEventListener('mouseover', () => {
-      const menu = miniMenu.querySelector('.menu');
+      const menu = miniMenu.querySelector<HTMLElement>('.menu');
       if (menu) {
-        menu.style.opacity = 1;
+        menu.style.opacity = "1";
       }
     })
 
     miniMenu?.addEventListener('mouseleave', () => {
-      const menu = miniMenu.querySelector('.menu');
+      const menu = miniMenu.querySelector<HTMLElement>('.menu');
       if (menu) {
-        menu.style.opacity = 0;
+        menu.style.opacity = "0";
       }
     })
   })
