@@ -25,26 +25,26 @@ export default function Creative() {
               <div>
                 <a href="https://www.youtube.com/watch?v=bMluOcQGx94">
                   <img src={IMAGES.creative1} className="rounded-[2rem]"></img>
-                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> ANCA DUMITRA | ACTORIE </p>
+                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
               <div>
                 <a href="https://www.youtube.com/watch?v=MKE1qRpIIHQ&t=22s ">
                   <img src={IMAGES.creative3} className="rounded-[2rem]"></img>
-                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> IUSTIN CHIROIU | CREARE DE CONȚINUT </p>
+                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
               <div>
                 <a href="https://www.youtube.com/watch?v=qhN9iTPQlxc&t=224s">
                   <img src={IMAGES.creative2} className="rounded-[2rem]"></img>
-                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" />  FLORIAN RUS | MUZICĂ </p>
+                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" />  Vezi episodul </p>
                 </a>
               </div>
 
               <div>
                 <a href="https://www.youtube.com/watch?v=MYFArK3FTVM&t=15s">
                   <img src={IMAGES.creative4} className="rounded-[2rem] ml-auto"></img>
-                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> MARIA ZVINCA | CREARE DE CONȚINUT </p>
+                  <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
             </div>

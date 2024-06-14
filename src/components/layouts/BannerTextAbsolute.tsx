@@ -29,7 +29,7 @@ export default function BannerTextAbsolute({ imageURL, title, children, directio
       className={`banner-text-absolute ${className} mb:h-auto`}
     >
       {direction === 'right' && (
-        <div className={`image ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
+        <div className={`image shadow-lg ${direction}`} style={{ backgroundImage: `url(${imageURL})` }}></div>
       )}
 
       <motion.div

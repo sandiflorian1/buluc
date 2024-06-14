@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: "Poppins";
-  src: local("Poppins"),
-   url("/src/assets/fonts/Poppins.ttf") format("truetype");
+  font-family: "Mersad";
+  src: local("Mersad"),
+   url("/src/assets/fonts/Mersad-Bold.ttf") format("truetype");
 }

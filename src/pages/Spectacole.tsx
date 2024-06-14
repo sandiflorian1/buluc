@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from "../components/layouts/MainLayout";
 import Modal from "../components/Modal";
 import Slider from '../components/Slider';
 import IMAGES from "../assets/Images";
+import { FadeInAnimation } from "../components/animations/Animations";
+
 
 export interface ISpectacoleProps {
 } 
@@ -27,10 +30,12 @@ export default function Spectacole(props: ISpectacoleProps) {
   return (
     <MainLayout>
       <div className="container pt-20" ref={ref}>
-        <div className="pb-20 mb:w-[100vw]">
+        <FadeInAnimation className="pb-20 mb:w-[100vw]">
           <Slider slides={slides} />
-        </div>
-        {/* <a href="/sufragerie" className="text-purple-600 hover:text-purple-500 underline">👈 Înapoi in sufragerie</a> */}
+        </FadeInAnimation>
+      </div>
+      <div className='flex justify-center'>
+        <Link to="/sufragerie" className="text-purple-600 hover:text-purple-500 underline">👈 Înapoi in sufragerie</Link>
       </div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>
@@ -42,12 +47,14 @@ const Description = () => {
     <div>
       <p> ”Din Întâmplare” este un spectacol de teatru care aduce în scenă o poveste captivantă despre dorință, loialitate și compromisuri ce explorează iubirea dintre două persoane din două lumi diferite, a căror dragoste este pusă la încercare de presiunile financiare și sociale. Spectacolul o prezintă pe Carla, o femeie care este conștientă de frumusețea ei exterioară și care lucrează de când se știe pentru “viața de noapte” a Bucureștiului. Și Mihai, un bărbat de succes, antreprenor, cu principii foarte bine stabilite despre iubire și bani. O stație de autobuz, o seară obișnuită care le schimbă viața... cum? Vei afla pe Madrid. 4</p>
       <br/>
-      <p>distribuție:</p>
+      <p className='text-red'>Distribuție:</p>
       
       <h6><span className="pl-10"> Mihai : </span> <span className="text-orange"> Ionuț Terteci </span></h6>
       <h6><span className="pl-10"> Carla : </span> <span className="text-orange"> Mihaela Mardare </span></h6>
       
-      <p>Data premierei: 14 octombrie 2023</p>
+      <p className='text-red'>Data premierei: </p>
+
+      <h6><span className="pl-10"> 14 octombrie 2023 </span></h6>
     </div>
   )
 }

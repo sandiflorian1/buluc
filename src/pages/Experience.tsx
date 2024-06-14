@@ -3,6 +3,7 @@ import { useRef, useEffect, Ref } from 'react';
 import { gsap } from "gsap";
 import TitleBanner from "../components/layouts/TitleBanner";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
+import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../components/animations/Animations";
 
@@ -27,9 +28,9 @@ const Experience: React.FC = () => {
           title="@The Experience"
           text={"O călătorie artisticăa unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
           bgBluredImg={IMAGES.Experience1}
-          bgImg={IMAGES.Experience2}
+          bgImg={IMAGES.Experience1}
           colorText="white"
-          textClass="text-bg"
+          // textClass="text-bg"
         />
       </FadeInViewPortAnimation>
 
@@ -84,7 +85,7 @@ const Experience: React.FC = () => {
 
       <div className="mx-[12%] mb:mx-6">
         <BannerTextAbsolute
-          imageURL={IMAGES.Experience5}
+          imageURL={IMAGES.Experience3}
           direction="right"
           className="h-[35vw] pb-20"
           title="YOGA CU MARTA"
@@ -101,7 +102,7 @@ const Experience: React.FC = () => {
             <h4 className="text-orange">Drumeție cu liv tu visit</h4>
             <p>Împreună cu LIV TU VISIT  - creatori de explorări urbane și experiențe turistice inedite - vom parcurge un traseu pe munții Coziei - cu istorie & legende.</p>
           </SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.Experience6}></img></SlideViewPortAnimation>
+          <SlideViewPortAnimation><img src={IMAGES.Experience9}></img></SlideViewPortAnimation>
           <SlideViewPortAnimation><img src={IMAGES.Experience6}></img></SlideViewPortAnimation>
           <SlideViewPortAnimation className="pt-6">
             <h4 className="text-orange">Foc de tabără</h4>
@@ -146,21 +147,42 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
       </div>
 
-      <div className="mx-[12%] mb:mx-6 pb-20">
-        <h4 className="title pb-4 text-orange">
-          ECHIPA
-        </h4>
-        <div className="columns-4 mb:columns-1 gap-10">
-          <SlideViewPortAnimation direction="up" className="pb-4"><p className="text-orange text-xl mb:text-5xl text-center">Mella - trainer </p></SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.echipaMihaelaMardare}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.echipaRobertCiupitu}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation direction="up" className="pt-4"><p className="text-red text-xl mb:text-5xl text-center">Robert - trainer </p></SlideViewPortAnimation>
-          <SlideViewPortAnimation direction="up" className="pb-4"><p className="text-orange text-xl mb:text-5xl text-center">Mari - comunicare & social media  </p></SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.echipaMarilenaAdam}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.echipaCezarStoica}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation direction="up" className="pt-4"><p className="text-red text-xl mb:text-5xl text-center">Cezar - identitate vizuală</p></SlideViewPortAnimation>
-        </div>
-      </div>
+      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20">
+          <h3 className="title pb-4 text-orange">
+           ECHIPA
+          </h3>
+
+          <div id="members" className="flex mb:inline gap-10 justify-center my-10">
+            <TeamMemberCard
+              key={1}
+              imageSrc={IMAGES.echipaMihaelaMardare}
+              name="Mella"
+              role="trainer"
+              color="red"
+            />
+            <TeamMemberCard
+              key={2}
+              imageSrc={IMAGES.echipaRobertCiupitu}
+              name="Robert"
+              role="trainer"
+              color="orange"
+            />
+            <TeamMemberCard
+              key={2}
+              imageSrc={IMAGES.echipaMarilenaAdam}
+              name="Mari"
+              role="comunicare & social media"
+              color="orange"
+            />
+            <TeamMemberCard
+              key={2}
+              imageSrc={IMAGES.echipaCezarStoica}
+              name="Cezar"
+              role="identitate vizuală"
+              color="orange"
+            />
+          </div>
+        </FadeInViewPortAnimation>
 
       <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-4">
         <h4 className="title pb-4 text-orange">
