@@ -137,6 +137,12 @@ const IMAGES = {
     doact6: new URL('/src/assets/images/proiecte/doact6.jpeg', import.meta.url).href,
     doact7: new URL('/src/assets/images/proiecte/doact7.jpeg', import.meta.url).href,
     doact8: new URL('/src/assets/images/proiecte/doact8.jpeg', import.meta.url).href,
+    zoomtalks1: new URL('/src/assets/images/proiecte/zoomtalk1.jpeg', import.meta.url).href,
+    zoomtalks2: new URL('/src/assets/images/proiecte/zoomtalk2.jpeg', import.meta.url).href,
+    zoomtalks3: new URL('/src/assets/images/proiecte/zoomtalk3.jpeg', import.meta.url).href,
+    zoomtalks4: new URL('/src/assets/images/proiecte/zoomtalk4.jpeg', import.meta.url).href,
+
+
 
 
     //gazeta

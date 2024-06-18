@@ -13,7 +13,7 @@ export default function MainLayout({ children, title, noPadding }: any) {
       </div>
       <Navbar />
 
-      <div className='mt-[5rem]'>
+      <div className='mt-[5rem] mb:mt-0'>
         {title &&
           (<section id="title">
             <div className="w-full mt-10">

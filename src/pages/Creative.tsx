@@ -23,26 +23,26 @@ export default function Creative() {
           <div className="col-start-1 col-span-4 mb:col-span-7">
             <div className="columns-2">
               <div>
-                <a href="https://www.youtube.com/watch?v=bMluOcQGx94">
+                <a href="https://www.youtube.com/watch?v=bMluOcQGx94" target="_blank">
                   <img src={IMAGES.creative1} className="rounded-[2rem]"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=MKE1qRpIIHQ&t=22s ">
+                <a href="https://www.youtube.com/watch?v=MKE1qRpIIHQ&t=22s" target="_blank">
                   <img src={IMAGES.creative3} className="rounded-[2rem]"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=qhN9iTPQlxc&t=224s">
+                <a href="https://www.youtube.com/watch?v=qhN9iTPQlxc&t=224s" target="_blank">
                   <img src={IMAGES.creative2} className="rounded-[2rem]"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" />  Vezi episodul </p>
                 </a>
               </div>
 
               <div>
-                <a href="https://www.youtube.com/watch?v=MYFArK3FTVM&t=15s">
+                <a href="https://www.youtube.com/watch?v=MYFArK3FTVM&t=15s" target="_blank">
                   <img src={IMAGES.creative4} className="rounded-[2rem] ml-auto"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
