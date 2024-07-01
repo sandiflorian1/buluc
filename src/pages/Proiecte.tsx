@@ -95,7 +95,7 @@ const projects = [
     title: 'the creARTive generation',
     description: 'este un proiect educațional pentru adolescenți, sub forma unui Podcast live, cu public - care vorbește despre curaj, autenticitate și despre libertatea de a alege propriul drum, despre despre ce înseamnă o profesie artistică în România și cum putem transforma aptitudinile în instrumente de care ne putem ajuta să facem trecerea de la pasiune la profesie.',
     imageUrl: IMAGES.creartive,
-    goToLink: '/thecreativegeneration',
+    goToLink: '/proiecte/thecreativegeneration',
     imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 
@@ -104,7 +104,7 @@ const projects = [
     title: 'să luăm bullying-ul la roast',
     description: 'este un proiect care are ca scop principal prevenirea manifestărilor de tip bullying în mediul adolescenților și conștientizarea propriului rol prin dezbateri și prin paralela dintre bullying si roast,  toate acestea realizate sub consilierea unui psiholog în cadrul unor interviuri cu 3 invitați speciali: Adrian Nicolae, Alexandru Minculescu și Maria Popovici',
     imageUrl: IMAGES.bulling,
-    goToLink: '/roast',
+    goToLink: '/proiecte/roast',
     imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 
@@ -123,7 +123,7 @@ const projects = [
     title: 'tabăra DOACT',
     description: 'Tabăra de teatru pentru adolescenții cu vârsta cuprinsă între 14-19 creată special pentru a construi o comunitate de tineri mult mai pregătiți pentru momentul în care decid să-și urmeze pasiunea pentru artă.',
     imageUrl: IMAGES.doact,
-    goToLink: '/doact',
+    goToLink: '/proiecte/doact',
     imageWidths: ['w-[45%]', 'w-[55%]'],
   },
   {
@@ -131,7 +131,7 @@ const projects = [
     title: 'zoomTalks',
     description: 'ZoomTalks este un proiect cultural apărut în pandemie din dorința de a oferi liceenilor pasionați de teatru și film o viziune asupra facultăților de teatru din România.',
     imageUrl: IMAGES.zoomtalks,
-    goToLink: '/zoomtalks',
+    goToLink: '/proiecte/zoomtalks',
     imageWidths: ['w-[45%]', 'w-[55%]'],
   },
 ];
