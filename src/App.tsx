@@ -18,7 +18,8 @@ import Creative from './pages/Creative';
 import Zoomtalks from "./pages/Zoomtalks";
 import Roast from './pages/Roast';
 import Doact from './pages/Doact';
-
+import Form35Page from './pages/Form35Page';
+import Donatie from './pages/Donation';
 
 const App = () => {
   return (
@@ -31,7 +32,9 @@ const App = () => {
         <Route path="/gazeta" component={Blog} exact />
         <Route path="/gazeta-buna-dimineata-la-cafeluta" component={Cafeluta} />
         <Route path="/gazeta-zoomtalks" component={BlogZoomtalks} />
-        <Route path="/sustine" component={Sustine} exact/>
+        <Route path="/sustine" component={Sustine} exact />
+        <Route path="/sustine-form35page" component={Form35Page} />
+        <Route path="/sustine-donatie" component={Donatie} />
         <Route path="/contact" component={Contact} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />
         <Route path="/improshow" component={Improshow} />
