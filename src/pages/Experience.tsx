@@ -29,7 +29,7 @@ const Experience: React.FC = () => {
         <TitleBanner
           title="@The Experience"
           text={"O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
-          bgBluredImg={IMAGES.Experience1}
+          bgBluredImg={IMAGES.ExperienceBlur}
           bgImg={IMAGES.Experience1}
           colorText="white"
         />
@@ -49,7 +49,7 @@ const Experience: React.FC = () => {
       </div>
 
       <div className="mx-[12%] mb:mx-6">
-        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
+        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
             <h5 className="title pb-4 text-red">
               ESTE PENTRU TINE DACĂ:
@@ -98,7 +98,7 @@ const Experience: React.FC = () => {
       </div>
 
       <div className="mx-[12%] mb:mx-6 pb-20">
-        <div className="columns-2 gap-10">
+        <div className="columns-2 mb:grid gap-10 mb:gap-0">
           <SlideViewPortAnimation direction="up" className="p-6 bg-white">
             <h4 className="text-orange">Drumeție pe munții Coziei</h4>
             <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
@@ -148,9 +148,9 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
       </div>
 
-      <FadeInViewPortAnimation className="mx-[6%] mb:mx-6 pb-20">
-        <SimpleCard>
-          <h3 className="title pb-4 text-orange">
+      <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+        <div className="w-100% bg-white mb:pb-2">
+          <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
             Echipa
           </h3>
 
@@ -184,11 +184,11 @@ const Experience: React.FC = () => {
               color="orange"
             />
           </div>
-        </SimpleCard>
+        </div>
 
       </FadeInViewPortAnimation>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 p-4 pb-20">
+      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20 mb:pb-10">
         <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
           <h4 className="title pb-4 text-orange">
             Cum mă înscriu?
@@ -198,9 +198,10 @@ const Experience: React.FC = () => {
       </FadeInViewPortAnimation>
 
       <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-10">
-        <h4 className="title pb-4 text-orange text-center">
+        {/* <h4 className="title pb-4 text-orange text-center">
           LOCURI LIMITATE
-        </h4>
+        </h4> */}
+        <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
       </FadeInViewPortAnimation>
 
       <div className="w-full flex justify-center pb-20">

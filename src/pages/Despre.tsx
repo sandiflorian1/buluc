@@ -37,7 +37,7 @@ const LocatieSection: React.FC = () => {
         title="loc de joaca"
         text={LocDeJoacaText}
         colorText="white"
-        bgBluredImg={IMAGES.sufrageria6}
+        bgBluredImg={IMAGES.sufrageriaBlur}
         images={[IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6]}
         fullScreen
       />
@@ -46,7 +46,7 @@ const LocatieSection: React.FC = () => {
 }
 
 const ParteneriSection: React.FC = () => {
-  const parteneri = [0, 1, 2, 3, 4, 5, 6, 7];
+  const parteneri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     <ContainerComponent>
       <div className="flex flex-col">
@@ -54,11 +54,11 @@ const ParteneriSection: React.FC = () => {
           <Title title='parteneri' position="start" />
         </div>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-8">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-5 my-8">
           {parteneri.map((index) => {
             const imgName = `partener${index}` as keyof typeof IMAGES;
             return (
-              <div className="my-auto px-4" key={index}>
+              <div className="my-auto px-2" key={index}>
                 <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
               </div>
             )

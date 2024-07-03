@@ -7,6 +7,7 @@ const IMAGES = {
     sufrageria4: new URL('/src/assets/images/culise/locatie/carolia4.jpeg' , import.meta.url).href,
     sufrageria5: new URL('/src/assets/images/culise/locatie/carolia5.jpeg' , import.meta.url).href,
     sufrageria6: new URL('/src/assets/images/culise/locatie/carolia6.jpeg' , import.meta.url).href,
+    sufrageriaBlur: new URL('/src/assets/images/culise/locatie/caroliaBlur.jpeg' , import.meta.url).href,
     parteneri: new URL('/src/assets/images/culise/parteneri.svg', import.meta.url).href,
     // echipa
     echipaMihaelaMardare: new URL('/src/assets/images/culise/echipa/mihaela-mardare.jpeg', import.meta.url).href,
@@ -27,8 +28,10 @@ const IMAGES = {
     partener3: new URL('/src/assets/images/culise/parteneri/3.png', import.meta.url).href,
     partener4: new URL('/src/assets/images/culise/parteneri/4.png', import.meta.url).href,
     partener5: new URL('/src/assets/images/culise/parteneri/5.png', import.meta.url).href,
-    partener6: new URL('/src/assets/images/culise/parteneri/4.png', import.meta.url).href,
-    partener7: new URL('/src/assets/images/culise/parteneri/5.png', import.meta.url).href,
+    partener6: new URL('/src/assets/images/culise/parteneri/6.png', import.meta.url).href,
+    partener7: new URL('/src/assets/images/culise/parteneri/7.png', import.meta.url).href,
+    partener8: new URL('/src/assets/images/culise/parteneri/8.png', import.meta.url).href,
+    partener9: new URL('/src/assets/images/culise/parteneri/9.png', import.meta.url).href,
     // in sufragerie
     improshow: new URL('/src/assets/images/in-sufragerie/improshow/improshow.jpg', import.meta.url).href,
     concerte: new URL('/src/assets/images/in-sufragerie/concerte/concerte.jpg', import.meta.url).href,
@@ -79,6 +82,9 @@ const IMAGES = {
     Experience7: new URL('/src/assets/images/challenge/experince/experience7.jpeg', import.meta.url).href,
     Experience8: new URL('/src/assets/images/challenge/experince/experience8.jpeg', import.meta.url).href,
     Experience9: new URL('/src/assets/images/challenge/experince/experience9.jpeg', import.meta.url).href,
+    ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
+    locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
+
 
 
 
