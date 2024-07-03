@@ -48,24 +48,22 @@ const LocatieSection: React.FC = () => {
 const ParteneriSection: React.FC = () => {
   const parteneri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
-    <ContainerComponent>
-      <div className="flex flex-col">
-        <div className="ml-[5vw]">
-          <Title title='parteneri' position="start" />
-        </div>
-
-        <div className="grid gap-8 grid-cols-2 md:grid-cols-5 my-8">
-          {parteneri.map((index) => {
-            const imgName = `partener${index}` as keyof typeof IMAGES;
-            return (
-              <div className="my-auto px-2" key={index}>
-                <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
-              </div>
-            )
-          })}
-        </div>
+    <div className="flex flex-col mx-[20vw] mb:mx-[10vw] pb-10">
+      <div className="">
+        <Title title='parteneri' position="start" />
       </div>
-    </ContainerComponent>
+
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-5 my-4">
+        {parteneri.map((index) => {
+          const imgName = `partener${index}` as keyof typeof IMAGES;
+          return (
+            <div className="my-auto px-2" key={index}>
+              <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
+            </div>
+          )
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -77,7 +75,7 @@ const People = ({ members, title }: { members: ITeamMember[], title: string }) =
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="ml-[7vw]">
+      <div className="ml-[3vw]">
         <Title title={title} position="start" />
       </div>
     </motion.div>
