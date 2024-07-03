@@ -23,7 +23,7 @@ export default function MainLayout({ children, title, noPadding }: any) {
           )}
 
         <div className='w-screen flex justify-center'>
-          <div className={`${noPadding ? '' : 'px-[13%]'} pb-10`}>
+          <div className={`${noPadding ? '' : 'px-[13%] mb:px-[10%]'} pb-10`}>
             {children}
           </div>
         </div>

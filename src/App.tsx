@@ -13,13 +13,13 @@ import MenuPage from "./pages/MenuPage";
 import Office from "./pages/Office";
 import Cafeluta from './pages/Cafeluta';
 import BlogZoomtalks from './pages/BlogZoomtalks';
-import IMAGES from "./assets/Images";
 import Experience from './pages/Experience';
 import Creative from './pages/Creative';
 import Zoomtalks from "./pages/Zoomtalks";
 import Roast from './pages/Roast';
 import Doact from './pages/Doact';
-
+import Form35Page from './pages/Form35Page';
+import Donatie from './pages/Donation';
 
 const App = () => {
   return (
@@ -28,11 +28,13 @@ const App = () => {
         <Route path="/" exact component={Homepage} />
         <Route path="/culise" component={Despre} />
         <Route path="/spectacole" component={Spectacole}  />
-        <Route path="/proiecte" component={Proiecte} />
-        <Route path="/gazeta" component={Blog} exact/>
+        <Route path="/proiecte" component={Proiecte} exact />
+        <Route path="/gazeta" component={Blog} exact />
         <Route path="/gazeta-buna-dimineata-la-cafeluta" component={Cafeluta} />
         <Route path="/gazeta-zoomtalks" component={BlogZoomtalks} />
-        <Route path="/sustine" component={Sustine} />
+        <Route path="/sustine" component={Sustine} exact />
+        <Route path="/sustine-form35page" component={Form35Page} />
+        <Route path="/sustine-donatie" component={Donatie} />
         <Route path="/contact" component={Contact} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />
         <Route path="/improshow" component={Improshow} />
@@ -41,10 +43,10 @@ const App = () => {
         <Route path="/menu-challenge-yourfelf" render={(props) => <MenuPage {...props} options={challengeActivities} />} />
         <Route path="/office" component={Office} />
         <Route path="/experience" component={Experience} />
-        <Route path="/thecreativegeneration" component={Creative} />
-        <Route path="/roast" component={Roast} />
-        <Route path="/doact" component={Doact} />
-        <Route path="/zoomtalks" component={Zoomtalks} />
+        <Route path="/proiecte/thecreativegeneration" component={Creative} />
+        <Route path="/proiecte/roast" component={Roast} />
+        <Route path="/proiecte/doact" component={Doact} />
+        <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
       </Switch>
     </Router>
     );

@@ -24,19 +24,20 @@ export default function Blog () {
 
 const data = [
   {
+    title: "Început de Buluc",
+    text: "Oamenii: Hai să facem cunoștință! Buluc: sunt o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă.",
+    imgURL: IMAGES.people,
+    cardClass: 'w-2/3 mb:w-full',
+    link: '/gazeta-buna-dimineata-la-cafeluta',
+  },
+  {
     title: "Zoomtalks",
     text: "Zoomtalks este un proiect ce își propune să creeze cât mai multe conexiuni între generații.",
     imgURL: IMAGES.zoomtalks,
     cardClass: 'w-1/3 mb:w-full ',
     link: '/gazeta-zoomtalks',
   },
-  {
-    title: "Oamenii: Hai să facem cunoștință!",
-    text: "Buluc: sunt o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă.",
-    imgURL: IMAGES.people,
-    cardClass: 'w-2/3 mb:w-full',
-    link: '/gazeta-buna-dimineata-la-cafeluta',
-  },
+ 
   // {
   //   title: "Card with an image",
   //   text: "This is a little bit better of a card!",

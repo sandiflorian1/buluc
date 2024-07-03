@@ -50,7 +50,7 @@ export default function MenuPage(props: IMenuPageProps) {
             >
               <h1 className="title">{text}</h1>
               <div className="description">
-                <p className="">.{description}</p>
+                <p className="" style={{ textShadow: '0.75px 0.75px 1.5px orange'}}>.{description}</p>
               </div>
             </Link>
           ))}

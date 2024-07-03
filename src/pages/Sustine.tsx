@@ -1,6 +1,7 @@
 import MainLayout from "../components/layouts/MainLayout";
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
+import { Link } from 'react-router-dom';
 export interface ISustineProps {
 }
 
@@ -22,10 +23,12 @@ export default function Sustine (props: ISustineProps) {
         <div className="flex flex-col">
           <img className="mx-auto mb-8 image1" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/35.jpg" loading="lazy" alt="Image 1" />
           <div className="relative flex h-full card1">
-            <div className="bg-red py-8 px-4 sm:p-8 md:p-12 flex flex-col br">
+            <div className="bg-red py-8 px-4 sm:p-8 md:p-12 br">
               <h3 className="text-white">3,5 %</h3>
-              <p className="text-white font-normal mb-4 md:mb-8 text-xl md:text-2xl">Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</p>
-              <a className="bg-white rounded-full py-2 px-6 md:px-8 text-red mt-auto no-underline" href="https://buluc.org/sustine/3-5/" style={{ width: 'fit-content' }}>Donează →</a>
+              <p className="text-white font-normal mb-4 md:mb-8">Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</p>
+              <Link to={'/sustine-form35page'} className="bg-white rounded-full py-2 px-6 md:px-8 text-red mt-auto no-underline">
+                Donează →
+              </Link>
             </div>
           </div>
         </div>
@@ -33,10 +36,12 @@ export default function Sustine (props: ISustineProps) {
         <div className="flex flex-col  h-full">
           <img className="mx-auto mb-8 image2" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/donatie.jpg" loading="lazy" alt="Image 2" />
           <div className="relative flex card2">
-            <div className="bg-orange py-8 px-4 sm:p-8 md:p-12 flex flex-col br">
+            <div className="bg-orange py-8 px-4 sm:p-8 md:p-12 br">
               <h3 className="text-white">Donație</h3>
-              <p className="text-white font-normal mb-4 md:mb-8 text-xl md:text-2xl">Toate ideile si inițiativele noastre pot fi sustinute printr-o donație directă in contul bancar al asociatiei noastre</p>
-              <a className="bg-white rounded-full py-2 px-6 md:px-8 text-orange mt-auto no-underline" href="https://buluc.org/sustine/donatie/" style={{ width: 'fit-content' }}>Donează →</a>
+              <p className="text-white font-normal mb-4 md:mb-8">Toate ideile si inițiativele noastre pot fi sustinute printr-o donație directă in contul bancar al asociatiei noastre</p>
+              <Link to={'/sustine-donatie'} className="bg-white rounded-full py-2 px-6 md:px-8 text-red mt-auto no-underline">
+                Donează →
+              </Link>
             </div>
           </div>
         </div>
