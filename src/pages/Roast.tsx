@@ -1,3 +1,4 @@
+import { FaYoutube } from "react-icons/fa";
 import MainLayout from "../components/layouts/MainLayout";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import SimpleSlider from '../components/SimpleSlider';
@@ -47,29 +48,30 @@ export default function Roast() {
           <div className="overflow-hidden">
             <SimpleSlider
               images={[IMAGES.roast4, IMAGES.roast5]}
-              className="w-[30vw] h-[32vw] br overflow-hidden"
+              className="w-[30vw] h-[32vw] mb:h-[20rem] br overflow-hidden"
             ></SimpleSlider>
           </div>
 
         </FadeInViewPortAnimation>
 
-        <div className="columns-3 gap-6 mb:columns-1 mb-20">
-          <ScaleViewPortAnimation><img src={IMAGES.roast1} className="rounded-[2rem] mb:my-4"></img> </ScaleViewPortAnimation>
-          <ScaleViewPortAnimation><img src={IMAGES.roast2} className="rounded-[2rem] mb:my-4"></img></ScaleViewPortAnimation>
-          <ScaleViewPortAnimation><img src={IMAGES.roast3} className="rounded-[2rem] mb:my-4"></img></ScaleViewPortAnimation>
-        </div>
-
-        <div className="columns-2 gap-6 mb:columns-1 mb-20">
-          <ScaleViewPortAnimation className="flex justify-center py-4">
-            <iframe width={width} height={height}
-              src="https://www.youtube.com/embed/23dK88ntwwQ">
-            </iframe>
+        <div className="grid grid-cols-6 gap-8 mb:gap-0 mb-20">
+          <ScaleViewPortAnimation className="col-start-1 col-end-5 mb:col-end-7">
+            <a href="https://www.youtube.com/embed/23dK88ntwwQ" target="_blank" >
+              <div className="columns-2 gap-8 mb:gap-2">
+                <img src={IMAGES.roast1} className="rounded-[2rem]"></img>
+                <img src={IMAGES.roast2} className="rounded-[2rem]"></img>
+              </div>
+              <p className="flex py-4 justify-center mb:justify-start"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
+            </a>
           </ScaleViewPortAnimation>
 
-          <ScaleViewPortAnimation className="flex justify-center py-4">
-            <iframe width={width} height={height}
-              src="https://www.youtube.com/embed/3X53YqZo1Fs">
-            </iframe>
+          <ScaleViewPortAnimation className="col-start-5 mb:col-start-1 col-end-7">
+            <a href="https://www.youtube.com/embed/23dK88ntwwQ" target="_blank">
+              <a href="https://www.youtube.com/embed/3X53YqZo1Fs" target="_blank">
+                <img src={IMAGES.roast3} className="rounded-[2rem] mb:my-4"></img>
+                <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
+              </a>
+            </a>
           </ScaleViewPortAnimation>
         </div>
       </div>

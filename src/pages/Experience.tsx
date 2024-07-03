@@ -7,6 +7,7 @@ import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../components/animations/Animations";
+import SimpleCard from "../components/cards/SimpleCard";
 
 
 export interface IExperienceProps { }
@@ -27,7 +28,7 @@ const Experience: React.FC = () => {
       <FadeInViewPortAnimation>
         <TitleBanner
           title="@The Experience"
-          text={"O călătorie artisticăa unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
+          text={"O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
           bgBluredImg={IMAGES.Experience1}
           bgImg={IMAGES.Experience1}
           colorText="white"
@@ -50,34 +51,34 @@ const Experience: React.FC = () => {
       <div className="mx-[12%] mb:mx-6">
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
-            <h4 className="title pb-4 text-red">
-              PENTRU CINE ESTE?
-            </h4>
+            <h5 className="title pb-4 text-red">
+              ESTE PENTRU TINE DACĂ:
+            </h5>
             <ul className="list-disc pl-8">
-              <li>pentru cei care competiția este ghidată de adrenalină</li>
-              <li>pentru cei care iubesc să-și depășească limitele </li>
-              <li>pentru cei care au experimentat sau nu cursul Challenge Yourself </li>
-              <li>pentru tine, dacă îți este dor să te joci</li>
+              <li>iubești competiția</li>
+              <li>vrei să-ți depășești limitele</li>
+              <li>ai mai fost sau nu la Cursul Challenge Yourself</li>
+              <li>îți este dor să te joci</li>
             </ul>
           </div>
 
-          <div className="col-end-7 col-span-4 mb:col-span-7  bg-white br p-6">
-            <h4 className="title pb-4 text-red">
+          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br p-6 relative overflow-hidden">
+            <h5 className="title pb-4 text-red">
               CE ESTE INCLUS
-            </h4>
+            </h5>
 
             <ul className="list-disc pl-8 grid grid-cols-2 gap-x-10">
-              <li>un sat doar pt tine - exclusivitate în locație</li>
-              <li>curte de 5000m2</li>
-              <li>3 nopți de cazare (1 - august)</li>
+              <li>un sat la picioarele tale</li>
+              <li>3 nopți de cazare</li>
               <li>3 mese pe zi 100% homemade</li>
-              <li>apa de izvor & ceaiuri nelimitat pe timpul zilei</li>
-              <li>3 cafele de persoana/ zi - cafea de specialitate</li>
               <li>acces la saună</li>
-              <li>vin & Prosecco</li>
-              <li>transport dus - întors</li>
+              <li>special drinks</li>
+              <li>transport dus-întors</li>
               <li>goodies & premii de la parteneri</li>
             </ul>
+
+            <div className="bg-red absolute bottom-[-6rem] right-10 w-40 h-40 rounded-[50%]" />
+            <div className="bg-orange absolute bottom-[-3rem] right-40 w-20 h-20 rounded-[50%]" />
 
           </div>
         </FadeInViewPortAnimation>
@@ -88,10 +89,10 @@ const Experience: React.FC = () => {
           imageURL={IMAGES.Experience3}
           direction="right"
           className="h-[35vw] pb-20"
-          title="YOGA CU MARTA"
+          title="Atelier Yoga"
         >
           <p className="">
-            Alături de Martha ne vom bucura de yoga la apus, unde ne conectăm la respirație, ne ghidăm armonios spre o stare de spirit de liniște, pace, prezență. Vom termina cu o meditatie ghidata sau chiar yoga Nidra (Yoga Nidra, cunoscută și sub numele de somn yoghin) este o meditație ghidată extrem de benefică. Clasa este accesibilă tuturor nivelelor de practică.
+            Alături de Martha ne vom bucura de un atelier de Yoga la apus, în natură unde te vei conecta la respirație, ghidat spre o stare de spirit de liniște, pace și prezență.
           </p>
         </BannerTextAbsolute>
       </div>
@@ -99,8 +100,8 @@ const Experience: React.FC = () => {
       <div className="mx-[12%] mb:mx-6 pb-20">
         <div className="columns-2 gap-10">
           <SlideViewPortAnimation direction="up" className="p-6 bg-white">
-            <h4 className="text-orange">Drumeție cu liv tu visit</h4>
-            <p>Împreună cu LIV TU VISIT  - creatori de explorări urbane și experiențe turistice inedite - vom parcurge un traseu pe munții Coziei - cu istorie & legende.</p>
+            <h4 className="text-orange">Drumeție pe munții Coziei</h4>
+            <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
           </SlideViewPortAnimation>
           <SlideViewPortAnimation><img src={IMAGES.Experience9}></img></SlideViewPortAnimation>
           <SlideViewPortAnimation><img src={IMAGES.Experience6}></img></SlideViewPortAnimation>
@@ -116,7 +117,7 @@ const Experience: React.FC = () => {
           imageURL={IMAGES.Experience8}
           direction="left"
           className="h-[40vw] pb-20"
-          title="Despre albastru și origini"
+          title="Despre Albastru și Origini"
         >
           <p className="pb-4">
             Un sat din Berislăvești, Jud. Vâlcea format din 4 case vechi de peste 100 de ani srămutate și readuse la viață, din nordul țării, alături de un hambar transformat în vatra satului – locul unde ne vom aduna buluc cu toții la povesti si la bucate delicioase. Un loc în care timpul parcă stă în loc.
@@ -136,7 +137,7 @@ const Experience: React.FC = () => {
           imageURL={IMAGES.Experience7}
           direction="right"
           className="h-[40vw] pb-20"
-          title="BUCĂTĂRIA"
+          title="Bucătăria"
         >
           <p className="pb-4">
             Te vei bucura de o bucatarie cu mult bun gust și de influențe din multe culturi. Și, mai ales, 100% homemade. 3 mese pe zi  gătite “with a twist”, niciodată banal. O mancare…eclectică, așa cum este și satul Albastru și Origini.
@@ -147,9 +148,10 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
       </div>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20">
+      <FadeInViewPortAnimation className="mx-[6%] mb:mx-6 pb-20">
+        <SimpleCard>
           <h3 className="title pb-4 text-orange">
-           ECHIPA
+            Echipa
           </h3>
 
           <div id="members" className="flex mb:inline gap-10 justify-center my-10">
@@ -182,10 +184,12 @@ const Experience: React.FC = () => {
               color="orange"
             />
           </div>
-        </FadeInViewPortAnimation>
+        </SimpleCard>
+
+      </FadeInViewPortAnimation>
 
       <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 p-4 pb-20">
-        <div className="w-[50%] mb-w[100%] bg-white p-6 br">
+        <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
           <h4 className="title pb-4 text-orange">
             Cum mă înscriu?
           </h4>
@@ -200,16 +204,9 @@ const Experience: React.FC = () => {
       </FadeInViewPortAnimation>
 
       <div className="w-full flex justify-center pb-20">
-        <div className="whatsapp-btn mr-10">
-          <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40743760430" className="flex">
-            <FaWhatsapp size='30px' className="pr-2" /> 
-            <p className="pt-1">Chat on WhatsApp</p>
-          </a>
-        </div>
-
         <div className="bg-red email-btn">
-          <a href="mailto:someone@example.com" className="flex">
-            <FaEnvelope size='30px' className="pr-2" /> 
+          <a href="mailto:rezervari.buluc@gmail.com" className="flex">
+            <FaEnvelope size='30px' className="pr-2" />
             <p className="pt-1">Trimite-ne un email</p>
           </a>
         </div>

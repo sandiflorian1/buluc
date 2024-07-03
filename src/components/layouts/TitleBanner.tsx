@@ -44,8 +44,8 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
           
           <div className="h-full flex flex-col justify-end">
             {!isMobile &&(<div className="bg-text">
-                <h1 className={`text-${colorText}`}>{title}</h1>
-                <p className={`text-${colorText} ${textClass}`}>
+                <h1 className={`text-${colorText}`} style={{ textShadow: colorText === 'white' ? '1px 1px 2px black' : '1px 1px 2px white'}}>{title}</h1>
+                <p className={`text-${colorText} ${textClass} `} style={{ textShadow: colorText === 'white' ? '1px 1px 2px black' : '1px 1px 2px white'}}>
                   {text}
                 </p>
               </div>
@@ -54,7 +54,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
         </FadeInViewPortAnimation>
 
         {isMobile && (
-          <div className="h-full flex flex-col justify-end bg-white mb:p-[5vw] br">
+          <div className="h-full flex flex-col justify-end bg-white p-[5vw] br mt-4">
             <div className="bg-text">
               <h1>{title}</h1>
               <p>

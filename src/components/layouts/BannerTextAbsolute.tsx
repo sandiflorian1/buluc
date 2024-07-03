@@ -38,7 +38,7 @@ export default function BannerTextAbsolute({ imageURL, title, children, directio
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="text shadow-lg">
+        <div className="text shadow-lg mb:my-4">
           {title && <h4 className="title pb-4 text-orange">
             {title}
           </h4>}

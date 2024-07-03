@@ -10,7 +10,7 @@ function Footer() {
 					<div>
 						<h6 className="pb-3 text-poppins">CONTACTEAZĂ-NE</h6>
 						<div className="pb-1"><a href="tel:+40740 993 479">0740 993 479</a></div>
-						<div><a href="mailto:contact@buluc.org">contact@buluc.org</a></div>
+						<div><a href="mailto:contact@buluc.org">buluc.org@gmail.com</a></div>
 					</div>
 					
 					<div>
@@ -24,7 +24,7 @@ function Footer() {
 					</div>
 
 					<div>
-						<h6 className="pb-3 text-poppins">VIZITEAZA-NE</h6>
+						<h6 className="pb-3 text-poppins">VIZITEAZĂ-NE</h6>
 						<p>Strada Madrid 4</p>
 					</div>
 					

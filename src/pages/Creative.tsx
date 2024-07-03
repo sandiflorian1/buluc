@@ -19,7 +19,7 @@ export default function Creative() {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 pb-20">
+        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
           <div className="col-start-1 col-span-4 mb:col-span-7">
             <div className="columns-2">
               <div>
@@ -29,13 +29,13 @@ export default function Creative() {
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=MKE1qRpIIHQ&t=22s" target="_blank">
+                <a href="https://www.youtube.com/watch?v=qhN9iTPQlxc" target="_blank">
                   <img src={IMAGES.creative3} className="rounded-[2rem]"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" /> Vezi episodul </p>
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=qhN9iTPQlxc&t=224s" target="_blank">
+                <a href="https://www.youtube.com/watch?v=MKE1qRpIIHQ&t=78s" target="_blank">
                   <img src={IMAGES.creative2} className="rounded-[2rem]"></img>
                   <p className="flex py-4"> <FaYoutube size='20px' className="mr-2" />  Vezi episodul </p>
                 </a>
@@ -62,7 +62,7 @@ export default function Creative() {
               <br />
 
               <p><span className="text-orange">Identitate vizuală:</span> Cezar Stoica</p>
-              <p><span className="text-orange">Coordonator comunicare & social media:</span> Marilena Adam</p>
+              <p><span className="text-orange">Comunicare & social media:</span> Marilena Adam</p>
               <p><span className="text-orange">Coordonator event:</span> Andreea Istrate</p>
               <p><span className="text-orange">Filmare & Montaj:</span> Adfilm</p>
               <p><span className="text-orange">Foto:</span> Ștefania Țecher & Ionuț Terteci</p>

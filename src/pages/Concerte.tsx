@@ -45,7 +45,7 @@ const Description = () => {
       <p>Evenimentul face parte din proiectul Stagiunea din sufragerie în colaborare cu Carolia Social House.</p>
       <br/>
       <p><span className='text-orange pr-2'>VOCE:</span> ANADI - DIANA OPREA </p>
-      <p><span className='text-orange pr-2'>PIAN:</span>  VASI COVE </p>
+      <p><span className='text-orange pr-4'>PIAN:</span> VASI COVE </p>
     </div>
   )
 }
@@ -53,10 +53,10 @@ const Description = () => {
 const Description2 = () => {
   return (
     <div>
-      <p>Jazz în Sufragerie într-o casă interbelică încărcată de poveste și de mister care a găzduit de-a lungul anilor multe petreceri boierești. Ne strângem #buluc într-un univers completat de note muzicale, atmosfera anilor ‘20 și o experiență care te va învălui încă de la primii pași. Un eveniment ce promite să-ți încânte simțurile și să-ți trezească pasiunea pentru jazz într-un cadru intim și sofisticat. Alături de Sorina Rotaru & Alexandru Olteanu te așteaptă o atmosferă plină de eleganță și rafinament, unde luminile calde și muzica de jazz te vor îndemna să te pierzi în farmecul acestei arte atemporale. </p>
+      <p>Ne strângem #buluc într-un univers completat de note muzicale, atmosfera anilor ‘20 și o experiență care te va învălui încă de la primii pași. Un eveniment ce promite să-ți încânte simțurile și să-ți trezească pasiunea pentru jazz într-un cadru intim și sofisticat. Alături de Sorina Rotaru & Alexandru Olteanu te așteaptă o atmosferă plină de eleganță și rafinament, unde luminile calde și muzica de jazz te vor îndemna să te pierzi în farmecul acestei arte atemporale. </p>
       <br/>
       <p><span className='text-orange pr-2'>VOCE:</span> SORINA ROTARU  </p>
-      <p><span className='text-orange pr-2'>VOCE:</span> ALEXANDRU OLTEANU </p>
+      <p><span className='text-orange pr-4'>PIAN:</span> ALEXANDRU OLTEANU </p>
     </div>
   )
 }

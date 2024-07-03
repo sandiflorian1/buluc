@@ -5,7 +5,7 @@ import Title from "../components/layouts/Title";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import { ITeamMember } from "../types/cards/ITeamMember";
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation } from "../components/animations/Animations";
 
 import "../css/despre.css";
 import TitleBanner from "../components/layouts/TitleBanner";
@@ -132,7 +132,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaMihaelaMardare,
     name: "Mihaela Mardare",
-    role: " actriță, trainer",
+    role: "fondator, actriță",
     color: 'red',
     fondator: true,
   },
@@ -140,7 +140,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaRobertCiupitu,
     name: "Robert Ciupitu",
-    role: "actor, trainer",
+    role: "fondator, actor",
     color: 'orange',
     fondator: true,
   },
@@ -148,7 +148,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaMarilenaAdam,
     name: "Marilena Adam",
-    role: "comunicare & social media",
+    role: "fondator",
     color: 'red',
     fondator: true,
   },
@@ -184,7 +184,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaIonutTerteci,
     name: "Ionuț Terteci",
-    role: "actor & coordonator tehnic Buluc",
+    role: "actor & artist videograf",
     color: 'orange',
   },
 ];

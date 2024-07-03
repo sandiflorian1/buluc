@@ -116,4 +116,23 @@
   .slider__content .slider__image {
     width: 100%;
   }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 2.5rem;
+  }
+
+  .slick-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .slick-arrow.slick-prev {
+    top: 6.5rem;
+    left: 0.5rem;
+  }
+  
+  .slick-arrow.slick-next {
+    top: 5.25rem;
+    right: 1vw;
+  }
 }

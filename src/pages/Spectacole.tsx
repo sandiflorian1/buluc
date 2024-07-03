@@ -90,7 +90,7 @@ const TeatruGalery = () => {
 const slides = [
   {
     number: 1,
-    title: 'Din intamplare – Stagiunea din sufragerie',
+    title: 'Din Întamplare',
     description: Description(),
     imageUrl: IMAGES.dinIntamplare,
     galery: TeatruGalery(),
