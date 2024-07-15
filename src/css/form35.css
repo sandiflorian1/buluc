@@ -1,0 +1,14 @@
+input {
+	border: 1px #f6772b solid;
+	border-radius: 6px;
+	padding: 2px 8px !important;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.signarure {
+	border: 1px #f6772b solid;
+	border-radius: 6px;
+}

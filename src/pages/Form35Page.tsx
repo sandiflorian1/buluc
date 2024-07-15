@@ -23,7 +23,7 @@ export default function Form35Page(props: IForm35PageProps) {
   return (
     <MainLayout>
       <div className="container">
-        <div className="flex flex-row mb:flex-col">
+        <div className="flex flex-row mb:flex-col m-10">
           <SimpleCard>
             <h4>Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</h4>
 
@@ -44,7 +44,7 @@ export default function Form35Page(props: IForm35PageProps) {
             </p>
           </SimpleCard>
 
-          <SimpleCard>
+          <SimpleCard cardClass="bg-red">
             <h4>Cum pot redirecționa?</h4>
             <p>
               Completează formularul de mai jos până pe 20 mai! Durează mai puțin de un minut.

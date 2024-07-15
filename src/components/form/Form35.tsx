@@ -1,65 +1,196 @@
+import SignatureCanvas from 'react-signature-canvas'
+import "../../css/form35.css";
+
 function Form35() {
+	const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
 	return (
 		<form
-			action="/contact/#wpcf7-f136-o1"
+			action="/contact"
 			method="post"
 			className="init"
 			noValidate={true}
 			data-status="init"
 		>
-			<div className="mx-auto">
-				<p className="text">Nume:* </p>
-				<p>
-					<span className="your-name">
+			<div className="mx-auto mt-4">
+				<div className="flex gap-2 mb:flex-col pb-2">
+					<div>
+						<p className="mb-1">Nume:* </p>
 						<input
 							type="text"
 							name="your-name"
-							size={40}
+							size={25}
 							className=""
 							aria-required="true"
 							aria-invalid="false"
 						/>
-					</span>
-				</p>
-				<p className="text"> Email:* </p>
-				<p>
-					<span className="your-email">
+					</div>
+
+					<div>
+						<p className="mb-1">Prenume:* </p>
 						<input
-							type="email"
-							name="your-email"
-							size={40}
+							type="text"
+							name="your-name"
+							size={25}
 							className=""
 							aria-required="true"
 							aria-invalid="false"
 						/>
-					</span>
-				</p>
-				<p className="text"> Telefon:* </p>
-				<p>
-					<span className="your-phone">
+					</div>
+				</div>
+
+				<div className="flex gap-2 mb:flex-col pb-2">
+					<div>
+						<p className="mb-1">Initiala tatalui:* </p>
 						<input
-							type="tel"
-							name="your-phone"
-							size={40}
+							type="text"
+							name="your-name"
+							size={15}
 							className=""
 							aria-required="true"
 							aria-invalid="false"
 						/>
-					</span>
-				</p>
-				<p className="text"> Mesaj:* </p>
-				<p>
-					<span className="mesaj">
-						<textarea
-							name="mesaj"
-							cols={40}
-							rows={5}
+					</div>
+
+					<div>
+						<p className="mb-1">CNP:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={35}
 							className=""
 							aria-required="true"
 							aria-invalid="false"
-						></textarea>
-					</span>
-				</p>
+						/>
+					</div>
+				</div>
+
+				<div className="flex gap-2 mb:flex-col pb-2">
+					<div>
+						<p className="mb-1">Strada:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={35}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Nr:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={15}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+				</div>
+
+				<div className="flex gap-2 mb:flex-col pb-2">
+					<div>
+						<p className="mb-1">Bloc:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={5}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Scara:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={5}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Etaj:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={5}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Apt:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={5}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Judet/Sector:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={18}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+				</div>
+
+				<div className="flex gap-2 mb:flex-col pb-2">
+					<div>
+						<p className="mb-1">Email:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={25}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+
+					<div>
+						<p className="mb-1">Telefon:* </p>
+						<input
+							type="text"
+							name="your-name"
+							size={25}
+							className=""
+							aria-required="true"
+							aria-invalid="false"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<p className="text"> Semnatura:* </p>
+					<div className="signarure">
+					<SignatureCanvas
+						penColor='black'
+						canvasProps={{ width: isMobile ? 200 : 500, height: 100, className: 'sigCanvas' }}
+					/>
+					</div>
+					
+				</div>
+
+
 				<div className="flex items-center mb-4">
 					<div className="mr-4">
 						<span className="gdpr-accept">
@@ -74,14 +205,12 @@ function Form35() {
 						Sunt de acord cu <a href="politica-de-confidentialitate/">Politica de Confidențialitate</a>.
 					</p>
 				</div>
-				<div className="flex justify-center">
-					<button type="submit" className=" wpcf7-submit btn-submit">
+				<div className="flex justify-center pb-4">
+					<button type="submit" className="px-6 py-2 bg-red text-white br">
 						Trimite
 					</button>
-					<span className="ajax-loader"></span>
 				</div>
 			</div>
-			<div className="wpcf7-response-output" aria-hidden="true"></div>
 		</form>
 	);
 }
