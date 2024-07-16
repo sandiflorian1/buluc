@@ -1,7 +1,6 @@
 import MainLayout from "../components/layouts/MainLayout";
 import { useRef, useEffect, Ref } from 'react';
 import { gsap } from "gsap";
-import IMAGES from "../assets/Images";
 
 export interface IImproshowProps { }
 

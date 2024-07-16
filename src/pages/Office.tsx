@@ -1,16 +1,15 @@
 import MainLayout from "../components/layouts/MainLayout";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
-import SimpleSlider from '../components/SimpleSlider';
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation, ScaleViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation, SlideXViewPortAnimation } from "../components/animations/Animations";
 
 export interface IOfficeProps { }
 
 
 const Office: React.FC = () => {
   return (
-    <MainLayout title="The Office">
+    <MainLayout title="@The Office">
       <div className="pt-10 mb:pt-5">
         <BannerTextAbsolute
           imageURL={IMAGES.Office6}
@@ -22,50 +21,48 @@ const Office: React.FC = () => {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-6 gap-8 mb:gap-0 mb-20 mb:mb-10">
-          <div className="overflow-hidden col-start-1 col-end-5 mb:col-end-7">
-            <SimpleSlider
-              images={[IMAGES.Office1, IMAGES.Office2, IMAGES.Office3, IMAGES.Office4, IMAGES.Office5]}
-              className="w-[30vw] h-[30vw] mb:h-[60vw] br overflow-hidden"
-            ></SimpleSlider>
-          </div>
+        <div className="grid grid-cols-6 gap-8 mb:gap-0 mb-20 mb:mb-10">
+          <FadeInViewPortAnimation className="overflow-hidden col-start-1 col-end-4 mb:col-end-7">
+            <img src={IMAGES.suit}></img>
+          </FadeInViewPortAnimation>
 
-          <div className="col-end-7 col-span-2 mb:col-span-7 my-auto bg-white p-6 br">
-            <p className="">
+          <div className="col-end-7 col-span-3 mb:col-span-7">
+            <SlideXViewPortAnimation className="bg-white p-6 br mb-4">
+            <p >
               În cadrul acestui workshop dinamic și interactiv, participanții vor fi conduși printr-o serie de exerciții și activități teatrale care îi vor provoca să-și exploreze și să-și depășească limitele, să-și îmbunătățească abilitățile de comunicare și să-și dezvolte încrederea în sine.
             </p>
-          </div>
-        </FadeInViewPortAnimation>
+            </SlideXViewPortAnimation>
+           
 
-        <FadeInViewPortAnimation className="grid grid-cols-6 gap-8 mb:gap-0 pb-20">
-          <div className="col-start-1 col-end-4 mb:col-end-7 bg-white p-6 br">
-            <h4 className="title pb-4 text-red">
-              Obiective:
-            </h4>
-            <ul className="list-disc pl-8">
-              <li>Explorarea și dezvoltarea abilităților de comunicare și colaborare în echipă</li>
-              <li>Îmbunătățirea capacității de adaptare și rezolvare a problemelor în contextul profesional</li>
-              <li>Stimularea creativității și a gândirii inovatoare în soluționarea provocărilor de la locul de muncă</li>
-              <li>Dezvoltarea empatiei și a abilităților de leadership</li>
-              <li>Creșterea încrederii în sine și gestionarea stresului în situații de prezentare sau de interacțiune în public</li>
-            </ul>
-          </div>
+            <SlideXViewPortAnimation className="bg-white p-6 br mb-4">
+              <h4 className="title pb-4 text-red">
+                Obiective:
+              </h4>
+              <ul className="list-disc pl-8">
+                <li>Explorarea și dezvoltarea abilităților de comunicare și colaborare în echipă</li>
+                <li>Îmbunătățirea capacității de adaptare și rezolvare a problemelor în contextul profesional</li>
+                <li>Stimularea creativității și a gândirii inovatoare în soluționarea provocărilor de la locul de muncă</li>
+                <li>Dezvoltarea empatiei și a abilităților de leadership</li>
+                <li>Creșterea încrederii în sine și gestionarea stresului în situații de prezentare sau de interacțiune în public</li>
+              </ul>
+            </SlideXViewPortAnimation>
 
-          <div className="col-end-7 col-span-3 mb:col-span-7 bg-white p-6 br">
-            <h4 className="title pb-4 text-red">
-              Beneficii:
-            </h4>
+            <SlideXViewPortAnimation className="bg-white p-6 br">
+              <h4 className="title pb-4 text-red">
+                Beneficii:
+              </h4>
 
-            <ul className="list-disc pl-8">
-              <li>Angajați mai încrezători și mai motivați, capabili să abordeze provocările profesionale cu creativitate și încredere</li>
-              <li>O cultură organizațională îmbunătățită, bazată pe comunicare eficientă și colaborare</li>
-              <li>Îmbunătățirea abilităților de comunicare</li>
-              <li>Creşterea încrederii de sine</li>
-              <li>Dezvoltarea capacității de adaptare</li>
-              <li>Îmbunătățirea abilităților de lucru în echipă</li>
-            </ul>
+              <ul className="list-disc pl-8">
+                <li>Angajați mai încrezători și mai motivați, capabili să abordeze provocările profesionale cu creativitate și încredere</li>
+                <li>O cultură organizațională îmbunătățită, bazată pe comunicare eficientă și colaborare</li>
+                <li>Îmbunătățirea abilităților de comunicare</li>
+                <li>Creşterea încrederii de sine</li>
+                <li>Dezvoltarea capacității de adaptare</li>
+                <li>Îmbunătățirea abilităților de lucru în echipă</li>
+              </ul>
+            </SlideXViewPortAnimation>
           </div>
-        </FadeInViewPortAnimation>
+        </div>
 
         <FadeInViewPortAnimation className="mb-20 mb:mb-10 bg-white p-6 br">
           <h3 className="text-red">
@@ -85,23 +82,33 @@ const Office: React.FC = () => {
               <p> Ne adaptăm în funcție de nevoile companiei tale. Alege varianta care crezi că ți se potrivește. </p>
             </div>
 
-            <div className="col-start-1 col-end-3 mb:col-end-7 bg-white p-6 br">
-              <h6 className="text-red">la noi ACASĂ</h6>
-              <p>
-                în sufrageria de pe str. Madrid 4, într-o casă din 1920 din zona Dorobanți. Un spațiu creativ si versatil, ce dispune şi de o terasa exterioară unde ne adunăm buluc seară de seară.
-              </p>
+            <div className="col-start-1 col-end-3 mb:col-end-7">
+              <img src={IMAGES.grafica1}></img>
+              <div className="bg-white p-6 br">
+                <h6 className="text-red">la noi ACASĂ</h6>
+                <p>
+                  în sufrageria de pe str. Madrid 4, într-o casă din 1920 din zona Dorobanți. Un spațiu creativ si versatil, ce dispune şi de o terasa exterioară unde ne adunăm buluc seară de seară.
+                </p>
+              </div>
             </div>
 
-            <div className="col-start-3 col-span-2 mb:col-span-7 bg-white p-6 br">
-              <h6 className="text-red">la tine ACASĂ</h6>
-              <p>
-              la birou, găzduit chiar în cadrul companiei, într-un mediu familiar. O sală de conferințe sau un spațiu deschis suficient de mare pentru a permite mișcarea și interacțiunea participanților.
-              </p>
+            <div className="col-start-3 col-span-2 mb:col-span-7">
+              <img src={IMAGES.grafica2}></img>
+              <div className="bg-white p-6 br">
+                <h6 className="text-red">la tine ACASĂ</h6>
+                <p>
+                  la birou, găzduit chiar în cadrul companiei, într-un mediu familiar. O sală de conferințe sau un spațiu deschis suficient de mare pentru a permite mișcarea și interacțiunea participanților.
+                </p>
+              </div>
+
             </div>
 
-            <div className="col-end-7 col-span-2 mb:col-span-7 bg-white p-6 br">
-              <h6 className="text-red">în TEAMBUILDING</h6>
-              <p>într-un loc care să ofere inspirație facilitând astfel un mediu propice pentru deconectare și creativitate</p>
+            <div className="col-end-7 col-span-2 mb:col-span-7">
+              <img src={IMAGES.grafica3}></img>
+              <div className="bg-white p-6 br">
+                <h6 className="text-red">în TEAMBUILDING</h6>
+                <p>într-un loc care să ofere inspirație facilitând astfel un mediu propice pentru deconectare și creativitate</p>
+              </div>
             </div>
           </div>
         </FadeInViewPortAnimation>

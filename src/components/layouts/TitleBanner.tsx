@@ -1,6 +1,6 @@
 import "../../css/title-banner.css";
 import Slider from 'react-slick';
-import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../animations/Animations";
+import { FadeInViewPortAnimation } from "../animations/Animations";
 
 type TitleBannerType = {
   bgBluredImg?: string, 

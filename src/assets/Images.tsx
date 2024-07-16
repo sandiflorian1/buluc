@@ -33,6 +33,7 @@ const IMAGES = {
     partener8: new URL('/src/assets/images/culise/parteneri/8.png', import.meta.url).href,
     partener9: new URL('/src/assets/images/culise/parteneri/9.png', import.meta.url).href,
     // in sufragerie
+    bgSufragerie: new URL('/src/assets/images/in-sufragerie/bg-sufragerie.png', import.meta.url).href,
     improshow: new URL('/src/assets/images/in-sufragerie/improshow/improshow.jpg', import.meta.url).href,
     concerte: new URL('/src/assets/images/in-sufragerie/concerte/concerte.jpg', import.meta.url).href,
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpeg', import.meta.url).href,
@@ -65,13 +66,13 @@ const IMAGES = {
     Show8: new URL('/src/assets/images/challenge/challenge-yourself/show8.jpeg', import.meta.url).href,
     Show9: new URL('/src/assets/images/challenge/challenge-yourself/show9.jpeg', import.meta.url).href,
     
-
-    Office1: new URL('/src/assets/images/challenge/office/office1.jpeg', import.meta.url).href,
-    Office2: new URL('/src/assets/images/challenge/office/office2.jpeg', import.meta.url).href,
-    Office3: new URL('/src/assets/images/challenge/office/office3.jpeg', import.meta.url).href,
-    Office4: new URL('/src/assets/images/challenge/office/office4.jpeg', import.meta.url).href,
-    Office5: new URL('/src/assets/images/challenge/office/office5.jpeg', import.meta.url).href,
     Office6: new URL('/src/assets/images/challenge/office/office6.jpeg', import.meta.url).href,
+    grafica1: new URL('/src/assets/images/challenge/office/grafica1.png', import.meta.url).href,
+    grafica2: new URL('/src/assets/images/challenge/office/grafica2.png', import.meta.url).href,
+    grafica3: new URL('/src/assets/images/challenge/office/grafica3.png', import.meta.url).href,
+    suit: new URL('/src/assets/images/challenge/office/suit.png', import.meta.url).href,
+
+
 
     Experience1: new URL('/src/assets/images/challenge/experince/experience1.jpeg', import.meta.url).href,
     Experience2: new URL('/src/assets/images/challenge/experince/experience2.jpeg', import.meta.url).href,

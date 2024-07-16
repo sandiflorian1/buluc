@@ -6,7 +6,7 @@ import TitleBanner from "../components/layouts/TitleBanner";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation, SlideViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation, SlideYViewPortAnimation } from "../components/animations/Animations";
 import SimpleCard from "../components/cards/SimpleCard";
 
 
@@ -99,16 +99,16 @@ const Experience: React.FC = () => {
 
       <div className="mx-[12%] mb:mx-6 pb-20">
         <div className="columns-2 mb:grid gap-10 mb:gap-0">
-          <SlideViewPortAnimation direction="up" className="p-6 bg-white">
+          <SlideYViewPortAnimation direction="up" className="p-6 bg-white">
             <h4 className="text-orange">Drumeție pe munții Coziei</h4>
             <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
-          </SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.Experience9}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation><img src={IMAGES.Experience6}></img></SlideViewPortAnimation>
-          <SlideViewPortAnimation className="p-6 bg-white">
+          </SlideYViewPortAnimation>
+          <SlideYViewPortAnimation><img src={IMAGES.Experience9}></img></SlideYViewPortAnimation>
+          <SlideYViewPortAnimation direction="up"><img src={IMAGES.Experience6}></img></SlideYViewPortAnimation>
+          <SlideYViewPortAnimation className="p-6 bg-white">
             <h4 className="text-orange">Foc de tabără</h4>
             <p>Ne strângem buluc seara, la foc de tabără, în jurul poveștilor sub cerul înstelat și sub privirile atente ale vârfului Cozia. Un moment de de conectare și de regăsire a simplității și a frumuseții vieții chiar la poalele muntelui.</p>
-          </SlideViewPortAnimation>
+          </SlideYViewPortAnimation>
         </div>
       </div>
 

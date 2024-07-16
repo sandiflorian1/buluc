@@ -62,3 +62,11 @@ body {
 header {
   background: white;
 }
+
+ul.list-disc {
+  list-style-image: url("/src/assets/images/stea.svg");
+}
+
+ul.list-disc li::marker {
+font-size: 1rem;
+}

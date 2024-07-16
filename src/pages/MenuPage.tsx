@@ -2,10 +2,13 @@ import { useRef, useEffect } from 'react';
 import MainLayout from "../components/layouts/MainLayout";
 import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
+import { FadeInAnimation, SlideRightAnimation } from "../components/animations/Animations";
+
+import IMAGES from "../assets/Images";
 
 export interface IMenuPageProps {
   options: { id: string; link: string; text: string, description: string }[]
-} 
+}
 
 export default function MenuPage(props: IMenuPageProps) {
   const { options } = props;
@@ -21,8 +24,8 @@ export default function MenuPage(props: IMenuPageProps) {
           const descHeight = description?.children[0].getBoundingClientRect().height;
           const tl = gsap.timeline({ repeat: 0, paused: true });
           if (description) {
-            tl.fromTo(description.children, {  height: 0 }, {height: descHeight, duration: 0.5 }, 0)
-              .fromTo(description, { opacity: 0}, { opacity: 1 }, 0);
+            tl.fromTo(description.children, { height: 0 }, { height: descHeight, duration: 0.5 }, 0)
+              .fromTo(description, { opacity: 0 }, { opacity: 1 }, 0);
 
             menuItemsRef[index].addEventListener('mouseover', () => {
               tl.play();
@@ -35,27 +38,31 @@ export default function MenuPage(props: IMenuPageProps) {
       }
     });
   }
-  
+
 
   return (
-    <MainLayout>
-      <div className="py-20 pl-60 mb:pl-0 h-[80vh] flex items-center" >
-        <div ref={menuRef} className="flex flex-col w-[25vw] mb:w-[80vw]">
-          {options.map(({ id, link, text, description }) => (
-            <Link 
-              id={id}
-              key={id}
-              to={link}
-              className="pb-5"
-            >
-              <h1 className="title">{text}</h1>
-              <div className="description">
-                <p className="" style={{ textShadow: '0.75px 0.75px 1.5px orange'}}>.{description}</p>
-              </div>
-            </Link>
-          ))}
+    <FadeInAnimation>
+      <MainLayout bgImg={IMAGES.bgSufragerie} noPadding>
+        <div className="py-20 h-[90vh] w-[100vw] flex items-center pl-[28%] mb:pl-8" >
+          <div ref={menuRef} className="flex flex-col w-[25vw] mb:w-[80vw]">
+            {options.map(({ id, link, text, description }) => (
+              <SlideRightAnimation>
+                <Link
+                  id={id}
+                  key={id}
+                  to={link}
+                  className="pb-5"
+                >
+                  <h1 className="title">{text}</h1>
+                  <div className="description">
+                    <p className="">.{description}</p>
+                  </div>
+                </Link>
+              </SlideRightAnimation>
+            ))}
+          </div>
         </div>
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </FadeInAnimation>
   );
 }

@@ -45,7 +45,7 @@ const ScaleViewPortAnimation = ({ children, className, ...props }: any) => {
   );
 };
 
-const SlideViewPortAnimation = ({ children, className, direction, ...props }: any) => {
+const SlideYViewPortAnimation = ({ children, className, direction, ...props }: any) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
   const cardVariants = {
@@ -76,9 +76,75 @@ const SlideViewPortAnimation = ({ children, className, direction, ...props }: an
     );
   };
 
+  const SlideXViewPortAnimation = ({ children, className, direction, ...props }: any) => {
+    const ref = useRef(null);
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isInView = useInView(ref, { once: true, amount: 1 });
+    const cardVariants = {
+      hidden: {
+        opacity: 0,
+        ...{ x: direction === 'right' ? 300 : -300 },
+      },
+      visible: {
+        opacity: 1,
+        ...{ x: 0 },
+        transition: {
+          delay: 0.2,
+          duration: 0.5,
+        },
+      },
+    };
+      return (
+        isMobile 
+        ? (<div className={className}>{children}</div>)
+        : (<motion.div
+          className={className}
+          ref={ref}
+          variants={cardVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          {...props}
+        >
+          {children}
+        </motion.div>)
+      );
+    };
+
+  const SlideRightAnimation = ({ children, className, direction, ...props }: any) => {
+    const ref = useRef(null);
+    const cardVariants = {
+      hidden: {
+        opacity: 0,
+        ...{ x: direction === 'up' ? 300 : -300 },
+      },
+      visible: {
+        opacity: 1,
+        ...{ x: 0 },
+        transition: {
+          delay: 0.2,
+          duration: 0.5,
+        },
+      },
+    };
+      return (
+        <motion.div
+          className={className}
+          ref={ref}
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+          {...props}
+        >
+          {children}
+        </motion.div>
+      );
+    };
+
 export { 
   FadeInViewPortAnimation, 
   ScaleViewPortAnimation, 
-  SlideViewPortAnimation, 
+  SlideYViewPortAnimation, 
+  SlideXViewPortAnimation,
   FadeInAnimation, 
+  SlideRightAnimation,
 }
