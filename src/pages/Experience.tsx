@@ -149,12 +149,12 @@ const Experience: React.FC = () => {
       </div>
 
       <FadeInViewPortAnimation className="pb-20 mb:pb-10">
-        <div className="w-100% bg-white mb:pb-2">
+        <div className="w-100% bg-white mb:pb-2 py-6">
           <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
             Echipa
           </h3>
 
-          <div id="members" className="flex mb:inline gap-10 justify-center my-10">
+          <div id="members" className="flex mb:inline gap-10 justify-center">
             <TeamMemberCard
               key={1}
               imageSrc={IMAGES.echipaMihaelaMardare}

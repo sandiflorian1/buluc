@@ -17,12 +17,6 @@ const Cafeluta: React.FC = () => {
               <SimpleCard>
                 <h2>Început de Buluc</h2>
                 <p className="mb-4">01.06.2024</p>
-                <div className="flex mb-6">
-                  <a href="https://www.instagram.com/_bulucul/" className="pr-[1rem]" target="_blank"><FaInstagram size='20px' /></a>
-                  <a href="https://www.facebook.com/bulucorg/" className="pr-[1rem]" target="_blank"><FaFacebook size='20px' /></a>
-                  <a href="https://www.tiktok.com/@_buluc" className="pr-[1rem]" target="_blank"><FaTiktok size='20px' /></a>
-                  <a href="https://www.youtube.com/channel/UCnn7EVQzc0nzv9YyGb-iUlA" target="_blank"><FaYoutube size='20px' /></a>
-                </div>
 
                 <h6 className="font-bold mb-2">
                 <span className="text-red">Oamenii:</span> Hai să facem cunoștință!

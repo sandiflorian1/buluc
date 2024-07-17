@@ -16,10 +16,7 @@ const BlogZoomtalks: React.FC = () => {
             <h2>Zoomtalks</h2>
             <p className="mb-4">01.06.2024</p>
             <div className="flex mb-6">
-              <a href="https://www.instagram.com/_bulucul/" className="pr-[1rem]" target="_blank"><FaInstagram size='20px' /></a>
-              <a href="https://www.facebook.com/bulucorg/" className="pr-[1rem]" target="_blank"><FaFacebook size='20px' /></a>
-              <a href="https://www.tiktok.com/@_buluc" className="pr-[1rem]" target="_blank"><FaTiktok size='20px' /></a>
-              <a href="https://www.youtube.com/channel/UCnn7EVQzc0nzv9YyGb-iUlA" target="_blank"><FaYoutube size='20px' /></a>
+              <a href="https://www.instagram.com/zoomtalks/" className="pr-[1rem]" target="_blank"><FaInstagram size='20px' /></a>
             </div>
             <p className="font-bold mb-2">
               Anul 2020 a reprezentat pentru teatrul independent o provocare, o provocare cu care unii dintre noi s-au obișnuit și care ulterior s-a transformat într-un stil de viață. Părea că nimic nu are sens, 70%, 30% ...închis! Acest - închis - ne-a făcut să ne întrebăm, să ne gândim că totul se întâmplă cu un motiv.

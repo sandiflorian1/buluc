@@ -77,7 +77,7 @@ function Navbar() {
   })
 
   return (
-    <header ref={ref} id="header" className='sm:flex justify-between w-screen px-[2vw] items-center shadow-lg fixed mb:relative'>
+    <header ref={ref} id="header" className='sm:flex justify-between w-screen px-[2vw] items-center shadow-lg fixed'>
       {!isMobile && (
         <>
           <a href="/">

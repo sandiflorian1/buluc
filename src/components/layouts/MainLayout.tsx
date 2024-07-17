@@ -14,7 +14,7 @@ const bgImage = bgImg || IMAGES.bg;
       </div>
       <Navbar />
 
-      <div className='mt-[5rem] mb:mt-0'>
+      <div className='pt-[5rem] mb:mt-0'>
         {title &&
           (<section id="title">
             <div className="w-full mt-10">

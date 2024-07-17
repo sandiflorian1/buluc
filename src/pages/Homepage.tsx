@@ -16,7 +16,6 @@ export default function Homepage (props: IHomepageProps) {
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
-    // tl.fromTo([backgroundRef.current], {  opacity: 0 }, {  opacity: 1, duration: 1  });
     tl.fromTo([navbarRef.current], {  y: "-200px", duration: 1 }, {  y: 0, duration: 1, delay: 3  });
 
     return () => {
@@ -37,7 +36,7 @@ export default function Homepage (props: IHomepageProps) {
 
       <div className="h-screen w-screen overflow-hidden page">
         <div ref={backgroundRef} className="h-screen bg-center bg-cover flex justify-center items-center">
-            <div ref={defRef} className='mx-[30vw] bg-white br p-6'>
+            <div ref={defRef} className='mx-[30vw] mb:mx-[15vw] bg-white br p-6'>
               <Typewriter text={text} speed={17} className='text-xl mb:text-5xl' />
             </div>
         </div>

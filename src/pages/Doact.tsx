@@ -16,8 +16,6 @@ export default function Doact() {
         >
           <p className="">
             DOACT este tabăra de teatru pentru adolescenții cu vârsta cuprinsă între 14-19 ani creată special pentru a construi o comunitate de tineri mult mai pregătiți pentru momentul în care decid să-și urmeze pasiunea pentru artă.
-          </p>
-          <p>
             Misiunea acestui proiect a stat la baza dorinței de a pregăti generațiile viitoare în a fi mai încrezători, mai curajoși că pot face ceea ce le place și îi pasionează.
           </p>
         </BannerTextAbsolute>

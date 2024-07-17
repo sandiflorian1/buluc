@@ -8,6 +8,7 @@ import { FadeInViewPortAnimation, ScaleViewPortAnimation, FadeInAnimation } from
 
 export default function ChallengeYourself() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const textShadow = { textShadow: isMobile ? '' : '1px 1px 2px black'};
 
   return (
     <MainLayout noPadding>
@@ -15,7 +16,7 @@ export default function ChallengeYourself() {
         <h1 className="text-center text-[6.5vw] mb:text-[8.5vw] leading-[7.5vw] mb:leading-[9.5vw]">
           Challenge Yourself
         </h1>
-        <h3 className="text-center">
+        <h3 className="text-center mb:text-[5.5vw] mb:px-10">
           curs de dezvoltare personală prin tehnici teatrale
         </h3>
       </FadeInAnimation>
@@ -90,7 +91,7 @@ export default function ChallengeYourself() {
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full"
+                    className="h-full mb:h-auto"
                   />
                 </div>
               ))}
@@ -102,7 +103,7 @@ export default function ChallengeYourself() {
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full"
+                    className="h-full mb:h-auto"
                   />
                 </div>
               ))}
@@ -118,15 +119,17 @@ export default function ChallengeYourself() {
               className="w-[100vh] h-[80vh] overflow-hidden"
             ></SimpleSlider>
             <div className="absolute w-[30vw] bottom-0 left-[20vw] pb-20 mb:relative mb:w-full mb:left-0 mb:bg-white mb:p-8">
-              <h4 className="title pb-4 text-white mb:text-red" style={{ textShadow: '1px 1px 2px black'}}>
-                Ce urmează după cele 3 luni de curs?
+              <h4 className="title pb-4 text-white mb:text-red" style={textShadow}>
+                Ce urmează după cele 
+                <br/>
+                3 luni de curs?
               </h4>
 
-              <p className="pb-4 text-white mb:text-black" style={{ textShadow: '1px 1px 2px black'}}>
+              <p className="pb-4 text-white mb:text-black" style={textShadow}>
                 La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="font-bold">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
               </p>
 
-              <p className="pb-4 text-white mb:text-black" style={{ textShadow: '1px 1px 2px black'}}>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
+              <p className="pb-4 text-white mb:text-black" style={textShadow}>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
             </div>
 
           </div>
