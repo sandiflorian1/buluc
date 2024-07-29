@@ -2,16 +2,17 @@ import MainLayout from "../components/layouts/MainLayout";
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { Link } from 'react-router-dom';
+import IMAGES from "../assets/Images";
 export interface ISustineProps {
 }
 
-export default function Sustine (props: ISustineProps) {
+export default function Sustine(props: ISustineProps) {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
-    tl.fromTo(".image1", {  opacity: 0 }, {opacity: 1, duration: 0.5})
-    .fromTo(".card1", {  opacity: 0 }, {opacity: 1, duration: 0.5})
-    .fromTo(".image2", {  opacity: 0 }, {opacity: 1, duration: 0.5})
-    .fromTo(".card2", {  opacity: 0 }, {opacity: 1, duration: 0.5})
+    tl.fromTo(".image1", { opacity: 0 }, { opacity: 1, duration: 0.5 })
+      .fromTo(".card1", { opacity: 0 }, { opacity: 1, duration: 0.5 })
+      .fromTo(".image2", { opacity: 0 }, { opacity: 1, duration: 0.5 })
+      .fromTo(".card2", { opacity: 0 }, { opacity: 1, duration: 0.5 })
     return () => {
       tl.kill();
     };
@@ -19,31 +20,30 @@ export default function Sustine (props: ISustineProps) {
 
   return (
     <MainLayout>
-      <div className="ugl_fix grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-20">
-        <div className="flex flex-col">
-          <img className="mx-auto mb-8 image1" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/35.jpg" loading="lazy" alt="Image 1" />
-          <div className="relative flex h-full card1">
-            <div className="bg-red py-8 px-4 sm:p-8 md:p-12 br">
-              <h3 className="text-white">3,5 %</h3>
-              <p className="text-white font-normal mb-4 md:mb-8">Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</p>
-              <Link to={'/sustine-form35page'} className="bg-white rounded-full py-2 px-6 md:px-8 text-red mt-auto no-underline">
-                Donează →
-              </Link>
+      <div className="flex mb:inline">
+        <div className="m-10">
+          <div className="relative">
+            <img className="mx-auto mb-8 image1" src={IMAGES.sustine} loading="lazy" alt="Image 1" />
+            <div className="absolute sustine-text">
+              <h1 className="text-white text-[5rem] mb:text-[2rem]">3,5 %</h1>
+              <p className="text-white px-8 text-center text-[1.75rem] mb:text-[0.85rem]">Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</p>
             </div>
           </div>
+          <Link to={'/sustine-form35page'} className="flex justify-center">
+            <h4 className="text-orange bg-white btn-suport br">Donează</h4>
+          </Link>
         </div>
-
-        <div className="flex flex-col  h-full">
-          <img className="mx-auto mb-8 image2" src="https://buluc.org/wp-content/themes/Buluc/assets/graphics/donatie.jpg" loading="lazy" alt="Image 2" />
-          <div className="relative flex card2">
-            <div className="bg-orange py-8 px-4 sm:p-8 md:p-12 br">
-              <h3 className="text-white">Donație</h3>
-              <p className="text-white font-normal mb-4 md:mb-8">Toate ideile si inițiativele noastre pot fi sustinute printr-o donație directă in contul bancar al asociatiei noastre</p>
-              <Link to={'/sustine-donatie'} className="bg-white rounded-full py-2 px-6 md:px-8 text-red mt-auto no-underline">
-                Donează →
-              </Link>
+        <div className="m-10">
+          <div className="relative">
+            <img className="mx-auto mb-8 image1" src={IMAGES.sustine} loading="lazy" alt="Image 1" />
+            <div className="absolute sustine-text">
+              <h1 className="text-white text-[4rem] mb:text-[1.5rem]">Donație</h1>
+              <p className="text-white px-8 mb:px-4 text-center text-[1.75rem] mb:text-[0.85rem]">Toate ideile si inițiativele noastre pot fi sustinute printr-o donație directă in contul bancar al asociatiei noastre</p>
             </div>
           </div>
+          <Link to={'/sustine-donatie'} className="flex justify-center">
+            <h4 className="text-orange bg-white btn-suport br">Donează</h4>
+          </Link>
         </div>
       </div>
     </MainLayout>

@@ -2,7 +2,7 @@ import "../../css/banner-text-absolute.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
 
-export default function BannerTextAbsolute({ imageURL, title, children, direction, className }: any) {
+export default function BannerTextAbsolute({ imageURL, title, children, direction, className, link }: any) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -39,9 +39,13 @@ export default function BannerTextAbsolute({ imageURL, title, children, directio
         animate={isInView ? "visible" : "hidden"}
       >
         <div className="text shadow-lg mb:my-4">
-          {title && <h4 className="title pb-4 text-orange">
+          {link ? 
+            <div className="title pb-4 text-orange"><h4>Despre</h4> <a href={link} className="underline"><h4>Albastru și Origini</h4></a></div>
+           : title && <h4 className="title pb-4 text-orange">
             {title}
-          </h4>}
+            </h4>
+          }
+          
 
           {children}
         </div>

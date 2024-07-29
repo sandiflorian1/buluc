@@ -20,6 +20,7 @@ import Roast from './pages/Roast';
 import Doact from './pages/Doact';
 import Form35Page from './pages/Form35Page';
 import Donatie from './pages/Donation';
+import Confidentialitate from './pages/Confidentialitate';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/sustine-form35page" component={Form35Page} />
         <Route path="/sustine-donatie" component={Donatie} />
         <Route path="/contact" component={Contact} />
+        <Route path="/politica-de-confidentialitate" component={Confidentialitate} />
         <Route path="/challenge_yourself" component={ChallengeYourself} />
         <Route path="/improshow" component={Improshow} />
         <Route path="/concerte" component={Concerte} />

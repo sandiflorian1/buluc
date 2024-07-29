@@ -76,7 +76,7 @@ const Office: React.FC = () => {
           <div className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
             <div className="col-start-1 col-end-5 mb:col-end-7 bg-white p-6 br">
               <h4 className="text-red">
-                Unde se întâmpla?
+                Unde se întâmplă?
               </h4>
 
               <p> Ne adaptăm în funcție de nevoile companiei tale. Alege varianta care crezi că ți se potrivește. </p>

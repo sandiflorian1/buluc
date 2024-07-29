@@ -149,13 +149,12 @@ const IMAGES = {
     zoomtalks3: new URL('/src/assets/images/proiecte/zoomtalk3.jpeg', import.meta.url).href,
     zoomtalks4: new URL('/src/assets/images/proiecte/zoomtalk4.jpeg', import.meta.url).href,
 
-
-
-
     //gazeta
     zoomtalks: new URL('/src/assets/images/gazeta/zoomtalks.jpg', import.meta.url).href,
     people: new URL('/src/assets/images/gazeta/people.jpg', import.meta.url).href,
 
+    //sustine
+    sustine: new URL('/src/assets/images/sustine.png', import.meta.url).href,
 }
 
 export default IMAGES;

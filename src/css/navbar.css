@@ -10,7 +10,7 @@
 }
 
 #header {
-  z-index: 10;
+  z-index: 1000;
 }
 
 li.has-menu {
@@ -21,7 +21,7 @@ li.has-menu {
   position: absolute;
   background-color: white;
   padding: 0.5rem;
-  z-index: 100;
+  z-index: 1001;
 }
 
 

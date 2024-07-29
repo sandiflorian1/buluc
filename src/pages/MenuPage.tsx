@@ -56,7 +56,7 @@ export default function MenuPage(props: IMenuPageProps) {
                 >
                   <h1 className="title">{text}<span><FaArrowRight size='25px' className="text-orange inline center align-baseline ml-2"/></span></h1>
                   <div className="description">
-                    <p className="">.{description}</p>
+                    <p className="" style={{ textShadow: '0.25px 0.25px 0.5px black'}}>.{description}</p>
                   </div>
                 </Link>
               </SlideRightAnimation>

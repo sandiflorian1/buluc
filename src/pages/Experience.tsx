@@ -77,8 +77,8 @@ const Experience: React.FC = () => {
               <li>goodies & premii de la parteneri</li>
             </ul>
 
-            <div className="bg-red absolute bottom-[-6rem] right-10 w-40 h-40 rounded-[50%]" />
-            <div className="bg-orange absolute bottom-[-3rem] right-40 w-20 h-20 rounded-[50%]" />
+            <div className="bg-red absolute bottom-[-6rem] right-10 w-40 h-40 rounded-[50%] mb:right-2" />
+            <div className="bg-orange absolute bottom-[-3rem] right-40 w-20 h-20 rounded-[50%] mb:right-28" />
 
           </div>
         </FadeInViewPortAnimation>
@@ -118,6 +118,7 @@ const Experience: React.FC = () => {
           direction="left"
           className="h-[40vw] pb-20"
           title="Despre Albastru și Origini"
+          link="https://albastrusiorigini.ro/"
         >
           <p className="pb-4">
             Un sat din Berislăvești, Jud. Vâlcea format din 4 case vechi de peste 100 de ani srămutate și readuse la viață, din nordul țării, alături de un hambar transformat în vatra satului – locul unde ne vom aduna buluc cu toții la povesti si la bucate delicioase. Un loc în care timpul parcă stă în loc.
@@ -198,10 +199,10 @@ const Experience: React.FC = () => {
       </FadeInViewPortAnimation>
 
       <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-10">
-        {/* <h4 className="title pb-4 text-orange text-center">
+        <h4 className="title pb-4 text-orange text-center">
           LOCURI LIMITATE
-        </h4> */}
-        <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
+        </h4>
+        {/* <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} /> */}
       </FadeInViewPortAnimation>
 
       <div className="w-full flex justify-center pb-20">

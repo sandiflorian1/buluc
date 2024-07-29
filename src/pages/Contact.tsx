@@ -19,8 +19,8 @@ export default function Contact(props: IContactProps) {
 
   return (
     <MainLayout>
-      <div className="pt-20 pl-40">
-        <div className="w-full p-10 bg-peach br">
+      <div className="pt-20 mb:pt-10 pl-40 mb:pl-0">
+        <div className="w-full p-10 mb:p-5 bg-peach br">
           <h4 className="text-end mb-4 mb:text-start">Conectează-te cu noi!</h4>
           <div className="flex justify-end mb:justify-start">
             <a aria-label="Chat on WhatsApp" href="https://wa.me/+40743760430" target="_blank" className='mr-4'><FaWhatsapp size='30px' /></a>
@@ -72,10 +72,10 @@ export default function Contact(props: IContactProps) {
                     aria-required="true"
                     aria-invalid="false"
                   ></textarea>
-                  <div className="flex items-center mb-4">
-                    <input type="checkbox" name="gdpr-accept" value="1" aria-invalid="false" />
+                  <div className="flex mb-4">
+                    <input type="checkbox" name="gdpr-accept" value="1" aria-invalid="false" className='12px' />
                     <p className="mb-0 ml-2">
-                      Sunt de acord cu <a href="politica-de-confidentialitate/">Politica de Confidențialitate</a>.
+                      Sunt de acord cu <a href="politica-de-confidentialitate/" className='underline'>Politica de Confidențialitate</a>.
                     </p>
                   </div>
                   <div className="">
