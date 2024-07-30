@@ -1,0 +1,16 @@
+.sustine-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sustine-text {
+      height: 20rem;
+      width: 20rem
+    }
+  }
