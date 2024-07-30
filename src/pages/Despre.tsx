@@ -32,7 +32,8 @@ const MisiuneSection: React.FC = () => {
 
 const LocatieSection: React.FC = () => {
   return (
-    <div className="locatie" >
+    <div className="locatie relative">
+			<img className="caracter-despre" src={IMAGES.caracter1} loading="lazy" alt="Image 1" />
       <TitleBanner
         title="loc de joaca"
         text={LocDeJoacaText}

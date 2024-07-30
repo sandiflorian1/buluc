@@ -1,10 +1,12 @@
 import "../css/footer.css";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+import IMAGES from "../assets/Images";
 
 function Footer() {
 	return (
 	<>
-		<div className="footer bg-red mt-auto">
+		<div className="footer bg-red mt-auto relative">
+			<img className="caracter mb:top-[-20px]" src={IMAGES.caracter2} loading="lazy" alt="Image 1" />
 			<div className="container mx-auto px-[18vw] mb:px-[4vw] sm:py-10 py-5">
 				<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-3 gap-4 mb:text-center">
 					<div>

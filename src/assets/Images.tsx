@@ -1,5 +1,5 @@
 const IMAGES = {
-    bg: new URL('/src/assets/images/bg.png', import.meta.url).href,
+    bg: new URL('/src/assets/images/bg.webp', import.meta.url).href,
     logo : new URL('/src/assets/images/buluc_loop.gif', import.meta.url).href,
     sufrageria: new URL('/src/assets/images/culise/locatie/carolia1.jpeg', import.meta.url).href,
     sufrageria2: new URL('/src/assets/images/culise/locatie/carolia2.jpeg' , import.meta.url).href,
@@ -155,6 +155,9 @@ const IMAGES = {
 
     //sustine
     sustine: new URL('/src/assets/images/sustine.png', import.meta.url).href,
+    caracter1: new URL('/src/assets/images/caracter1.png', import.meta.url).href,
+    caracter2: new URL('/src/assets/images/caracter2.png', import.meta.url).href,
+
 }
 
 export default IMAGES;

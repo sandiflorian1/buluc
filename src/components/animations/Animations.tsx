@@ -45,6 +45,20 @@ const ScaleViewPortAnimation = ({ children, className, ...props }: any) => {
   );
 };
 
+const ScaleAnimation = ({ children, className, ...props }: any) => {
+  return (
+    <motion.div
+      className={className}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5 }}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 const SlideYViewPortAnimation = ({ children, className, direction, ...props }: any) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
@@ -147,4 +161,5 @@ export {
   SlideXViewPortAnimation,
   FadeInAnimation, 
   SlideRightAnimation,
+  ScaleAnimation
 }

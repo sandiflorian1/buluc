@@ -3,3 +3,9 @@
   width: 100vw;
   color: #ffffff;
 }
+
+.caracter {
+  position: absolute;
+  top: -80px;
+  width: 22vw;
+}

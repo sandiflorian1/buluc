@@ -20,7 +20,7 @@ export default function Contact(props: IContactProps) {
   return (
     <MainLayout>
       <div className="pt-20 mb:pt-10 pl-40 mb:pl-0">
-        <div className="w-full p-10 mb:p-5 bg-peach br">
+        <div className="w-full p-10 mb:p-5 bg-white br">
           <h4 className="text-end mb-4 mb:text-start">Conectează-te cu noi!</h4>
           <div className="flex justify-end mb:justify-start">
             <a aria-label="Chat on WhatsApp" href="https://wa.me/+40743760430" target="_blank" className='mr-4'><FaWhatsapp size='30px' /></a>

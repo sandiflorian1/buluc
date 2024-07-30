@@ -88,3 +88,16 @@ font-size: 1rem;
   justify-content: center;
   align-items: center;
 }
+
+.circle-sustine {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .circle-sustine {
+    height: 65vw;
+    width: 65vw;
+  }
+}

@@ -2,3 +2,10 @@ h3 {
     font-size: 40px;
     font-family: 'Handlee', cursive;
 }
+
+.caracter-despre {
+    position: absolute;
+    right: 5vw;
+    width: 23vw;
+    top: -20vw;
+}
