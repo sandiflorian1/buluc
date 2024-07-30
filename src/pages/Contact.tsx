@@ -73,7 +73,7 @@ export default function Contact(props: IContactProps) {
                     aria-invalid="false"
                   ></textarea>
                   <div className="flex mb-4">
-                    <input type="checkbox" name="gdpr-accept" value="1" aria-invalid="false" className='12px' />
+                    <input type="checkbox" name="gdpr-accept" value="1" aria-invalid="false" className='w-[12px]' />
                     <p className="mb-0 ml-2">
                       Sunt de acord cu <a href="politica-de-confidentialitate/" className='underline'>Politica de Confidențialitate</a>.
                     </p>
