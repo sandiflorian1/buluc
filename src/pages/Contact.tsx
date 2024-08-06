@@ -2,20 +2,17 @@ import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import MainLayout from "../components/layouts/MainLayout";
+import SendEmail from './SendEmail.js';
 
 export interface IContactProps {
 }
 
 export default function Contact(props: IContactProps) {
+  const onclick =() => {
+    debugger
+    SendEmail();
 
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: 0 });
-    tl.fromTo(".bg-peach", { opacity: 0 }, { opacity: 1, duration: 1 })
-      .fromTo(".image", { scale: 0 }, { scale: 1, duration: 1 })
-    return () => {
-      tl.kill();
-    };
-  });
+  }
 
   return (
     <MainLayout>
@@ -30,11 +27,8 @@ export default function Contact(props: IContactProps) {
           <div className="mt-6">
             <div role="form" className="">
               <form
-                action="/contact/#wpcf7-f136-o1"
                 method="post"
                 className="init"
-                noValidate={true}
-                data-status="init"
               >
                 <div className="mx-auto">
                   <p className='mb-2'>NUME </p>
@@ -75,17 +69,18 @@ export default function Contact(props: IContactProps) {
                   <div className="flex mb-4">
                     <input type="checkbox" name="gdpr-accept" value="1" aria-invalid="false" className='w-[12px]' />
                     <p className="mb-0 ml-2">
-                      Sunt de acord cu <a href="politica-de-confidentialitate/" className='underline'>Politica de Confidențialitate</a>.
+                      Sunt de acord cu <a href="/politica-de-confidentialitate" className='underline'>Politica de Confidențialitate</a>.
                     </p>
                   </div>
                   <div className="">
-                    <button type="submit" className="bg-red px-4 py-2 br text-white">
+                    <button type="submit" className="bg-red px-4 py-2 br text-white" onClick={() => onclick()}>
                       Trimite
                     </button>
-                    <span className="ajax-loader"></span>
                   </div>
                 </div>
               </form>
+
+             
             </div>
           </div>
         </div>
