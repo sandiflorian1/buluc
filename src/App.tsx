@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Homepage from "./pages/Homepage";
 import Contact from './pages/Contact';
 import Despre from './pages/Despre';
@@ -49,6 +49,7 @@ const App = () => {
         <Route path="/proiecte/roast" component={Roast} />
         <Route path="/proiecte/doact" component={Doact} />
         <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
+        <Route render={() => <Redirect to="/" />} />
       </Switch>
     </Router>
     );
