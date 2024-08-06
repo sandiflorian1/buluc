@@ -39,7 +39,7 @@ const TeamMemberCard: React.FC<ITeamMember> = ({ imageSrc, name, role, color, fo
       </div>
 
       <h5 className="name">{name}</h5>
-      <h6 className="role">{role}{fondator && ', fondator'}</h6>
+      <h6 className="role">{role}</h6>
     </motion.div>
   );
 };

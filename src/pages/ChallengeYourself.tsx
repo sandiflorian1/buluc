@@ -87,11 +87,11 @@ export default function ChallengeYourself() {
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {Galery1.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div key={index} className="overflow-hidden">
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full mb:h-auto"
+                    className="rounded-lg shadow-md"
                   />
                 </div>
               ))}
@@ -99,11 +99,11 @@ export default function ChallengeYourself() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {Galery2.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div key={index} className="rounded-lg overflow-hidden">
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full mb:h-auto"
+                    className="rounded-lg shadow-md"
                   />
                 </div>
               ))}
@@ -215,7 +215,7 @@ export default function ChallengeYourself() {
 
         <div className="w-full flex justify-center pb-20 mb:grid mb:gap-4">
           <div className="whatsapp-btn mr-10 mb:mr-0">
-            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40740993479" className="flex">
+            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40740993479" className="flex items-center">
               <FaWhatsapp size='30px' className="pr-2" /> 
               <p className="pt-1">Scrie-ne pe whatsapp</p>
             </a>
@@ -224,7 +224,7 @@ export default function ChallengeYourself() {
           <div className="bg-red email-btn">
             <a href="mailto:rezervari.buluc@gmail.com" className="flex">
               <FaEnvelope size='30px' className="pr-2" /> 
-              <p className="pt-1">Trimite-ne un email</p>
+              <p className="pt-1 mb:pt-2">Trimite-ne un email</p>
             </a>
           </div>
         </div>
@@ -238,11 +238,11 @@ const Galery1 = [
   IMAGES.CYImage2,
   IMAGES.CYImage9,
   IMAGES.CYImage10,
-  IMAGES.CYImage7,
+  IMAGES.CYImage4,
 ];
 
 const Galery2 = [
-  IMAGES.CYImage4,
+  IMAGES.CYImage7,
   IMAGES.CYImage5,
   IMAGES.CYImage6,
   IMAGES.CYImage8,
