@@ -19,7 +19,7 @@ export default function Contact(props: IContactProps) {
 
   return (
     <MainLayout>
-      <div className="pt-20 mb:pt-10 pl-40 mb:pl-0">
+      <div className="pt-20 mb:pt-10 mb:pl-0">
         <div className="w-full p-10 mb:p-5 bg-white br">
           <h4 className="text-end mb-4 mb:text-start">Conectează-te cu noi!</h4>
           <div className="flex justify-end mb:justify-start">

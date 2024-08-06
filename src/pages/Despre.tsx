@@ -20,10 +20,11 @@ const MisiuneSection: React.FC = () => {
         bgBluredImg={IMAGES.teamBlur}
         bgImg={IMAGES.team}
         colorText="black"
+        title="buluc"
       />
 
       <div className="mx-[20vw] mb:mx-[10vw] p-[3vw] mb:p-[5vw] mb-20 bg-white br">
-        <Title title='misiune' position="start" />
+        <h2>misiune</h2>
         <p>{MisiuneText}</p>
       </div>
     </div>
@@ -133,7 +134,6 @@ const teamMembers: ITeamMember[] = [
     name: "Mihaela Mardare",
     role: "fondator, actriță",
     color: 'red',
-    fondator: true,
   },
 
   {
@@ -141,7 +141,6 @@ const teamMembers: ITeamMember[] = [
     name: "Robert Ciupitu",
     role: "fondator, actor",
     color: 'orange',
-    fondator: true,
   },
 
   {
@@ -149,7 +148,6 @@ const teamMembers: ITeamMember[] = [
     name: "Marilena Adam",
     role: "fondator",
     color: 'red',
-    fondator: true,
   },
 
   {
@@ -192,4 +190,4 @@ const colaboratori: ITeamMember[] | null = null;
 
 const LocDeJoacaText = "O casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
 const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."
-const MisiuneTextBanner = "Buluc este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
+const MisiuneTextBanner = "este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
