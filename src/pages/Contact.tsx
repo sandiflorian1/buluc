@@ -1,13 +1,9 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { gsap } from "gsap";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import MainLayout from "../components/layouts/MainLayout";
 
-export interface IContactProps {
-}
-
-export default function Contact(props: IContactProps) {
-
+export default function Contact() {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
     tl.fromTo(".bg-peach", { opacity: 0 }, { opacity: 1, duration: 1 })
@@ -30,11 +26,7 @@ export default function Contact(props: IContactProps) {
           <div className="mt-6">
             <div role="form" className="">
               <form
-                action="/contact/#wpcf7-f136-o1"
-                method="post"
                 className="init"
-                noValidate={true}
-                data-status="init"
               >
                 <div className="mx-auto">
                   <p className='mb-2'>NUME </p>
@@ -82,7 +74,6 @@ export default function Contact(props: IContactProps) {
                     <button type="submit" className="bg-red px-4 py-2 br text-white">
                       Trimite
                     </button>
-                    <span className="ajax-loader"></span>
                   </div>
                 </div>
               </form>

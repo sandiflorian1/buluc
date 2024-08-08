@@ -146,7 +146,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaMarilenaAdam,
     name: "Marilena Adam",
-    role: "fondator",
+    role: "fondator, social media manager",
     color: 'red',
   },
 
