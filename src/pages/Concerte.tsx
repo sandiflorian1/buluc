@@ -27,7 +27,7 @@ export default function Concerte(props: IConcerteProps) {
   })
 
   return (
-    <MainLayout>
+    <MainLayout bgImg={IMAGES.bgSufragerie}>
       <div className="container pt-20" ref={ref}>
         <FadeInAnimation className="mb-20 mb:w-[100vw]">
           <Slider slides={slides} />

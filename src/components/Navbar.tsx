@@ -129,7 +129,7 @@ function Navbar() {
               <img
                 src={IMAGES.logo}
                 alt="buluc-gif"
-                className="w-32" />
+                className="h-[5rem]" />
             </a>
             <MenuToggle toggle={() => toggleOpen()} />
           </div>

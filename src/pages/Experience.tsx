@@ -7,7 +7,6 @@ import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, SlideYViewPortAnimation } from "../components/animations/Animations";
-import SimpleCard from "../components/cards/SimpleCard";
 
 
 export interface IExperienceProps { }
@@ -35,7 +34,7 @@ const Experience: React.FC = () => {
         />
       </FadeInViewPortAnimation>
 
-      <div className="mx-[12%] mb:mx-6">
+      <div className="mx-[12%] mb:mx-[6%]">
         <BannerTextAbsolute
           imageURL={IMAGES.Experience4}
           direction="left"
@@ -46,9 +45,7 @@ const Experience: React.FC = () => {
             Competitivitatea stă la baza acestei experiențe și te va teleporta direct într-un bootcamp artistic careva îmbina relaxarea cu ateliere de expresie corporală, teatru, activități ce presupun depășirea barierelor, și multă joacă Pe tot parcursul probelor & atelierelor vei aduna puncte care vor conta la finalul călătoriei. Pregătim multe surprize și un podium care abia așteaptă să fie cucerit.
           </p>
         </BannerTextAbsolute>
-      </div>
 
-      <div className="mx-[12%] mb:mx-6">
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
             <h5 className="title pb-4 text-red">
@@ -82,23 +79,19 @@ const Experience: React.FC = () => {
 
           </div>
         </FadeInViewPortAnimation>
-      </div>
 
-      <div className="mx-[12%] mb:mx-6">
         <BannerTextAbsolute
           imageURL={IMAGES.Experience3}
           direction="right"
-          className="h-[35vw] pb-20"
+          className="h-[30vw] pb-20"
           title="Atelier Yoga"
         >
           <p className="">
             Alături de Martha ne vom bucura de un atelier de Yoga la apus, în natură unde te vei conecta la respirație, ghidat spre o stare de spirit de liniște, pace și prezență.
           </p>
         </BannerTextAbsolute>
-      </div>
 
-      <div className="mx-[12%] mb:mx-6 pb-20">
-        <div className="columns-2 mb:grid gap-10 mb:gap-0">
+        <div className="columns-2 mb:grid gap-10 mb:gap-0 pb-20">
           <SlideYViewPortAnimation direction="up" className="p-6 bg-white">
             <h4 className="text-orange">Drumeție pe munții Coziei</h4>
             <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
@@ -110,9 +103,7 @@ const Experience: React.FC = () => {
             <p>Ne strângem buluc seara, la foc de tabără, în jurul poveștilor sub cerul înstelat și sub privirile atente ale vârfului Cozia. Un moment de de conectare și de regăsire a simplității și a frumuseții vieții chiar la poalele muntelui.</p>
           </SlideYViewPortAnimation>
         </div>
-      </div>
 
-      <div className="mx-[12%] mb:mx-6">
         <BannerTextAbsolute
           imageURL={IMAGES.Experience8}
           direction="left"
@@ -131,9 +122,7 @@ const Experience: React.FC = () => {
             <li>Hambarul Albastru și Origini</li>
           </ul>
         </BannerTextAbsolute>
-      </div>
 
-      <div className="mx-[12%] mb:mx-6">
         <BannerTextAbsolute
           imageURL={IMAGES.Experience7}
           direction="right"
@@ -189,30 +178,34 @@ const Experience: React.FC = () => {
 
       </FadeInViewPortAnimation>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-20 mb:pb-10">
-        <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
-          <h4 className="title pb-4 text-orange">
-            Cum mă înscriu?
+      <div className="mx-[12%] mb:mx-[6%]">
+        <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+          <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
+            <h4 className="title pb-4 text-orange">
+              Cum mă înscriu?
+            </h4>
+            <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
+          </div>
+        </FadeInViewPortAnimation>
+
+        <FadeInViewPortAnimation className="pb-10">
+          <h4 className="title pb-4 text-orange text-center">
+            LOCURI LIMITATE
           </h4>
-          <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
-        </div>
-      </FadeInViewPortAnimation>
+          {/* <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} /> */}
+        </FadeInViewPortAnimation>
 
-      <FadeInViewPortAnimation className="mx-[12%] mb:mx-6 pb-10">
-        <h4 className="title pb-4 text-orange text-center">
-          LOCURI LIMITATE
-        </h4>
-        {/* <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} /> */}
-      </FadeInViewPortAnimation>
-
-      <div className="w-full flex justify-center pb-20">
-        <div className="bg-red email-btn">
-          <a href="mailto:rezervari.buluc@gmail.com" className="flex">
-            <FaEnvelope size='30px' className="pr-2" />
-            <p className="pt-1">Trimite-ne un email</p>
-          </a>
+        <div className="w-full flex justify-center pb-20">
+          <div className="bg-red email-btn">
+            <a href="mailto:rezervari.buluc@gmail.com" className="flex">
+              <FaEnvelope size='30px' className="pr-2" />
+              <p className="pt-1">Trimite-ne un email</p>
+            </a>
+          </div>
         </div>
       </div>
+
+
     </MainLayout>
   );
 };
