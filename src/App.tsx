@@ -21,6 +21,7 @@ import Doact from './pages/Doact';
 import Form35Page from './pages/Form35Page';
 import Donatie from './pages/Donation';
 import Confidentialitate from './pages/Confidentialitate';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
         <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
+      <ToastContainer 
+        hideProgressBar={true}
+        theme="colored"
+      />
     </Router>
     );
 }

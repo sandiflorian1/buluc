@@ -1,16 +1,17 @@
 import SignatureCanvas from 'react-signature-canvas'
+import { toast } from 'react-toastify';
 import "../../css/form35.css";
 
 function Form35() {
 	const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
+	const onSubmitForm = () => {
+		toast.error("Ne pare rau mesajul nu a fost trimis");
+	}
+
 	return (
 		<form
-			action="/contact"
-			method="post"
-			className="init"
-			noValidate={true}
-			data-status="init"
+			onSubmit={onSubmitForm}
 		>
 			<div className="mx-auto mt-4">
 				<div className="flex gap-2 mb:flex-col pb-2">
@@ -21,8 +22,6 @@ function Form35() {
 							name="your-name"
 							size={25}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -33,8 +32,6 @@ function Form35() {
 							name="your-name"
 							size={25}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 				</div>
@@ -47,8 +44,6 @@ function Form35() {
 							name="your-name"
 							size={15}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -59,8 +54,6 @@ function Form35() {
 							name="your-name"
 							size={35}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 				</div>
@@ -73,8 +66,6 @@ function Form35() {
 							name="your-name"
 							size={35}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -85,8 +76,6 @@ function Form35() {
 							name="your-name"
 							size={15}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 				</div>
@@ -99,8 +88,6 @@ function Form35() {
 							name="your-name"
 							size={5}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -111,8 +98,6 @@ function Form35() {
 							name="your-name"
 							size={5}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -123,8 +108,6 @@ function Form35() {
 							name="your-name"
 							size={5}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -135,8 +118,6 @@ function Form35() {
 							name="your-name"
 							size={5}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -147,8 +128,6 @@ function Form35() {
 							name="your-name"
 							size={18}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 				</div>
@@ -161,8 +140,6 @@ function Form35() {
 							name="your-name"
 							size={25}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 
@@ -173,8 +150,6 @@ function Form35() {
 							name="your-name"
 							size={25}
 							className=""
-							aria-required="true"
-							aria-invalid="false"
 						/>
 					</div>
 				</div>
