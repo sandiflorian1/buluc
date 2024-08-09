@@ -28,7 +28,7 @@ export default function Spectacole(props: ISpectacoleProps) {
   })
 
   return (
-    <MainLayout>
+    <MainLayout bgImg={IMAGES.bgSufragerie}>
       <div className="container pt-20" ref={ref}>
         <FadeInAnimation className="pb-20 mb:w-[100vw]">
           <Slider slides={slides} />

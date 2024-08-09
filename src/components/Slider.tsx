@@ -19,7 +19,7 @@ const SliderContent = ({
       className={`slider__content shadow-lg mb:flex-col bg-white ${width}`}
     >
       <div className="slider__text">
-        <h3 className='pb-5'>{title}</h3>
+        <h3 className='pb-5 mb:pt-5'>{title}</h3>
         {description}
       </div>
       <figure className="slider__image">
@@ -34,10 +34,12 @@ const SliderContent = ({
 );
 
 const MySlider = ({ slides }: { slides: SlideProps[] }) => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: !isMobile,
+    dots: true,
     fade: true,
   };
   const width = slides.length > 1 ? 'w-[85%]' : 'mx-2 mb:mx-10';

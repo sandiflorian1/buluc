@@ -103,6 +103,53 @@
   pointer-events: none;
 }
 
+.slick-dots {
+  top: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  position: relative;
+} 
+
+.slick-dots li.slick-active button:before {
+  color: #f05252;
+  opacity: .75;
+}
+
+.slick-dots li button:before {
+  color: #f05252;
+  content: "•";
+  font-size: 3rem;
+  height: 20px;
+  left: 0;
+  line-height: 20px;
+  opacity: .25;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+.slick-dots li button {
+  border: 0;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding: 5px;
+}
+
+.slick-dots li, .slick-dots li button {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .slider__content  {
     padding: 1rem;

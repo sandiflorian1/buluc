@@ -8,12 +8,12 @@ import { FadeInViewPortAnimation, ScaleViewPortAnimation, FadeInAnimation } from
 
 export default function ChallengeYourself() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  const textShadow = { textShadow: isMobile ? '' : '1px 1px 2px black'};
+  const textShadow = { textShadow: isMobile ? '' : '1px 1px 2px black' };
 
   return (
     <MainLayout noPadding>
-      <FadeInAnimation className="w-full py-20">
-        <h1 className="text-center text-[6.5vw] mb:text-[8.5vw] leading-[7.5vw] mb:leading-[9.5vw]">
+      <FadeInAnimation className="w-full py-20 mb:py-10">
+        <h1 className="text-center text-[6.5vw] mb:text-[17vw] leading-[7.5vw] mb:leading-[21vw]">
           Challenge Yourself
         </h1>
         <h3 className="text-center mb:text-[5.5vw] mb:px-10">
@@ -21,11 +21,11 @@ export default function ChallengeYourself() {
         </h3>
       </FadeInAnimation>
 
-      <div className="w-full mb:px-0 mb:w-[100vw]">
+      <div className="mx-[12%] mb:mx-[6%]">
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage1}
           direction="right"
-          className="h-[30vw] mb-20 mb:mb-10 mb:h-auto mx-[12%] mb:mx-[2rem]"
+          className="h-[35vw] mb-20 mb:mb-0 mb:h-auto"
         >
           <p className="pb-2">
             Challenge Yourself este așa cum spune și numele -
@@ -41,7 +41,7 @@ export default function ChallengeYourself() {
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage3}
           direction="left"
-          className="h-[32vw] pb-20 mb:h-auto mx-[12%]"
+          className="h-[32vw] mb-20 mb:mb-10 mb:h-auto"
           title="Unde se întâmplă?"
         >
           <p className="">
@@ -49,7 +49,7 @@ export default function ChallengeYourself() {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mb:mb-10 mx-[12%] mb:mx-[6%] bg-white br p-8">
+        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mb:mb-10 bg-white rounded-lg shadow-lg p-8">
           <div className="">
             <h4 className="title pb-4 text-red">
               Unde și când ne pot fi de folos tehnicile teatrale?
@@ -83,15 +83,15 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <div className="galery w-full mb-20 mb:mb-10 px-[12%]">
+        <div className="galery w-full mb-20 mb:mb-10">
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {Galery1.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div key={index} className="overflow-hidden">
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full mb:h-auto"
+                    className="rounded-lg shadow-md"
                   />
                 </div>
               ))}
@@ -99,11 +99,11 @@ export default function ChallengeYourself() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {Galery2.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div key={index} className="rounded-lg overflow-hidden">
                   <img
                     src={image}
                     alt={`image ${index + 1}`}
-                    className="h-full mb:h-auto"
+                    className="rounded-lg shadow-md"
                   />
                 </div>
               ))}
@@ -111,7 +111,9 @@ export default function ChallengeYourself() {
           </div>
         </div>
 
+      </div>
 
+      <div className="w-full mb:px-0 mb:w-[100vw]">
         <FadeInViewPortAnimation className="mb-20 mb:mb-10">
           <div className="w-[100vw] relative mb:w-full">
             <SimpleSlider
@@ -120,8 +122,8 @@ export default function ChallengeYourself() {
             ></SimpleSlider>
             <div className="absolute w-[30vw] bottom-0 left-[20vw] pb-20 mb:relative mb:w-full mb:left-0 mb:bg-white mb:p-8">
               <h4 className="title pb-4 text-white mb:text-red" style={textShadow}>
-                Ce urmează după cele 
-                <br/>
+                Ce urmează după cele
+                <br />
                 3 luni de curs?
               </h4>
 
@@ -134,17 +136,18 @@ export default function ChallengeYourself() {
 
           </div>
         </FadeInViewPortAnimation>
+      </div>
 
-        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
-          <div className="bg-white p-10 mb:mb-6">
-          <h3 className="text-red">
-            Traineri
-          </h3>
+      <div className="mx-[12%] mb:mx-[6%]">
+        <FadeInViewPortAnimation className="">
+          <div className="bg-white rounded-lg shadow-lg p-10 mb:mb-6">
+            <h3 className="text-red">
+              Traineri
+            </h3>
 
-          <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: <span className="font-bold">Robert şi Mella</span>. Ei au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
-
+            <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: <span className="font-bold">Robert şi Mella</span>. Ei au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
           </div>
-         
+
           <div id="members" className="flex mb:inline gap-10 justify-center my-10">
             <TeamMemberCard
               key={1}
@@ -161,20 +164,20 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="px-20 pb-20 mb:px-0 mx-[12%]">
-          <h4 className="title px-10 mb:mb-4">
+        <FadeInViewPortAnimation className="pb-20">
+          <h4 className="title mb:mb-4">
             Alege varianta care ți se potrivește și contactează-ne.
           </h4>
 
           <div className="flex mb:inline gap-10 justify-center my-4 mx-auto">
-            <ScaleViewPortAnimation className="p-10 bg-orange rounded-full mb:mb-10">
+            <ScaleViewPortAnimation className="p-10 bg-orange shadow-lg rounded-full mb:mb-10">
               <h5 className="text-center text-white"> VARIANTA 1 </h5>
               <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
               <p className="text-center text-white"> 4 sedinte/ luna </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
             </ScaleViewPortAnimation>
 
-            <ScaleViewPortAnimation className="p-10 bg-red rounded-full mb:mb-10">
+            <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
               <h5 className="text-center text-white"> VARIANTA 2 </h5>
               <h5 className="text-center text-white pb-4"> PLATA INTEGRALA MODUL </h5>
 
@@ -185,7 +188,7 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="mb-20 mb:mb-10 mx-[12%] bg-white br p-10">
+        <FadeInViewPortAnimation className="mb-20 mb:mb-10 bg-white rounded-lg shadow-lg p-10">
           <div className="grid grid-cols-1 mb:grid-cols-1 gap-8">
             <div>
               <h4 className="text-orange">
@@ -215,16 +218,16 @@ export default function ChallengeYourself() {
 
         <div className="w-full flex justify-center pb-20 mb:grid mb:gap-4">
           <div className="whatsapp-btn mr-10 mb:mr-0">
-            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40740993479" className="flex">
-              <FaWhatsapp size='30px' className="pr-2" /> 
+            <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40740993479" className="flex items-center">
+              <FaWhatsapp size='30px' className="pr-2" />
               <p className="pt-1">Scrie-ne pe whatsapp</p>
             </a>
           </div>
 
           <div className="bg-red email-btn">
             <a href="mailto:rezervari.buluc@gmail.com" className="flex">
-              <FaEnvelope size='30px' className="pr-2" /> 
-              <p className="pt-1">Trimite-ne un email</p>
+              <FaEnvelope size='30px' className="pr-2" />
+              <p className="pt-1 mb:pt-2">Trimite-ne un email</p>
             </a>
           </div>
         </div>
@@ -238,11 +241,11 @@ const Galery1 = [
   IMAGES.CYImage2,
   IMAGES.CYImage9,
   IMAGES.CYImage10,
-  IMAGES.CYImage7,
+  IMAGES.CYImage4,
 ];
 
 const Galery2 = [
-  IMAGES.CYImage4,
+  IMAGES.CYImage7,
   IMAGES.CYImage5,
   IMAGES.CYImage6,
   IMAGES.CYImage8,

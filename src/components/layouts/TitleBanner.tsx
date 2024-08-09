@@ -55,7 +55,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
 
         {isMobile && (
           <div className="h-full flex flex-col justify-end bg-white p-[5vw] br mt-4">
-            <div className="bg-text">
+            <div className="">
               <h1>{title}</h1>
               <p>
                 {text}

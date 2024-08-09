@@ -129,7 +129,7 @@ function Navbar() {
               <img
                 src={IMAGES.logo}
                 alt="buluc-gif"
-                className="w-32" />
+                className="h-[5rem]" />
             </a>
             <MenuToggle toggle={() => toggleOpen()} />
           </div>
@@ -143,10 +143,11 @@ function Navbar() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     key={name}
+                    className="mb-2"
                   >
                     <Link
                       to={link}
-                      className={`btn-navbar capitalize ${pathname.includes(link) ? 'selected' : ''}`}
+                      className={`btn-navbar uppercase ${pathname.includes(link) ? 'selected' : ''}`}
                     >
                       {name}
                     </Link>
@@ -161,7 +162,7 @@ function Navbar() {
                       >
                         <Link
                           to={link}
-                          className={`btn-navbar capitalize ${pathname.includes(link) ? 'selected' : ''}`}
+                          className={`btn-navbar uppercase ${pathname.includes(link) ? 'selected' : ''}`}
                         >
                           {name}
                         </Link>
