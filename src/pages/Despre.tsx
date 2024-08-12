@@ -151,6 +151,27 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
+    imageSrc: IMAGES.echipaAndrei,
+    name: "Andrei Atabay",
+    role: "actor",
+    color: 'red',
+  },
+
+  {
+    imageSrc: IMAGES.echipaLixi,
+    name: "Ioana Lixăndroaia",
+    role: "actriță",
+    color: 'orange',
+  },
+
+  {
+    imageSrc: IMAGES.echipaIonutTerteci,
+    name: "Ionuț Terteci",
+    role: "actor & artist videograf",
+    color: 'orange',
+  },
+
+  {
     imageSrc: IMAGES.echipaCezarStoica,
     name: "Cezar Stoica",
     role: "graphic designer",
@@ -176,13 +197,6 @@ const teamMembers: ITeamMember[] = [
     name: "Ștefania Țecher",
     role: "artist fotograf",
     color: 'red',
-  },
-
-  {
-    imageSrc: IMAGES.echipaIonutTerteci,
-    name: "Ionuț Terteci",
-    role: "actor & artist videograf",
-    color: 'orange',
   },
 ];
 

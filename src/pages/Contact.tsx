@@ -11,7 +11,7 @@ const ContactForm = () => {
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
 
-	const sendEmail = (e) => {
+	const sendEmail = (e: any) => {
 		e.preventDefault();
 
 		const templateParams = {

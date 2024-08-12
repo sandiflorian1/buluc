@@ -16,7 +16,7 @@ const Cafeluta: React.FC = () => {
             <div className="mx-[15%] mb:mx-0">
               <SimpleCard>
                 <h2>Început de Buluc</h2>
-                <p className="mb-4">01.06.2024</p>
+                <p className="mb-4">20.11.2021</p>
 
                 <h6 className="font-bold mb-2">
                 <span className="text-red">Oamenii:</span> Hai să facem cunoștință!

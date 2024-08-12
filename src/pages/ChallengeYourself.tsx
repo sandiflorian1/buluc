@@ -131,7 +131,7 @@ export default function ChallengeYourself() {
                 La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="font-bold">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
               </p>
 
-              <p className="pb-4 text-white mb:text-black" style={textShadow}>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm într-un spectacol de Improvizație “pe bune”</p>
+              <p className="pb-4 text-white mb:text-black" style={textShadow}>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm în diferite spectacole de Improvizație “pe bune”.</p>
             </div>
 
           </div>
@@ -145,7 +145,7 @@ export default function ChallengeYourself() {
               Traineri
             </h3>
 
-            <p className=""> Pe Madrid, 4 te vei întâlni cu cei doi traineri pe care cu siguranţă îi vei îndrăgi: <span className="font-bold">Robert şi Mella</span>. Ei au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București şi de mai bine de 5 ani sunt profii ăia cool din cadrul cursurilor de dezvoltare personală cu adulţi, dar şi cu copii.</p>
+            <p className=""> Pe Madrid, 4 te vei întâlni cu <span className="font-bold">Robert şi Mella</span> sau <span className="font-bold">Lixi şi Andrei</span>. Cei 4 traineri au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București și în prezent sunt actori și pedagogi teatrali. Cu o experiență de peste 6 ani în cadrul cursurilor de dezvoltare personală pentru adulţi, adolescenți dar şi pentru copii.</p>
           </div>
 
           <div id="members" className="flex mb:inline gap-10 justify-center my-10">
@@ -161,6 +161,12 @@ export default function ChallengeYourself() {
               name=""
               color="orange"
             />
+            <TeamMemberCard
+              key={1}
+              imageSrc={IMAGES.CYTeam3}
+              name=""
+              color="red"
+            />
           </div>
         </FadeInViewPortAnimation>
 
@@ -175,6 +181,7 @@ export default function ChallengeYourself() {
               <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
               <p className="text-center text-white"> 4 sedinte/ luna </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
+              <p className="text-center text-white"> 449 lei </p>
             </ScaleViewPortAnimation>
 
             <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
@@ -183,6 +190,7 @@ export default function ChallengeYourself() {
 
               <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
+              <p className="text-center text-white">1049 lei </p>
             </ScaleViewPortAnimation>
 
           </div>
@@ -198,7 +206,6 @@ export default function ChallengeYourself() {
               <ul className="list-disc pl-8">
                 <li>are 4 ședințe pe lună, 1 ședință/săptămână</li>
                 <li>funcționează sub forma unui abonament, iar ședințele nu se pot recupera</li>
-                <li>se achită în prima ședință a fiecărei luni</li>
               </ul>
               <p className="mt-2">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varianta aleasa</p>
 

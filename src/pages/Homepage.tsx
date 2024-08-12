@@ -30,7 +30,7 @@ export default function Homepage (props: IHomepageProps) {
       </div>
 
       <div className="absolute top-0 bottom-0 right-0 left-0 z-[-1]">
-        <div className="bg-cover bg-no-repeat bg-center h-full w-full" style={{ backgroundImage: `url(${IMAGES.bg})` }}>
+        <div className="bg-cover bg-no-repeat bg-center h-full w-full" style={{ backgroundImage: `url(${IMAGES.homepageBg})` }}>
         </div>
       </div>
 
