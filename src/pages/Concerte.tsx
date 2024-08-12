@@ -41,7 +41,7 @@ export default function Concerte(props: IConcerteProps) {
 const Description = () => {
   return(
     <div>
-      <p>”All-that-Jazz … and more” este un concept care reunește mai multe genuri muzicale cântate în note de jazz alături de ANADI. O cântăreață extravagantă din anii `20 care a fost văzută cu proprietarul unei case burgheze de pe strada Madrid 4. Ziarele roiau în jurul ideii cum că cei 2 trăiau o poveste de dragoste, în timp ce ea își dorea să ajungă un star și să aibă propriul show. Oamenii o refuzau. Inclusiv el. Lumea întreaga era plina de nu. Lucrurile nu au ieșit cum a vrut ea, dar nici pentru el nu a ieșit prea grozav.  Cine zice ca nu-i și crima o arta? Te aşteaptă o seară de JAZZ reinterpretat alături de ANADI pe 13 Octombrie la 20:00 pe str. Madrid 4</p>
+      <p>”All-that-Jazz … and more” este un concept care reunește mai multe genuri muzicale cântate în note de jazz alături de ANADI. O cântăreață extravagantă din anii `20 care a fost văzută cu proprietarul unei case burgheze de pe strada Madrid 4. Ziarele roiau în jurul ideii cum că cei 2 trăiau o poveste de dragoste, în timp ce ea își dorea să ajungă un star și să aibă propriul show. Oamenii o refuzau. Inclusiv el. Lumea întreaga era plina de nu. Lucrurile nu au ieșit cum a vrut ea, dar nici pentru el nu a ieșit prea grozav.  Cine zice ca nu-i și crima o arta? Te aşteaptă o seară de JAZZ reinterpretat alături de ANADI pe 13 Octombrie la 20:00 pe str. Madrid 4.</p>
       <p>Evenimentul face parte din proiectul Stagiunea din sufragerie în colaborare cu Carolia Social House.</p>
       <br/>
       <p><span className='text-orange pr-2'>VOCE:</span> ANADI - DIANA OPREA </p>

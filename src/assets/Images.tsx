@@ -1,5 +1,9 @@
 const IMAGES = {
     bg: new URL('/src/assets/images/bg.webp', import.meta.url).href,
+    homepageBg: new URL('/src/assets/images/homepageBg.webp', import.meta.url).href,
+    teatruBg: new URL('/src/assets/images/teatruBg.png', import.meta.url).href,
+    bgSufragerie: new URL('/src/assets/images/in-sufragerie/bg-sufragerie.png', import.meta.url).href,
+
     logo : new URL('/src/assets/images/buluc_loop.gif', import.meta.url).href,
     sufrageria: new URL('/src/assets/images/culise/locatie/carolia1.jpeg', import.meta.url).href,
     sufrageria2: new URL('/src/assets/images/culise/locatie/carolia2.jpeg' , import.meta.url).href,
@@ -18,6 +22,8 @@ const IMAGES = {
     echipaAndreeaIstrate: new URL('/src/assets/images/culise/echipa/andreea-istrate.jpeg', import.meta.url).href,
     echipaCezarStoica: new URL('/src/assets/images/culise/echipa/cezar-stoica.jpeg', import.meta.url).href,
     echipaAlexandraFlorian: new URL('/src/assets/images/culise/echipa/alexandra.jpeg', import.meta.url).href,
+    echipaAndrei: new URL('/src/assets/images/culise/echipa/andrei.jpeg', import.meta.url).href,
+    echipaLixi: new URL('/src/assets/images/culise/echipa/lixi.jpeg', import.meta.url).href,
     team: new URL('/src/assets/images/culise/echipa/team.jpeg', import.meta.url).href,
     teamBlur: new URL('/src/assets/images/culise/echipa/team-blur.jpeg', import.meta.url).href,
 
@@ -33,7 +39,6 @@ const IMAGES = {
     partener8: new URL('/src/assets/images/culise/parteneri/8.png', import.meta.url).href,
     partener9: new URL('/src/assets/images/culise/parteneri/9.png', import.meta.url).href,
     // in sufragerie
-    bgSufragerie: new URL('/src/assets/images/in-sufragerie/bg-sufragerie.png', import.meta.url).href,
     improshow: new URL('/src/assets/images/in-sufragerie/improshow/improshow.jpg', import.meta.url).href,
     concerte: new URL('/src/assets/images/in-sufragerie/concerte/concerte.jpg', import.meta.url).href,
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.jpeg', import.meta.url).href,
@@ -55,6 +60,7 @@ const IMAGES = {
     CYImage10: new URL('/src/assets/images/challenge/challenge-yourself/image10.jpeg', import.meta.url).href,
     CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.jpeg', import.meta.url).href,
     CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.jpeg', import.meta.url).href,
+    CYTeam3: new URL('/src/assets/images/challenge/challenge-yourself/team3.jpeg', import.meta.url).href,
 
 
     Show1: new URL('/src/assets/images/challenge/challenge-yourself/show1.jpeg', import.meta.url).href,
