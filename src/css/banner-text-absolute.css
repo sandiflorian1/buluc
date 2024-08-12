@@ -66,4 +66,8 @@
     .text-wrapper.right {
         right: 0;
     }
+
+    .office.banner-text-absolute .image {
+        display: none;
+    }
   }

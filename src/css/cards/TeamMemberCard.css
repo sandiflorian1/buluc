@@ -63,12 +63,16 @@
 
 @media screen and (max-width: 768px) {
     .image-circle {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
     
     .image-circle-border {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .team-member-card {
+        margin-bottom: 1.5rem;
     }
   }

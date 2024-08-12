@@ -88,11 +88,11 @@ function Navbar() {
           </a>
 
           <ul className='sm:flex justify-end py-6 mb:w-40'>
-            {links.map(({ link, name, miniMenu }) => (
+            {links.map(({ link, name, miniMenu, bold }) => (
               <li key={name} className={`px-4 uppercase ${miniMenu && 'has-menu'}`}>
                 <Link
                   to={link}
-                  className={`sm:text-sm text-3xl btn-navbar ${pathname.includes(link) ? 'selected' : ''}`}
+                  className={`sm:text-sm text-3xl btn-navbar ${pathname.includes(link) ? 'selected' : ''} ${bold &&  'font-bold'}`}
                 >
                   {name}
                 </Link>
@@ -136,7 +136,7 @@ function Navbar() {
           <motion.div variants={sidebar} />
           <motion.ul variants={variants1} style={{ display: isOpen ? 'block' : 'none', width: 'fit-content' }} className="p-5">
             <>
-              {links.map(({ link, name, miniMenu }) => (
+              {links.map(({ link, name, miniMenu, bold }) => (
                 <>
                   <motion.li
                     variants={variants}
@@ -147,7 +147,7 @@ function Navbar() {
                   >
                     <Link
                       to={link}
-                      className={`btn-navbar uppercase ${pathname.includes(link) ? 'selected' : ''}`}
+                      className={`btn-navbar uppercase ${pathname.includes(link) ? 'selected' : ''} ${bold &&  'font-bold'}`}
                     >
                       {name}
                     </Link>
@@ -193,6 +193,7 @@ const links = [
   {
     link: '/challenge_yourself',
     name: 'challenge yourself',
+    bold: true,
     miniMenu: [
       {
         link: '/experience',

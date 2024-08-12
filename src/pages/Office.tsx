@@ -14,7 +14,7 @@ const Office: React.FC = () => {
         <BannerTextAbsolute
           imageURL={IMAGES.Office6}
           direction="left"
-          className="h-[30vw] mb-20 mb:mb-10 mb:h-auto"
+          className="h-[30vw] mb-20 mb:mb-10 mb:h-auto office"
         >
           <p className="pb-2">
             Challenge Yourself @The Office are la bază dezvoltarea personală și profesională a angajaților, contribuind la îmbunătățirea performanței individuale și a succesului organizațional. O experiență interactivă și provocatoare, menită să încurajeze creșterea personală și profesională a membrilor unei echipe prin intermediul tehnicilor teatrale.

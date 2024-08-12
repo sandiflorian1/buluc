@@ -23,7 +23,7 @@ export default function Form35Page(props: IForm35PageProps) {
   return (
     <MainLayout>
       <div className="container">
-        <div className="flex flex-row mb:flex-col m-10">
+        <div className="flex flex-row mb:flex-col m-10 mb:m-0">
           <SimpleCard>
             <h4>Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</h4>
 

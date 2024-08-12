@@ -148,7 +148,7 @@ export default function ChallengeYourself() {
             <p className=""> Pe Madrid, 4 te vei întâlni cu <span className="font-bold">Robert şi Mella</span> sau <span className="font-bold">Lixi şi Andrei</span>. Cei 4 traineri au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București și în prezent sunt actori și pedagogi teatrali. Cu o experiență de peste 6 ani în cadrul cursurilor de dezvoltare personală pentru adulţi, adolescenți dar şi pentru copii.</p>
           </div>
 
-          <div id="members" className="flex mb:inline gap-10 justify-center my-10">
+          <div id="members" className="flex mb:inline gap-10 mb:gap-20 justify-center my-10">
             <TeamMemberCard
               key={1}
               imageSrc={IMAGES.CYTeam1}
@@ -170,7 +170,7 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="pb-20">
+        <FadeInViewPortAnimation className="pb-20 mb:pb-0">
           <h4 className="title mb:mb-4">
             Alege varianta care ți se potrivește și contactează-ne.
           </h4>
