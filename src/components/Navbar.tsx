@@ -64,14 +64,14 @@ function Navbar() {
     miniMenu?.addEventListener('mouseover', () => {
       const menu = miniMenu.querySelector<HTMLElement>('.menu');
       if (menu) {
-        menu.style.opacity = "1";
+        menu.style.display = "block";
       }
     })
 
     miniMenu?.addEventListener('mouseleave', () => {
       const menu = miniMenu.querySelector<HTMLElement>('.menu');
       if (menu) {
-        menu.style.opacity = "0";
+        menu.style.display = "none";
       }
     })
   })
@@ -97,7 +97,7 @@ function Navbar() {
                   {name}
                 </Link>
                 {miniMenu &&
-                  <div className="menu opacity-0 shadow-md">
+                  <div className="menu hidden shadow-md">
                     <ul>
                       {miniMenu.map(({ link, name }) => (
                         <li key={name} className="px-4 pb-2 capitalize">

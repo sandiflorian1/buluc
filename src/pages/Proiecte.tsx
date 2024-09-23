@@ -22,7 +22,7 @@ export default function Sectacole(props: ISectacoleProps) {
 
   return (
     <MainLayout>
-      <div className="my-20">
+      <div className="mt-20 mb:mt-10">
         {projects.map(({ number, title, description, goToLink, imageUrl, images, imageWidths }) => {
           const ref = useRef(null);
           const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -44,7 +44,7 @@ export default function Sectacole(props: ISectacoleProps) {
           return (
             <motion.div
               id={`id-card-${number}`}
-              className={`min-h-[36vh] rounded-[1rem] shadow-lg flex mb:flex-col row bg-white ${number % 2 === 0 && 'flex-row-reverse'} m-10`}
+              className={`min-h-[36vh] rounded-[1rem] shadow-lg flex mb:flex-col row bg-white ${number % 2 === 0 && 'flex-row-reverse'} mb-10`}
               ref={ref}
               variants={cardVariants}
               initial="hidden"

@@ -1,13 +1,14 @@
 import MainLayout from "../components/layouts/MainLayout"; 
 import BlogCard from "../components/cards/BlogCard"; 
 import IMAGES from "../assets/Images";
+import { FadeInAnimation } from "../components/animations/Animations";
 
 export default function Blog () {
 
   return (
     <MainLayout>
-      <div className="container mx-auto w-50 py-20">
-        <div className="flex flex-wrap justify-center">
+      <div className="container pt-20 mb:pt-10">
+        <FadeInAnimation className="flex flex-wrap justify-center">
           {data.map((card) => (
             <BlogCard
               key={card.title} 
@@ -15,7 +16,7 @@ export default function Blog () {
             />
             ))}
           
-        </div>
+        </FadeInAnimation>
       </div>
     </MainLayout>
   );
@@ -27,14 +28,14 @@ const data = [
     title: "Început de Buluc",
     text: "Oamenii: Hai să facem cunoștință! Buluc: sunt o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă.",
     imgURL: IMAGES.people,
-    cardClass: 'w-2/3 mb:w-full',
+    cardClass: 'w-2/3 mb:w-full pr-4 mb:p-0 mb:mb-10',
     link: '/gazeta-buna-dimineata-la-cafeluta',
   },
   {
     title: "Zoomtalks",
     text: "Zoomtalks este un proiect ce își propune să creeze cât mai multe conexiuni între generații.",
     imgURL: IMAGES.zoomtalks,
-    cardClass: 'w-1/3 mb:w-full ',
+    cardClass: 'w-1/3 mb:w-full pl-4 mb:p-0',
     link: '/gazeta-zoomtalks',
   },
  

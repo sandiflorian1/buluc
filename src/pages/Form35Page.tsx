@@ -1,9 +1,9 @@
 import MainLayout from "../components/layouts/MainLayout";
 import Form35 from "../components/form/Form35";
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { gsap } from "gsap";
 import SimpleCard from "../components/cards/SimpleCard";
-import IMAGES from "../assets/Images";
+import { FadeInAnimation } from "../components/animations/Animations";
 
 export interface IForm35PageProps {
 }
@@ -22,8 +22,8 @@ export default function Form35Page(props: IForm35PageProps) {
 
   return (
     <MainLayout>
-      <div className="container">
-        <div className="flex flex-row mb:flex-col m-10 mb:m-0">
+      <FadeInAnimation className="container mt-20 mb:mt-10">
+        <div className="flex flex-row mb:flex-col m-10 mb:m-0 gap-4">
           <SimpleCard>
             <h4>Redirecționează 3,5% din impozitul pe venit către Asociația ”Buluc”</h4>
 
@@ -44,7 +44,7 @@ export default function Form35Page(props: IForm35PageProps) {
             </p>
           </SimpleCard>
 
-          <SimpleCard cardClass="bg-red">
+          <SimpleCard>
             <h4>Cum pot redirecționa?</h4>
             <p>
               Completează formularul de mai jos până pe 20 mai! Durează mai puțin de un minut.
@@ -54,7 +54,7 @@ export default function Form35Page(props: IForm35PageProps) {
             <p className="font-bold">Mulțumim!</p>
           </SimpleCard>
         </div>
-      </div>
+      </FadeInAnimation>
     </MainLayout>
   );
 }

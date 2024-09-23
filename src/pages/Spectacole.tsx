@@ -70,7 +70,7 @@ const images = [
 const TeatruGalery = () => {
   return (
     <>
-      <div className="galery container mx-auto mt-20">
+      <div className="galery container w-[85%] mx-auto mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">

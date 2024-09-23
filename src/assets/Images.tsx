@@ -1,7 +1,9 @@
 const IMAGES = {
     bg: new URL('/src/assets/images/bg.webp', import.meta.url).href,
     homepageBg: new URL('/src/assets/images/homepageBg.webp', import.meta.url).href,
-    teatruBg: new URL('/src/assets/images/teatruBg.png', import.meta.url).href,
+    teatruBg: new URL('/src/assets/images/in-sufragerie/teatruBg.png', import.meta.url).href,
+    serateBg: new URL('/src/assets/images/in-sufragerie/serateBg.png', import.meta.url).href,
+    bgSufragerieGol: new URL('/src/assets/images/in-sufragerie/bg-sufragerie-gol.png', import.meta.url).href,
     bgSufragerie: new URL('/src/assets/images/in-sufragerie/bg-sufragerie.png', import.meta.url).href,
 
     logo : new URL('/src/assets/images/buluc_loop.gif', import.meta.url).href,

@@ -6,7 +6,7 @@ type SimpleCard = {
 function SimpleCard(data:SimpleCard) {
     const { title, cardClass, children } = data;
     return (
-        <div className={`${cardClass} bg-white rounded-lg shadow-lg m-4`}>
+        <div className={`${cardClass} bg-white rounded-lg shadow-lg`}>
             <div className="p-6">
                 <h2 className="font-bold mb-2 text-2xl text-poppins">
                     {title}

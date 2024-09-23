@@ -11,7 +11,7 @@ const Cafeluta: React.FC = () => {
     <MainLayout>
       <section>
         <div>
-          <div className="container">
+          <div className="container mt-20 mb:mt-10">
             {/* <div className="w-full h-[30vw]  image-cover" style={{ backgroundImage: `url(${IMAGES.zoomtalks})` }} /> */}
             <div className="mx-[15%] mb:mx-0">
               <SimpleCard>

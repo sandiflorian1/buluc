@@ -2,6 +2,8 @@ import MainLayout from "../components/layouts/MainLayout";
 import { useEffect } from 'react';
 import { gsap } from "gsap";
 import SimpleCard from "../components/cards/SimpleCard";
+import { FadeInAnimation } from "../components/animations/Animations";
+
 export interface IDonatieProps {
 }
 
@@ -19,9 +21,9 @@ export default function Donatie(props: IDonatieProps) {
 
 	return (
 		<MainLayout>
-			<div className="container">
+			<div className="container mt-20 mb:mt-10">
 				{/* <div className="w-full h-[30vw] image-cover" style={{ backgroundImage: `url(${IMAGES.zoomtalks})` }} /> */}
-				<div className="mx-[15%] mb:mx-0">
+				<FadeInAnimation className="mx-[15%] mb:mx-0">
 					<SimpleCard>
 						<h2 className="pb-4 mb:text-[1.5rem]">Toate ideile și inițiativele noastre pot fi susținute printr-o donație directă în contul bancar al Asociației Buluc</h2>
 
@@ -31,7 +33,7 @@ export default function Donatie(props: IDonatieProps) {
 						<p className="pb-2"><span className="font-bold">IBANRO57BTRLRONCRT0606181701</span> - deschis la Banca Transilvania</p>
 						<p className="pb-2"><span className="font-bold">Beneficiar:</span> Asociația „Buluc”, reprezentată prin Robert Damian Ciupitu</p>
 					</SimpleCard>
-				</div>
+				</FadeInAnimation>
 			</div>
 		</MainLayout>
 	);

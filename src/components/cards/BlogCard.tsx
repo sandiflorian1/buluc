@@ -11,7 +11,7 @@ function BlogCard({ data }: { data: BlogCard }) {
     const { imgURL, text, title, cardClass, link } = data;
     return (
         <div className={`${cardClass}`}>
-            <div className={`bg-white rounded-lg shadow-lg m-4`}>
+            <div className={`bg-white rounded-lg shadow-lg h-full`}>
                 <img src={imgURL} alt="" className="rounded-t-lg w-full" style={{ height: '200px', objectFit: 'cover' }}/>
                 <div className="p-6">
                     <h3 className="font-bold mb-2">

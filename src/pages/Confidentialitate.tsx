@@ -54,7 +54,7 @@ const Confidentialitate: React.FC = () => {
             </p>
             <p className="pb-2">Dacă aveți și alte întrebări cu privire la politica noastră de confidențialitate sau felul în care colectăm și folosim informațiile personale, vă rugăm de asemenea să ne contactați la adresa:
             </p>
-            <p className="italic">Email: contact@buluc.org </p>
+            <p className="italic">Email: buluc.org@gmail.com </p>
           </SimpleCard>
         </div>
       </div>

@@ -189,10 +189,7 @@ const Experience: React.FC = () => {
         </FadeInViewPortAnimation>
 
         <FadeInViewPortAnimation className="pb-10">
-          <h4 className="title pb-4 text-orange text-center">
-            LOCURI LIMITATE
-          </h4>
-          {/* <div className="h-[24vw] mb:h-[28vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} /> */}
+          <div className="h-[7vw] w-[50%] mb:w-full mb:h-[15vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
         </FadeInViewPortAnimation>
 
         <div className="w-full flex justify-center pb-20">

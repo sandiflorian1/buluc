@@ -10,7 +10,7 @@ const BlogZoomtalks: React.FC = () => {
   return (
     <MainLayout>
       <div className="container">
-        <div className="w-full h-[30vw] image-cover" style={{ backgroundImage: `url(${IMAGES.zoomtalks})` }} />
+        <div className="w-full h-[30vw] mb:h-[40vw] image-cover" style={{ backgroundImage: `url(${IMAGES.zoomtalks})` }} />
         <div className="mx-[15%] mb:mx-0">
           <SimpleCard>
             <h2>Zoomtalks</h2>

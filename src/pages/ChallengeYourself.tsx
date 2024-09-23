@@ -22,21 +22,25 @@ export default function ChallengeYourself() {
       </FadeInAnimation>
 
       <div className="mx-[12%] mb:mx-[6%]">
-        <BannerTextAbsolute
-          imageURL={IMAGES.CYImage1}
-          direction="right"
-          className="h-[35vw] mb-20 mb:mb-0 mb:h-auto"
-        >
-          <p className="pb-2">
-            Challenge Yourself este așa cum spune și numele -
-            <span className="text-orange"> o provocare, o încercare de a te autodepasi, dar și o relaxare activă care are ca scop formarea unei pauze în viețile noastre. </span>
-            Ne întâlnim o dată pe săptămână într-o casă interbelică unde, cu ajutorul tehnicilor teatrale, încercăm să ne deconectăm de la haosul zilnic și să ne conectăm mai mult cu propria persoană.
-          </p>
+        <FadeInAnimation>
+          <BannerTextAbsolute
+            imageURL={IMAGES.CYImage1}
+            direction="right"
+            className="h-[35vw] mb-20 mb:mb-0 mb:h-auto"
+            noAnimation
+          >
+            <p className="pb-2">
+              Challenge Yourself este așa cum spune și numele -
+              <span className="text-orange"> o provocare, o încercare de a te autodepasi, dar și o relaxare activă care are ca scop formarea unei pauze în viețile noastre. </span>
+              Ne întâlnim o dată pe săptămână într-o casă interbelică unde, cu ajutorul tehnicilor teatrale, încercăm să ne deconectăm de la haosul zilnic și să ne conectăm mai mult cu propria persoană.
+            </p>
 
-          <p className="">
-            Îți propunem un curs ce se desfășoară pe o perioadă de 3 luni unde ”ne jucăm” prin intermediul unor tehnici teatrale pe care le vei folosi în fiecare moment în care trebuie să lucrezi cu emoția, imaginația și creativitatea, cu tine însuți, dar și în relație cu ceilalți.
-          </p>
-        </BannerTextAbsolute>
+            <p className="">
+              Îți propunem un curs ce se desfășoară pe o perioadă de 3 luni unde ”ne jucăm” prin intermediul unor tehnici teatrale pe care le vei folosi în fiecare moment în care trebuie să lucrezi cu emoția, imaginația și creativitatea, cu tine însuți, dar și în relație cu ceilalți.
+            </p>
+          </BannerTextAbsolute>
+
+        </FadeInAnimation>
 
         <BannerTextAbsolute
           imageURL={IMAGES.CYImage3}
@@ -190,7 +194,7 @@ export default function ChallengeYourself() {
 
               <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <p className="text-center text-white">1049 lei </p>
+              <p className="text-center text-white">1149 lei </p>
             </ScaleViewPortAnimation>
 
           </div>
