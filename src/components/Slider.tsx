@@ -39,8 +39,11 @@ const MySlider = ({ slides }: { slides: SlideProps[] }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: !isMobile,
-    dots: true,
+    dots: isMobile,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
   };
   const width = slides.length > 1 ? 'w-[85%]' : 'mx-2 mb:mx-10';
   return (

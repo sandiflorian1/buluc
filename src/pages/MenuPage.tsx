@@ -37,13 +37,11 @@ export default function MenuPage(props: IMenuPageProps) {
 
             if(option.id === 'teatru') {
               tl.fromTo(sufragerieBg, { opacity: 1 }, { opacity: 0 }, 0)
-              .fromTo(serateBg, { opacity: 1 }, { opacity: 0 }, 0)
               .fromTo(teaturBg, { opacity: 0 }, { opacity: 1 }, 0);
             }
 
             if(option.id === 'concerte') {
               tl.fromTo(sufragerieBg, { opacity: 1 }, { opacity: 0 }, 0)
-              .fromTo(teaturBg, { opacity: 1 }, { opacity: 0 }, 0)
               .fromTo(serateBg, { opacity: 0 }, { opacity: 1 }, 0);
             }
 

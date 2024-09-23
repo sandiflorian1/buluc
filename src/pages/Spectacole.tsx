@@ -28,7 +28,10 @@ export default function Spectacole(props: ISpectacoleProps) {
   })
 
   return (
-    <MainLayout bgImg={IMAGES.bgSufragerie}>
+    <MainLayout bgImg={IMAGES.bgSufragerieGol}>
+      <div className="absolute top-0 bottom-0 right-0 left-0 z-[-1] teatru-bg mb:opacity-0">
+        <div className="bg-cover bg-no-repeat bg-center h-full w-full" style={{ backgroundImage: `url(${IMAGES.teatruBg})` }}/>
+      </div>
       <div className="container pt-20" ref={ref}>
         <FadeInAnimation className="pb-20 mb:w-[100vw]">
           <Slider slides={slides} />
