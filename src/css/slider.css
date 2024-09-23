@@ -1,6 +1,5 @@
 .slick-slider {
   overflow-y: hidden;
-  cursor: pointer;
 }
 
 .slider__wrapper {
@@ -182,4 +181,8 @@
     top: 5.25rem;
     right: 1vw;
   }
+}
+
+.galery img {
+  cursor: pointer;
 }
