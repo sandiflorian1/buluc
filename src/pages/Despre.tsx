@@ -48,14 +48,14 @@ const LocatieSection: React.FC = () => {
 }
 
 const ParteneriSection: React.FC = () => {
-  const parteneri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const parteneri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <div className="flex flex-col mx-[20vw] mb:mx-[10vw] pb-10">
       <div className="">
         <Title title='parteneri' position="start" />
       </div>
 
-      <div className="grid gap-4 grid-cols-2 md:grid-cols-5 my-4">
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-7 my-4">
         {parteneri.map((index) => {
           const imgName = `partener${index}` as keyof typeof IMAGES;
           return (
