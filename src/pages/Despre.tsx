@@ -34,7 +34,7 @@ const MisiuneSection: React.FC = () => {
 const LocatieSection: React.FC = () => {
   return (
     <div className="locatie relative">
-			<img className="caracter-despre" src={IMAGES.caracter1} loading="lazy" alt="Image 1" />
+      <img className="caracter-despre" src={IMAGES.caracter1} loading="lazy" alt="Image 1" />
       <TitleBanner
         title="loc de joaca"
         text={LocDeJoacaText}
@@ -48,7 +48,6 @@ const LocatieSection: React.FC = () => {
 }
 
 const ParteneriSection: React.FC = () => {
-  const parteneri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <div className="flex flex-col mx-[20vw] mb:mx-[10vw] pb-10">
       <div className="">
@@ -56,11 +55,13 @@ const ParteneriSection: React.FC = () => {
       </div>
 
       <div className="grid gap-4 grid-cols-2 md:grid-cols-7 my-4">
-        {parteneri.map((index) => {
-          const imgName = `partener${index}` as keyof typeof IMAGES;
+        {parteneri.map(({ id, link}) => {
+          const imgName = `partener${id-1}` as keyof typeof IMAGES;
           return (
-            <div className="my-auto px-2" key={index}>
-              <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${index}`} />
+            <div className="my-auto px-2" key={id}>
+              <a href={link} target="_blank">
+                <img className="" src={IMAGES[imgName]} loading="lazy" alt={`partener-${id}`} />
+              </a>
             </div>
           )
         })}
@@ -205,3 +206,57 @@ const colaboratori: ITeamMember[] | null = null;
 const LocDeJoacaText = "O casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
 const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."
 const MisiuneTextBanner = "este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
+
+const parteneri = [
+  {
+    id: 1,
+    link: 'https://www.moaraghionea.ro/',
+  },
+  {
+    id: 2,
+    link: "https://carolia.ro/",
+  },
+  {
+    id: 3,
+    link: "https://vinuri.shop/",
+  },
+  {
+    id: 4,
+    link: "https://www.behance.net/aandreeav",
+  },
+  {
+    id: 5,
+    link: "https://www.pop-cola.com/",
+  },
+  {
+    id: 6,
+    link: "https://www.iqads.ro/",
+  },
+  {
+    id: 7,
+    link: "https://landing.bookster.ro",
+  },
+  {
+    id: 8,
+    link: "https://organicindia.ro/",
+  },
+  {
+    id: 9,
+    link: "https://solarisplant.ro/",
+  },
+  {
+    id: 10,
+    link: "https://zoestudio.ro/",
+  },
+  {
+    id: 11,
+    link: "https://www.artsafari.ro/",
+  },
+  {
+    id: 12,
+    link: "https://www.culturadata.ro/",
+  },
+  {
+    id: 13,
+    link: "https://linktr.ee/franui.ro",
+  }];
