@@ -9,16 +9,16 @@ interface SlideProps {
     description: any;
     galery?: any;
     width?: string;
+    edition?: number;
   }
 
 const SliderContent = ({
-  number, title, description, imageUrl, galery, width
+  number, title, description, imageUrl, galery, width, edition
 }: SlideProps) => (
   <div>
-    <div
-      className={`slider__content shadow-lg mb:flex-col bg-white ${width}`}
-    >
+    <div className={`slider__content shadow-lg mb:flex-col bg-white ${width}`}>
       <div className="slider__text">
+        {edition && <span className="slider__edition tracking-wider">#ediția{edition}</span>}
         <h3 className='pb-5 mb:pt-5'>{title}</h3>
         {description}
       </div>
@@ -41,7 +41,7 @@ const MySlider = ({ slides }: { slides: SlideProps[] }) => {
     arrows: !isMobile,
     dots: isMobile,
     fade: true,
-    autoplay: true,
+    autoplay: !isMobile && true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
   };
@@ -54,6 +54,7 @@ const MySlider = ({ slides }: { slides: SlideProps[] }) => {
           number={slide.number}
           title={slide.title}
           description={slide.description}
+          edition={slide.edition}
           imageUrl={slide.imageUrl}
           galery={slide.galery}
           width={width}

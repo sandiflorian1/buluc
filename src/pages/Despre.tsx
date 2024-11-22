@@ -17,7 +17,7 @@ const MisiuneSection: React.FC = () => {
     <div className="misiune">
       <TitleBanner
         text={MisiuneTextBanner}
-        bgBluredImg={IMAGES.teamBlur}
+        bgBluredImg={IMAGES.homepageBg}
         bgImg={IMAGES.team}
         colorText="black"
         title="buluc"
@@ -71,7 +71,7 @@ const ParteneriSection: React.FC = () => {
 }
 
 const People = ({ members, title }: { members: ITeamMember[], title: string }) => (
-  <div className="mt-8 flex flex-col">
+  <div className="mt-8 flex flex-col pb-20 mb:pb-2">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -169,13 +169,6 @@ const teamMembers: ITeamMember[] = [
     imageSrc: IMAGES.echipaIonutTerteci,
     name: "Ionuț Terteci",
     role: "actor & artist videograf",
-    color: 'orange',
-  },
-
-  {
-    imageSrc: IMAGES.echipaCezarStoica,
-    name: "Cezar Stoica",
-    role: "graphic designer",
     color: 'orange',
   },
 

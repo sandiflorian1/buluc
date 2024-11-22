@@ -45,6 +45,9 @@ const IMAGES = {
     // in sufragerie
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.webp', import.meta.url).href,
     cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.webp', import.meta.url).href,
+    cover3: new URL('/src/assets/images/in-sufragerie/concerte/cover3.png', import.meta.url).href,
+    cover4: new URL('/src/assets/images/in-sufragerie/concerte/cover4.png', import.meta.url).href,
+
     dinIntamplare: new URL('/src/assets/images/in-sufragerie/teatru/din-intamplare.webp', import.meta.url).href,
     CYImage1: new URL('/src/assets/images/challenge/challenge-yourself/image1.webp', import.meta.url).href,
     CYImage2: new URL('/src/assets/images/challenge/challenge-yourself/image2.webp', import.meta.url).href,
@@ -87,6 +90,13 @@ const IMAGES = {
     Experience7: new URL('/src/assets/images/challenge/experince/experience7.jpeg', import.meta.url).href,
     Experience8: new URL('/src/assets/images/challenge/experince/experience8.jpeg', import.meta.url).href,
     Experience9: new URL('/src/assets/images/challenge/experince/experience9.jpeg', import.meta.url).href,
+    Experience10: new URL('/src/assets/images/challenge/experince/experience10.jpeg', import.meta.url).href,
+    Experience11: new URL('/src/assets/images/challenge/experince/experience11.jpeg', import.meta.url).href,
+    Experience12: new URL('/src/assets/images/challenge/experince/experience12.jpeg', import.meta.url).href,
+    Experience13: new URL('/src/assets/images/challenge/experince/experience13.jpeg', import.meta.url).href,
+    Experience14: new URL('/src/assets/images/challenge/experince/experience14.jpeg', import.meta.url).href,
+    Experience15: new URL('/src/assets/images/challenge/experince/experience15.jpeg', import.meta.url).href,
+    Experience16: new URL('/src/assets/images/challenge/experince/experience16.jpeg', import.meta.url).href,
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
 
@@ -111,6 +121,20 @@ const IMAGES = {
     jazzSorina6: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina6.webp', import.meta.url).href,
     jazzSorina7: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina7.webp', import.meta.url).href,
     jazzSorina8: new URL('/src/assets/images/in-sufragerie/concerte/JazzSorina8.webp', import.meta.url).href,
+
+    taraf1: new URL('/src/assets/images/in-sufragerie/concerte/taraf1.jpeg', import.meta.url).href,
+    taraf2: new URL('/src/assets/images/in-sufragerie/concerte/taraf2.jpeg', import.meta.url).href,
+    taraf3: new URL('/src/assets/images/in-sufragerie/concerte/taraf3.jpeg', import.meta.url).href,
+    taraf4: new URL('/src/assets/images/in-sufragerie/concerte/taraf4.jpeg', import.meta.url).href,
+    taraf5: new URL('/src/assets/images/in-sufragerie/concerte/taraf5.jpeg', import.meta.url).href,
+    taraf6: new URL('/src/assets/images/in-sufragerie/concerte/taraf6.jpeg', import.meta.url).href,
+    taraf7: new URL('/src/assets/images/in-sufragerie/concerte/taraf7.jpeg', import.meta.url).href,
+    taraf8: new URL('/src/assets/images/in-sufragerie/concerte/taraf8.jpeg', import.meta.url).href,
+
+    cinema1: new URL('/src/assets/images/in-sufragerie/concerte/cinema1.jpeg', import.meta.url).href,
+    cinema2: new URL('/src/assets/images/in-sufragerie/concerte/cinema2.jpeg', import.meta.url).href,
+    cinema3: new URL('/src/assets/images/in-sufragerie/concerte/cinema3.jpeg', import.meta.url).href,
+    cinema4: new URL('/src/assets/images/in-sufragerie/concerte/cinema4.jpeg', import.meta.url).href,
 
     dinIntamplare1: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare1.webp', import.meta.url).href,
     dinIntamplare2: new URL('/src/assets/images/in-sufragerie/teatru/dinIntamplare2.webp', import.meta.url).href,

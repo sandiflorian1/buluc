@@ -185,7 +185,7 @@ export default function ChallengeYourself() {
               <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
               <p className="text-center text-white"> 4 sedinte/ luna </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <p className="text-center text-white"> 449 lei </p>
+              <h5 className="text-center text-white font-bold pt-4"> 449 lei </h5>
             </ScaleViewPortAnimation>
 
             <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
@@ -194,7 +194,7 @@ export default function ChallengeYourself() {
 
               <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <p className="text-center text-white">1149 lei </p>
+              <h5 className="text-center text-white font-bold pt-4">1149 lei </h5>
             </ScaleViewPortAnimation>
 
           </div>

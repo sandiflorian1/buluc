@@ -1,17 +1,34 @@
-import MainLayout from "../components/layouts/MainLayout";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { useRef, useEffect, Ref } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { FaEnvelope } from "react-icons/fa";
 import { gsap } from "gsap";
+import MainLayout from "../components/layouts/MainLayout";
 import TitleBanner from "../components/layouts/TitleBanner";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
+import Modal from "../components/Modal";
 import { FadeInViewPortAnimation, SlideYViewPortAnimation } from "../components/animations/Animations";
 
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
   const experienceRef = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setcurrentImage] = useState(false);
+  const ref = useRef<HTMLImageElement | null>(null);
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  const onImageClick = (image: any) => {
+    setcurrentImage(image);
+    setModalOpen(true);
+  }
+
+  useEffect(() => {
+    const images = ref.current?.querySelectorAll('.galery img');
+    images?.forEach((image: any) => {
+      image.addEventListener('click', () => (onImageClick(image?.src)))
+    })
+  })
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
@@ -41,8 +58,8 @@ const Experience: React.FC = () => {
           className="h-[35vw] pb-20"
           title="CE AM PREGĂTIT?"
         >
-          <p className="">
-            Competitivitatea stă la baza acestei experiențe și te va teleporta direct într-un bootcamp artistic careva îmbina relaxarea cu ateliere de expresie corporală, teatru, activități ce presupun depășirea barierelor, și multă joacă Pe tot parcursul probelor & atelierelor vei aduna puncte care vor conta la finalul călătoriei. Pregătim multe surprize și un podium care abia așteaptă să fie cucerit.
+          <p>
+            O experiență creativă care te va teleporta direct într-un bootcamp artistic unde îmbinăm relaxarea cu ateliere de expresie corporală, teatru, activități ce presupun depășirea barierelor și multă joacă.
           </p>
         </BannerTextAbsolute>
 
@@ -166,19 +183,58 @@ const Experience: React.FC = () => {
               role="comunicare & social media"
               color="orange"
             />
-            <TeamMemberCard
-              key={2}
-              imageSrc={IMAGES.echipaCezarStoica}
-              name="Cezar"
-              role="identitate vizuală"
-              color="orange"
-            />
           </div>
         </div>
 
       </FadeInViewPortAnimation>
 
-      <div className="mx-[12%] mb:mx-[6%]">
+      <div className="mx-[12%] mb:mx-[6%]" ref={ref}>
+        {!isMobile && <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+          <>
+            <div className="galery">
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+                <div className="grid gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                    {TarafImages1.map((image, index) => (
+                      <div key={index}>
+                        <img
+                          src={image}
+                          alt="galery-img"
+                          className="w-full rounded-lg shadow-md"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <img
+                    src={IMAGES.Experience13}
+                    alt={`image ${IMAGES.Experience13}`}
+                    className="w-full"
+                  />
+                </div>
+
+
+                <div className="grid gap-4">
+                  <img
+                    src={IMAGES.Experience16}
+                    alt={`image ${IMAGES.Experience16}`}
+                    className="w-full"
+                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                    {TarafImages2.map((image, index) => (
+                      <div key={index}>
+                        <img
+                          src={image}
+                          alt="galery-img"
+                          className="w-full rounded-lg shadow-md"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        </FadeInViewPortAnimation>}
         <FadeInViewPortAnimation className="pb-20 mb:pb-10">
           <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
             <h4 className="title pb-4 text-orange">
@@ -202,9 +258,23 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-
+      <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>
   );
 };
 
 export default Experience;
+
+const TarafImages1 = [
+  IMAGES.Experience2,
+  IMAGES.Experience5,
+  IMAGES.Experience10,
+  IMAGES.Experience11,
+];
+
+const TarafImages2 = [
+  IMAGES.Experience12,
+  IMAGES.Experience4,
+  IMAGES.Experience14,
+  IMAGES.Experience15,
+];

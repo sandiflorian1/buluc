@@ -196,6 +196,10 @@ const links = [
     bold: true,
     miniMenu: [
       {
+        link: '/challenge_yourself',
+        name: ' @Curs',
+      },
+      {
         link: '/experience',
         name: ' @The Experience',
       },

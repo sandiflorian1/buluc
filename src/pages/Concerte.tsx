@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import MainLayout from "../components/layouts/MainLayout";
 import Modal from "../components/Modal";
 import Slider from '../components/Slider';
@@ -61,6 +60,40 @@ const Description2 = () => {
   )
 }
 
+const Description3 = () => {
+  return (
+    <div>
+      <p>Prima serată lăutărească din sufrageria Buluc. O seară dedicată muzicii și bucuriei de a fi împreună într-un cadru desprins din Bucureștiul interbelic, unde fiecare colț ascunde povești și amintiri. „Nu știu cu ce ți-am greșit” melodia pe care Corina Sîrghi a crescut și care aparține Romicăi Puceanu o însoțește și dă numele concertului din sufrageria noastră.</p>
+      <br/>
+      <p><span className='text-orange pr-2'>VOCE:</span> CORINA SÎRGHI  </p>
+      <p><span className='text-orange pr-2'>VIOARA:</span> MELTIADE MIHALACHE </p>
+      <p><span className='text-orange pr-2'>CONTRABAS:</span> COSTEL NECHITA </p>
+      <p><span className='text-orange pr-2'>ACORDEON:</span> NICU PAUN </p>
+      <p><span className='text-orange pr-2'>TAMBAL:</span> LAURENTIU MARINESCU </p>
+    </div>
+  )
+}
+
+const Description4 = () => {
+  return (
+    <div>
+      <p>O seară de scurtmetraje românești difuzate în curtea casei de pe Madrid 4. Am vizionat împreună:</p>
+      <br/>
+<p> <span className='font-bold text-orange'> Maria Tănase, </span> regia Maria Drăgoi</p>
+<p> <span className='font-bold text-orange'> Offstage,</span> regia & scenariu Andrei Huțuleac </p>
+<p> <span className='font-bold text-orange'> Havana Cuba,</span> regia & scenariu Andrei</p>
+    </div>
+  )
+}
+
+const GaleryImg = (image: any) => (
+  <img 
+    src={image} 
+    alt="galery-img"
+    className="w-full rounded-lg shadow-md" 
+  />
+)
+
 const SorinaImages1 = [
   IMAGES.jazzSorina1,
   IMAGES.jazzSorina2,
@@ -82,24 +115,16 @@ const SorinaGalery = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
             {SorinaImages1.map((image, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src={image} 
-                  alt={`image ${index + 1}`} 
-                  className="w-full" 
-                />
+              <div key={index}>
+                {GaleryImg(image)}
               </div>
             ))}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
             {SorinaImages2.map((image, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src={image} 
-                  alt={`image ${index + 1}`} 
-                  className="w-full" 
-                />
+              <div key={index}>
+                {GaleryImg(image)}
               </div>
             ))}
           </div>
@@ -126,12 +151,8 @@ const AnadiGalery = () => {
       <div className="galery container w-[85%] mx-auto mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {AnadiImages.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src={image} 
-                alt={`image ${index + 1}`} 
-                className="w-full" 
-              />
+            <div key={index}>
+              {GaleryImg(image)}
             </div>
           ))}
         </div>
@@ -140,20 +161,108 @@ const AnadiGalery = () => {
   )
 }
 
+const TarafImages1 = [
+  IMAGES.taraf1,
+  IMAGES.taraf2,
+  IMAGES.taraf7,
+  IMAGES.taraf8,
+];
+
+const TarafImages2 = [
+  IMAGES.taraf3,
+  IMAGES.taraf6,
+];
+
+const TarafGalery = () => {
+  return (
+    <>
+       <div className="galery container w-[85%] mx-auto mt-20">
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            {TarafImages1.map((image, index) => (
+              <div key={index}>
+                {GaleryImg(image)}
+              </div>
+            ))}
+          </div>
+
+          <div className="grid gap-4">
+            <img 
+              src={IMAGES.taraf5} 
+              alt={`image ${IMAGES.taraf5}`} 
+              className="w-full" 
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+              {TarafImages2.map((image, index) => (
+                <div key={index}>
+                  {GaleryImg(image)}
+                </div>
+              ))}
+              </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const CinemaImages = [
+  IMAGES.cinema1,
+  IMAGES.cinema2,
+  IMAGES.cinema3,
+  IMAGES.cinema4,
+];
+
+const CinemaGalery = () => {
+  return (
+    <>
+      <div className="galery container w-[85%] mx-auto mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {CinemaImages.map((image, index) => (
+            <div key={index}>
+              {GaleryImg(image)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
+
+
 const slides = [
   {
     number: 1,
+    title: 'Nu știu cu ce ți-am greșit',
+    description: Description3(),
+    imageUrl: IMAGES.cover3,
+    galery: TarafGalery(),
+    edition: 2,
+  },
+  {
+    number: 2,
+    title: 'Scurtemetraje sub stele',
+    description: Description4(),
+    imageUrl: IMAGES.cover4,
+    galery: CinemaGalery(),
+    edition: 2,
+  },
+  {
+    number: 3,
     title: 'All-that-Jazz … and more',
     description: Description(),
     imageUrl: IMAGES.cover1,
     galery: AnadiGalery(),
+    edition: 1,
   },
 
   {
-    number: 2,
+    number: 4,
     title: 'Jazz în sufragerie cu Sorina Rotaru',
     description: Description2(),
     imageUrl: IMAGES.cover2,
     galery: SorinaGalery(),
+    edition: 1,
   },
 ];
