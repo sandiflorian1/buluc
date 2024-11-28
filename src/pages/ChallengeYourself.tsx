@@ -53,7 +53,7 @@ export default function ChallengeYourself() {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mb:mb-10 bg-white rounded-lg shadow-lg p-8">
+        <FadeInViewPortAnimation className="grid grid-cols-1 gap-8 mb-20 mb:mb-10 bg-white shadow-lg br p-8">
           <div className="">
             <h4 className="title pb-4 text-red">
               Unde și când ne pot fi de folos tehnicile teatrale?
@@ -144,7 +144,7 @@ export default function ChallengeYourself() {
 
       <div className="mx-[12%] mb:mx-[6%]">
         <FadeInViewPortAnimation className="">
-          <div className="bg-white rounded-lg shadow-lg p-10 mb:mb-6">
+          <div className="bg-white br shadow-lg p-10 mb:mb-6">
             <h3 className="text-red">
               Traineri
             </h3>
@@ -200,7 +200,7 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="mb-20 mb:mb-10 bg-white rounded-lg shadow-lg p-10">
+        <FadeInViewPortAnimation className="mb-20 mb:mb-10 bg-white br shadow-lg p-10">
           <div className="grid grid-cols-1 mb:grid-cols-1 gap-8">
             <div>
               <h4 className="text-orange">

@@ -5,7 +5,7 @@ import Title from "../components/layouts/Title";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import { ITeamMember } from "../types/cards/ITeamMember";
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 
 import "../css/despre.css";
 import TitleBanner from "../components/layouts/TitleBanner";
@@ -15,7 +15,7 @@ export interface IDespreProps { }
 const MisiuneSection: React.FC = () => {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   return (
-    <div className="misiune">
+    <FadeInAnimation className="misiune">
       <div>
         <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[39vw] mb:pt-[52vw] relative">
           <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
@@ -39,7 +39,7 @@ const MisiuneSection: React.FC = () => {
         <h2>misiune</h2>
         <p>{MisiuneText}</p>
       </div>
-    </div>
+    </FadeInAnimation>
   );
 }
 

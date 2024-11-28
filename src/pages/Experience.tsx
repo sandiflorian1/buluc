@@ -55,7 +55,7 @@ const Experience: React.FC = () => {
         <BannerTextAbsolute
           imageURL={IMAGES.Experience4}
           direction="left"
-          className="h-[35vw] pb-20"
+          className="h-[35vw] mb-20 mb:mb-10"
           title="CE AM PREGĂTIT?"
         >
           <p>
@@ -63,7 +63,7 @@ const Experience: React.FC = () => {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
+        <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 mb-20 mb:mb-10">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br shadow-lg p-6">
             <h5 className="title pb-4 text-red">
               ESTE PENTRU TINE DACĂ:
@@ -76,7 +76,7 @@ const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br shadow-lg p-6 relative overflow-hidden">
+          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br shadow-lg p-6 relative overflow-hidden mb:mt-2">
             <h5 className="title pb-4 text-red">
               CE ESTE INCLUS
             </h5>
@@ -93,14 +93,13 @@ const Experience: React.FC = () => {
 
             <div className="bg-red absolute bottom-[-6rem] right-10 w-40 h-40 rounded-[50%] mb:right-2" />
             <div className="bg-orange absolute bottom-[-3rem] right-40 w-20 h-20 rounded-[50%] mb:right-28" />
-
           </div>
         </FadeInViewPortAnimation>
 
         <BannerTextAbsolute
           imageURL={IMAGES.Experience3}
           direction="right"
-          className="h-[30vw] pb-20"
+          className="h-[30vw] mb-20 mb:mb-10"
           title="Atelier Yoga"
         >
           <p className="">
@@ -108,13 +107,13 @@ const Experience: React.FC = () => {
           </p>
         </BannerTextAbsolute>
 
-        <FadeInViewPortAnimation className="columns-2 mb:grid gap-10 mb:gap-0 pb-20">
+        <FadeInViewPortAnimation className="columns-2 mb:grid gap-10 mb:gap-0 mb-20 mb:mb-10">
           <div className="p-6 bg-white br shadow-lg mb-2">
             <h4 className="text-orange">Drumeție pe munții Coziei</h4>
             <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
           </div>
           <div><img src={IMAGES.Experience9} className='br shadow-lg'></img></div>
-          <div><img src={IMAGES.Experience6} className='br shadow-lg'></img></div>
+          <div><img src={IMAGES.Experience6} className='br shadow-lg mb:mt-2'></img></div>
           <div className="p-6 bg-white br shadow-lg mt-2">
             <h4 className="text-orange">Foc de tabără</h4>
             <p>Ne strângem buluc seara, la foc de tabără, în jurul poveștilor sub cerul înstelat și sub privirile atente ale vârfului Cozia. Un moment de de conectare și de regăsire a simplității și a frumuseții vieții chiar la poalele muntelui.</p>
@@ -124,7 +123,7 @@ const Experience: React.FC = () => {
         <BannerTextAbsolute
           imageURL={IMAGES.Experience8}
           direction="left"
-          className="h-[40vw] pb-20"
+          className="h-[40vw] mb-20 mb:mb-10"
           title="Despre Albastru și Origini"
           link="https://albastrusiorigini.ro/"
         >
@@ -155,7 +154,7 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
       </div>
 
-      <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+      <div className="mb-20 mb:mb-10">
         <div className="w-100% mb:pb-2">
           <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
             Echipa
@@ -185,11 +184,10 @@ const Experience: React.FC = () => {
             />
           </div>
         </div>
-
-      </FadeInViewPortAnimation>
+      </div>
 
       <div className="mx-[12%] mb:mx-[6%]" ref={ref}>
-        {!isMobile && <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+        {!isMobile && <FadeInViewPortAnimation className="mb-20">
           <>
             <div className="galery">
               <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
@@ -235,7 +233,7 @@ const Experience: React.FC = () => {
             </div>
           </>
         </FadeInViewPortAnimation>}
-        <FadeInViewPortAnimation className="pb-20 mb:pb-10">
+        <FadeInViewPortAnimation className="mb-20 mb:mb-10">
           <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
             <h4 className="title pb-4 text-orange">
               Cum mă înscriu?
