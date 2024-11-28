@@ -4,7 +4,7 @@ import "../css/slider.css";
 
 interface SlideProps {
     number: number;
-    title: string;
+    title: any;
     imageUrl: string;
     description: any;
     galery?: any;

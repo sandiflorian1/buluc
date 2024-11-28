@@ -93,7 +93,7 @@ const TeatruGalery = () => {
 const slides = [
   {
     number: 1,
-    title: 'Din Întamplare',
+    title: <h3 className='pb-5 mb:pt-5'>Din Întamplare</h3>,
     description: Description(),
     imageUrl: IMAGES.dinIntamplare,
     galery: TeatruGalery(),

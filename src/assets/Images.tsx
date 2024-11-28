@@ -26,6 +26,7 @@ const IMAGES = {
     echipaAndrei: new URL('/src/assets/images/culise/echipa/andrei.webp', import.meta.url).href,
     echipaLixi: new URL('/src/assets/images/culise/echipa/lixi.webp', import.meta.url).href,
     team: new URL('/src/assets/images/culise/echipa/team.png', import.meta.url).href,
+    teamMB: new URL('/src/assets/images/culise/echipa/teamMB.png', import.meta.url).href,
 
     //parteneri
     partener0: new URL('/src/assets/images/culise/parteneri/0.png', import.meta.url).href,

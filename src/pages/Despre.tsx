@@ -13,12 +13,13 @@ import TitleBanner from "../components/layouts/TitleBanner";
 export interface IDespreProps { }
 
 const MisiuneSection: React.FC = () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   return (
     <div className="misiune">
       <div>
         <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[39vw] mb:pt-[52vw] relative">
           <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
-            <img src={IMAGES.team} className="h-[45vw] mb:h-[60vw]"></img>
+            <img src={isMobile ? IMAGES.teamMB : IMAGES.team} className="h-[45vw] mb:h-[60vw]"></img>
           </div>
 
           <div className="">
