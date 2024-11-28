@@ -65,10 +65,10 @@ export default function MenuPage(props: IMenuPageProps) {
         </div>
         <div className="py-20 h-[90vh] w-[100vw] flex flex-col pl-[22%] pt-[14vh] mb:items-start mb:pl-8 mb:pt-10 mb:justify-between">
           <div className="pb-10 mb:pb-25">
-            <h1 className="text-[4vw]">Stagiunea din Sufragerie</h1>
-            <p className='w-[40vw] mb:w-[80vw] text-[16px] mb:text-[0.85rem] mb:bg-white mb:py-2'>Este un proiect cultural desfășurat de Asociația Buluc în colaborare cu Carolia Social House care își dorește să adune oameni buluc în jurul muzicii live, dansului și conversațiilor animate, creând astfel amintiri de neuitat dezvoltând astfel spațiului cultural în cartierul Dorobanți, dar şi a comunităţii care se schimbă odată cu oraşul.</p>
+            <h1 className="text-[4vw] mb:text-[1.25rem]">Stagiunea din Sufragerie</h1>
+            <p className='w-[40vw] mb:w-[80vw] text-[16px] mb:text-[0.85rem] mb:bg-white mb:py-2'>Un proiect cultural desfășurat de Asociația Buluc în colaborare cu Carolia Social House care își dorește să adune oameni buluc în jurul muzicii live, dansului și conversațiilor animate, creând astfel amintiri de neuitat dezvoltând astfel spațiului cultural în cartierul Dorobanți, dar şi a comunităţii care se schimbă odată cu oraşul.</p>
           </div>
-          <div ref={menuRef} className="flex flex-col w-[25vw] mb:w-[80vw] mb:pt-20">
+          <div ref={menuRef} className="flex flex-col w-[25vw] mb:w-[80vw]">
             {options.map(({ id, link, text }) => (
               <SlideRightAnimation key={id} className="pb-2">
                 <Link

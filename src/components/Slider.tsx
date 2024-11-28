@@ -19,7 +19,7 @@ const SliderContent = ({
     <div className={`slider__content shadow-lg mb:flex-col bg-white ${width}`}>
       <div className="slider__text">
         {edition && <span className="slider__edition tracking-wider">#ediția{edition}</span>}
-        <h3 className='pb-5 mb:pt-5'>{title}</h3>
+        {title}
         {description}
       </div>
       <figure className="slider__image">

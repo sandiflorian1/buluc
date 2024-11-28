@@ -15,15 +15,26 @@ export interface IDespreProps { }
 const MisiuneSection: React.FC = () => {
   return (
     <div className="misiune">
-      <TitleBanner
-        text={MisiuneTextBanner}
-        bgBluredImg={IMAGES.homepageBg}
-        bgImg={IMAGES.team}
-        colorText="black"
-        title="buluc"
-      />
+      <div>
+        <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[39vw] mb:pt-[52vw] relative">
+          <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
+            <img src={IMAGES.team} className="h-[45vw] mb:h-[60vw]"></img>
+          </div>
 
-      <div className="mx-[20vw] mb:mx-[10vw] p-[3vw] mb:p-[5vw] mb-20 bg-white br">
+          <div className="">
+            <div className="bg-white p-[3vw] br shadow-lg">
+              <div className="">
+                <h1>buluc</h1>
+                <p>
+                  {MisiuneTextBanner}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-[20vw] mb:mx-[10vw] p-[3vw] mb:p-[5vw] mb-20 bg-white br shadow-lg">
         <h2>misiune</h2>
         <p>{MisiuneText}</p>
       </div>
@@ -155,14 +166,14 @@ const teamMembers: ITeamMember[] = [
     imageSrc: IMAGES.echipaAndrei,
     name: "Andrei Atabay",
     role: "actor",
-    color: 'red',
+    color: 'orange',
   },
 
   {
     imageSrc: IMAGES.echipaLixi,
     name: "Ioana Lixăndroaia",
     role: "actriță",
-    color: 'orange',
+    color: 'red',
   },
 
   {
@@ -183,7 +194,7 @@ const teamMembers: ITeamMember[] = [
     imageSrc: IMAGES.echipaAndreeaIstrate,
     name: "Andreea Istrate",
     role: "coregraf & coordonator event",
-    color: 'red',
+    color: 'orange',
   },
 
   {

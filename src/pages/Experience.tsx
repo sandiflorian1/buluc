@@ -7,7 +7,7 @@ import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
 import Modal from "../components/Modal";
-import { FadeInViewPortAnimation, SlideYViewPortAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 
 
 export interface IExperienceProps { }
@@ -41,15 +41,15 @@ const Experience: React.FC = () => {
 
   return (
     <MainLayout noPadding>
-      <FadeInViewPortAnimation>
+      <FadeInAnimation>
         <TitleBanner
           title="@The Experience"
           text={"O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
           bgBluredImg={IMAGES.ExperienceBlur}
-          bgImg={IMAGES.Experience1}
+          bgImg={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1}
           colorText="white"
         />
-      </FadeInViewPortAnimation>
+      </FadeInAnimation>
 
       <div className="mx-[12%] mb:mx-[6%]">
         <BannerTextAbsolute
@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
 
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 pb-20">
-          <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
+          <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br shadow-lg p-6">
             <h5 className="title pb-4 text-red">
               ESTE PENTRU TINE DACĂ:
             </h5>
@@ -76,7 +76,7 @@ const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br p-6 relative overflow-hidden">
+          <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br shadow-lg p-6 relative overflow-hidden">
             <h5 className="title pb-4 text-red">
               CE ESTE INCLUS
             </h5>
@@ -108,18 +108,18 @@ const Experience: React.FC = () => {
           </p>
         </BannerTextAbsolute>
 
-        <div className="columns-2 mb:grid gap-10 mb:gap-0 pb-20">
-          <SlideYViewPortAnimation direction="up" className="p-6 bg-white">
+        <FadeInViewPortAnimation className="columns-2 mb:grid gap-10 mb:gap-0 pb-20">
+          <div className="p-6 bg-white br shadow-lg mb-2">
             <h4 className="text-orange">Drumeție pe munții Coziei</h4>
             <p>Vom parcurge împreună un traseu pe munții Coziei plin de istorie & legende.O aventură captivantă pentru iubitorii de natură și pasionații de activități în aer liber.</p>
-          </SlideYViewPortAnimation>
-          <SlideYViewPortAnimation><img src={IMAGES.Experience9}></img></SlideYViewPortAnimation>
-          <SlideYViewPortAnimation direction="up"><img src={IMAGES.Experience6}></img></SlideYViewPortAnimation>
-          <SlideYViewPortAnimation className="p-6 bg-white">
+          </div>
+          <div><img src={IMAGES.Experience9} className='br shadow-lg'></img></div>
+          <div><img src={IMAGES.Experience6} className='br shadow-lg'></img></div>
+          <div className="p-6 bg-white br shadow-lg mt-2">
             <h4 className="text-orange">Foc de tabără</h4>
             <p>Ne strângem buluc seara, la foc de tabără, în jurul poveștilor sub cerul înstelat și sub privirile atente ale vârfului Cozia. Un moment de de conectare și de regăsire a simplității și a frumuseții vieții chiar la poalele muntelui.</p>
-          </SlideYViewPortAnimation>
-        </div>
+          </div>
+        </FadeInViewPortAnimation>
 
         <BannerTextAbsolute
           imageURL={IMAGES.Experience8}
@@ -156,7 +156,7 @@ const Experience: React.FC = () => {
       </div>
 
       <FadeInViewPortAnimation className="pb-20 mb:pb-10">
-        <div className="w-100% bg-white mb:pb-2 py-6">
+        <div className="w-100% mb:pb-2">
           <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
             Echipa
           </h3>
@@ -195,7 +195,7 @@ const Experience: React.FC = () => {
               <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
                 <div className="grid gap-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                    {TarafImages1.map((image, index) => (
+                    {galerie1.map((image, index) => (
                       <div key={index}>
                         <img
                           src={image}
@@ -220,7 +220,7 @@ const Experience: React.FC = () => {
                     className="w-full"
                   />
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                    {TarafImages2.map((image, index) => (
+                    {galerie2.map((image, index) => (
                       <div key={index}>
                         <img
                           src={image}
@@ -236,7 +236,7 @@ const Experience: React.FC = () => {
           </>
         </FadeInViewPortAnimation>}
         <FadeInViewPortAnimation className="pb-20 mb:pb-10">
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br">
+          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
             <h4 className="title pb-4 text-orange">
               Cum mă înscriu?
             </h4>
@@ -265,14 +265,14 @@ const Experience: React.FC = () => {
 
 export default Experience;
 
-const TarafImages1 = [
+const galerie1 = [
   IMAGES.Experience2,
   IMAGES.Experience5,
   IMAGES.Experience10,
   IMAGES.Experience11,
 ];
 
-const TarafImages2 = [
+const galerie2 = [
   IMAGES.Experience12,
   IMAGES.Experience4,
   IMAGES.Experience14,

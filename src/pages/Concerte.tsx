@@ -66,10 +66,10 @@ const Description3 = () => {
       <p>Prima serată lăutărească din sufrageria Buluc. O seară dedicată muzicii și bucuriei de a fi împreună într-un cadru desprins din Bucureștiul interbelic, unde fiecare colț ascunde povești și amintiri. „Nu știu cu ce ți-am greșit” melodia pe care Corina Sîrghi a crescut și care aparține Romicăi Puceanu o însoțește și dă numele concertului din sufrageria noastră.</p>
       <br/>
       <p><span className='text-orange pr-2'>VOCE:</span> CORINA SÎRGHI  </p>
-      <p><span className='text-orange pr-2'>VIOARA:</span> MELTIADE MIHALACHE </p>
+      <p><span className='text-orange pr-2'>VIOARĂ:</span> MELTIADE MIHALACHE </p>
       <p><span className='text-orange pr-2'>CONTRABAS:</span> COSTEL NECHITA </p>
-      <p><span className='text-orange pr-2'>ACORDEON:</span> NICU PAUN </p>
-      <p><span className='text-orange pr-2'>TAMBAL:</span> LAURENTIU MARINESCU </p>
+      <p><span className='text-orange pr-2'>ACORDEON:</span> NICU PĂUN </p>
+      <p><span className='text-orange pr-2'>ȚAMBAL:</span> LAURENȚIU MARINESCU </p>
     </div>
   )
 }
@@ -80,8 +80,8 @@ const Description4 = () => {
       <p>O seară de scurtmetraje românești difuzate în curtea casei de pe Madrid 4. Am vizionat împreună:</p>
       <br/>
 <p> <span className='font-bold text-orange'> Maria Tănase, </span> regia Maria Drăgoi</p>
-<p> <span className='font-bold text-orange'> Offstage,</span> regia & scenariu Andrei Huțuleac </p>
-<p> <span className='font-bold text-orange'> Havana Cuba,</span> regia & scenariu Andrei</p>
+<p> <span className='font-bold text-orange'> Offstage,</span> regia & scenariul Andrei Huțuleac </p>
+<p> <span className='font-bold text-orange'> Havana Cuba,</span> regia & scenariul Andrei Huțuleac</p>
     </div>
   )
 }
@@ -230,11 +230,10 @@ const CinemaGalery = () => {
 }
 
 
-
 const slides = [
   {
     number: 1,
-    title: 'Nu știu cu ce ți-am greșit',
+    title: <div className='pb-5 mb:pt-5'><h3 className='mr-2'>Nu știu cu ce</h3><h3>ți-am greșit</h3></div>,
     description: Description3(),
     imageUrl: IMAGES.cover3,
     galery: TarafGalery(),
@@ -242,7 +241,7 @@ const slides = [
   },
   {
     number: 2,
-    title: 'Scurtemetraje sub stele',
+    title: <h3 className='pb-5 mb:pt-5'>Scurtemetraje sub stele</h3>,
     description: Description4(),
     imageUrl: IMAGES.cover4,
     galery: CinemaGalery(),
@@ -250,7 +249,7 @@ const slides = [
   },
   {
     number: 3,
-    title: 'All-that-Jazz … and more',
+    title: <h3 className='pb-5 mb:pt-5'>All-that-Jazz … and more</h3>,
     description: Description(),
     imageUrl: IMAGES.cover1,
     galery: AnadiGalery(),
@@ -259,7 +258,7 @@ const slides = [
 
   {
     number: 4,
-    title: 'Jazz în sufragerie cu Sorina Rotaru',
+    title: <h3 className='pb-5 mb:pt-5'>Jazz în sufragerie cu Sorina Rotaru</h3>,
     description: Description2(),
     imageUrl: IMAGES.cover2,
     galery: SorinaGalery(),

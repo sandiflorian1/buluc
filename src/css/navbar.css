@@ -19,7 +19,7 @@ li.has-menu {
 
 .menu {
   position: absolute;
-  background-color: white;
+  background-color: #fdfdfb;
   padding: 0.5rem;
   z-index: 1001;
 }

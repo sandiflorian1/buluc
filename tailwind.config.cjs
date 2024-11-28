@@ -28,7 +28,7 @@ module.exports = {
         DEFAULT: '#f05252',
         dark: '#0e7490',
       },
-      white: '#ffffff',
+      white: '#fdfdfb',
       black: '#000000',
     },
     fontSize: {
