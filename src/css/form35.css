@@ -1,14 +1,26 @@
+.form-row {
+	@apply flex gap-2 mb:flex-col pb-2 justify-between;
+}
+
 input, textarea {
 	border: 1px #f6772b solid;
 	border-radius: 6px;
 	padding: 2px 8px !important;
+	/* margin: 0.25rem 0 0 0 !important; */
 
 	@media screen and (max-width: 768px) {
 		width: 100%;
 	}
 }
 
+label {
+	display: flex;
+  flex-direction: column;
+}
 
+label span.error {
+	color: red;
+}
 
 .signarure {
 	border: 1px #f6772b solid;
