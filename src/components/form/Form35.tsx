@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import SignatureCanvas from 'react-signature-canvas'
 import { modifyPdf } from '../utils/modifyPdf';
@@ -35,45 +35,52 @@ function Form35() {
 	const isMobile = window.matchMedia("(max-width: 768px)").matches;
 	const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 	const signatureRef = useRef<SignatureCanvas>(null);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const onSubmitForm = async (data: FormData) => {
-		const signatureImage = signatureRef.current?.getTrimmedCanvas().toDataURL('image/png');
-		const params = {
-			...data,
-			signature: signatureImage,
-		}
-
-		const modifiedPdfBlob = await modifyPdf(params);
-
-		const reader = new FileReader();
-		reader.readAsDataURL(modifiedPdfBlob);
-		reader.onloadend = async () => {
-			const base64pdf = reader.result as string;
-			try {
-				 await emailHandler(
-					{
-						to_name: 'Buluc',
-						form: base64pdf,
-						subject: 'Formular 230',
-						message: 'Formular 230 trimis',
-						user_email: data.email,
-						from_name: data.firstName + ' ' + data.lastName,
-						reply_to: data.email,
-					}
-				);
-				// Reset form and signature
-				reset();
-				signatureRef.current?.clear();
-			} catch (error) {
-				console.error(error);
+		try {
+			setIsSubmitting(true);
+			const signatureImage = signatureRef.current?.getTrimmedCanvas().toDataURL('image/png');
+			const params = {
+				...data,
+				signature: signatureImage,
 			}
-		};
+
+			const modifiedPdfBlob = await modifyPdf(params);
+
+			const reader = new FileReader();
+			reader.readAsDataURL(modifiedPdfBlob);
+			reader.onloadend = async () => {
+				const base64pdf = reader.result as string;
+				try {
+					await emailHandler(
+						{
+							to_name: 'Buluc',
+							form: base64pdf,
+							subject: 'Formular 230',
+							message: 'Formular 230 trimis',
+							user_email: data.email,
+							from_name: data.firstName + ' ' + data.lastName,
+							reply_to: data.email,
+						}
+					);
+					// Reset form and signature
+					reset();
+					signatureRef.current?.clear();
+				} catch (error) {
+					console.error(error);
+				} finally {
+					setIsSubmitting(false);
+				}
+			};
+		} catch (error) {
+			console.error(error);
+			setIsSubmitting(false);
+		}
 	}
 
 	return (
-		<form
-			onSubmit={handleSubmit(onSubmitForm)}
-		>
+		<form onSubmit={handleSubmit(onSubmitForm)}>
 			<div className="mx-auto mt-4">
 				<div className="form-row">
 					<div>
@@ -361,8 +368,12 @@ function Form35() {
 				</div>
 
 				<div className="flex justify-center pb-4">
-					<button type="submit" className="px-6 py-2 bg-red text-white br">
-						Trimite
+					<button 
+						type="submit" 
+						className="px-6 py-2 bg-red text-white br disabled:opacity-50 disabled:cursor-not-allowed"
+						disabled={isSubmitting}
+					>
+						{isSubmitting ? 'Se trimite...' : 'Trimite'}
 					</button>
 				</div>
 			</div>
