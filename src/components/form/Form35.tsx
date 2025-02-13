@@ -28,11 +28,12 @@ type FormData = {
 	city: string;
 	zipCode: string;
 	gdpr: boolean;
+	period: '1' | '2'; 
 };
 
 function Form35() {
 	const isMobile = window.matchMedia("(max-width: 768px)").matches;
-	const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+	const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 	const signatureRef = useRef<SignatureCanvas>(null);
 
 	const onSubmitForm = async (data: FormData) => {
@@ -60,6 +61,9 @@ function Form35() {
 						reply_to: data.email,
 					}
 				);
+				// Reset form and signature
+				reset();
+				signatureRef.current?.clear();
 			} catch (error) {
 				console.error(error);
 			}
@@ -303,6 +307,31 @@ function Form35() {
 					</div>
 				</div>
 
+				<div className="mb-4">
+					<div className="mb-2">Pentru câți ani doriți să redirecționați?</div>
+					<div className="flex gap-4">
+						<label className="flex items-center">
+							<input
+								type="radio"
+								value="1"
+								className="mr-2"
+								{...register('period', { required: 'Vă rugăm să selectați perioada' })}
+							/>
+							<span>1 an</span>
+						</label>
+						<label className="flex items-center">
+							<input
+								type="radio"
+								value="2"
+								className="mr-2"
+								{...register('period', { required: 'Vă rugăm să selectați perioada' })}
+							/>
+							<span>2 ani</span>
+						</label>
+					</div>
+					{errors.period && <span className='error mt-2'>{errors.period.message}</span>}
+				</div>
+
 				<div>
 					<p className="text"> Semnatura:* </p>
 					<div className="signarure">
@@ -329,8 +358,8 @@ function Form35() {
 
 						{errors.gdpr && <span className='error mt-2'>{errors.gdpr.message}</span>}
 					</label>
-
 				</div>
+
 				<div className="flex justify-center pb-4">
 					<button type="submit" className="px-6 py-2 bg-red text-white br">
 						Trimite

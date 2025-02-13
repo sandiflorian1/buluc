@@ -33,6 +33,7 @@ export async function modifyPdf(params: any) {
     city,
     zipCode,
     signature,
+    period,
   } = params;
 
   // Load the PDF template
@@ -54,12 +55,13 @@ export async function modifyPdf(params: any) {
     { text: building, x: 47, y: 615 },
     { text: sc, x: 108, y: 615 },
     { text: floor, x: 147, y: 615 },
-    { text: apt, x: 184, y: 615 },
+    { text: apt, x: 185, y: 615 },
     { text: county, x: 255, y: 615 },
     { text: city, x: 68, y: 593 },
     { text: zipCode, x: 264, y: 593 },
     { text: email, x: 364, y: 649 },
     { text: phone, x: 364, y: 622 },
+    { text: period === '2' ? 'X' : ' ', x: 326, y: 428 },
   ];
 
   // Draw text fields
