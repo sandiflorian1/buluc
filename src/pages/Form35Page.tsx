@@ -7,6 +7,8 @@ export interface IForm35PageProps {
 }
 
 export default function Form35Page(props: IForm35PageProps) {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   const handleDownload = async () => {
     try {
       const response = await fetch('/form230.pdf');
@@ -44,17 +46,21 @@ export default function Form35Page(props: IForm35PageProps) {
               Numai contribuabilii care realizează venituri din salarii şi asimilate salariilor pot dispune asupra destinaţiei unei sume reprezentând până la 3,5% din impozitul stabilit conform legii, prin completarea formularului 230, către orice organizație non-guvernamentală ‒ asociație, fundație etc. dorește (conform art. 82, alin. 6 din Codul Fiscal). Practic, în acest fel, tu transmiți statului modul în care dorești să fie cheltuită o parte din impozitul tău pe venit.
             </p>
 
-            <h5 className="my-4">Vrei să depui singur formularul? Iată ce ai de făcut:</h5>
+            {!isMobile && (
+              <>
+                <h5 className="my-4">Vrei să depui singur formularul? Iată ce ai de făcut:</h5>
 
-            <button
-              onClick={handleDownload}
-              className="px-6 py-2 bg-red text-white br mb-4">
-              Descarca formularul
-            </button>
+                <button
+                  onClick={handleDownload}
+                  className="px-6 py-2 bg-red text-white br mb-4">
+                  Descarca formularul
+                </button>
 
-            <p>
-              Completezi formularul cu datele tale. Îl scanezi și îl trimiți (în format PDF) pe <a href="mailto:contact@buluc.org" className="text-red">buluc.org@gmail.com</a> sau într-o direcție financiară de care aparții.
-            </p>
+                <p>
+                  Completezi formularul cu datele tale. Îl scanezi și îl trimiți (în format PDF) pe <a href="mailto:contact@buluc.org" className="text-red">buluc.org@gmail.com</a> sau într-o direcție financiară de care aparții.
+                </p>
+              </>
+            )}
           </SimpleCard>
 
           <SimpleCard>
@@ -66,6 +72,22 @@ export default function Form35Page(props: IForm35PageProps) {
             <p>Odată ajuns la noi, echipa Buluc se ocupă de toată treaba.</p>
             <p className="font-bold">Mulțumim!</p>
           </SimpleCard>
+
+          {isMobile && (
+              <SimpleCard>
+                <h5 className="my-4">Vrei să depui singur formularul? Iată ce ai de făcut:</h5>
+
+                <button
+                  onClick={handleDownload}
+                  className="px-6 py-2 bg-red text-white br mb-4">
+                  Descarca formularul
+                </button>
+
+                <p>
+                  Completezi formularul cu datele tale. Îl scanezi și îl trimiți (în format PDF) pe <a href="mailto:contact@buluc.org" className="text-red">buluc.org@gmail.com</a> sau într-o direcție financiară de care aparții.
+                </p>
+              </SimpleCard>
+            )}
         </div>
       </FadeInAnimation>
     </MainLayout>
