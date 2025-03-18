@@ -21,7 +21,7 @@ const FadeInViewPortAnimation = ({ children, className, ...props }: any) => {
         className={className}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5 }}
         {...props}
       >
@@ -36,7 +36,7 @@ const ScaleViewPortAnimation = ({ children, className, ...props }: any) => {
       className={className}
       initial={{ scale: 0 }}
       whileInView={{ scale: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.5 }}
       {...props}
     >
@@ -61,7 +61,7 @@ const ScaleAnimation = ({ children, className, ...props }: any) => {
 
 const SlideYViewPortAnimation = ({ children, className, direction, ...props }: any) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const cardVariants = {
     hidden: {
       opacity: 0,

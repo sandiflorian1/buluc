@@ -87,7 +87,7 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
-        <div className="galery w-full mb-20 mb:mb-10">
+        {!isMobile && (<div className="galery w-full mb-20 mb:mb-10">
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {Galery1.map((image, index) => (
@@ -113,7 +113,7 @@ export default function ChallengeYourself() {
               ))}
             </div>
           </div>
-        </div>
+        </div>)}
 
       </div>
 

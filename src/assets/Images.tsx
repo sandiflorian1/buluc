@@ -83,7 +83,7 @@ const IMAGES = {
     Experience1: new URL('/src/assets/images/challenge/experince/experience1.jpeg', import.meta.url).href,
     Experience1mb: new URL('/src/assets/images/challenge/experince/experience1mb.jpeg', import.meta.url).href,
     Experience2: new URL('/src/assets/images/challenge/experince/experience2.webp', import.meta.url).href,
-    Experience3: new URL('/src/assets/images/challenge/experince/experience3.webp', import.meta.url).href,
+    Experience3: new URL('/src/assets/images/challenge/experince/experience3.jpg', import.meta.url).href,
     Experience4: new URL('/src/assets/images/challenge/experince/experience4.webp', import.meta.url).href,
     Experience5: new URL('/src/assets/images/challenge/experince/experience5.webp', import.meta.url).href,
     Experience6: new URL('/src/assets/images/challenge/experince/experience6.webp', import.meta.url).href,
@@ -97,6 +97,11 @@ const IMAGES = {
     Experience14: new URL('/src/assets/images/challenge/experince/experience14.webp', import.meta.url).href,
     Experience15: new URL('/src/assets/images/challenge/experince/experience15.webp', import.meta.url).href,
     Experience16: new URL('/src/assets/images/challenge/experince/experience16.webp', import.meta.url).href,
+    ExperienceV2_1: new URL('/src/assets/images/challenge/experince/experienceV2_1.png', import.meta.url).href,
+    ExperienceV2_2: new URL('/src/assets/images/challenge/experince/experienceV2_2.png', import.meta.url).href,
+    ExperienceV2_3: new URL('/src/assets/images/challenge/experince/experienceV2_3.jpg', import.meta.url).href,
+    ExperienceV2_4: new URL('/src/assets/images/challenge/experince/experienceV2_4.jpeg', import.meta.url).href,
+
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
 

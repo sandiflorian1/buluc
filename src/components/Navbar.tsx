@@ -137,7 +137,7 @@ function Navbar() {
           <motion.ul variants={variants1} style={{ display: isOpen ? 'block' : 'none', width: 'fit-content' }} className="p-5">
             <>
               {links.map(({ link, name, miniMenu, bold }) => (
-                <>
+                <div key={link}>
                   <motion.li
                     variants={variants}
                     whileHover={{ scale: 1.1 }}
@@ -168,7 +168,7 @@ function Navbar() {
                         </Link>
                       </motion.li>
                     ))}
-                </>
+                </div>
               ))}
             </>
           </motion.ul>

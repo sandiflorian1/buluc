@@ -7,10 +7,10 @@ export default function MainLayout({ children, title, noPadding, bgImg }: any) {
 const bgImage = bgImg || IMAGES.bg;
 
   return (
-    <div className='h-screen flex flex-col justify-between overflow-y-auto overflow-x-hidden'>
+    <div className='h-screen flex flex-col justify-between overflow-y-auto overflow-x-hidden' id="scrolled">
       <div className="absolute top-0 bottom-0 right-0 left-0 z-[-1]">
         <div className="bg-cover bg-no-repeat bg-center h-full w-full" style={{ backgroundImage: `url(${bgImage})` }}>
-      </div>
+        </div>
       </div>
       <Navbar />
 
