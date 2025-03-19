@@ -156,7 +156,7 @@ const Experience: React.FC = () => {
 
       <div className="mb-20 mb:mb-10">
         <div className="w-100% mb:pb-2">
-          <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
+          <h3 className="title p-4 text-orange text-shadow-white mx-[12%] mb:mx-6">
             Echipa
           </h3>
 

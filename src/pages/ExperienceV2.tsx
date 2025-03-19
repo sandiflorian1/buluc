@@ -15,7 +15,6 @@ const Experience: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImage, setcurrentImage] = useState<string>('');
   const imagesRef = useRef<HTMLImageElement | null>(null);
-  const inscriereRef = useRef<HTMLDivElement>(null);
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const onImageClick = (image: any) => {
@@ -46,8 +45,8 @@ const Experience: React.FC = () => {
 
       <FadeInViewPortAnimation>
         <div className="mx-[12%] mb:mx-[6%]">
-          <CardContainer cardClass="p-6 w-[60%] my-20 mb:my-10 mb:w-full">
-            <span>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </span>
+          <CardContainer cardClass="p-6 my-20 mb:my-10 mb:w-full">
+            <span>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor, <b>tema de anul acesta fiind ”Joacă-te cu emoția”</b>. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </span>
             <p onClick={scrollToInscriere} className="cursor-pointer text-orange hover:underline">Cum mă înscriu?</p>
           </CardContainer>
         </div>
@@ -95,32 +94,57 @@ const Experience: React.FC = () => {
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="columns-2 mb:grid gap-10 mb:gap-0 mb-20 mb:mb-10">
-          <div className="p-6 bg-white br shadow-lg mb-2">
-            <h4 className="text-orange">Atelier de muzicoterapie coordonat de Monica Dimofte</h4>
-            <p className="pb-2">Monica Dorofte este muzicoterapeut, pedagog special și profesor de muzică, cu o experiență vastă în domeniul educației și asistenței sociale, în special în München. De-a lungul timpului s-a specializat în muzică și comunicare nonverbală urmând cursuri de specializare în Berlin, iar în München a aplicat aceste cunoștințe în centre pedagogice speciale, școli și instituții culturale. Pe lângă partea pedagogică și terapeutică, are o carieră muzicală activă, participând la competiții internaționale de pian în Franța, Grecia, Italia și alte țări europene. </p>
-            <p>Acest atelier îmbină muzica, vocea și elementele de teatru pentru a oferi participanților un spațiu sigur de explorare interioară. Scopul este să creștem încrederea de sine, să reducem stresul și anxietatea prin tehnici de relaxare, să ne îmbunătățim conștientizarea de sine prin sunet, ritm și mișcare </p>
-          </div>
-          <div><img src={IMAGES.ExperienceV2_3} className='br shadow-lg'></img></div>
-          <div><img src={IMAGES.ExperienceV2_4} className='br shadow-lg mb:mt-2'></img></div>
-          <div className="p-6 bg-white br shadow-lg mt-2">
-            <h4 className="text-orange">Atelier de Teatru coordonat de Rareș Florin Stoica.</h4>
-            <h4>”Din Interior” - Descoperă Actorul Autentic din Tine </h4>
-            <p className="pb-2">Rareș Florin Stoica este actor și pedagog, doctor în Artele Spectacolului, cu o experiență bogată atât pe scenă, cât și în fața camerei de filmat. Prin abordarea sa autentică și profundă, el explorează și transmite esența actoriei, punând accent pe conexiunea emoțională și sinceritatea interpretării. În prezent continuă să inspire și să formeze noi generații de actori printr-o abordare profundă și autentică a artei actoricești, punând în prim-plan adevărul emoțional și expresivitatea scenică.</p>
-            <p>În cadrul atelierului vei explora partea practică a actoriei printr-o serie de exerciții menite să îmbine tehnicile scenice cu explorarea profundă a emoțiilor autentice din interiorul tău. Scopul este să te ajute să redescoperi și să îmbrățișezi veridicitatea și sinceritatea ta, transformând experiențele interioare în performanțe pline de viață și autenticitate.</p>
+        <BannerTextAbsolute
+          imageURL={IMAGES.ExperienceV2_5}
+          direction="left"
+          className="h-[40vw] mb-20 mb:mb-10"
+          title="Traineri"
+          noAnimation={isMobile}
+        >
+          <p className="pb-4">
+            Un sat din Berislăvești, Jud. Vâlcea format din 4 case vechi de peste 100 de ani srămutate și readuse la viață, din nordul țării, alături de un hambar transformat în vatra satului – locul unde ne vom aduna buluc cu toții la povesti si la bucate delicioase. Un loc în care timpul parcă stă în loc.
+          </p>
+        </BannerTextAbsolute>
+
+        <FadeInViewPortAnimation className="mb-20 mb:mb-10">
+          <div>
+            <h4 className="text-orange mb-4 text-shadow-white">Invitați speciali</h4>
+            <div className="flex mb:inline gap-10">
+              <CardContainer cardClass="p-6 w-[50%] mb:w-full mb:mb-4">
+                <div className='flex flex-col gap-4'>
+                <h5 className="text-orange">Atelier de muzicoterapie cu Monica Dorofte</h5>
+
+                <img src={IMAGES.ExperienceV2_3} className='br shadow-lg w-full'></img>
+                <p>Monica Dorofte este muzicoterapeut, pedagog special și profesor de muzică, cu experiență vastă în educație și asistență socială, activând în special în München. Pe lângă activitatea pedagogică și terapeutică, are o carieră muzicală activă, participând la competiții internaționale de pian în diferite țări europene. Acest atelier îmbină muzica, vocea și elementele de teatru pentru a oferi participanților un spațiu sigur de explorare interioară. Scopul este să creștem încrederea de sine, să reducem stresul și anxietatea prin tehnici de relaxare, să ne îmbunătățim conștientizarea de sine prin sunet, ritm și mișcare. </p>
+                </div>
+              </CardContainer>
+              
+              <CardContainer cardClass="p-6 w-[50%] mb:w-full">
+                <div className='flex flex-col gap-4'>
+                  <h5 className="text-orange">Atelierul ”Din Interior” - Descoperă Actorul Autentic din tine cu Rareș Florin Stoica</h5>
+
+                  <img src={IMAGES.ExperienceV2_4} className='br shadow-lg w-full'></img>
+                  <p>Rareș Florin Stoica este actor și pedagog, doctor în Artele Spectacolului, cu o experiență bogată atât pe scenă, cât și în fața camerei de filmat. În cadrul atelierului vei explora partea practică a actoriei printr-o serie de exerciții menite să îmbine tehnicile scenice cu explorarea profundă a emoțiilor autentice din interiorul tău. Scopul este să te ajute să redescoperi și să îmbrățișezi veridicitatea și sinceritatea ta, transformând experiențele interioare în performanțe pline de viață și autenticitate.</p>
+                </div>
+              </CardContainer>
+            </div>
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="columns-2 mb:grid gap-10 mb:gap-0 mb-20 mb:mb-10">
-          <div className="p-6 bg-white br shadow-lg mb-2">
-            <h4 className="text-orange">Yoga la apus și la răsărit</h4>
-            <p>Alături de Martha, vom trăi momente deosebite de conectare cu respirația, ghidați spre o stare profundă de liniște, pace și prezent. Fiecare sesiune ne va purta într-o călătorie interioară, iar la final vom încheia cu o meditație ghidată sau, opțional, cu Yoga Nidra – o tehnică profundă de meditație, cunoscută și sub numele de „somn yoghin”, care aduce beneficii remarcabile pentru minte și corp.</p>
-          </div>
-          <div><img src={IMAGES.Experience3} className='br shadow-lg'></img></div>
-          <div><img src={IMAGES.Experience6} className='br shadow-lg mb:mt-2'></img></div>
-          <div className="p-6 bg-white br shadow-lg mt-2">
-            <h4 className="text-orange">Foc de tabără</h4>
-            <p>Ne strângem buluc în jurul focului de tabără, sub cerul înstelat și privirile atente ale vârfului Cozia. Un moment magic de reconectare cu natura și cu noi înșine, o oportunitate de a regăsi simplitatea și frumusețea vieții chiar la poalele muntelui, în mijlocul poveștilor.</p>
+
+        <FadeInViewPortAnimation className="mb-20 mb:mb-10">
+          <h4 className="text-orange mb-4 text-shadow-white">Relaxare & Deconectare</h4>
+          <div className='columns-2 mb:grid gap-10 mb:gap-0'>
+            <div className="p-6 bg-white br shadow-lg mb-4 mb:mb-4">
+              <h4 className="text-orange">Yoga la apus și la răsărit</h4>
+              <p>Alături de Martha, vom trăi momente deosebite de conectare cu respirația, ghidați spre o stare profundă de liniște, pace și prezent. Fiecare sesiune ne va purta într-o călătorie interioară, iar la final vom încheia cu o meditație ghidată sau, opțional, cu Yoga Nidra – o tehnică profundă de meditație, cunoscută și sub numele de „somn yoghin”, care aduce beneficii remarcabile pentru minte și corp.</p>
+            </div>
+            <div><img src={IMAGES.Experience3} className='br shadow-lg'></img></div>
+            <div className="p-6 bg-white br shadow-lg mb-4 mb:mb-4 mb:mt-4">
+              <h4 className="text-orange">Foc de tabără</h4>
+              <p>Ne strângem buluc în jurul focului de tabără, sub cerul înstelat și privirile atente ale vârfului Cozia. Un moment magic de reconectare cu natura și cu noi înșine, o oportunitate de a regăsi simplitatea și frumusețea vieții chiar la poalele muntelui, în mijlocul poveștilor.</p>
+            </div>
+            <div><img src={IMAGES.Experience6} className='br shadow-lg'></img></div>
           </div>
         </FadeInViewPortAnimation>
 
@@ -146,16 +170,16 @@ const Experience: React.FC = () => {
 
         <BannerTextAbsolute
           imageURL={IMAGES.Experience7}
-          direction="right"
+          direction={isMobile ? "left" : "right"}
           className="h-[40vw] pb-20"
           title="Bucătăria"
           noAnimation={isMobile}
         >
           <p className="pb-4">
-            Te vei bucura de o bucatarie cu mult bun gust și de influențe din multe culturi. Și, mai ales, 100% homemade. 3 mese pe zi  gătite “with a twist”, niciodată banal. O mancare…eclectică, așa cum este și satul Albastru și Origini.
+            Te vei bucura de o bucătărie cu mult bun gust și de influențe din multe culturi. Și, mai ales, 100% homemade. 3 mese pe zi  gătite “with a twist”, niciodată banal. O mâncare…eclectică, așa cum este și satul Albastru și Origini.
           </p>
           <p className="pb-4">
-            Vei lua masa într-o șură veche, transformată în bucatarie, șezătoare, sufragerie, loc de povesti, loc de adunări buluc …și dacă ești fan mâncării vegetariene - te vei bucura de legume de sezon.
+            Vei lua masa într-o șură veche, transformată în bucătărie, șezătoare, sufragerie, loc de povești, loc de adunări buluc …și dacă ești fan mâncării vegetariene - te vei bucura de legume de sezon.
           </p>
         </BannerTextAbsolute>
       </div>
@@ -182,32 +206,27 @@ const Experience: React.FC = () => {
 
       <div className="mx-[12%] mb:mx-[6%]" ref={imagesRef}>
         <FadeInViewPortAnimation className="mb-20 mb:mb-10 flex gap-10 mb:inline">
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
+          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg mb:mb-4">
             <h4 className="title pb-4 text-orange">
               Cum ajung acolo?
             </h4>
             <p>Oferta include transport asigurat de dus - întors: din București către Albastru și Origini & Albastru și Origini către București.  Preluarea din București se va face dintr-o singură locație.</p>
           </div>
 
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
-            <h4 className="title pb-4 text-orange">
-              Cum a fost la prima editie?
-            </h4>
-            <p>Poti vedea detaliile primei editii vizitant pagina <Link to="/experience" className='text-orange underline'>Experience V2</Link></p>
-          </div>
-        </FadeInViewPortAnimation>
-
-        <FadeInViewPortAnimation className="mb-20 mb:mb-10" id="inscriere-section">
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
+          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg mb:mb-4" id="inscriere-section">
             <h4 className="title pb-4 text-orange">
               Cum mă înscriu?
             </h4>
-            <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
+            <p>Înscrierea se face exclusiv prin mail la rezervari.buluc@gmail.com unde vei primi și oferta detaliată.</p>
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="pb-10">
-          <div className="h-[7vw] w-[50%] mb:w-full mb:h-[15vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
+
+        <FadeInViewPortAnimation className="pb-10 flex gap-10 mb:inline">
+          <div className="h-[7vw] w-[50%] mb:w-full mb:h-[15vw] image-cover br mb:mb-4" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
+          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg h-fit mb:mb-4">
+            <p>Poti vedea detaliile primei editii vizitand pagina <Link to="/experience" className='text-orange underline'>Experience V2</Link></p>
+          </div>
         </FadeInViewPortAnimation>
 
         <div className="w-full flex justify-center pb-20">
@@ -226,21 +245,6 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
-
-const galerie1 = [
-  IMAGES.Experience2,
-  IMAGES.Experience5,
-  IMAGES.Experience10,
-  IMAGES.Experience11,
-];
-
-const galerie2 = [
-  IMAGES.Experience12,
-  IMAGES.Experience4,
-  IMAGES.Experience14,
-  IMAGES.Experience15,
-];
-
 
 const teamMembers = [
   {
@@ -262,13 +266,13 @@ const teamMembers = [
     imageSrc: IMAGES.echipaMarilenaAdam,
     name: "Mari",
     role: "comunicare & social media",
-    color: "orange"
+    color: "red"
   },
   {
     key: "andreea",
-    imageSrc: IMAGES.echipaMarilenaAdam,
+    imageSrc: IMAGES.echipaAdreeaD,
     name: "Andreea",
     role: "Identitate Vizuală",
-    color: "red"
+    color: "orange"
   }
 ];

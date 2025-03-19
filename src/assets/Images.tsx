@@ -24,6 +24,8 @@ const IMAGES = {
     echipaAlexandraFlorian: new URL('/src/assets/images/culise/echipa/alexandra.png', import.meta.url).href,
     echipaAndrei: new URL('/src/assets/images/culise/echipa/andrei.png', import.meta.url).href,
     echipaLixi: new URL('/src/assets/images/culise/echipa/lixi.png', import.meta.url).href,
+    echipaAdreeaD: new URL('/src/assets/images/culise/echipa/andreeaD.png', import.meta.url).href,
+    echipaAdi: new URL('/src/assets/images/culise/echipa/adi.png', import.meta.url).href,
     team: new URL('/src/assets/images/culise/echipa/team.png', import.meta.url).href,
     teamMB: new URL('/src/assets/images/culise/echipa/teamMB.png', import.meta.url).href,
 
@@ -101,6 +103,7 @@ const IMAGES = {
     ExperienceV2_2: new URL('/src/assets/images/challenge/experince/experienceV2_2.png', import.meta.url).href,
     ExperienceV2_3: new URL('/src/assets/images/challenge/experince/experienceV2_3.jpg', import.meta.url).href,
     ExperienceV2_4: new URL('/src/assets/images/challenge/experince/experienceV2_4.jpeg', import.meta.url).href,
+    ExperienceV2_5: new URL('/src/assets/images/challenge/experince/experienceV2_5.jpg', import.meta.url).href,
 
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
