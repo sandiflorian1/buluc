@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
       <FadeInViewPortAnimation>
         <div className="mx-[12%] mb:mx-[6%]">
           <CardContainer cardClass="p-6 my-20 mb:my-10 mb:w-full">
-            <h5 className="text-orange mb-4 text-shadow-white">Tema de anul acesta este ”Joacă-te cu emoția”</h5>
+            <h5 className="text-orange mb-4 text-shadow-white">Tema de anul acesta este {isMobile && <br/>} ”Joacă-te cu emoția”</h5>
             <p className='pb-4'>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </p>
             <button 
               onClick={scrollToInscriere} 
@@ -217,7 +217,7 @@ const Experience: React.FC = () => {
               Cum ajung acolo?
             </h5>
             <p className='pb-4'>Oferta include transport asigurat de dus - întors: din București către Albastru și Origini & Albastru și Origini către București.  Preluarea din București se va face dintr-o singură locație.</p>
-            <p className='pb-4'>Vezi cum a fost în Challenge Yourself <Link to="/experience" className='text-orange underline'> @Experience #1</Link></p>
+            <p className='pb-4 font-bold'>Vezi cum a fost în Challenge Yourself <Link to="/experience" className='text-orange underline'> @Experience #1</Link></p>
             <h5 className="title pb-4 text-orange">
               Cum mă înscriu?
             </h5>
