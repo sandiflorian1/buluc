@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { FaEnvelope } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import MainLayout from "../components/layouts/MainLayout";
 import TitleBanner from "../components/layouts/TitleBanner";
@@ -56,7 +56,7 @@ const Experience: React.FC = () => {
           imageURL={IMAGES.Experience4}
           direction="left"
           className="h-[35vw] mb-20 mb:mb-10"
-          title="CE AM PREGĂTIT?"
+          title="Ce am pregătit?"
         >
           <p>
             O experiență creativă care te va teleporta direct într-un bootcamp artistic unde îmbinăm relaxarea cu ateliere de expresie corporală, teatru, activități ce presupun depășirea barierelor și multă joacă.
@@ -66,7 +66,7 @@ const Experience: React.FC = () => {
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 mb-20 mb:mb-10">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br shadow-lg p-6">
             <h5 className="title pb-4 text-red">
-              ESTE PENTRU TINE DACĂ:
+              Este pentru tine dacă:
             </h5>
             <ul className="list-disc pl-8">
               <li>iubești competiția</li>
@@ -78,7 +78,7 @@ const Experience: React.FC = () => {
 
           <div className="col-end-7 col-span-4 mb:col-span-7 bg-white br shadow-lg p-6 relative overflow-hidden mb:mt-2">
             <h5 className="title pb-4 text-red">
-              CE ESTE INCLUS
+              Ce este inclus
             </h5>
 
             <ul className="list-disc pl-8 grid grid-cols-2 gap-x-10">
@@ -233,25 +233,10 @@ const Experience: React.FC = () => {
             </div>
           </>
         </FadeInViewPortAnimation>}
-        <FadeInViewPortAnimation className="mb-20 mb:mb-10">
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg">
-            <h4 className="title pb-4 text-orange">
-              Cum mă înscriu?
-            </h4>
-            <p>Înscrierea se face exclusiv prin email la rezervari.buluc@gmail.com</p>
-          </div>
-        </FadeInViewPortAnimation>
-
-        <FadeInViewPortAnimation className="pb-10">
-          <div className="h-[7vw] w-[50%] mb:w-full mb:h-[15vw] image-cover br" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
-        </FadeInViewPortAnimation>
 
         <div className="w-full flex justify-center pb-20">
-          <div className="bg-red email-btn">
-            <a href="mailto:rezervari.buluc@gmail.com" className="flex">
-              <FaEnvelope size='30px' className="pr-2" />
-              <p className="pt-1">Trimite-ne un email</p>
-            </a>
+          <div className="bg-white border-2 border-orange rounded-lg py-2 px-4">
+            <Link to="/experienceV2" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #1</Link>
           </div>
         </div>
       </div>

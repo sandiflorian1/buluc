@@ -46,8 +46,14 @@ const Experience: React.FC = () => {
       <FadeInViewPortAnimation>
         <div className="mx-[12%] mb:mx-[6%]">
           <CardContainer cardClass="p-6 my-20 mb:my-10 mb:w-full">
-            <span>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor, <b>tema de anul acesta fiind ”Joacă-te cu emoția”</b>. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </span>
-            <p onClick={scrollToInscriere} className="cursor-pointer text-orange hover:underline">Cum mă înscriu?</p>
+            <h5 className="text-orange mb-4 text-shadow-white">Tema de anul acesta este ”Joacă-te cu emoția”</h5>
+            <p className='pb-4'>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </p>
+            <button 
+              onClick={scrollToInscriere} 
+              className="cursor-pointer text-orange hover:underline font-bold border-2 border-orange rounded-lg px-4 py-2"
+            >
+              Inscrie-te
+            </button>
           </CardContainer>
         </div>
       </FadeInViewPortAnimation>
@@ -66,7 +72,7 @@ const Experience: React.FC = () => {
         </BannerTextAbsolute>
 
         <FadeInViewPortAnimation className="grid grid-cols-6 mb:grid-cols-1 gap-8 mb:gap-0 mb-20 mb:mb-10">
-          <div className="col-start-1 col-end-5 mb:col-end-7 bg-white br shadow-lg p-6">
+          <CardContainer cardClass="col-start-1 col-end-5 mb:col-end-7 p-6">
             <h5 className="title pb-4 text-red">
               Pentru cine este? 
             </h5>
@@ -76,9 +82,9 @@ const Experience: React.FC = () => {
               <li>pentru cei care simt că au nevoie de o pauză de la zgomotul cotidian și vor să se redescopere</li>
               <li>pentru oricine vrea să experimenteze emoția într-un mod autentic, prin joc și creativitate</li>
             </ul>
-          </div>
+          </CardContainer>
 
-          <div className="col-end-7 col-span-2 mb:col-span-7 bg-white br shadow-lg p-6 relative overflow-hidden mb:mt-2">
+          <CardContainer cardClass="col-end-7 col-span-2 mb:col-span-7 p-6 relative overflow-hidden mb:mt-2">
             <h5 className="title pb-4 text-red">
               Ce este inclus?
             </h5>
@@ -91,7 +97,7 @@ const Experience: React.FC = () => {
               <li>transport dus-întors</li>
               <li>goodies & premii de la parteneri</li>
             </ul>
-          </div>
+          </CardContainer>
         </FadeInViewPortAnimation>
 
         <BannerTextAbsolute
@@ -102,13 +108,13 @@ const Experience: React.FC = () => {
           noAnimation={isMobile}
         >
           <p className="pb-4">
-            Un sat din Berislăvești, Jud. Vâlcea format din 4 case vechi de peste 100 de ani srămutate și readuse la viață, din nordul țării, alături de un hambar transformat în vatra satului – locul unde ne vom aduna buluc cu toții la povesti si la bucate delicioase. Un loc în care timpul parcă stă în loc.
+            Alături de Mella și Robert, actori și traineri ai cursului Challenge Yourself by Buluc, vei experimenta ateliere de creativitate și improvizație, menite să-ți stimuleze spontaneitatea și expresivitatea, dar și activități interactive care te vor scoate din zona de confort. Cu toate acestea, conținutul exact al atelierelor rămâne o surpriză – vei afla despre ce este vorba abia în momentul în care ajungi în satul Albastru și Origini. 
           </p>
         </BannerTextAbsolute>
 
         <FadeInViewPortAnimation className="mb-20 mb:mb-10">
           <div>
-            <h4 className="text-orange mb-4 text-shadow-white">Invitați speciali</h4>
+            <h4 className="text-red bg-white w-fit rounded-lg pt-2 px-6 border-2 border-red mb-4">Invitați speciali</h4>
             <div className="flex mb:inline gap-10">
               <CardContainer cardClass="p-6 w-[50%] mb:w-full mb:mb-4">
                 <div className='flex flex-col gap-4'>
@@ -133,17 +139,17 @@ const Experience: React.FC = () => {
 
 
         <FadeInViewPortAnimation className="mb-20 mb:mb-10">
-          <h4 className="text-orange mb-4 text-shadow-white">Relaxare & Deconectare</h4>
+          <h4 className="text-red bg-white w-fit rounded-lg pt-2 px-6 border-2 border-red mb-4">Relaxare & Deconectare</h4>
           <div className='columns-2 mb:grid gap-10 mb:gap-0'>
-            <div className="p-6 bg-white br shadow-lg mb-4 mb:mb-4">
+            <CardContainer cardClass="p-6 mb-4 mb:mb-4">
               <h4 className="text-orange">Yoga la apus și la răsărit</h4>
               <p>Alături de Martha, vom trăi momente deosebite de conectare cu respirația, ghidați spre o stare profundă de liniște, pace și prezent. Fiecare sesiune ne va purta într-o călătorie interioară, iar la final vom încheia cu o meditație ghidată sau, opțional, cu Yoga Nidra – o tehnică profundă de meditație, cunoscută și sub numele de „somn yoghin”, care aduce beneficii remarcabile pentru minte și corp.</p>
-            </div>
+            </CardContainer>
             <div><img src={IMAGES.Experience3} className='br shadow-lg'></img></div>
-            <div className="p-6 bg-white br shadow-lg mb-4 mb:mb-4 mb:mt-4">
+            <CardContainer cardClass="p-6 mb-4 mb:mb-4 mb:mt-4">
               <h4 className="text-orange">Foc de tabără</h4>
               <p>Ne strângem buluc în jurul focului de tabără, sub cerul înstelat și privirile atente ale vârfului Cozia. Un moment magic de reconectare cu natura și cu noi înșine, o oportunitate de a regăsi simplitatea și frumusețea vieții chiar la poalele muntelui, în mijlocul poveștilor.</p>
-            </div>
+            </CardContainer>
             <div><img src={IMAGES.Experience6} className='br shadow-lg'></img></div>
           </div>
         </FadeInViewPortAnimation>
@@ -186,9 +192,9 @@ const Experience: React.FC = () => {
 
       <div className="mb-20 mb:mb-10">
         <div className="w-100% mb:pb-2">
-          <h3 className="title p-4 text-orange mx-[12%] mb:mx-6">
+          <h4 className="title bg-white text-orange mx-[12%] mb-4  mb:mx-6 w-fit rounded-lg py-2 px-4 border-2 border-red">
             Echipa
-          </h3>
+          </h4>
 
           <div id="members" className="flex mb:inline gap-10 justify-center">
             {teamMembers.map((member) => (
@@ -204,29 +210,24 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-[12%] mb:mx-[6%]" ref={imagesRef}>
+      <div className="mx-[12%] mb:mx-[6%]" ref={imagesRef} id="inscriere-section">
         <FadeInViewPortAnimation className="mb-20 mb:mb-10 flex gap-10 mb:inline">
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg mb:mb-4">
-            <h4 className="title pb-4 text-orange">
+          <CardContainer cardClass="p-6 mb:mb-4">
+            <h5 className="title pb-4 text-orange">
               Cum ajung acolo?
-            </h4>
-            <p>Oferta include transport asigurat de dus - întors: din București către Albastru și Origini & Albastru și Origini către București.  Preluarea din București se va face dintr-o singură locație.</p>
-          </div>
-
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg mb:mb-4" id="inscriere-section">
-            <h4 className="title pb-4 text-orange">
+            </h5>
+            <p className='pb-4'>Oferta include transport asigurat de dus - întors: din București către Albastru și Origini & Albastru și Origini către București.  Preluarea din București se va face dintr-o singură locație.</p>
+            <p className='pb-4'>Vezi cum a fost în Challenge Yourself <Link to="/experience" className='text-orange underline'> @Experience #1</Link></p>
+            <h5 className="title pb-4 text-orange">
               Cum mă înscriu?
-            </h4>
+            </h5>
             <p>Înscrierea se face exclusiv prin mail la rezervari.buluc@gmail.com unde vei primi și oferta detaliată.</p>
-          </div>
+          </CardContainer>
         </FadeInViewPortAnimation>
 
 
         <FadeInViewPortAnimation className="pb-10 flex gap-10 mb:inline">
           <div className="h-[7vw] w-[50%] mb:w-full mb:h-[15vw] image-cover br mb:mb-4" style={{ backgroundImage: `url(${IMAGES.locuriLimitate})` }} />
-          <div className="w-[50%] mb:w-[100%] bg-white p-6 br shadow-lg h-fit mb:mb-4">
-            <p>Poti vedea detaliile primei editii vizitand pagina <Link to="/experience" className='text-orange underline'>Experience V2</Link></p>
-          </div>
         </FadeInViewPortAnimation>
 
         <div className="w-full flex justify-center pb-20">

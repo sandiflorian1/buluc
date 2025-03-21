@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Title from "./Title";
 import IMAGES from '../../assets/Images';
 
-export default function MainLayout({ children, title, noPadding, bgImg }: any) {
+export default function MainLayout({ children, title, noPadding, bgImg, noFooter }: any) {
 const bgImage = bgImg || IMAGES.bg;
 
   return (
@@ -24,13 +24,13 @@ const bgImage = bgImg || IMAGES.bg;
           )}
 
         <div className='w-screen flex justify-center'>
-          <div className={`${noPadding ? '' : 'px-[13%] mb:px-[10%]'} pb-10`}>
+          <div className={`${noPadding ? '' : 'px-[13%] mb:px-[10%] pb-10'}`}>
             {children}
           </div>
         </div>
       </div>
 
-      <Footer />
+      {!noFooter && <Footer />}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { FaChevronDown } from 'react-icons/fa';
 const SCROLL_THRESHOLD = 20;
 const ScrollIndicator = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   useEffect(() => {
     const scrollableElement = document.getElementById('scrolled');
@@ -35,7 +36,7 @@ const ScrollIndicator = () => {
     });
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible || !isMobile) return null;
 
   return (
     <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 text-orange">
