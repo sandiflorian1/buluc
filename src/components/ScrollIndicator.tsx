@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { FaChevronDown } from 'react-icons/fa';
+
 const SCROLL_THRESHOLD = 20;
-const ScrollIndicator = () => {
+
+const ScrollIndicator = ({ size = 24, text }: { size?: number, text?: string }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -11,7 +13,7 @@ const ScrollIndicator = () => {
       const currentScroll = scrollableElement?.scrollTop || 0;
       const isAtTopFirstTime = currentScroll < SCROLL_THRESHOLD && isVisible;
       if (currentScroll >= SCROLL_THRESHOLD && !isAtTopFirstTime) {
-        gsap.to('.scroll-indicator', {
+        gsap.to(['.scroll-indicator', '.scroll-indicator-text'], {
           opacity: 0,
           duration: 1,
         }).eventCallback('onComplete', () => {setIsVisible(false);});
@@ -39,7 +41,13 @@ const ScrollIndicator = () => {
 
   return (
     <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 text-orange">
-      <FaChevronDown size={24} className="scroll-indicator" />
+      <div className="flex flex-col items-center">
+        {text && <p className="title scroll-indicator-text border-2 border-orange px-4 py-2 rounded-xl mb-2 gradient-container">{text}</p>}
+        <div className="scroll-indicator border-4 border-orange p-2 rounded-full gradient-container">
+          <FaChevronDown size={size}  />
+          
+        </div>
+      </div>
     </div>
   );
 };

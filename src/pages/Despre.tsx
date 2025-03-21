@@ -204,6 +204,20 @@ const teamMembers: ITeamMember[] = [
     role: "artist fotograf",
     color: 'red',
   },
+
+  {
+    imageSrc: IMAGES.echipaAdi,
+    name: "Adi Loțcu",
+    role: "actor & artist videograf",
+    color: 'orange',
+  },
+
+  {
+    imageSrc: IMAGES.echipaAdreeaD,
+    name: "Andreea Preda",
+    role: "Graphic Designer",
+    color: 'red',
+  },
 ];
 
 const colaboratori: ITeamMember[] | null = null;

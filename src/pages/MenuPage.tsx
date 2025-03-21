@@ -70,13 +70,13 @@ export default function MenuPage(props: IMenuPageProps) {
           </div>
           <div ref={menuRef} className="flex flex-col w-[25vw] mb:w-[80vw] mb:mt-[9rem]">
             {options.map(({ id, link, text }) => (
-              <SlideRightAnimation key={id} className="pb-2">
+              <SlideRightAnimation key={id}>
                 <Link
                   id={id}
                   key={id}
                   to={link}
                 >
-                  <h2 className="title">{text}<span><FaArrowRight size='25px' className="text-orange inline center align-baseline ml-2"/></span></h2>
+                  <h2 className="title">{text}<span><FaArrowRight size='25px' className="text-orange inline center align-baseline ml-2 pb-2"/></span></h2>
                 </Link>
               </SlideRightAnimation>
             ))}

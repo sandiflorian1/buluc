@@ -200,7 +200,7 @@ const links = [
         name: ' @Curs',
       },
       {
-        link: '/experience',
+        link: '/experienceV2',
         name: ' @The Experience',
       },
       {

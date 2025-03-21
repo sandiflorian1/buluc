@@ -6,7 +6,7 @@ function CardContainer(data: CardContainer) {
 	const { cardClass, children } = data;
 	return (
 		<div className={`${cardClass} bg-white rounded-lg shadow-lg`}>
-			{children && <p className="mb-2">{children}</p>}
+			{children && <div className="mb-2">{children}</div>}
 		</div>
 	);
 }
