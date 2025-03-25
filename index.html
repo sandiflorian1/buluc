@@ -2,6 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:title" content="Buluc - Experiențe Artistice">
+    <meta property="og:description" content="Buluc este o companie independentă de artiști care organizează evenimente creative și experiențe artistice în București">
+    <meta property="og:image" content="https://buluc.org/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://buluc.org">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="src/assets/images/bulina.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buluc</title>
@@ -9,6 +16,67 @@
     <link rel="preload" as="image" href="src/assets/images/homepageBg.webp">
     <link rel="preload" as="image" href="src/assets/images/bg.webp">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://buluc.org/#organization",
+          "name": "Buluc",
+          "url": "https://buluc.org",
+          "description": "Buluc este o companie independentă de artiști care organizează evenimente creative și experiențe artistice în România",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://buluc.org/src/assets/images/bulina.svg"
+          }
+        },
+        {
+          "@type": "Event",
+          "name": "Challenge Yourself @Experience #2",
+          "description": "Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe. Tema: Joacă-te cu emoția",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Albastru și Origini",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Berislăvești",
+              "addressRegion": "Vâlcea",
+              "addressCountry": "RO"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/LimitedAvailability",
+            "url": "https://buluc.org/ChyExperience2"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "@id": "https://buluc.org/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://buluc.org/#website",
+          "url": "https://buluc.org",
+          "name": "Buluc",
+          "publisher": {
+            "@id": "https://buluc.org/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://buluc.org/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -236,7 +236,7 @@ const Experience: React.FC = () => {
 
         <div className="w-full flex justify-center pb-20">
           <div className="bg-white border-2 border-orange rounded-lg py-2 px-4">
-            <Link to="/experienceV2" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #1</Link>
+            <Link to="/ChyExperience2" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #1</Link>
           </div>
         </div>
       </div>

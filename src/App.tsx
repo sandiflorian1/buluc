@@ -47,7 +47,7 @@ const App = () => {
         <Route path="/menu-challenge-yourfelf" render={(props) => <MenuPage {...props} options={challengeActivities} />} />
         <Route path="/office" component={Office} />
         <Route path="/experience" component={Experience} />
-        <Route path="/experienceV2" component={ExperienceV2} />
+        <Route path="/ChyExperience2" component={ExperienceV2} />
         <Route path="/proiecte/thecreativegeneration" component={Creative} />
         <Route path="/proiecte/roast" component={Roast} />
         <Route path="/proiecte/doact" component={Doact} />
