@@ -208,14 +208,14 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaAdi,
     name: "Adi Loțcu",
-    role: "actor & artist videograf",
+    role: "actor & artist fotograf",
     color: 'orange',
   },
 
   {
     imageSrc: IMAGES.echipaAdreeaD,
     name: "Andreea Preda",
-    role: "Graphic Designer",
+    role: "graphic designer & illustrator",
     color: 'red',
   },
 ];
