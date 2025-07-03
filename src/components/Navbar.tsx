@@ -81,10 +81,7 @@ function Navbar() {
       {!isMobile && (
         <>
           <a href="/">
-            <img
-              src={IMAGES.logo}
-              alt="buluc-gif"
-              className="h-[5rem]" />
+            <div className="h-[5rem] w-[9rem] bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.logo})` }}></div>
           </a>
 
           <ul className='sm:flex justify-end py-6 mb:w-40'>
