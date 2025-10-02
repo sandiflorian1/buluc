@@ -23,6 +23,7 @@ import Form35Page from './pages/Form35Page';
 import Donatie from './pages/Donation';
 import Confidentialitate from './pages/Confidentialitate';
 import { ToastContainer } from 'react-toastify';
+import ConsimtamantPage from './pages/ConsimtamantPage';
 
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/proiecte/roast" component={Roast} />
         <Route path="/proiecte/doact" component={Doact} />
         <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
+        <Route path="/consimtamant" component={ConsimtamantPage} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
       <ToastContainer 
