@@ -9,6 +9,8 @@ const handler: Handler = async (event) => {
     const apiKey = defaultClient.authentications["api-key"];
     apiKey.apiKey = process.env.BREVO_API_KEY as string;
 
+    console.log("API Key:", apiKey.apiKey);
+
     const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
     const email = {
