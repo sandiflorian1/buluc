@@ -1,33 +1,67 @@
 import { Handler } from "@netlify/functions";
 import SibApiV3Sdk from "sib-api-v3-sdk";
 
-const handler: Handler = async (event) => {
-  try {
-    const { to, subject, message, filename, fileBase64 } = JSON.parse(event.body || "{}");
+export const handler: Handler = async (event) => {
+  const headers = {
+    "Access-Control-Allow-Origin": "*", // Poți pune domeniul tău aici
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS"
+  };
 
+  // Pre-flight request pentru CORS
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers,
+      body: ""
+    };
+  }
+
+  try {
+    if (!event.body) throw new Error("Missing request body");
+
+    const data = JSON.parse(event.body);
+
+    const { to_name, from_name, user_email, subject, message, form } = data;
+
+    // Configurare API Brevo
     const defaultClient = SibApiV3Sdk.ApiClient.instance;
     const apiKey = defaultClient.authentications["api-key"];
-    apiKey.apiKey = process.env.BREVO_API_KEY as string;
-
-    console.log("API Key:", apiKey.apiKey);
+    if (!process.env.BREVO_API_KEY) throw new Error("Missing BREVO_API_KEY env variable");
+    apiKey.apiKey = process.env.BREVO_API_KEY;
 
     const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
-    const email = {
-      sender: { email: "florianmaa@gmail.com" },
-      to: [{ email: to }],
-      subject,
-      htmlContent: `<p>${message}</p>`,
-      attachment: [{ name: filename, content: fileBase64 }],
+    // Pregătim emailul cu attachment
+    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+    sendSmtpEmail.to = [{ email: user_email, name: to_name }];
+    sendSmtpEmail.sender = { email: "florianmaa@gmail.com", name: from_name };
+    sendSmtpEmail.subject = subject || "Formular PDF";
+    sendSmtpEmail.htmlContent = `<p>${message}</p>`;
+    sendSmtpEmail.attachment = [
+      {
+        content: form.replace(/^data:application\/pdf;base64,/, ""),
+        name: "formular.pdf",
+        type: "application/pdf"
+      }
+    ];
+
+    // Trimitem emailul
+    await apiInstance.sendTransacEmail(sendSmtpEmail);
+
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ success: true })
     };
+  } catch (error: any) {
+    console.error(error);
 
-    const resp = await apiInstance.sendTransacEmail(email);
-
-    return { statusCode: 200, body: JSON.stringify({ success: true, data: resp }) };
-  } catch (err: any) {
-    console.error(err);
-    return { statusCode: 500, body: JSON.stringify({ success: false, error: err.message }) };
+    return {
+      statusCode: 500,
+      headers,
+      body: JSON.stringify({ success: false, error: error.message })
+    };
   }
 };
 
-export { handler };

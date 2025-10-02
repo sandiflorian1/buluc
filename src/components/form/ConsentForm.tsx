@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import SignatureCanvas from 'react-signature-canvas';
 import { modifyConsentPdf } from '../utils/modifyConsentPdf';
+import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
 import SimpleCard from '../cards/SimpleCard';
 import '../../css/form35.css';
 
@@ -40,26 +41,18 @@ export default function ConsentForm() {
         reader.onerror = err => reject(err);
       });
 
-      const response = await fetch("https://buluc.netlify.app/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          to: data.email, 
-          subject: "Consimtamant",
-          message: "Salut! Vezi PDF-ul atașat.",
-          filename: "consimtamant.pdf",
-          fileBase64: base64pdf
-        })
-      });
+      await emailHandlerNetlify({
+        to_name: `${data.firstName} ${data.lastName}`,
+        from_name: "Asociația Buluc",
+        user_email: data.email,
+        subject: "Consimțământ Challenge Yourself",
+        message: "Salut! Vezi PDF-ul atașat.",
+        form: `data:application/pdf;base64,${base64pdf}`
+        });
 
-      const result = await response.json();
-      if (result.success) {
-        console.log("Email trimis cu succes!");
-        reset();
-        signatureRef.current?.clear();
-      } else {
-        console.error("Eroare la trimiterea emailului:", result.error);
-      }
+      reset();
+      signatureRef.current?.clear();
+      setIsSubmitting(false);
 
     } catch (error) {
       console.error(error);
