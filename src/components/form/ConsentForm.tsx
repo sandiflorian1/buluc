@@ -41,14 +41,27 @@ export default function ConsentForm() {
         reader.onerror = err => reject(err);
       });
 
-      await emailHandlerNetlify({
-        to_name: `${data.firstName} ${data.lastName}`,
-        from_name: "Asociația Buluc",
-        user_email: data.email,
-        subject: "Consimțământ Challenge Yourself",
-        message: "Salut! Vezi PDF-ul atașat.",
-        form: `data:application/pdf;base64,${base64pdf}`
-        });
+      function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
+        const url = URL.createObjectURL(pdfBlob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      downloadPdf(pdfBlob, "consimtamant.pdf");
+
+      // await emailHandlerNetlify({
+      //   to_name: `${data.firstName} ${data.lastName}`,
+      //   from_name: "Asociația Buluc",
+      //   user_email: data.email,
+      //   subject: "Consimțământ Challenge Yourself",
+      //   message: "Salut! Vezi PDF-ul atașat.",
+      //   form: `data:application/pdf;base64,${base64pdf}`
+      //   });
 
       reset();
       signatureRef.current?.clear();

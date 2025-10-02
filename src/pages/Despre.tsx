@@ -17,10 +17,10 @@ const MisiuneSection: React.FC = () => {
   return (
     <FadeInAnimation className="misiune">
       <div>
-        <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[39vw] mb:pt-[52vw] relative">
-          <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
+        <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[3vw] mb:pt-[5vw] relative">
+          {/* <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
             <img src={isMobile ? IMAGES.teamMB : IMAGES.team} className="h-[45vw] mb:h-[60vw]"></img>
-          </div>
+          </div> */}
 
           <div className="">
             <div className="bg-white p-[3vw] br shadow-lg">
@@ -194,7 +194,7 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaAndreeaIstrate,
     name: "Andreea Istrate",
-    role: "coregraf & coordonator event",
+    role: "teatrolog & coordonator event",
     color: 'orange',
   },
 
@@ -216,13 +216,13 @@ const teamMembers: ITeamMember[] = [
     imageSrc: IMAGES.echipaAdreeaD,
     name: "Andreea Preda",
     role: "graphic designer & illustrator",
-    color: 'red',
+    color: 'orange',
   },
 ];
 
 const colaboratori: ITeamMember[] | null = null;
 
-const LocDeJoacaText = "O casă cu trăsături burgheze din inima Capitalei amplasată în zona Dorobanți, într-o vilă interbelică din anul 1920. Un spațiu creativ și versatil, ce dispune și de o terasă exterioară unde ne adunăm buluc seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
+const LocDeJoacaText = "Ne adunǎm Buluc în sufrageria unei vile interbelice din 1920 amplasatǎ în cartierului Dorobanți. Un spațiu creativ și versatil, cu o terasă primitoare unde ne strângem seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
 const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."
 const MisiuneTextBanner = "este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
 

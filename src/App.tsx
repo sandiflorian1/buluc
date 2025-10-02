@@ -25,6 +25,8 @@ import Confidentialitate from './pages/Confidentialitate';
 import { ToastContainer } from 'react-toastify';
 import ConsimtamantPage from './pages/ConsimtamantPage';
 
+import Faq from './pages/Faq';
+
 const App = () => {
   return (
     <Router>
@@ -54,6 +56,7 @@ const App = () => {
         <Route path="/proiecte/doact" component={Doact} />
         <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
         <Route path="/consimtamant" component={ConsimtamantPage} />
+        <Route path="/faq" component={Faq} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
       <ToastContainer 

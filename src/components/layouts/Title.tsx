@@ -2,7 +2,7 @@ export default function Title ({ title, position, className }: { title: string, 
 
   return (
     <div className={`${className} w-full mt-auto mb-4 flex justify-${position || 'center'}`}>
-        <h1 className="title title-h1">
+        <h1 className="title title-h1 text-center">
           {title}
         </h1>
     </div>

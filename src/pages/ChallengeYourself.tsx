@@ -1,4 +1,5 @@
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaQuestionCircle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import MainLayout from "../components/layouts/MainLayout";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
@@ -36,7 +37,7 @@ export default function ChallengeYourself() {
             </p>
 
             <p className="">
-              Îți propunem un curs ce se desfășoară pe o perioadă de 3 luni unde ”ne jucăm” prin intermediul unor tehnici teatrale pe care le vei folosi în fiecare moment în care trebuie să lucrezi cu emoția, imaginația și creativitatea, cu tine însuți, dar și în relație cu ceilalți.
+              Modulul de începǎtori se desfășoară pe parcursul a 3 luni, timp în care ne jucăm cu ajutorul unor exerciții teatrale pe care le vei putea folosi în orice situație ce implică emoția, imaginația și creativitatea – atât în relația cu tine însuți, cât și în interacțiunea cu ceilalți.
             </p>
           </BannerTextAbsolute>
 
@@ -132,10 +133,10 @@ export default function ChallengeYourself() {
               </h4>
 
               <p className="pb-4 text-white mb:text-black" style={textShadow}>
-                La finalul modulului, cursanții pregătesc un show de improvizație cu exerciții și jocuri pe care le-au făcut în aceste 3 luni. Ne place să spunem că este <span className="font-bold">un curs deschis cu apucături de show</span> pentru că vrem să oferim o experiență relaxantă și distractivă unde fiecare persoană își invită în sufrageria noastră prietenii, familia sau chiar colegii de la job.
+                La finalul modulului, cursanții pun în scenă un show de improvizație construit din exercițiile și jocurile lucrate pe parcursul celor 3 luni. Ne place să spunem că e un curs deschis cu apucǎturi de show pentru că atmosfera este una relaxată și distractivă unde fiecare participant își aduce în public prietenii, familia sau colegii de la birou.
               </p>
 
-              <p className="pb-4 text-white mb:text-black" style={textShadow}>Ulterior, Challenge Yourself continuă la grupele de avansați unde trecem la un alt nivel, aprofundam exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum ne putem folosi de acestea în viața de zi cu zi, dar și care este conexiunea lor cu teatrul. Ne jucăm mai mult și ne distrăm în diferite spectacole de Improvizație “pe bune”.</p>
+              <p className="pb-4 text-white mb:text-black" style={textShadow}>După acest pas, Challenge Yourself merge mai departe cu modulul pentru avansați – o etapă nouă, în care aprofundăm exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum le putem aplica în viața de zi cu zi și care este legătura lor directă cu teatrul. Ne jucăm cu mai multă intensitate, urcăm pe scenă în spectacole de improvizație „pe bune” și, treptat, ajungem chiar să construim propriile spectacole de teatru.</p>
             </div>
 
           </div>
@@ -174,6 +175,40 @@ export default function ChallengeYourself() {
           </div>
         </FadeInViewPortAnimation>
 
+        <FadeInViewPortAnimation className="">
+          <div className="bg-white br shadow-lg p-10 mb:mb-6">
+            <h3 className="text-red">
+              Traineri Invitați
+            </h3>
+
+            <p className=""> La modulul de avansați vei fi ghidat de trainerii invitați printr-o serie de workshop-uri în care vei explora forme noi de dezvoltare personală și tehnici teatrale specifice, menite să îți extindă expresivitatea si creativitatea. </p>
+          </div>
+
+          <div id="members" className="flex mb:inline gap-10 mb:gap-20 justify-center my-10">
+            <TeamMemberCard
+              key={1}
+              imageSrc={IMAGES.CYTeam4}
+              name="Valentina Boldurescu"
+              color="red"
+              role="profa de dans & mișcare scenicǎ"
+            />
+            <TeamMemberCard
+              key={2}
+              imageSrc={IMAGES.CYTeam5}
+              name="Ioana Petrescu"
+              color="orange"
+              role="profa de dicție"
+            />
+            <TeamMemberCard
+              key={1}
+              imageSrc={IMAGES.CYTeam6}
+              name="Andrei Mihail Dominte"
+              color="red"
+              role="proful de scrimǎ artisticǎ de teatru/film"
+            />
+          </div>
+        </FadeInViewPortAnimation>
+
         <FadeInViewPortAnimation className="pb-20 mb:pb-0">
           <h4 className="title mb:mb-4">
             Alege varianta care ți se potrivește și contactează-ne.
@@ -182,10 +217,11 @@ export default function ChallengeYourself() {
           <div className="flex mb:inline gap-10 justify-center my-4 mx-auto">
             <ScaleViewPortAnimation className="p-10 bg-orange shadow-lg rounded-full mb:mb-10">
               <h5 className="text-center text-white"> VARIANTA 1 </h5>
-              <h5 className="text-center text-white pb-4"> PLATA LUNARA </h5>
+              <h5 className="text-center text-white pb-4"> PLATA LUNARA</h5>
               <p className="text-center text-white"> 4 sedinte/ luna </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <h5 className="text-center text-white font-bold pt-4"> 449 lei </h5>
+              <h5 className="text-center text-white font-bold pt-4"> 449 lei/luna </h5>
+              <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow</b> </p>
             </ScaleViewPortAnimation>
 
             <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
@@ -195,6 +231,8 @@ export default function ChallengeYourself() {
               <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
               <p className="text-center text-white"> o sedinta/ saptamana </p>
               <h5 className="text-center text-white font-bold pt-4">1149 lei </h5>
+              <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow </b> </p>
+
             </ScaleViewPortAnimation>
 
           </div>
@@ -204,31 +242,39 @@ export default function ChallengeYourself() {
           <div className="grid grid-cols-1 mb:grid-cols-1 gap-8">
             <div>
               <h4 className="text-orange">
-                Trebuie să știi că acest curs:
+                Despre curs:
               </h4>
 
               <ul className="list-disc pl-8">
-                <li>are 4 ședințe pe lună, 1 ședință/săptămână</li>
-                <li>funcționează sub forma unui abonament, iar ședințele nu se pot recupera</li>
+                <li>modulul de incepatori durează 3 luni: 4 ședințe /lună, câte 1/săptămână</li>
+                <li>funcționează ca un abonament: ședințele pierdute nu se pot recupera la o altǎ grupǎ</li>
+                <li>după modulul de incepatori - poți continua la avansați</li>
+                <li>clasele de avansați sunt concepute într-un modul continuu de învățare & explorare</li>
               </ul>
-              <p className="mt-2">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varianta aleasa</p>
 
             </div>
 
             <div>
               <h4 className="text-orange">
-                Cum îmi rezerv locul?
+                Rezervă-ți locul:
               </h4>
               <p>
-                <span className="text-red font-bold">Locul se consideră rezervat după achitarea avansului nerambursabil în valoare de 100 de lei (avans ce acoperă prima ședință)</span>. Acesta se scade automat din plata primei luni sau plata întregului modul.
+                <span className="text-red font-bold">Locul se consideră rezervat după achitarea avansului nerambursabil în valoare de 150 de lei (avans ce acoperă prima ședință)</span>. Acesta se scade automat din plata primei luni sau plata întregului modul.
               </p>
             </div>
 
           </div>
         </FadeInViewPortAnimation>
 
-        <div className="w-full flex justify-center pb-20 mb:grid mb:gap-4">
-          <div className="whatsapp-btn mr-10 mb:mr-0">
+        <div className="w-full flex justify-center pb-20 mb:grid gap-6 mb:gap-4">
+          <div className="bg-orange email-btn">
+            <Link to="/faq" className="flex">
+              <FaQuestionCircle size='30px' className="pr-2" />
+              <p className="pt-1 mb:pt-2">Întrebări frecvente</p>
+            </Link>
+          </div>
+
+          <div className="whatsapp-btn mb:mr-0">
             <a aria-label="Chat on WhatsApp" target="_blank" href="https://wa.me/+40740993479" className="flex items-center">
               <FaWhatsapp size='30px' className="pr-2" />
               <p className="pt-1">Scrie-ne pe whatsapp</p>

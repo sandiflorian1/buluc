@@ -64,7 +64,10 @@ const IMAGES = {
     CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.webp', import.meta.url).href,
     CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.webp', import.meta.url).href,
     CYTeam3: new URL('/src/assets/images/challenge/challenge-yourself/team3.webp', import.meta.url).href,
-
+    CYTeam4: new URL('/src/assets/images/challenge/challenge-yourself/vale.webp', import.meta.url).href,
+    CYTeam5: new URL('/src/assets/images/challenge/challenge-yourself/ioana.webp', import.meta.url).href,
+    CYTeam6: new URL('/src/assets/images/challenge/challenge-yourself/andrei.webp', import.meta.url).href,
+    
 
     Show1: new URL('/src/assets/images/challenge/challenge-yourself/show1.webp', import.meta.url).href,
     Show2: new URL('/src/assets/images/challenge/challenge-yourself/show2.webp', import.meta.url).href,
