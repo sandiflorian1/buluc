@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@netlify/functions": "^4.2.7",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.0.20",
     "gsap": "^3.11.4",
@@ -24,6 +25,7 @@
     "react-toastify": "^10.0.5",
     "sass": "^1.72.0",
     "sharp": "^0.33.2",
+    "sib-api-v3-sdk": "^8.5.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

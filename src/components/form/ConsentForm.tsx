@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import SignatureCanvas from 'react-signature-canvas';
 import { modifyConsentPdf } from '../utils/modifyConsentPdf';
-import { emailHandler } from '../utils/emailHandler';
 import SimpleCard from '../cards/SimpleCard';
 import '../../css/form35.css';
 
@@ -30,35 +29,38 @@ export default function ConsentForm() {
       setIsSubmitting(true);
       const signatureImage = signatureRef.current?.getTrimmedCanvas().toDataURL('image/png') || null;
 
-      const pdfBlob = await modifyConsentPdf({
-        firstName: data.firstName,
-        lastName: data.lastName,
-        email: data.email,
-        signature: signatureImage,
+      const pdfBlob = await modifyConsentPdf({...data, signature: signatureImage });
+
+      const base64pdf = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(pdfBlob);
+        reader.onloadend = () => {
+          resolve((reader.result as string).split(',')[1]); 
+        };
+        reader.onerror = err => reject(err);
       });
 
-      const reader = new FileReader();
-      reader.readAsDataURL(pdfBlob);
-      reader.onloadend = async () => {
-        const base64pdf = reader.result as string;
-        try {
-          await emailHandler({
-            to_name: 'Buluc',
-            form: base64pdf,
-            subject: 'Consimtamant Challenge Yourself',
-            message: 'Consimtamant completat',
-            user_email: data.email,
-            from_name: `${data.firstName} ${data.lastName}`,
-            reply_to: data.email,
-          });
-          reset();
-          signatureRef.current?.clear();
-        } catch (err) {
-          console.error(err);
-        } finally {
-          setIsSubmitting(false);
-        }
-      };
+      const response = await fetch("https://buluc.netlify.app/.netlify/functions/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: data.email, 
+          subject: "Consimtamant",
+          message: "Salut! Vezi PDF-ul atașat.",
+          filename: "consimtamant.pdf",
+          fileBase64: base64pdf
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        console.log("Email trimis cu succes!");
+        reset();
+        signatureRef.current?.clear();
+      } else {
+        console.error("Eroare la trimiterea emailului:", result.error);
+      }
+
     } catch (error) {
       console.error(error);
       setIsSubmitting(false);
@@ -148,8 +150,6 @@ export default function ConsentForm() {
               {errors.period && <span className='error mt-2'>{errors.period.message}</span>}
 				    </div>
           </li>
-
-
         </ul>
 
         <h4 className="mt-6 mb-2 font-semibold">Nota de informare cu privire la protecția datelor personale</h4>
