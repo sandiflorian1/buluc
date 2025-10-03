@@ -44,7 +44,7 @@ export const handler: Handler = async (event) => {
     // 🔹 Trimitem emailul
     const { data: result, error } = await resend.emails.send({
       from: `Asociatia Buluc <onboarding@resend.dev>`, 
-      to: [user_email],
+      to: ['buluc.arhiva@gmail.com'],
       subject: subject || "Formular PDF",
       html: `<p>${message}</p>`,
       attachments,
