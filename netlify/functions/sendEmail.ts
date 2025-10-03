@@ -1,19 +1,21 @@
 import { Handler } from "@netlify/functions";
-import SibApiV3Sdk from "sib-api-v3-sdk";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY as string);
 
 export const handler: Handler = async (event) => {
   const headers = {
-    "Access-Control-Allow-Origin": "*", // Poți pune domeniul tău aici
+    "Access-Control-Allow-Origin": "*", // sau domeniul tău ex: "https://buluc.ro"
     "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "POST, OPTIONS"
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
   };
 
-  // Pre-flight request pentru CORS
+  // 🔹 Pre-flight request pentru CORS
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
       headers,
-      body: ""
+      body: "",
     };
   }
 
@@ -22,37 +24,40 @@ export const handler: Handler = async (event) => {
 
     const data = JSON.parse(event.body);
 
-    const { to_name, from_name, user_email, subject, message, form } = data;
+    const { user_email, subject, message, form } = data;
 
-    // Configurare API Brevo
-    const defaultClient = SibApiV3Sdk.ApiClient.instance;
-    const apiKey = defaultClient.authentications["api-key"];
-    if (!process.env.BREVO_API_KEY) throw new Error("Missing BREVO_API_KEY env variable");
-    apiKey.apiKey = process.env.BREVO_API_KEY;
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error("Missing RESEND_API_KEY env variable");
+    }
 
-    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+    // 🔹 Construim atașamentul PDF
+    const attachments = form
+      ? [
+          {
+            filename: "consimtamant.pdf",
+            content: form.replace(/^data:application\/pdf;base64,/, ""),
+            encoding: "base64",
+          },
+        ]
+      : [];
 
-    // Pregătim emailul cu attachment
-    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
-    sendSmtpEmail.to = [{ email: user_email, name: to_name }];
-    sendSmtpEmail.sender = { email: "florianmaa@gmail.com", name: from_name };
-    sendSmtpEmail.subject = subject || "Formular PDF";
-    sendSmtpEmail.htmlContent = `<p>${message}</p>`;
-    sendSmtpEmail.attachment = [
-      {
-        content: form.replace(/^data:application\/pdf;base64,/, ""),
-        name: "formular.pdf",
-        type: "application/pdf"
-      }
-    ];
+    // 🔹 Trimitem emailul
+    const { data: result, error } = await resend.emails.send({
+      from: `Asociatia Buluc <onboarding@resend.dev>`, 
+      to: [user_email],
+      subject: subject || "Formular PDF",
+      html: `<p>${message}</p>`,
+      attachments,
+    });
 
-    // Trimitem emailul
-    await apiInstance.sendTransacEmail(sendSmtpEmail);
+    if (error) {
+      throw new Error(error.message);
+    }
 
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ success: true })
+      body: JSON.stringify({ success: true, result }),
     };
   } catch (error: any) {
     console.error(error);
@@ -60,8 +65,7 @@ export const handler: Handler = async (event) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ success: false, error: error.message })
+      body: JSON.stringify({ success: false, error: error.message }),
     };
   }
 };
-

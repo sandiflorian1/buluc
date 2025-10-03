@@ -12,8 +12,7 @@ const nameRegex = /^[a-zA-Z\s]*$/;
 const phoneRegex = /^[0-9+]*$/;
 
 interface ConsentFormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
   period: '1' | '2';
@@ -41,27 +40,25 @@ export default function ConsentForm() {
         reader.onerror = err => reject(err);
       });
 
-      function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
-        const url = URL.createObjectURL(pdfBlob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = fileName;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-      }
+      // function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
+      //   const url = URL.createObjectURL(pdfBlob);
+      //   const link = document.createElement("a");
+      //   link.href = url;
+      //   link.download = fileName;
+      //   document.body.appendChild(link);
+      //   link.click();
+      //   document.body.removeChild(link);
+      //   URL.revokeObjectURL(url);
+      // }
 
-      downloadPdf(pdfBlob, "consimtamant.pdf");
+      // downloadPdf(pdfBlob, "consimtamant.pdf");
 
-      // await emailHandlerNetlify({
-      //   to_name: `${data.firstName} ${data.lastName}`,
-      //   from_name: "Asociația Buluc",
-      //   user_email: data.email,
-      //   subject: "Consimțământ Challenge Yourself",
-      //   message: "Salut! Vezi PDF-ul atașat.",
-      //   form: `data:application/pdf;base64,${base64pdf}`
-      //   });
+      await emailHandlerNetlify({
+        user_email: data.email,
+        subject: "Consimțământ Challenge Yourself",
+        message: "Salut! Vezi PDF-ul atașat.",
+        form: `data:application/pdf;base64,${base64pdf}`
+      });
 
       reset();
       signatureRef.current?.clear();
@@ -85,14 +82,14 @@ export default function ConsentForm() {
             <input
               type="text"
               size={25}
-              {...register('lastName', {
+              {...register('name', {
                 required: 'Numele este obligatoriu',
                 pattern: {
                   value: nameRegex,
                   message: 'Numele poate conține doar litere, fără diacritice'
                 }
               })} />
-            {errors.lastName && <span className='error'>{errors.lastName.message}</span>}
+            {errors.name && <span className='error'>{errors.name.message}</span>}
           </label>
 
           <label className='w-1/3 mb:w-full'>
@@ -167,7 +164,7 @@ export default function ConsentForm() {
         <p className="mb-2">Părțile se obligă să aplice toate măsurile tehnice și operaționale adecvate în vederea protejării datelor cu caracter personal împotriva oricăror pierderi, modificări, dezvăluiri sau acces neautorizat și împotriva procesării ilegale.</p>
         <p className="mb-4">Părțile se obligă să respecte clauzele de confidențialitate prevăzute în consimțământ.</p>
 
-        <div className="mt-6">
+        <div className="mt-6" style={{ width: isMobile ? 200 : 500 }}>
           <p className="mb-4">Am luat la cunoștință,</p>
           <p className="text"> Semnătura:* </p>
           <div className="signarure">
@@ -179,7 +176,7 @@ export default function ConsentForm() {
           </div>
         </div>
 
-        <div className="flex justify-center pb-4 mt-4">
+        <div className="flex pb-4 mt-4">
           <button
             type="submit"
             className="px-6 py-2 bg-red text-white br disabled:opacity-50 disabled:cursor-not-allowed"
