@@ -18,17 +18,17 @@ export const handler: Handler = async (event) => {
 
     // Configurare SMTP din cPanel
     const transporter = nodemailer.createTransport({
-      host: "mail.buluc.ro",
+      host: "mail.buluc.org",
       port: 465,
       secure: true,
       auth: {
-        user: "buluc@buluc.ro",
+        user: "buluc@buluc.org",
         pass: process.env.CPANEL_EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"Challenge Yourself" <buluc@buluc.ro>`,
+      from: `"Challenge Yourself" <buluc@buluc.org>`,
       to,
       subject,
       html: `<p>${message}</p>`,
