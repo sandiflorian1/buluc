@@ -1,4 +1,5 @@
 import { PDFDocument, rgb } from 'pdf-lib';
+import { getCurrentDateTimeAsNumber, getFormattedDate } from './dateUtils';
 
 export interface ConsentParams {
   name: string;
@@ -10,6 +11,8 @@ export interface ConsentParams {
 
 export async function modifyConsentPdf(params: ConsentParams) {
   const { name, phone, period, email, signature } = params;
+  const dateNumber = getCurrentDateTimeAsNumber();
+  const formattedDate = getFormattedDate();
 
   // Load the consent PDF template from public path
   const pdfUrl = '/consimtamant.pdf';
@@ -19,10 +22,12 @@ export async function modifyConsentPdf(params: ConsentParams) {
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
   const page1 = pdfDoc.getPages()[0];
   const page2 = pdfDoc.getPages()[1];
+  const nrDoc = `Nr. ${dateNumber} / ${formattedDate}`;
 
   // NOTE: Coordinates are approximate; adjust if template changes.
   // Draw name fields (nume + prenume) on the first page
-  const textFields = [
+    const textFields = [
+    { text: nrDoc, x: 220, y: 700 },
     { text: name, x: 270, y: 650 },
     { text: phone, x: 110, y: 634 },
     { text: email, x: 260, y: 634 },
@@ -31,6 +36,7 @@ export async function modifyConsentPdf(params: ConsentParams) {
 
   ];
 
+  // Page 1
   textFields.forEach((field) => {
     if (field.text) {
       page1.drawText(field.text, {
@@ -41,6 +47,9 @@ export async function modifyConsentPdf(params: ConsentParams) {
       });
     }
   });
+
+  // Page 2
+  page2.drawText(nrDoc, { x: 220, y: 700, size: 12, color: rgb(0, 0, 0)});
 
   // Add signature image if available
   if (signature) {

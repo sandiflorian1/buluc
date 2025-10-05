@@ -53,13 +53,24 @@ export default function ConsentForm() {
 
       // downloadPdf(pdfBlob, "consimtamant.pdf");
 
-      const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul.</p>`
+      // const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul.</p>`
 
-      await emailHandlerNetlify({
-        user_email: data.email,
-        subject: "Consimțământ Challenge Yourself",
-        message: emailHTML,
-        form: `data:application/pdf;base64,${base64pdf}`
+      // await emailHandlerNetlify({
+      //   user_email: data.email,
+      //   subject: "Consimțământ Challenge Yourself",
+      //   message: emailHTML,
+      //   form: `data:application/pdf;base64,${base64pdf}`
+      // });
+
+      await fetch("/.netlify/functions/sendEmailCPannel", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: data.email,
+          subject: "Consimțământ Challenge Yourself",
+          message: "Salut! Ați semnat consimțământul cu succes. Ați primit fisierul atașat.",
+          form: `data:application/pdf;base64,${base64pdf}`,
+        }),
       });
 
       reset();

@@ -2153,6 +2153,11 @@ node-source-walk@^7.0.1:
   dependencies:
     "@babel/parser" "^7.26.7"
 
+nodemailer@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.npmjs.org/nodemailer/-/nodemailer-7.0.7.tgz"
+  integrity sha512-jGOaRznodf62TVzdyhKt/f1Q/c3kYynk8629sgJHpRzGZj01ezbgMMWJSAjHADcwTKxco3B68/R+KHJY2T5BaA==
+
 nopt@^8.0.0:
   version "8.1.0"
   resolved "https://registry.npmjs.org/nopt/-/nopt-8.1.0.tgz"
