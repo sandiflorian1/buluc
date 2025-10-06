@@ -27,12 +27,11 @@ export async function modifyConsentPdf(params: ConsentParams) {
   // NOTE: Coordinates are approximate; adjust if template changes.
   // Draw name fields (nume + prenume) on the first page
     const textFields = [
-    { text: nrDoc, x: 220, y: 700 },
-    { text: name, x: 270, y: 650 },
-    { text: phone, x: 110, y: 634 },
-    { text: email, x: 260, y: 634 },
-    { text: period === '1' ? 'X' : ' ', x: 129, y: 172 },
-    { text: period === '2' ? 'X' : ' ', x: 129, y: 150 },
+    { text: name, x: 270, y: 635 },
+    { text: phone, x: 110, y: 619 },
+    { text: email, x: 260, y: 619 },
+    { text: period === '1' ? 'X' : ' ', x: 129, y: 155 },
+    { text: period === '2' ? 'X' : ' ', x: 129, y: 133 },
 
   ];
 
@@ -48,8 +47,10 @@ export async function modifyConsentPdf(params: ConsentParams) {
     }
   });
 
+  page1.drawText(nrDoc, { x: 243, y: 680, size: 10, color: rgb(0, 0, 0)});
+
   // Page 2
-  page2.drawText(nrDoc, { x: 220, y: 700, size: 12, color: rgb(0, 0, 0)});
+  page2.drawText(nrDoc, { x: 238, y: 695, size: 10, color: rgb(0, 0, 0)});
 
   // Add signature image if available
   if (signature) {
@@ -60,7 +61,7 @@ export async function modifyConsentPdf(params: ConsentParams) {
     // Place signature near the end of the document
     page2.drawImage(signatureImage, {
       x: 390,
-      y: 150,
+      y: 160,
       width: signatureDims.width,
       height: signatureDims.height,
     });
