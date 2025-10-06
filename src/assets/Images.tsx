@@ -11,8 +11,8 @@ const IMAGES = {
     sufrageria: new URL('/src/assets/images/culise/locatie/carolia1.jpeg', import.meta.url).href,
     sufrageria2: new URL('/src/assets/images/culise/locatie/carolia2.jpeg' , import.meta.url).href,
     sufrageria3: new URL('/src/assets/images/culise/locatie/carolia3.jpeg' , import.meta.url).href,
-    sufrageria4: new URL('/src/assets/images/culise/locatie/carolia4.jpeg' , import.meta.url).href,
-    sufrageria5: new URL('/src/assets/images/culise/locatie/carolia5.jpeg' , import.meta.url).href,
+    sufrageria4: new URL('/src/assets/images/culise/locatie/carolia4.webp' , import.meta.url).href,
+    sufrageria5: new URL('/src/assets/images/culise/locatie/carolia5.webp' , import.meta.url).href,
     sufrageria6: new URL('/src/assets/images/culise/locatie/carolia6.jpeg' , import.meta.url).href,
     sufrageriaBlur: new URL('/src/assets/images/culise/locatie/caroliaBlur.jpeg' , import.meta.url).href,
     // echipa
@@ -27,8 +27,9 @@ const IMAGES = {
     echipaLixi: new URL('/src/assets/images/culise/echipa/lixi.png', import.meta.url).href,
     echipaAdreeaD: new URL('/src/assets/images/culise/echipa/andreeaD.png', import.meta.url).href,
     echipaAdi: new URL('/src/assets/images/culise/echipa/adi.png', import.meta.url).href,
-    team: new URL('/src/assets/images/culise/echipa/team.png', import.meta.url).href,
-    teamMB: new URL('/src/assets/images/culise/echipa/teamMB.png', import.meta.url).href,
+    team: new URL('/src/assets/images/culise/team.webp', import.meta.url).href,
+    misiune: new URL('/src/assets/images/culise/misiune.webp', import.meta.url).href,
+
 
     //parteneri
     partener0: new URL('/src/assets/images/culise/parteneri/0.png', import.meta.url).href,

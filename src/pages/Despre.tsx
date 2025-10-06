@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import ContainerComponent from '../components/layouts/ContainerComponent';
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import TeamMemberCard from "../components/cards/TeamMemberCard";
 import { ITeamMember } from "../types/cards/ITeamMember";
 import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
+import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 
 import "../css/despre.css";
 import TitleBanner from "../components/layouts/TitleBanner";
@@ -13,33 +15,32 @@ import TitleBanner from "../components/layouts/TitleBanner";
 export interface IDespreProps { }
 
 const MisiuneSection: React.FC = () => {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   return (
-    <FadeInAnimation className="misiune">
-      <div>
-        <div className="px-[20vw] pb-[5vw] mb:px-[10vw] pt-[3vw] mb:pt-[5vw] relative">
-          {/* <div className="absolute w-full right-[-11vw] mb:right-[1vw] top-0">
-            <img src={isMobile ? IMAGES.teamMB : IMAGES.team} className="h-[45vw] mb:h-[60vw]"></img>
-          </div> */}
+    <Fragment>
+      <div className="mt-20 px-[13%] mb:px-[10%] pb-10">
+        <BannerTextAbsolute
+          imageURL={IMAGES.team}
+          direction="left"
+          className="h-[32vw] mb-20 mb:mb-10 mb:h-auto"
+          title="buluc"
+        >
+          <p className="">
+            {MisiuneTextBanner}
+          </p>
+        </BannerTextAbsolute>
 
-          <div className="">
-            <div className="bg-white p-[3vw] br shadow-lg">
-              <div className="">
-                <h1>buluc</h1>
-                <p>
-                  {MisiuneTextBanner}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BannerTextAbsolute
+          imageURL={IMAGES.misiune}
+          direction="right"
+          className="h-[32vw] mb-20 mb:mb-10 mb:h-auto"
+          title="misiune"
+        >
+          <p className="">
+            {MisiuneText}
+          </p>
+        </BannerTextAbsolute>
       </div>
-
-      <div className="mx-[20vw] mb:mx-[10vw] p-[3vw] mb:p-[5vw] mb-20 bg-white br shadow-lg">
-        <h2>misiune</h2>
-        <p>{MisiuneText}</p>
-      </div>
-    </FadeInAnimation>
+    </Fragment>
   );
 }
 
@@ -245,7 +246,7 @@ const parteneri = [
   },
   {
     id: 5,
-    link: "https://www.pop-cola.com/",
+    link: "https://ro.hama.com/",
   },
   {
     id: 6,
@@ -253,19 +254,15 @@ const parteneri = [
   },
   {
     id: 7,
-    link: "https://landing.bookster.ro",
+    link: "https://urbanmonkey.ro/",
   },
   {
     id: 8,
-    link: "https://organicindia.ro/",
+    link: "https://www.frufru.ro/",
   },
   {
     id: 9,
     link: "https://solarisplant.ro/",
-  },
-  {
-    id: 10,
-    link: "https://zoestudio.ro/",
   },
   {
     id: 11,
@@ -274,8 +271,4 @@ const parteneri = [
   {
     id: 12,
     link: "https://www.culturadata.ro/",
-  },
-  {
-    id: 13,
-    link: "https://linktr.ee/franui.ro",
   }];
