@@ -41,21 +41,21 @@ export const handler: Handler = async (event) => {
       ],
     });
 
-    const arhivaEmailHTML = `<p> Cursantul ${user_email}, cu email-ul ${to}, a semnat consimțământul.</p>`
+    // const arhivaEmailHTML = `<p> Cursantul ${user_email}, cu email-ul ${to}, a semnat consimțământul.</p>`
 
-    await transporter.sendMail({
-      from: `"Challenge Yourself" <buluc@buluc.org>`,
-      to: 'buluc.arhiva@gmail.com',
-      subject,
-      html: arhivaEmailHTML,
-      attachments: [
-        {
-          filename: "consimtamant.pdf",
-          content: form.replace(/^data:application\/pdf;base64,/, ""),
-          encoding: "base64",
-        },
-      ],
-    });
+    // await transporter.sendMail({
+    //   from: `"Challenge Yourself" <buluc@buluc.org>`,
+    //   to: 'buluc.arhiva@gmail.com',
+    //   subject,
+    //   html: arhivaEmailHTML,
+    //   attachments: [
+    //     {
+    //       filename: "consimtamant.pdf",
+    //       content: form.replace(/^data:application\/pdf;base64,/, ""),
+    //       encoding: "base64",
+    //     },
+    //   ],
+    // });
 
     return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
   } catch (error: any) {

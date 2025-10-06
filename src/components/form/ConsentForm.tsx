@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import SignatureCanvas from 'react-signature-canvas';
 import { modifyConsentPdf } from '../utils/modifyConsentPdf';
 import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
+import { emailHandlerCPannel } from '../utils/emailHandlerCPannel'
 import SimpleCard from '../cards/SimpleCard';
 import '../../css/form35.css';
 
@@ -72,6 +73,13 @@ export default function ConsentForm() {
       //     form: `data:application/pdf;base64,${base64pdf}`,
       //   }),
       // });
+
+      await emailHandlerCPannel({
+        to: data.email,
+        subject: "Consimțământ Challenge Yourself",
+        message: "Salut! Ați semnat consimțământul cu succes. Ați primit fisierul atașat.",
+        form: `data:application/pdf;base64,${base64pdf}`,
+      });
 
       reset();
       signatureRef.current?.clear();

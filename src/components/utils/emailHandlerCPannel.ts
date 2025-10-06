@@ -1,8 +1,8 @@
 import { toast } from 'react-toastify';
 
-export const emailHandlerNetlify = async (emailParams: any) => {
+export const emailHandlerCPannel = async (emailParams: any) => {
   try {
-    const response = await fetch("https://buluc.netlify.app/.netlify/functions/sendEmail", {
+    const response = await fetch("https://buluc.netlify.app/.netlify/functions/sendEmailCPannel", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(emailParams)
@@ -17,7 +17,7 @@ export const emailHandlerNetlify = async (emailParams: any) => {
       throw new Error(result.error || "Failed to send email");
     }
   } catch (error) {
-    console.error(error);
+    console.log(error);
     console.log("Email nu a fost trimis!")
     toast.error("Ne pare rău, mesajul nu a fost trimis");
     throw error;
