@@ -252,6 +252,7 @@ export default function ChallengeYourself() {
                 <li>clasele de avansați sunt concepute într-un modul continuu de învățare & explorare</li>
               </ul>
 
+              <p className="mt-2">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varianta aleasa</p>
             </div>
 
             <div>

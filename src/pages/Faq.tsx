@@ -76,7 +76,7 @@ const FaqItemRow: React.FC<FaqItem> = ({ question, answer }) => {
 const Faq: React.FC = () => {
   const sections: FaqSection[] = useMemo(() => [
     {
-      title: 'Despre structura cursului',
+      title: 'Structura cursului',
       items: [
         {
           question: 'Cate sedinte sunt intr-o luna?',
@@ -114,7 +114,7 @@ const Faq: React.FC = () => {
       ]
     },
     {
-      title: 'Despre plata cursului',
+      title: 'Plata cursului',
       items: [
         {
           question: 'Cum se face plata cursului?',
@@ -143,7 +143,7 @@ const Faq: React.FC = () => {
       ]
     },
     {
-      title: 'Despre situatii speciale',
+      title: 'Situatii speciale',
       items: [
         {
           question: 'Ce fac daca m-am inscris, am achitat cursul si nu mai pot ajunge? Primesc banii inapoi?',

@@ -63,21 +63,10 @@ export default function ConsentForm() {
         form: `data:application/pdf;base64,${base64pdf}`
       });
 
-      // await fetch("/.netlify/functions/sendEmailCPannel", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     to: data.email,
-      //     subject: "Consimțământ Challenge Yourself",
-      //     message: "Salut! Ați semnat consimțământul cu succes. Ați primit fisierul atașat.",
-      //     form: `data:application/pdf;base64,${base64pdf}`,
-      //   }),
-      // });
-
       await emailHandlerCPannel({
         to: data.email,
         subject: "Consimțământ Challenge Yourself",
-        message: "Salut! Ați semnat consimțământul cu succes. Ați primit fisierul atașat.",
+        message: "Salut! Consimțământul a fost trimis cu succes. Ați primit fisierul atașat.",
         form: `data:application/pdf;base64,${base64pdf}`,
       });
 
