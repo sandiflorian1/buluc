@@ -21,6 +21,13 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        entryFileNames: `js/[name]-[hash].js`,
+        chunkFileNames: `js/[name]-[hash].js`,
+        assetFileNames: `assets/[name][extname]`
+      },
+    },
   },
   assetsInclude: ['**/*.gltf'],
 })
