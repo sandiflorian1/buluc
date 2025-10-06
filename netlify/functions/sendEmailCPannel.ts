@@ -14,7 +14,7 @@ export const handler: Handler = async (event) => {
 
   try {
     if (!event.body) throw new Error("Missing request body");
-    const { to, subject, message, form } = JSON.parse(event.body);
+    const { to, subject, message, form, user_email } = JSON.parse(event.body);
 
     // Configurare SMTP din cPanel
     const transporter = nodemailer.createTransport({
@@ -34,7 +34,23 @@ export const handler: Handler = async (event) => {
       html: `<p>${message}</p>`,
       attachments: [
         {
-          filename: "formular.pdf",
+          filename: "consimtamant.pdf",
+          content: form.replace(/^data:application\/pdf;base64,/, ""),
+          encoding: "base64",
+        },
+      ],
+    });
+
+    const arhivaEmailHTML = `<p> Cursantul ${user_email}, cu email-ul ${to}, a semnat consimțământul.</p>`
+
+    await transporter.sendMail({
+      from: `"Challenge Yourself" <buluc@buluc.org>`,
+      to: 'buluc.arhiva@gmail.com',
+      subject,
+      html: arhivaEmailHTML,
+      attachments: [
+        {
+          filename: "consimtamant.pdf",
           content: form.replace(/^data:application\/pdf;base64,/, ""),
           encoding: "base64",
         },
