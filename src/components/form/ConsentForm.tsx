@@ -54,7 +54,7 @@ export default function ConsentForm() {
 
       // downloadPdf(pdfBlob, "consimtamant.pdf");
 
-      const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul.</p>`
+      const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul. Si a primit fisierul atașat.</p>`
 
       await emailHandlerNetlify({
         user_email: data.email,
