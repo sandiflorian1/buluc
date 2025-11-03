@@ -34,7 +34,7 @@ function Footer() {
 						</div>
 
 						<div className="flex items-end mb:justify-center">
-							<div className="text-sm mb:text-[0.5rem]">Ⓒ2024 by Buluc.</div>
+							<div className="text-xs mb:text-[0.5rem]">Ⓒ2024 by Buluc.</div>
 						</div>
 					</div>
 				</div>

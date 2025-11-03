@@ -48,12 +48,6 @@ const Experience: React.FC = () => {
           <CardContainer cardClass="p-6 my-20 mb:my-10 mb:w-full">
             <h5 className="text-orange mb-4 text-shadow-white">Tema de anul acesta este {isMobile && <br/>} ”Joacă-te cu emoția”</h5>
             <p className='pb-4'>Un bootcamp artistic unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Dacă anul trecut am testat limitele creativității și ale dezvoltării personale printr-o competiție, acum ne propunem să pătrundem în lumea emoțiilor. Plecăm de la joacă și învățăm să recunoaștem, să acceptăm și să ne folosim emoțiile în viața de zi cu zi. </p>
-            <button 
-              onClick={scrollToInscriere} 
-              className="cursor-pointer text-orange hover:underline font-bold border-2 border-orange rounded-lg px-4 py-2"
-            >
-              Inscrie-te
-            </button>
           </CardContainer>
         </div>
       </FadeInViewPortAnimation>
@@ -210,7 +204,7 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-[12%] mb:mx-[6%]" ref={imagesRef} id="inscriere-section">
+      {/* <div className="mx-[12%] mb:mx-[6%]" ref={imagesRef} id="inscriere-section">
         <FadeInViewPortAnimation className="mb-20 mb:mb-10 flex gap-10 mb:inline">
           <CardContainer cardClass="p-6 mb:mb-4">
             <h5 className="title pb-4 text-orange">
@@ -238,7 +232,7 @@ const Experience: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>

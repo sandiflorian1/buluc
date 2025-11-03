@@ -24,7 +24,7 @@ import Donatie from './pages/Donation';
 import Confidentialitate from './pages/Confidentialitate';
 import { ToastContainer } from 'react-toastify';
 import ConsimtamantPage from './pages/ConsimtamantPage';
-
+import ExperienceV3 from './pages/ExperienceV3';
 import Faq from './pages/Faq';
 
 const App = () => {
@@ -51,6 +51,7 @@ const App = () => {
         <Route path="/office" component={Office} />
         <Route path="/experience" component={Experience} />
         <Route path="/ChyExperience2" component={ExperienceV2} />
+        <Route path="/ChyExperience3" component={ExperienceV3} />
         <Route path="/proiecte/thecreativegeneration" component={Creative} />
         <Route path="/proiecte/roast" component={Roast} />
         <Route path="/proiecte/doact" component={Doact} />

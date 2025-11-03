@@ -241,7 +241,7 @@ const slides = [
   },
   {
     number: 2,
-    title: <h3 className='pb-5 mb:pt-5'>Scurtemetraje sub stele</h3>,
+    title: <h3 className='pb-5 mb:pt-5'>Scurtmetraje sub stele</h3>,
     description: Description4(),
     imageUrl: IMAGES.cover4,
     galery: CinemaGalery(),

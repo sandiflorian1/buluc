@@ -197,7 +197,7 @@ const links = [
         name: ' @Curs',
       },
       {
-        link: '/ChyExperience2',
+        link: '/ChyExperience3',
         name: ' @The Experience',
       },
       {

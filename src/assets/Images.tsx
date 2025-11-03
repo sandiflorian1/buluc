@@ -112,7 +112,7 @@ const IMAGES = {
 
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
-
+    experienceSoon: new URL('/src/assets/images/challenge/experince/coming-soon.webp', import.meta.url).href,
 
 
 
@@ -189,10 +189,11 @@ const IMAGES = {
     zoomtalks2: new URL('/src/assets/images/proiecte/zoomtalk2.jpeg', import.meta.url).href,
     zoomtalks3: new URL('/src/assets/images/proiecte/zoomtalk3.jpeg', import.meta.url).href,
     zoomtalks4: new URL('/src/assets/images/proiecte/zoomtalk4.jpeg', import.meta.url).href,
-
-    //gazeta
     zoomtalks: new URL('/src/assets/images/gazeta/zoomtalks.webp', import.meta.url).href,
-    people: new URL('/src/assets/images/gazeta/people.webp', import.meta.url).href,
+    //gazeta
+    articol1: new URL('/src/assets/images/gazeta/articol1.webp', import.meta.url).href,
+    articol2: new URL('/src/assets/images/gazeta/articol2.webp', import.meta.url).href,
+    articol4: new URL('/src/assets/images/gazeta/articol4.webp', import.meta.url).href,
 
     //sustine
     caracter1: new URL('/src/assets/images/caracter1.png', import.meta.url).href,

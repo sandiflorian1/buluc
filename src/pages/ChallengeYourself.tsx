@@ -195,7 +195,7 @@ export default function ChallengeYourself() {
             <TeamMemberCard
               key={2}
               imageSrc={IMAGES.CYTeam5}
-              name="Ioana Petrescu"
+              name="Ioana Perescu"
               color="orange"
               role="profa de dicție"
             />
