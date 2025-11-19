@@ -29,7 +29,7 @@ export const handler: Handler = async (event) => {
 
     await transporter.sendMail({
       from: `"Challenge Yourself" <buluc@buluc.org>`,
-      to:[to, "buluc.arhiva@gmail.com"],
+      to:[to],
       subject,
       html: `<p>${message}</p>`,
       attachments: [
