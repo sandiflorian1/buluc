@@ -25,11 +25,11 @@ export default function Blog () {
 
 const data = [
   {
-    title: "Asociația Buluc | o inițiativă menită să adune buluc oamenii la proiectele artiștilor independenți",
-    text: "Poate sună clișeic, dar noi am înțeles că este foarte important să-ți păstrezi pe tot parcursul călătoriei tale curiozitatea și entuziasmul cu care ai pornit la drum. Credem că cele două fac diferența într-un proces creativ. Pe lângă asta, este foarte important să fii deschis către conexiuni, către oameni și să nu rămâi în bula ta: ar putea să te surprindă într-un sens pozitiv.",
-    imgURL: IMAGES.articol1,
+    title: " Improvizație și joacă la Buluc: cum s‑a născut un spațiu creativ în București",
+    text: "Ziua lucrează în companii, în ateliere de olărit și prin departamente de marketing sau de vânzări. În seara asta, sunt Cartoon Network, Realitatea TV, Taraf sau Trinitas, posturi TV într-un show de improvizație. Show-ul e absolvirea după trei luni de cursuri la Buluc, o asociație culturală care a pornit în 2021 ca o companie independentă de artiști.",
+    imgURL: IMAGES.articol6,
     cardClass: 'w-full mb:p-0 mb:mb-10',
-    link: 'https://www.curatorialist.ro/asociatia-buluc-o-initiativa-menita-sa-adune-buluc-oamenii-la-proiectele-artistilor-independenti/',
+    link: 'https://www.revistacariere.ro/lifestyle/pauza-de-corporate/improvizatie-si-joaca-la-buluc-cum-sa-nascut-un-spatiu-creativ-in-bucuresti',
     externalLink: true,
   },
   {
@@ -38,6 +38,14 @@ const data = [
     imgURL: IMAGES.articol2,
     cardClass: 'w-full mb:p-0',
     link: 'https://careers-business.ro/robert-ciupitu-actor-si-cofondator-buluc-antreprenoriat-cultural/',
+    externalLink: true,
+  },
+  {
+    title: "Asociația Buluc | o inițiativă menită să adune buluc oamenii la proiectele artiștilor independenți",
+    text: "Poate sună clișeic, dar noi am înțeles că este foarte important să-ți păstrezi pe tot parcursul călătoriei tale curiozitatea și entuziasmul cu care ai pornit la drum. Credem că cele două fac diferența într-un proces creativ. Pe lângă asta, este foarte important să fii deschis către conexiuni, către oameni și să nu rămâi în bula ta: ar putea să te surprindă într-un sens pozitiv.",
+    imgURL: IMAGES.articol1,
+    cardClass: 'w-full mb:p-0 mb:mb-10',
+    link: 'https://www.curatorialist.ro/asociatia-buluc-o-initiativa-menita-sa-adune-buluc-oamenii-la-proiectele-artistilor-independenti/',
     externalLink: true,
   },
   {

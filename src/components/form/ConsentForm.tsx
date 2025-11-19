@@ -66,7 +66,7 @@ export default function ConsentForm() {
       await emailHandlerCPannel({
         to: data.email,
         subject: "Consimțământ Challenge Yourself",
-        message: "Salut! Consimțământul a fost trimis cu succes. Ați primit fisierul atașat.",
+        message: "Mulțumim ca ai completat acordul de participare și confidențialitate privind participarea la cursurile Buluc. Acest formular nu te obligă la continuarea cursului, dar este necesar si pentru participarea la prima ședință.",
         form: `data:application/pdf;base64,${base64pdf}`,
       });
 

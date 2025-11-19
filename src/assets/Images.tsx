@@ -194,6 +194,7 @@ const IMAGES = {
     articol1: new URL('/src/assets/images/gazeta/articol1.webp', import.meta.url).href,
     articol2: new URL('/src/assets/images/gazeta/articol2.webp', import.meta.url).href,
     articol4: new URL('/src/assets/images/gazeta/articol4.webp', import.meta.url).href,
+    articol6: new URL('/src/assets/images/gazeta/articol6.webp', import.meta.url).href,
 
     //sustine
     caracter1: new URL('/src/assets/images/caracter1.png', import.meta.url).href,
