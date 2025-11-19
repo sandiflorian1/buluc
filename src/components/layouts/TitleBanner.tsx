@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import { FadeInViewPortAnimation } from "../animations/Animations";
 
 type TitleBannerType = {
-  bgBluredImg?: string, 
+  imageHeight?: string, 
   bgImg?: string, 
   title?: string, 
   text?: string,
@@ -13,28 +13,26 @@ type TitleBannerType = {
   textClass?: string,
 }
 
-export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, colorText, fullScreen, textClass }: TitleBannerType) {
+export default function TitleBanner ({ title, imageHeight = '60vh', bgImg, text, images, colorText, fullScreen, textClass }: TitleBannerType) {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
     pauseOnHover: true,
 };
 
   return (
     <div className={`${fullScreen && 'w-screen'} relative ${images && 'has-slider'}`}>
-      {bgBluredImg && <div className="w-screen absolute bg-cover bg-no-repeat bg-center h-[25vw] mb:h-[50vw] z-[-1] shadow-lg" style={{ backgroundImage: `url(${bgBluredImg})` }} />}
-
-      <div className="px-[20vw] py-[5vw] mb:px-[10vw]">
-        <FadeInViewPortAnimation className="img-banner relative overflow-hidden shadow-lg" style={{ backgroundImage: `url(${bgImg})` }}>
+      <div>
+        <FadeInViewPortAnimation className="img-banner relative overflow-hidden shadow-lg" style={{ backgroundImage: `url(${bgImg})`, height: imageHeight }}>
           <div className="absolute top-0 bottom-o right-0 left-0 z-[-1]">
             {images && (
               <Slider {...settings}>
                 {images.map((img) => (
-                  <div className="h-[60vh] w-full" key={img}>
+                  <div className={`h-[${imageHeight}] w-full`} key={img}>
                     <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
                   </div>
                 ))}
@@ -42,7 +40,7 @@ export default function TitleBanner ({ title, bgBluredImg, bgImg, text, images, 
             )}
           </div>
           
-          <div className="h-full flex flex-col justify-end">
+          <div className="px-[20vw] mb:px-[10vw] h-full flex flex-col justify-end">
             {!isMobile &&(<div className="bg-text">
                 <h1 className={`text-${colorText}`} style={{ textShadow: colorText === 'white' ? '1px 1px 2px black' : '1px 1px 2px white'}}>{title}</h1>
                 <p className={`text-${colorText} ${textClass} `} style={{ textShadow: colorText === 'white' ? '1px 1px 2px black' : '1px 1px 2px white'}}>

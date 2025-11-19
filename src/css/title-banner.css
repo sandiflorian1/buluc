@@ -4,11 +4,11 @@
     background-position: center;
     background-size: cover;
     /* border: 2px solid #f05252; */
-    border-radius: 1.5rem;
+    /* border-radius: 1.5rem; */
 }
 
 .bg-text {
-    padding: 1.5vw 3vw;
+    padding: 1.75vw 0;
 }
 
 .text-bg {
@@ -17,6 +17,3 @@
     border-radius: 1.5rem;
 }
 
-.has-slider .bg-text {
-    
-}

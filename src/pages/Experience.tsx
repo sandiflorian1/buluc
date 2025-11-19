@@ -41,13 +41,13 @@ const Experience: React.FC = () => {
 
   return (
     <MainLayout noPadding>
-      <FadeInAnimation>
+      <FadeInAnimation className="pb-[8vw]">
         <TitleBanner
           title="@The Experience"
           text={"O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
-          bgBluredImg={IMAGES.ExperienceBlur}
           bgImg={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1}
           colorText="white"
+          imageHeight='70vh'
         />
       </FadeInAnimation>
 

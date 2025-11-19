@@ -46,13 +46,13 @@ const MisiuneSection: React.FC = () => {
 
 const LocatieSection: React.FC = () => {
   return (
-    <div className="locatie relative">
+    <div className="locatie relative mb:mx-[10vw] pb-10">
       <img className="caracter-despre" src={IMAGES.caracter1} loading="lazy" alt="Image 1" />
       <TitleBanner
         title="loc de joaca"
         text={LocDeJoacaText}
         colorText="white"
-        bgBluredImg={IMAGES.sufrageriaBlur}
+        imageHeight='70vh'
         images={[IMAGES.sufrageria2, IMAGES.sufrageria3, IMAGES.sufrageria4, IMAGES.sufrageria5, IMAGES.sufrageria6]}
         fullScreen
       />
