@@ -68,5 +68,8 @@ export async function modifyConsentPdf(params: ConsentParams) {
   }
 
   const pdfBytes = await pdfDoc.save();
-  return new Blob([pdfBytes], { type: 'application/pdf' });
+      // The Uint8Array's buffer from pdf-lib can be a SharedArrayBuffer, which is not allowed in Blob.
+  // Slicing the Uint8Array itself creates a new Uint8Array with a new ArrayBuffer that is not shared.
+  const arrayBuffer = pdfBytes.slice().buffer;
+  return new Blob([arrayBuffer], { type: 'application/pdf' });
 }
