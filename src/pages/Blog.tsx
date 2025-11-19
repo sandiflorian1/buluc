@@ -8,14 +8,24 @@ export default function Blog () {
   return (
     <MainLayout>
       <div className="container pt-20 mb:pt-10">
-        <FadeInAnimation className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-          {data.map((card) => (
-            <BlogCard
-              key={card.title} 
-              data={card}
-            />
-            ))}
-          
+        <FadeInAnimation className="grid grid-cols-1 md:grid-cols-6 gap-5">
+          {data.map((card, index) => {
+            const gridClasses = [
+              "md:col-span-4", // 2/3
+              "md:col-span-2", // 1/3
+              "md:col-span-3", // 1/2
+              "md:col-span-3", // 1/2
+              "md:col-span-2", // 1/3
+              "md:col-span-4", // 2/3
+            ];
+            const cardClass = gridClasses[index % gridClasses.length];
+
+            return (
+              <div key={card.title} className={cardClass}>
+                <BlogCard data={card} />
+              </div>
+            );
+          })}
         </FadeInAnimation>
       </div>
     </MainLayout>
@@ -33,16 +43,16 @@ const data = [
     externalLink: true,
   },
   {
-    title: "„Acasă la Buluc” – Povestea actorului Robert Ciupitu și a antreprenoriatului creativ care aduce oamenii împreună",
-    text: "Două lucruri în care cred cu tărie sunt perseverența și comunicarea sinceră. Mi se pare că, indiferent de cât de provocatoare devine o situație, dacă nu renunți ușor și știi să vorbești deschis cu oamenii din jurul tău, lucrurile încep să se așeze.",
+    title: "„Acasă la Buluc” – Povestea actorului Robert Ciupitu...",
+    text: "Două lucruri în care cred cu tărie sunt perseverența și comunicarea sinceră. Mi se pare că, indiferent de cât de provocatoare devine o situație...",
     imgURL: IMAGES.articol2,
     cardClass: 'w-full mb:p-0',
     link: 'https://careers-business.ro/robert-ciupitu-actor-si-cofondator-buluc-antreprenoriat-cultural/',
     externalLink: true,
   },
   {
-    title: "Asociația Buluc | o inițiativă menită să adune buluc oamenii la proiectele artiștilor independenți",
-    text: "Poate sună clișeic, dar noi am înțeles că este foarte important să-ți păstrezi pe tot parcursul călătoriei tale curiozitatea și entuziasmul cu care ai pornit la drum. Credem că cele două fac diferența într-un proces creativ. Pe lângă asta, este foarte important să fii deschis către conexiuni, către oameni și să nu rămâi în bula ta: ar putea să te surprindă într-un sens pozitiv.",
+    title: "O inițiativă menită să adune buluc oamenii la proiectele artiștilor independenți",
+    text: "Poate sună clișeic, dar noi am înțeles că este foarte important să-ți păstrezi pe tot parcursul călătoriei tale curiozitatea și entuziasmul cu care ai pornit la drum. Credem că cele două fac diferența într-un proces creativ. Pe lângă asta, este foarte important să fii deschis...",
     imgURL: IMAGES.articol1,
     cardClass: 'w-full mb:p-0 mb:mb-10',
     link: 'https://www.curatorialist.ro/asociatia-buluc-o-initiativa-menita-sa-adune-buluc-oamenii-la-proiectele-artistilor-independenti/',
@@ -57,19 +67,19 @@ const data = [
     externalLink: true,
   },
   {
+    title: "Să Luăm Bullying-ul la Roast",
+    text: "Compania independentă de artiști Buluc a pus bazele unui proiect educațional care readuce în discuție acest fenomen...",
+    imgURL: IMAGES.bulling,
+    cardClass: 'w-full mb:p-0',
+    link: 'https://www.iqads.ro/articol/61479/sa-luam-bullying-ul-la-roast',
+    externalLink: true,
+  },
+  {
     title: "The creARTive generation - from passion to profession",
     text: "Te-ai trezit într-o dimineață și ai realizat că pasiunea ta trebuie să devină profesie. Ti-ai dat seama că ceea ce iubești să faci și ce te menține fericit este exact ce te definește pe tine ca adolescent și îți oferă, totodată un sentiment de împlinire. Dar cum faci să transformi pasiunea în profesie?",
     imgURL: IMAGES.articol4,
     cardClass: 'w-full mb:p-0',
     link: 'https://www.iqads.ro/articol/66187/the-creartive-generation-from-passion-to-profession',
-    externalLink: true,
-  },
-  {
-    title: "Să Luăm Bullying-ul la Roast",
-    text: "Compania independentă de artiști Buluc a pus bazele unui proiect educațional care readuce în discuție acest fenomen foarte cunoscut, dar mult prea puțin înțeles sau de cele mai multe ori confundat cu alte tipuri de comportament.",
-    imgURL: IMAGES.bulling,
-    cardClass: 'w-full mb:p-0',
-    link: 'https://www.iqads.ro/articol/61479/sa-luam-bullying-ul-la-roast',
     externalLink: true,
   },
  
