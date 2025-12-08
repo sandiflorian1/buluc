@@ -33,7 +33,7 @@ export default function TitleBanner ({ title, imageHeight = '60vh', bgImg, text,
               <Slider {...settings}>
                 {images.map((img) => (
                   <div className={`h-[${imageHeight}] w-full`} key={img}>
-                    <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${img})` }} />
+                    <div className="h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url("${img}")` }} />
                   </div>
                 ))}
               </Slider>
