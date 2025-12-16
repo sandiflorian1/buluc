@@ -1,6 +1,4 @@
 import { useRef, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaEnvelope } from "react-icons/fa";
 import MainLayout from "../components/layouts/MainLayout";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
@@ -8,7 +6,6 @@ import IMAGES from "../assets/Images";
 import Modal from "../components/Modal";
 import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 import CardContainer from '../components/cards/CardContainer';
-import ScrollIndicator from '../components/ScrollIndicator';
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -22,13 +19,6 @@ const Experience: React.FC = () => {
     setModalOpen(true);
   }
 
-  const scrollToInscriere = () => {
-    document.getElementById('inscriere-section')?.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    });
-  };
-
   useEffect(() => {
     const images = imagesRef.current?.querySelectorAll('.galery img');
     images?.forEach((image: any) => {
@@ -40,7 +30,6 @@ const Experience: React.FC = () => {
     <MainLayout noPadding>
       <FadeInAnimation>
         <img src={isMobile ? IMAGES.ExperienceV2_1 : IMAGES.ExperienceV2_2} className="w-full" />
-        <ScrollIndicator />
       </FadeInAnimation>
 
       <FadeInViewPortAnimation>

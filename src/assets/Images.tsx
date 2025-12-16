@@ -87,8 +87,8 @@ const IMAGES = {
 
 
 
-    Experience1: new URL('/src/assets/images/challenge/experince/experience1.jpeg', import.meta.url).href,
-    Experience1mb: new URL('/src/assets/images/challenge/experince/experience1mb.jpeg', import.meta.url).href,
+    Experience1: new URL('/src/assets/images/challenge/experince/experience1.png', import.meta.url).href,
+    Experience1mb: new URL('/src/assets/images/challenge/experince/experience1mb.png', import.meta.url).href,
     Experience2: new URL('/src/assets/images/challenge/experince/experience2.webp', import.meta.url).href,
     Experience3: new URL('/src/assets/images/challenge/experince/experience3.jpg', import.meta.url).href,
     Experience4: new URL('/src/assets/images/challenge/experince/experience4.webp', import.meta.url).href,

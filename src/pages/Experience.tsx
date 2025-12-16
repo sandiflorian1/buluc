@@ -2,12 +2,12 @@ import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import MainLayout from "../components/layouts/MainLayout";
-import TitleBanner from "../components/layouts/TitleBanner";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import IMAGES from "../assets/Images";
 import Modal from "../components/Modal";
 import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
+import CardContainer from '../components/cards/CardContainer';
 
 
 export interface IExperienceProps { }
@@ -41,15 +41,18 @@ const Experience: React.FC = () => {
 
   return (
     <MainLayout noPadding>
-      <FadeInAnimation className="pb-[8vw]">
-        <TitleBanner
-          title="@The Experience"
-          text={"O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții."}
-          bgImg={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1}
-          colorText="white"
-          imageHeight='70vh'
-        />
+      <FadeInAnimation>
+        <img src={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1} className="w-full" />
       </FadeInAnimation>
+
+      <FadeInViewPortAnimation>
+        <div className="mx-[12%] mb:mx-[6%]">
+          <CardContainer cardClass="p-6 my-20 mb:my-10 mb:w-full">
+            {/* <h5 className="text-orange mb-4 text-shadow-white">@The Experience</h5> */}
+            <p className='pb-4'>O călătorie artistică unde te vei conecta cu sinele tău într-un spațiu safe, unde natura devine nu doar o sursă de inspirație, ci și un partener în procesul creativ. Este o creștere interioară ce pleacă de la prima activitate de învățare a omului - JOCUL. Timp de 4 zile explorăm diverse forme de exprimare artistică: de la mișcarea corporală, la teatru, de la depășirea barierelor, la joacă - toate sub forma unei competiții.</p>
+          </CardContainer>
+        </div>
+      </FadeInViewPortAnimation>
 
       <div className="mx-[12%] mb:mx-[6%]">
         <BannerTextAbsolute
@@ -236,7 +239,7 @@ const Experience: React.FC = () => {
 
         <div className="w-full flex justify-center pb-20">
           <div className="bg-white border-2 border-orange rounded-lg py-2 px-4">
-            <Link to="/ChyExperience2" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #1</Link>
+            <Link to="/ChyExperience3" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #3</Link>
           </div>
         </div>
       </div>
