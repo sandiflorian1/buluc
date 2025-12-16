@@ -4,6 +4,7 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 import IMAGES from "../assets/Images";
 import { FadeInViewPortAnimation, SlideXViewPortAnimation } from "../components/animations/Animations";
+import "../css/office.css";
 
 export interface IOfficeProps { }
 
@@ -19,22 +20,22 @@ const Office: React.FC = () => {
       <div className="pt-10 mb:pt-5">
         <div className="flex justify-end p-4">
           <div className="border-2 border-orange rounded-lg">
-            <button onClick={() => changeLanguage('ro')} className={`px-4 py-2 rounded-l-md ${i18n.language === 'ro' ? 'bg-orange text-white' : 'bg-white text-black'}`}>RO</button>
-            <button onClick={() => changeLanguage('en')} className={`px-4 py-2 rounded-r-md ${i18n.language === 'en' ? 'bg-orange text-white' : 'bg-white text-black'}`}>EN</button>
+            <button onClick={() => changeLanguage('ro')} className={`px-2 py-1 rounded-l-md ${i18n.language === 'ro' ? 'bg-orange text-white' : 'bg-white text-orange'}`}>RO</button>
+            <button onClick={() => changeLanguage('en')} className={`px-2 py-1 rounded-r-md ${i18n.language === 'en' ? 'bg-orange text-white' : 'bg-white text-orange'}`}>EN</button>
           </div>
         </div>
         <BannerTextAbsolute
           imageURL={IMAGES.Office6}
           direction="left"
-          className="h-[30vw] mb-20 mb:mb-10 mb:h-auto office"
+          className="h-[30vw] mb-20 mb:mb-10 mb:h-auto office z-10"
         >
           <p className="pb-2"><Trans i18nKey="office.intro" /></p>
         </BannerTextAbsolute>
 
-        <div className="grid grid-cols-6 gap-8 mb:gap-0 mb-20 mb:mb-10">
-          <FadeInViewPortAnimation className="overflow-hidden col-start-1 col-end-4 mb:col-end-7">
-            <img src={IMAGES.suit}></img>
-          </FadeInViewPortAnimation>
+        <FadeInViewPortAnimation className="grid grid-cols-6 gap-8 mb:gap-0 mb-20 mb:mb-10">
+          <div className="suit-wrapper col-start-1 col-end-4 mb:col-end-7">
+            <img src={IMAGES.suit} className="suit"></img>
+          </div>
 
           <div className="col-end-7 col-span-3 mb:col-span-7">
             <SlideXViewPortAnimation className="bg-white p-6 br mb-4">
@@ -61,7 +62,7 @@ const Office: React.FC = () => {
               </ul>
             </SlideXViewPortAnimation>
           </div>
-        </div>
+        </FadeInViewPortAnimation>
 
         <FadeInViewPortAnimation className="mb-20 mb:mb-10 bg-white p-6 br">
           <h3 className="text-red">

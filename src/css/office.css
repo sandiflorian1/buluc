@@ -1,0 +1,24 @@
+.suit-wrapper {
+  position: relative;
+  overflow: visible
+}
+
+.suit {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .suit-wrapper {
+    height: 470px;
+  }
+
+  .suit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
