@@ -17,7 +17,7 @@
 
   .suit {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     right: 0;
     z-index: -1;
   }
