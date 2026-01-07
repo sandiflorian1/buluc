@@ -57,14 +57,14 @@ export default function ConsentAdvForm() {
 
       await emailHandlerNetlify({
         user_email: data.email,
-        subject: "Consimțământ Challenge Yourself",
+        subject: "Consimțământ Challenge Yourself Avansati",
         message: emailHTML,
         form: `data:application/pdf;base64,${base64pdf}`
       });
 
       await emailHandlerCPannel({
         to: data.email,
-        subject: "Consimțământ Challenge Yourself",
+        subject: "Consimțământ Challenge Yourself Avansati",
         message: "Mulțumim ca ai completat acordul de participare și confidențialitate privind participarea la cursurile Buluc. Acest formular nu te obligă la continuarea cursului, dar este necesar si pentru participarea la prima ședință.",
         form: `data:application/pdf;base64,${base64pdf}`,
       });
@@ -132,7 +132,7 @@ export default function ConsentAdvForm() {
         <ul className="list-disc ml-6 space-y-2">
           <li> <b>Cursul Challenge Yourself - avansați</b>  (curs cu frecvență lunară - 4 ședințe/lună), funcționează sub forma unui abonament în care ședințele pierdute de către participanți <b>nu se pot recupera.</b> Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
           <li> Dacă ai efectuat deja plata pentru abonamentul cursului, suma achitată nu va putea fi rambursată, indiferent de circumstanțele care pot apărea ulterior. </li>
-          <li><b>Plata</b>se va face la prima ședință din fiecare <b>lună nouă de curs, nu la prima ședință la care ajunge cursantul</b> - prin transfer bancar direct în contul asociației Buluc sau numerar la locația noastră. Modulul de avansați se achită lunar - 449 lei / lună.</li>
+          <li><b>Plata</b> se va face la prima ședință din fiecare <b>lună nouă de curs, nu la prima ședință la care ajunge cursantul</b> - prin transfer bancar direct în contul asociației Buluc sau numerar la locația noastră. Modulul de avansați se achită lunar - 449 lei / lună.</li>
           <li>Se va emite factură aferentă serviciilor oferite de Asociația Buluc pe baza datelor de identificare pe care ni le veți comunica. Factura poate circula fără ștampilă și semnătură conform Legii 227/2015 privind Codul Fiscal, Art. 319.</li>
           <li>Cursul se desfășoară pe perioadă nedeterminată, așadar <b> întreruperea cursului se anunță cu cel puțin 14 de zile înainte de următoarea lună.</b></li>
           <li>În cazul în care un participant nu poate ajunge într-o anumită lună de curs, el se preocupă să anunțe trainerii cu minim 14 zile înainte de data stabilită. Mai puțin în cazul situațiilor neprevăzute.</li>
