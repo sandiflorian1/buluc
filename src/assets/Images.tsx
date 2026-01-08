@@ -85,8 +85,8 @@ const IMAGES = {
 
 
 
-    Experience1: new URL('/src/assets/images/challenge/experince/experience1.png', import.meta.url).href,
-    Experience1mb: new URL('/src/assets/images/challenge/experince/experience1mb.png', import.meta.url).href,
+    Experience1: new URL('/src/assets/images/challenge/experince/experience1.webp', import.meta.url).href,
+    Experience1mb: new URL('/src/assets/images/challenge/experince/experience1mb.webp', import.meta.url).href,
     Experience2: new URL('/src/assets/images/challenge/experince/experience2.webp', import.meta.url).href,
     Experience3: new URL('/src/assets/images/challenge/experince/experience3.jpg', import.meta.url).href,
     Experience4: new URL('/src/assets/images/challenge/experince/experience4.webp', import.meta.url).href,
@@ -110,8 +110,8 @@ const IMAGES = {
 
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
-    experienceSoon: new URL('/src/assets/images/challenge/experince/coming-soon.png', import.meta.url).href,
-    experienceSoonMb: new URL('/src/assets/images/challenge/experince/coming-soon-mb.png', import.meta.url).href,
+    experienceSoon: new URL('/src/assets/images/challenge/experince/coming-soon.webp', import.meta.url).href,
+    experienceSoonMb: new URL('/src/assets/images/challenge/experince/coming-soon-mb.webp', import.meta.url).href,
 
 
 
