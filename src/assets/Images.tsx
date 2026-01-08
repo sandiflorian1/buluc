@@ -41,10 +41,8 @@ const IMAGES = {
     partener6: new URL('/src/assets/images/culise/parteneri/6.png', import.meta.url).href,
     partener7: new URL('/src/assets/images/culise/parteneri/7.png', import.meta.url).href,
     partener8: new URL('/src/assets/images/culise/parteneri/8.png', import.meta.url).href,
-    partener9: new URL('/src/assets/images/culise/parteneri/9.png', import.meta.url).href,
     partener10: new URL('/src/assets/images/culise/parteneri/10.png', import.meta.url).href,
     partener11: new URL('/src/assets/images/culise/parteneri/11.png', import.meta.url).href,
-    partener12: new URL('/src/assets/images/culise/parteneri/12.png', import.meta.url).href,
     // in sufragerie
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.webp', import.meta.url).href,
     cover2: new URL('/src/assets/images/in-sufragerie/concerte/cover2.webp', import.meta.url).href,
@@ -112,7 +110,8 @@ const IMAGES = {
 
     ExperienceBlur: new URL('/src/assets/images/challenge/experince/experienceBlur.jpeg', import.meta.url).href,
     locuriLimitate: new URL('/src/assets/images/challenge/experince/locuri-limitate.jpeg', import.meta.url).href,
-    experienceSoon: new URL('/src/assets/images/challenge/experince/coming-soon.webp', import.meta.url).href,
+    experienceSoon: new URL('/src/assets/images/challenge/experince/coming-soon.png', import.meta.url).href,
+    experienceSoonMb: new URL('/src/assets/images/challenge/experince/coming-soon-mb.png', import.meta.url).href,
 
 
 
