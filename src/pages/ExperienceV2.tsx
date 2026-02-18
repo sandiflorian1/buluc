@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
             <h5 className="title pb-4 text-red">
               Pentru cine este? 
             </h5>
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>pentru oricine simte nevoia să se reconecteze cu sine printr-o provocare artistică, în mijlocul naturii</li>
               <li>pentru oricine vrea să se joace cu emoția, în mijlocul naturii, alături de oameni care împărtășesc aceeași curiozitate</li>
               <li>pentru cei care simt că au nevoie de o pauză de la zgomotul cotidian și vor să se redescopere</li>
@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
               Ce este inclus?
             </h5>
 
-            <ul className="list-disc pl-8 gap-x-10">
+            <ul className="list-star pl-8 gap-x-10">
               <li>un sat doar pentru tine </li>
               <li>3 nopți de cazare</li>
               <li>3 mese pe zi 100% homemade</li>
@@ -148,7 +148,7 @@ const Experience: React.FC = () => {
           <p className="pb-4">
             Un sat din Berislăvești, Jud. Vâlcea format din 4 case vechi de peste 100 de ani srămutate și readuse la viață, din nordul țării, alături de un hambar transformat în vatra satului – locul unde ne vom aduna buluc cu toții la povesti si la bucate delicioase. Un loc în care timpul parcă stă în loc.
           </p>
-          <ul className="list-disc pl-8">
+          <ul className="list-star pl-8">
             <li>Casa Amurg</li>
             <li>Casa Zori de Zi</li>
             <li>Casa Rădăcini</li>

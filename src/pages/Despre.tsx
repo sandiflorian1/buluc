@@ -62,7 +62,7 @@ const LocatieSection: React.FC = () => {
 
 const ParteneriSection: React.FC = () => {
   return (
-    <div className="flex flex-col mx-[20vw] mb:mx-[10vw] pb-10">
+    <div className="flex flex-col mx-[20vw] mb:mx-[15vw] pb-10">
       <div className="">
         <Title title='parteneri' position="start" />
       </div>
@@ -179,6 +179,20 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
+    imageSrc: IMAGES.echipaVictoras,
+    name: "Matei Victoras",
+    role: "actor",
+    color: 'orange',
+  },
+
+    {
+    imageSrc: IMAGES.echipaValentina,
+    name: "Valentina Boldurescu",
+    role: "actriță",
+    color: 'red',
+  },
+
+  {
     imageSrc: IMAGES.echipaIonutTerteci,
     name: "Ionuț Terteci",
     role: "actor & artist videograf",
@@ -204,13 +218,6 @@ const teamMembers: ITeamMember[] = [
     name: "Ștefania Țecher",
     role: "artist fotograf",
     color: 'red',
-  },
-
-  {
-    imageSrc: IMAGES.echipaAdi,
-    name: "Adi Loțcu",
-    role: "actor & artist fotograf",
-    color: 'orange',
   },
 
   {

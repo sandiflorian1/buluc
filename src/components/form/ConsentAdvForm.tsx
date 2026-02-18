@@ -129,7 +129,7 @@ export default function ConsentAdvForm() {
         <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - avansați</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
 
         <p className="mb-2">Prin această anexă declar pe propria răspundere că am luat la cunoștință și sunt de acord cu următoarele:</p>
-        <ul className="list-disc ml-6 space-y-2">
+        <ul className="list-star ml-6 space-y-2">
           <li> <b>Cursul Challenge Yourself - avansați</b>  (curs cu frecvență lunară - 4 ședințe/lună), funcționează sub forma unui abonament în care ședințele pierdute de către participanți <b>nu se pot recupera.</b> Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
           <li> Dacă ai efectuat deja plata pentru abonamentul cursului, suma achitată nu va putea fi rambursată, indiferent de circumstanțele care pot apărea ulterior. </li>
           <li><b>Plata</b> se va face la prima ședință din fiecare <b>lună nouă de curs, nu la prima ședință la care ajunge cursantul</b> - prin transfer bancar direct în contul asociației Buluc sau numerar la locația noastră. Modulul de avansați se achită lunar - 449 lei / lună.</li>

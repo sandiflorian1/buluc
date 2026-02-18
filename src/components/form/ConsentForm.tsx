@@ -130,7 +130,7 @@ export default function ConsentForm() {
         <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - modul începători</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
 
         <p className="mb-2">Prin această anexă declar pe propria răspundere că am luat la cunoștință și sunt de acord cu următoarele:</p>
-        <ul className="list-disc ml-6 space-y-2">
+        <ul className="list-star ml-6 space-y-2">
           <li> <b>Cursul Challenge Yourself, modulul de începători (3 luni)</b> funcționează sub forma unui abonament în care  <b>ședințele pierdute de către participanți nu se pot recupera la o altă grupă.</b> Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
           <li>Dacă ai efectuat deja plata pentru una dintre cele două opțiuni de abonament (lunar sau întregul modul), <b>suma achitată nu va putea fi rambursată</b>, indiferent de circumstanțele care pot apărea ulterior.</li>
           <li><b>Plata cursului se efectuează la prima ședință a fiecărei luni</b>, conform calendarului, și acoperă participarea la toate cele patru ședințe din luna respectivă.</li>

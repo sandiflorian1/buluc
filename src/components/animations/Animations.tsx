@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const FadeInAnimation = ({ children, className, ...props }: any) => {
   return (
@@ -154,6 +154,36 @@ const SlideYViewPortAnimation = ({ children, className, direction, ...props }: a
       );
     };
 
+    const AnimatedTextLine: React.FC<{ children: React.ReactNode; delay: number }> = ({ children, delay }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  return (
+    <motion.p 
+      ref={ref}
+      className='text-[3.5vw]'
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ 
+        opacity: isInView ? 1 : 0,
+        y: isInView ? 0 : 20
+      }}
+       transition={{ 
+        duration: 0.8, 
+        delay: isInView ? delay / 1000 : 0,
+        ease: "easeOut" 
+      }}
+    >
+      {children}
+    </motion.p>
+  );
+};
+
 export { 
   FadeInViewPortAnimation, 
   ScaleViewPortAnimation, 
@@ -161,5 +191,6 @@ export {
   SlideXViewPortAnimation,
   FadeInAnimation, 
   SlideRightAnimation,
-  ScaleAnimation
+  ScaleAnimation,
+  AnimatedTextLine,
 }

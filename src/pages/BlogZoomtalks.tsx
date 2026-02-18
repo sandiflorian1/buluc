@@ -48,7 +48,7 @@ const BlogZoomtalks: React.FC = () => {
               zoomCLASS e un alt capitol prin care adolescenții au avut acces la diferite ateliere de dezvoltare personală redate prin jocuri teatrale care dezvoltă:
             </p>
 
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>încrederea în sine;</li>
               <li>inteligența emoțională;</li>
               <li>abilități de comunicare și lucru în echipă;</li>
@@ -88,7 +88,7 @@ const BlogZoomtalks: React.FC = () => {
 
             <p><strong>ZoomTalks</strong> este despre conexiunea între generații:</p>
 
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>26 de întâlniri</li>
               <li>18 orașe</li>
               <li>peste 150 de adolescenți</li>

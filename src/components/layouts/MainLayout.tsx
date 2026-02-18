@@ -2,8 +2,9 @@ import Footer from '../Footer';
 import Navbar from "../Navbar";
 import Title from "./Title";
 import IMAGES from '../../assets/Images';
+import cn from 'classnames';
 
-export default function MainLayout({ children, title, noPadding, bgImg, noFooter }: any) {
+export default function MainLayout({ children, title, noPadding, bgImg, noFooter, noNavbar }: any) {
 const bgImage = bgImg || IMAGES.bg;
 
   return (
@@ -12,9 +13,9 @@ const bgImage = bgImg || IMAGES.bg;
         <div className="bg-cover bg-no-repeat bg-center h-full w-full" style={{ backgroundImage: `url(${bgImage})` }}>
         </div>
       </div>
-      <Navbar />
+      {!noNavbar && <Navbar />}
 
-      <div className='pt-[5rem] mb:mt-0'>
+      <div className={cn('mb:mt-0', !noNavbar && 'pt-[5rem]')}>
         {title &&
           (<section id="title">
             <div className="w-full mt-10">

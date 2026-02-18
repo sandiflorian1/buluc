@@ -45,7 +45,7 @@ export default function Doact() {
         <FadeInViewPortAnimation className="grid grid-cols-4 gap-8 mb-20 mb:mb-10">
           <div className="col-start-1 col-end-3 mb:col-end-7 bg-white br p-6">
             <h4 className="text-orange">Ateliere:</h4>
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>Introducere în Arta Actorului</li>
               <li>Mișcare Scenica</li>
               <li>Scriere creativa</li>
@@ -56,7 +56,7 @@ export default function Doact() {
             </ul>
             <br />
             <h4 className="text-orange">Obiective principale:</h4>
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>vei fi mai prezent și mai disponibil în a consolida relații reale de prietenie</li>
               <li>vei învăța lucru cu partenerul alături de blocajele ce pot apărea</li>
               <li>vei afla care sunt modalitățile de descoperire și consolidare ale unui parcurs scenic</li>

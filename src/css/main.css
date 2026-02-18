@@ -63,12 +63,18 @@ header {
   background: #fdfdfb;
 }
 
-ul.list-disc {
+ul.list-star {
   list-style-image: url("/src/assets/images/stea.svg");
 }
 
-ul.list-disc li::marker {
+ul.list-star li {
+  padding-left: 0.4rem;
+  padding-bottom: 0.5rem;
+}
+
+ul.list-star li::marker {
 font-size: 1rem;
+margin-right: 1rem;
 }
 
 .text-shadow-white {

@@ -45,7 +45,7 @@ const Office: React.FC = () => {
 
             <SlideXViewPortAnimation className="bg-white p-6 br mb-4">
               <h4 className="title pb-4 text-red">{t('office.objectivesTitle')}</h4>
-              <ul className="list-disc pl-8">
+              <ul className="list-star pl-8">
                 {(t('office.objectives', { returnObjects: true }) as string[]).map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
@@ -55,7 +55,7 @@ const Office: React.FC = () => {
             <SlideXViewPortAnimation className="bg-white p-6 br">
               <h4 className="title pb-4 text-red">{t('office.benefitsTitle')}</h4>
 
-              <ul className="list-disc pl-8">
+              <ul className="list-star pl-8">
                 {(t('office.benefits', { returnObjects: true }) as string[]).map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}

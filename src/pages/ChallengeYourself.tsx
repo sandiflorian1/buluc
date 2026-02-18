@@ -63,7 +63,7 @@ export default function ChallengeYourself() {
               Aproape în fiecare moment în care trebuie să lucrăm cu emoția, imaginația și creativitatea, cu noi înșine dar și în relație cu ceilalți.
             </p>
 
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li className="text-red pl">atunci când ne dorim sa fim productivi</li>
               <li className="text-orange">când vrem să avem o gândire pozitivă</li>
               <li className="text-red">când ne dorim să avem curajul de a acționa şi libertatea de a ne exprima</li>
@@ -75,7 +75,7 @@ export default function ChallengeYourself() {
               Cum te va schimba acest curs?
             </h4>
 
-            <ul className="list-disc pl-8">
+            <ul className="list-star pl-8">
               <li>Vei vedea de ce ești capabil cu adevărat prin ascultarea si gestionarea propriului corp;</li>
               <li>Îți vei îmbunătăți încrederea prin gestionarea emoțiilor;</li>
               <li>Îți vei dezvolta creativitatea prin arta improvizației;</li>
@@ -245,7 +245,7 @@ export default function ChallengeYourself() {
                 Despre curs:
               </h4>
 
-              <ul className="list-disc pl-8">
+              <ul className="list-star pl-8">
                 <li>modulul de incepatori durează 3 luni: 4 ședințe /lună, câte 1/săptămână</li>
                 <li>funcționează ca un abonament: ședințele pierdute nu se pot recupera la o altǎ grupǎ</li>
                 <li>după modulul de incepatori - poți continua la avansați</li>
