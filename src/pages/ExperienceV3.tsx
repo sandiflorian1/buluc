@@ -18,7 +18,7 @@ const Experience: React.FC = () => {
     <MainLayout noPadding noNavbar>
       <ImageWithText 
         image={IMAGES.ExperienceV3}
-        textBoxClass='flex justify-center items-center bg-red bg-[#f5f1a0]'  
+        textBoxClass='flex justify-center items-center bg-[#f5f1a0]'  
       >
         <div className='text-red flex flex-col justify-center items-center'>
           <a href="/" className='pb-10'>
@@ -37,7 +37,7 @@ const Experience: React.FC = () => {
        <ImageWithText 
         image={IMAGES.ExperienceV3}
         textRight={true}
-        textBoxClass='flex justify-center items-center bg-red bg-[#f5f1a0]'  
+        textBoxClass='flex justify-center items-center bg-[#f5f1a0]'  
       >
          <div className='px-20 text-red mb:px-8'>
           <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
