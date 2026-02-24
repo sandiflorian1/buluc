@@ -44,14 +44,6 @@ export default function Homepage (props: IHomepageProps) {
       <Link to="/ChyExperience3">
         <img src={isMobile ? IMAGES.ExperienceV3MB : IMAGES.ExperienceV3_cover} alt="Experience V3" className='w-[100vw] h-auto mb:h-full' />
       </Link>
-
-       <Link to="/ChyExperience2">
-        <img src={isMobile ? IMAGES.ExperienceV2_1 : IMAGES.ExperienceV2_2} alt="Experience V2" className='w-[100vw] h-auto mb:h-full' />
-      </Link>
-
-      <Link to="/experience">
-        <img src={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1} className='w-[100vw] h-auto mb:h-full' />
-      </Link>
     </div>
   );
 }
