@@ -23,7 +23,7 @@ const MySlider = ({ slides }: { slides: string[] }) => {
     variableWidth: true,
 
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
 
     responsive: [

@@ -29,7 +29,7 @@ const Experience: React.FC = () => {
         <div className={'h-full mb:w-full mb:h-[100vh] flex justify-center items-center bg-[#233528]'}>
             <div className='px-20 text-white mb:px-8 '>
               <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-                O experiențǎ creativǎ de patru zile construită ca un proces organic unde transformăm frica de penibil în <strong>curaj</strong>. Este despre <strong>libertate, energie creativă și bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: în viața de zi cu zi, în corp, în relații, în exprimare.
+                O experiențǎ creativǎ de patru zile construită ca un proces organic unde transformăm frica de penibil în <strong>curaj</strong>. Este despre <strong>libertate, energie creativă și bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: în viața de zi cu zi, în relații, în exprimare.
               </p>
 
               <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
@@ -65,7 +65,7 @@ const Experience: React.FC = () => {
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru oricine simte nevoia să se reconecteze cu sine printr-o provocare artistică, în mijlocul naturii</li>
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru oricine vrea să <strong>își înfrunte frica de penibil</strong> într-un mediu sigur și distractiv</li>
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru cei care simt că au nevoie de o pauză de la zgomotul cotidian și vor să se redescopere</li>
-              <li className='pb-2 text-2xl mb:text-[18px]'>pentru cei care vor sa transforme penibilul in energie creativa si curaj</li>
+              <li className='pb-2 text-2xl mb:text-[18px]'>pentru cei care vor să transforme penibilul în energie creativa și curaj</li>
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru cei care evită să facă ce-și doresc din teama de a părea ridicoli</li>
             </ul>
         </div>
@@ -84,9 +84,9 @@ const Experience: React.FC = () => {
           <ul className="list-star ml-8 mb:ml-2">
             <li className='pb-2 text-2xl mb:text-[18px]'>o experienta creativa de patru zile</li>
             <li className='pb-2 text-2xl mb:text-[18px]'>ateliere interactive despre prezenta, expunere, improvizatie, joaca</li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>sesiuni active in care inveti facand </li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>lucuri individual si de grup cu feedback real</li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>timp pentru relaxare si deconectare </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>sesiuni active în care inveti facand </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>lucru individual și de grup cu feedback real</li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>timp pentru relaxare și deconectare </li>
           </ul>
         </div>
       </ImageWithText>
@@ -94,6 +94,7 @@ const Experience: React.FC = () => {
       <ImageWithText 
         image={IMAGES.ExperienceV3_14}
         textBoxClass='flex flex-col justify-center bg-[#ed9561]'  
+        hideImageOnMobile={true}
       >
         <div className='text-white px-20 mb:px-8'>
           <div>
@@ -102,15 +103,15 @@ const Experience: React.FC = () => {
           </h3>
 
           <ul className="list-star ml-8 mb:ml-2">
-            <li className='pb-2 text-2xl mb:text-[18px]'>cazare 4 zile si 3 nopti in inima Transilvaniei, la Mesendorf Gasthaus </li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>cazare care imbina linistea cu confortul </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>cazare 4 zile și 3 nopti în inima Transilvaniei, la Mesendorf Gasthaus </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>cazare care îmbina liniștea cu confortul </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>spatii de relaxare & deconectare </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>o bibliotecă doar pentru tine cu canapele și fotolii unde te poti pierde ori de cate ori vrei un moment doar pentru tine</li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>3 mese pe zi gatite proaspat cu cu ingrediente locale</li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>3 mese pe zi gătite proaspăt cu ingrediente locale</li>
             <li className='pb-2 text-2xl mb:text-[18px]'>transport dus-intors </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>ateliere creative </li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>materiale incluse pentru activitati </li>
-            <li className='pb-2 text-2xl mb:text-[18px]'>invitati speciali - anuntati la momentul potrivit </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>materiale incluse pentru activități </li>
+            <li className='pb-2 text-2xl mb:text-[18px]'>invitați speciali - anuntați la momentul potrivit </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>goodies & premii de la parteneri </li>
           </ul>
         </div>
@@ -146,8 +147,8 @@ const Experience: React.FC = () => {
         textBoxClass='flex justify-center items-center bg-[#859762]'  
       >
         <div className='text-white px-20 mb:px-8'>
-          <h3 className='pb-4 mb:pb-2'>Invitati speciali</h3>
-          <p className='pb-20 text-xl mb:text-[18px] mb:pb-8'>Invitații speciali care vor se vor alătura acestei ediții vor fi dezvăluiți in luna aprilie. Pregătește-te să descoperi oameni care te vor provoca, inspira și încuraja să te exprimi liber.</p>
+          <h3 className='pb-4 mb:pb-2'>Invitați speciali</h3>
+          <p className='pb-20 text-xl mb:text-[18px] mb:pb-8'>Invitații speciali care se vor alătura acestei ediții vor fi dezvăluiți în luna aprilie. <br /> Pregătește-te să descoperi oameni care te vor provoca, inspira și încuraja să te exprimi liber.</p>
 
           <h3 className='pb-4 mb:pb-2'>Relaxare & Deconectare </h3>
           <p className='text-xl mb:text-[18px]'>Această experiență include momente dedicate liniștii și reconectării cu tine. Te vei bucura de sesiuni de yoga, plimbări prin sat și explorarea împrejurimilor, timp petrecut în livadă sau în bibliotecǎ. Totul într-un ritm blând, care îți permite să te oprești, să respiri și să te reconectezi cu prezentul.</p>
@@ -165,7 +166,7 @@ const Experience: React.FC = () => {
       >
         <div className='text-white px-20 mb:px-8'>
           <a href="https://www.mesendorfgasthaus.ro/" className="underline" target="_blank"><h3 className='pb-4 mb:pb-2'>Despre Mesendorf Gasthaus</h3> </a>
-          <p className='text-xl mb:text-[18px]'>Ne vom aduna buluc în fermecătorul sat Mesendorf, în inima Transilvaniei. Aici vei fi cazat în gospodării săsești tradiționale, unde fiecare cameră îmbină armonios detalii autentice care pastreaza farmecul moștenirii sasesti cu elemente contemporane. Fiecare spațiu este unic, dar toate se completează reciproc, creând o experiență armonioasă și primitoare. Proprietatea a fost restaurată cu grijă, astfel încât să păstreze patrimoniul săsesc și să ofere oaspeților noștri relaxare și confort pe măsura așteptărilor.</p>
+          <p className='text-xl mb:text-[18px]'>Ne vom aduna buluc în fermecătorul sat Meșendorf, în inima Transilvaniei. Aici vei fi cazat în gospodării săsești tradiționale, unde fiecare cameră îmbină armonios detalii autentice care pastreaza farmecul moștenirii sasesti cu elemente contemporane. Fiecare spațiu este unic, dar toate se completează reciproc, creând o experiență armonioasă și primitoare. Proprietatea a fost restaurată cu grijă, astfel încât să păstreze patrimoniul săsesc și să ofere oaspeților noștri relaxare și confort pe măsura așteptărilor.</p>
         </div>
       </ImageWithText>
 
@@ -176,7 +177,8 @@ const Experience: React.FC = () => {
       >
         <div className='text-white px-20 mb:px-8'>
           <h3 className='pb-4 mb:pb-2'>Bucătăria</h3>
-          <p className='text-xl mb:text-[18px]'>Te vei bucura de o bucătărie prepartata cu ingrediente pe cat posibil locale și naturale. 3 mese pe zi gătite “with a twist”, niciodată banal. Toate mesele se servesc sub formă de bufet, iar oaspeții se pot servi după pofta inimii cu bunătățile locale, atent alese și preparate conform specificului zonei, după rețete clasice de inspirație românească dar și austro-ungară.</p>
+          <p className='text-xl mb:text-[18px] pb-4'>Te vei bucura de o bucătărie preparatǎ cu ingrediente pe cat posibil locale și naturale. 3 mese pe zi gătite “with a twist”, niciodată banal. </p> 
+          <p className='text-xl mb:text-[18px]'>Toate mesele se servesc sub formă de bufet, iar oaspeții se pot servi după pofta inimii cu bunătățile locale, atent alese și preparate conform specificului zonei, după rețete clasice de inspirație românească dar și austro-ungară.</p>
         </div>
       </ImageWithText>
 
