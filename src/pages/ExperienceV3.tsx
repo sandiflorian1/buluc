@@ -1,4 +1,4 @@
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 import { useRef } from "react";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import MainLayout from "../components/layouts/MainLayout";
@@ -10,36 +10,92 @@ import FaqItemRow from '../components/layouts/FaqItemRow';
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   const signupRef = useRef<HTMLDivElement>(null);
   const scrollToSignup = () => {
     signupRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <MainLayout noPadding noNavbar>
+      <div className='w-[100vw] h-[100vh] flex mb:inline mb:h-auto overflow-hidden'>
+        <img src={IMAGES.ExperienceV3} alt="Experience V3" className='h-[100vh] w-auto mb:w-full' />
+        <div className={''}>
+        </div>
+        
+        <div className={'h-full mb:w-full mb:h-[100vh] flex justify-center items-center bg-[#233528]'}>
+            <div className='px-20 text-white mb:px-8 '>
+              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
+                O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
+              </p>
+
+              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
+                Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
+              </p>
+
+              <button className="my-4 px-2 text-[1.5rem] border-b-2 border-white flex items-center gap-2 font-bold" onClick={scrollToSignup}>
+                Sari direct la înscriere
+                <FaExternalLinkAlt className="h-4" />
+              </button>
+            </div>
+          </div>
+      </div>
+
+      <div className='w-[100vw] h-[100vh] flex mb:inline mb:h-auto overflow-hidden'>
+        <img src={IMAGES.ExperienceV3} alt="Experience V3" className='h-[100vh] w-auto mb:w-full' />
+        <div className={''}>
+        </div>
+        
+        <div className={'h-full mb:w-full mb:h-[100vh] flex justify-center items-center bg-[#859762]'}>
+            <div className='px-20 text-white mb:px-8'>
+              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
+                O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
+              </p>
+
+              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
+                Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
+              </p>
+
+              <button className="my-4 px-2 text-[1.5rem] border-b-2 border-white" onClick={scrollToSignup}>Sari direct la înscriere</button>
+            </div>
+          </div>
+      </div>
+
+      <div className='p-20 bg-white mb:p-8'>
+        <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
+        <AnimatedTextLine delay={400}><p className='text-[3.5vw] mb:text-[20px]'> Un spațiu în care ai voie să greșești</p></AnimatedTextLine>
+        <AnimatedTextLine delay={800}><p className='text-[3.5vw] mb:text-[20px]'>Să te joci</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
+      </div>
+
       <ImageWithText 
-        image={IMAGES.ExperienceV3}
-        textBoxClass='flex justify-center items-center bg-[#f5f1a0]'  
+        image={IMAGES.ExperienceV3_22}
+        textBoxClass='flex justify-center items-center bg-[#233528]'  
       >
-        <div className='text-red flex flex-col justify-center items-center'>
+        <div className='text-white flex flex-col justify-center items-center'>
           <a href="/" className='pb-10'>
-            <div className="h-[5rem] w-[11rem] bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.logo})` }}></div>
+            <div className="h-[5rem] w-[11rem] bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.logoAlb})` }}></div>
           </a>
 
           <h1 className='text-center pb-10'>The Challenge Yourself @Experience #3</h1>
           <h4 className='pb-4'>LET’S GET AWKWARD</h4>
           <p className='pb-1'>30 iulie - 2 august 2026</p>
-          <p>Mesendorf Gasthaus</p>
+          <a href="https://www.mesendorfgasthaus.ro/" target="_blank" rel="noopener noreferrer" className='cursor-pointer underline pb-2'>Mesendorf Gasthaus</a>
 
-          <button className="my-8 px-2 text-[1.5rem] border-b-2 border-red" onClick={scrollToSignup}>Înscrie-te acum</button>
+          <button className="my-4 px-2 text-[1.25rem] border-b-2 border-white flex items-center gap-2 font-bold" onClick={scrollToSignup}>
+            Sari direct la înscriere
+            <FaExternalLinkAlt className="h-4" />
+          </button>
         </div>
       </ImageWithText>
 
        <ImageWithText 
-        image={IMAGES.ExperienceV3}
-        textRight={true}
-        textBoxClass='flex justify-center items-center bg-[#f5f1a0]'  
-      >
-         <div className='px-20 text-red mb:px-8'>
+          image={IMAGES.ExperienceV3_23}
+          textRight={true}
+          textBoxClass='flex justify-center items-center bg-[#859762]'  
+        >
+         <div className='px-20 text-white mb:px-8'>
           <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
             O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
           </p>
@@ -47,27 +103,37 @@ const Experience: React.FC = () => {
           <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
             Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
           </p>
-
-          <button className="my-4 px-2 text-[1.5rem] border-b-2 border-red" onClick={scrollToSignup}>Înscrie-te acum</button>
         </div>
       </ImageWithText>
 
-      <ImageWithText 
-        image={IMAGES.ExperienceV3_4}
-        textRight={true}
-        textBoxClass='flex justify-center items-center bg-[#859762]'  
-      >
-        <div className='px-20 text-white mb:px-8'>
-          <p className='text-2xl pb-10 mb:text-[20px]'>
+      <div className='p-20 bg-white mb:p-8'>
+        <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
+        <AnimatedTextLine delay={400}><p className='text-[3.5vw] mb:text-[20px]'> Un spațiu în care ai voie să greșești</p></AnimatedTextLine>
+        <AnimatedTextLine delay={800}><p className='text-[3.5vw] mb:text-[20px]'>Să te joci</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
+      </div>
+
+      <div>
+        <img src={IMAGES.ExperienceV3_cover} alt="Experience V3" className='w-[100vw] h-auto mb:h-full' />
+      </div>
+
+       <ImageWithText 
+          image={IMAGES.ExperienceV3_23}
+          textRight={true}
+          textBoxClass='flex justify-center items-center bg-[#859762]'  
+        >
+         <div className='px-20 text-white mb:px-8'>
+          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
             O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
           </p>
 
-          <p className='text-2xl pb-10 mb:text-[20px]'>
+          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
             Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
           </p>
         </div>
       </ImageWithText>
-
+      
       <div className='p-20 bg-white mb:p-8'>
         <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
         <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
