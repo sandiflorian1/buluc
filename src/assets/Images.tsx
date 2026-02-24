@@ -110,7 +110,8 @@ const IMAGES = {
     ExperienceV2_4: new URL('/src/assets/images/challenge/experince/experienceV2_4.webp', import.meta.url).href,
     ExperienceV2_5: new URL('/src/assets/images/challenge/experince/experienceV2_5.webp', import.meta.url).href,
     ExperienceV3: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3.jpeg', import.meta.url).href,
-    ExperienceV3_cover: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-cover.png', import.meta.url).href,
+    ExperienceV3MB: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-mb.jpeg', import.meta.url).href,
+    ExperienceV3_cover: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-cover.jpeg', import.meta.url).href,
     ExperienceV3_1: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-1.jpeg', import.meta.url).href,
     ExperienceV3_2: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-2.jpeg', import.meta.url).href,
     ExperienceV3_3: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-3.jpeg', import.meta.url).href,
@@ -130,13 +131,11 @@ const IMAGES = {
     ExperienceV3_19: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-19.jpeg', import.meta.url).href,
     ExperienceV3_20: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-20.jpeg', import.meta.url).href,
     ExperienceV3_21: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-21.jpeg', import.meta.url).href,
-    ExperienceV3_22: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-23.png', import.meta.url).href,
-    ExperienceV3_23: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-22.png', import.meta.url).href,
 
-    ExperienceV3_echipa_1: new URL('/src/assets/images/challenge/experince/experienceV3/echipa1.png', import.meta.url).href,
-    ExperienceV3_echipa_2: new URL('/src/assets/images/challenge/experince/experienceV3/echipa2.png', import.meta.url).href,
-    ExperienceV3_echipa_3: new URL('/src/assets/images/challenge/experince/experienceV3/echipa3.png', import.meta.url).href,
-    ExperienceV3_echipa_4: new URL('/src/assets/images/challenge/experince/experienceV3/echipa4.png', import.meta.url).href,
+    ExperienceV3_echipa_1: new URL('/src/assets/images/challenge/experince/experienceV3/echipa1.jpeg', import.meta.url).href,
+    ExperienceV3_echipa_2: new URL('/src/assets/images/challenge/experince/experienceV3/echipa2.jpeg', import.meta.url).href,
+    ExperienceV3_echipa_3: new URL('/src/assets/images/challenge/experince/experienceV3/echipa3.jpeg', import.meta.url).href,
+    ExperienceV3_echipa_4: new URL('/src/assets/images/challenge/experince/experienceV3/echipa4.jpeg', import.meta.url).href,
 
 
 

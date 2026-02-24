@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
+import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Typewriter from "../components/animations/Typewriter";
 import IMAGES from "../assets/Images";
@@ -10,6 +11,7 @@ export interface IHomepageProps {
 export default function Homepage (props: IHomepageProps) {
   const navbarRef = useRef<HTMLImageElement | null>(null);
   const text = 'BULÚC, bulucuri, s. n. 1. Număr mare de oameni strânși la un loc; droaie, gloată. ♦ În masă, în rânduri strânse, cu grămada; unul peste altul, înghesuindu-se; repede, iute.';
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: 0 });
@@ -21,7 +23,7 @@ export default function Homepage (props: IHomepageProps) {
   });
 
   return (
-    <>
+    <div className="w-screen h-screen overflow-scroll">
       <div ref={navbarRef} style={{ position: 'absolute'}}>
         <Navbar />
       </div>
@@ -38,6 +40,14 @@ export default function Homepage (props: IHomepageProps) {
             </div>
         </div>
       </div>
-    </>
+
+      <Link to="/experience-v3">
+        <img src={isMobile ? IMAGES.ExperienceV3MB : IMAGES.ExperienceV3_cover} alt="Experience V3" className='w-[100vw] h-auto mb:h-full' />
+      </Link>
+
+      <Link to="/experience">
+        <img src={isMobile ? IMAGES.Experience1mb : IMAGES.Experience1} className='w-[100vw] h-auto mb:h-full' />
+      </Link>
+    </div>
   );
 }

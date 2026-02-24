@@ -64,7 +64,7 @@ header {
 }
 
 ul.list-star {
-  list-style-image: url("/src/assets/images/stea.svg");
+  list-style-image: url("/src/assets/images/stea.png");
 }
 
 ul.list-star li {
@@ -72,9 +72,29 @@ ul.list-star li {
   padding-bottom: 0.5rem;
 }
 
-ul.list-star li::marker {
-font-size: 1rem;
-margin-right: 1rem;
+ul.list-star {
+  list-style: none; 
+  padding-left: 0;
+}
+
+ul.list-star li {
+  position: relative;
+  padding-left: 1.8rem; 
+  padding-bottom: 0.5rem;
+}
+
+ul.list-star li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  background-image: url("/src/assets/images/stea.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .text-shadow-white {

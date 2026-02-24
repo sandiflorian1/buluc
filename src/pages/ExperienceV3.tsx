@@ -1,5 +1,6 @@
 import { FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 import { useRef } from "react";
+import { Link } from 'react-router-dom';
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import MainLayout from "../components/layouts/MainLayout";
 import IMAGES from "../assets/Images";
@@ -18,15 +19,17 @@ const Experience: React.FC = () => {
   };
   return (
     <MainLayout noPadding noNavbar>
-      <div className='w-[100vw] h-[100vh] flex mb:inline mb:h-auto overflow-hidden'>
-        <img src={IMAGES.ExperienceV3} alt="Experience V3" className='h-[100vh] w-auto mb:w-full' />
-        <div className={''}>
-        </div>
+      <div className='w-[100vw] h-[100vh] flex mb:inline mb:h-auto overflow-hidden relative'>
+        <img src={isMobile ? IMAGES.ExperienceV3MB : IMAGES.ExperienceV3} alt="Experience V3" className='h-[100vh] w-auto mb:w-full' />
         
+        {!isMobile  
+        ? (<Link to="/homepage" className="absolute bottom-0 left-[20vw] cursor-pointer w-[150px] h-[100px]"></Link>  ) 
+        : (<Link to="/homepage" className="absolute top-[85vh] left-[30vw] cursor-pointer w-[150px] h-[100px]"></Link> )}     
+       
         <div className={'h-full mb:w-full mb:h-[100vh] flex justify-center items-center bg-[#233528]'}>
             <div className='px-20 text-white mb:px-8 '>
               <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-                O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
+                O experiențǎ creativǎ de patru zile construită ca un proces organic unde transformăm frica de penibil în <strong>curaj</strong>. Este despre <strong>libertate, energie creativă și bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: în viața de zi cu zi, în corp, în relații, în exprimare.
               </p>
 
               <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
@@ -40,106 +43,14 @@ const Experience: React.FC = () => {
             </div>
           </div>
       </div>
-
-      <div className='w-[100vw] h-[100vh] flex mb:inline mb:h-auto overflow-hidden'>
-        <img src={IMAGES.ExperienceV3} alt="Experience V3" className='h-[100vh] w-auto mb:w-full' />
-        <div className={''}>
-        </div>
-        
-        <div className={'h-full mb:w-full mb:h-[100vh] flex justify-center items-center bg-[#859762]'}>
-            <div className='px-20 text-white mb:px-8'>
-              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-                O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
-              </p>
-
-              <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-                Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
-              </p>
-
-              <button className="my-4 px-2 text-[1.5rem] border-b-2 border-white" onClick={scrollToSignup}>Sari direct la înscriere</button>
-            </div>
-          </div>
-      </div>
-
-      <div className='p-20 bg-white mb:p-8'>
-        <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
-        <AnimatedTextLine delay={400}><p className='text-[3.5vw] mb:text-[20px]'> Un spațiu în care ai voie să greșești</p></AnimatedTextLine>
-        <AnimatedTextLine delay={800}><p className='text-[3.5vw] mb:text-[20px]'>Să te joci</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
-      </div>
-
-      <ImageWithText 
-        image={IMAGES.ExperienceV3_22}
-        textBoxClass='flex justify-center items-center bg-[#233528]'  
-      >
-        <div className='text-white flex flex-col justify-center items-center'>
-          <a href="/" className='pb-10'>
-            <div className="h-[5rem] w-[11rem] bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.logoAlb})` }}></div>
-          </a>
-
-          <h1 className='text-center pb-10'>The Challenge Yourself @Experience #3</h1>
-          <h4 className='pb-4'>LET’S GET AWKWARD</h4>
-          <p className='pb-1'>30 iulie - 2 august 2026</p>
-          <a href="https://www.mesendorfgasthaus.ro/" target="_blank" rel="noopener noreferrer" className='cursor-pointer underline pb-2'>Mesendorf Gasthaus</a>
-
-          <button className="my-4 px-2 text-[1.25rem] border-b-2 border-white flex items-center gap-2 font-bold" onClick={scrollToSignup}>
-            Sari direct la înscriere
-            <FaExternalLinkAlt className="h-4" />
-          </button>
-        </div>
-      </ImageWithText>
-
-       <ImageWithText 
-          image={IMAGES.ExperienceV3_23}
-          textRight={true}
-          textBoxClass='flex justify-center items-center bg-[#859762]'  
-        >
-         <div className='px-20 text-white mb:px-8'>
-          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-            O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
-          </p>
-
-          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-            Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
-          </p>
-        </div>
-      </ImageWithText>
-
-      <div className='p-20 bg-white mb:p-8'>
-        <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
-        <AnimatedTextLine delay={400}><p className='text-[3.5vw] mb:text-[20px]'> Un spațiu în care ai voie să greșești</p></AnimatedTextLine>
-        <AnimatedTextLine delay={800}><p className='text-[3.5vw] mb:text-[20px]'>Să te joci</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
-      </div>
-
-      <div>
-        <img src={IMAGES.ExperienceV3_cover} alt="Experience V3" className='w-[100vw] h-auto mb:h-full' />
-      </div>
-
-       <ImageWithText 
-          image={IMAGES.ExperienceV3_23}
-          textRight={true}
-          textBoxClass='flex justify-center items-center bg-[#859762]'  
-        >
-         <div className='px-20 text-white mb:px-8'>
-          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-            O experienta creativa de patru zile construită ca un proces organic unde transformăm frica de penibil in <strong>curaj</strong>. Este despre <strong>libertate, energie creativa si bucuria de a fi tu</strong>. Un bootcamp artistic pentru oamenii care simt că frica de penibil le ține uneori vocea pe pauză: in viața de zi cu zi, in corp, în relații, în exprimare.
-          </p>
-
-          <p className='text-2xl pb-10 mb:text-[20px] mb:pb-4'>
-            Împreunǎ vom experimenta vulnerabilitatea într-un mediu sigur și vom învǎța sǎ ne bucurǎm de stângăcii și ridicol, transformându-le în putere personală.
-          </p>
-        </div>
-      </ImageWithText>
       
       <div className='p-20 bg-white mb:p-8'>
         <AnimatedTextLine delay={1200}><p className='text-[3.5vw] mb:text-[20px]'>Un spațiu în care penibilul nu e evitat, ci explorat</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
         <AnimatedTextLine delay={400}><p className='text-[3.5vw] mb:text-[20px]'> Un spațiu în care ai voie să greșești</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1400}><p className='text-[3.5vw] mb:text-[20px]'>Să te exprimi</p></AnimatedTextLine>
         <AnimatedTextLine delay={800}><p className='text-[3.5vw] mb:text-[20px]'>Să te joci</p></AnimatedTextLine>
-        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
+        <AnimatedTextLine delay={600}><p className='text-[3.5vw] mb:text-[20px]'>Să fii văzut</p></AnimatedTextLine>
+        <AnimatedTextLine delay={1000}><p className='text-[3.5vw] mb:text-[20px]'>Și, poate pentru prima dată după mult timp, să te simți liber</p></AnimatedTextLine>
       </div>
 
       <ImageWithText 
@@ -150,7 +61,7 @@ const Experience: React.FC = () => {
            <h3 className="pb-4 mb:pb-2">
               Pentru cine este? 
             </h3>
-            <ul className="list-star ml-8">
+            <ul className="list-star ml-8 mb:ml-2">
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru oricine simte nevoia să se reconecteze cu sine printr-o provocare artistică, în mijlocul naturii</li>
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru oricine vrea să <strong>își înfrunte frica de penibil</strong> într-un mediu sigur și distractiv</li>
               <li className='pb-2 text-2xl mb:text-[18px]'>pentru cei care simt că au nevoie de o pauză de la zgomotul cotidian și vor să se redescopere</li>
@@ -170,7 +81,7 @@ const Experience: React.FC = () => {
             Ce am pregatit
           </h3>
 
-          <ul className="list-star pl-8">
+          <ul className="list-star ml-8 mb:ml-2">
             <li className='pb-2 text-2xl mb:text-[18px]'>o experienta creativa de patru zile</li>
             <li className='pb-2 text-2xl mb:text-[18px]'>ateliere interactive despre prezenta, expunere, improvizatie, joaca</li>
             <li className='pb-2 text-2xl mb:text-[18px]'>sesiuni active in care inveti facand </li>
@@ -181,7 +92,7 @@ const Experience: React.FC = () => {
       </ImageWithText>
 
       <ImageWithText 
-        image={IMAGES.ExperienceV3_5}
+        image={IMAGES.ExperienceV3_14}
         textBoxClass='flex flex-col justify-center bg-[#ed9561]'  
       >
         <div className='text-white px-20 mb:px-8'>
@@ -190,7 +101,7 @@ const Experience: React.FC = () => {
             Ce este inclus?
           </h3>
 
-          <ul className="list-star pl-8">
+          <ul className="list-star ml-8 mb:ml-2">
             <li className='pb-2 text-2xl mb:text-[18px]'>cazare 4 zile si 3 nopti in inima Transilvaniei, la Mesendorf Gasthaus </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>cazare care imbina linistea cu confortul </li>
             <li className='pb-2 text-2xl mb:text-[18px]'>spatii de relaxare & deconectare </li>
@@ -253,7 +164,7 @@ const Experience: React.FC = () => {
         textBoxClass='flex justify-center items-center bg-[#729ed1]'
       >
         <div className='text-white px-20 mb:px-8'>
-          <h3 className='pb-4 mb:pb-2'>Despre Mesendorf Gasthaus </h3>
+          <a href="https://www.mesendorfgasthaus.ro/" className="underline" target="_blank"><h3 className='pb-4 mb:pb-2'>Despre Mesendorf Gasthaus</h3> </a>
           <p className='text-xl mb:text-[18px]'>Ne vom aduna buluc în fermecătorul sat Mesendorf, în inima Transilvaniei. Aici vei fi cazat în gospodării săsești tradiționale, unde fiecare cameră îmbină armonios detalii autentice care pastreaza farmecul moștenirii sasesti cu elemente contemporane. Fiecare spațiu este unic, dar toate se completează reciproc, creând o experiență armonioasă și primitoare. Proprietatea a fost restaurată cu grijă, astfel încât să păstreze patrimoniul săsesc și să ofere oaspeților noștri relaxare și confort pe măsura așteptărilor.</p>
         </div>
       </ImageWithText>
@@ -312,22 +223,12 @@ const Experience: React.FC = () => {
           <p className="underline pb-4">Andrei, #ediția 2 </p>
           <p className="italic">Experiența CHY#2 a fost pur și simplu excepțională! Patru zile pline de distracție, aventura și momente de descoperire personală, care mi-au rămas în amintire. Echipa Buluc a fost, și de aceasta data, la înălțime: au ales o locație superbă, au organizat activități provocatoare și au creat ocazia perfectă de a lega prietenii autentice. Conexiunea cu trainerii a fost imediată, iar clasele au depasit toate asteptarile. Iar colegii… nu știu cum reușesc, dar de fiecare data se aduna cei mai cool oameni!</p>
         </div>
-        {/* <div className="flex-1 p-4">
-          <p className="underline pb-4">Irina, #ediția 2</p>
-          <p className="italic">
-            Am participat la CHY Experience #2 pentru prima dată vara trecută. Am venit fără așteptări, curioasă de surprizele pregătite de organizatori.
-          </p>
-          <p className="italic">
-            Am fost plăcut surprinsă de cadrul unde s-a desfășurat tabăra: vedere la piscurile montane, o oază de relaxare, conectare autentică, creștere personală într-un mediu sigur în care să îți poți explora și exprima emoțiile.
-          </p>
-          <p className="italic">De-abia aștept ediția următoare.</p>
-        </div> */}
       </div>
 
       <div className="bg-white">
         <div className="flex mb:flex-col">
           <div className="p-20 mb:p-10">
-             <h3 className="title bg-white text-[#ed9561] mb-10 mb:mx-6">
+            <h3 className="title bg-white text-[#ed9561] mb-10">
               FAQs
             </h3>
             {questions.map((item) => (
@@ -335,9 +236,9 @@ const Experience: React.FC = () => {
             ))}
           </div>
         
-          <div className="w-[50vw] mb:w-[100vw] mb:h-[80vh]">
-           <div className="bg-cover bg-no-repeat bg-center h-[100%] mb:w-full" style={{ backgroundImage: `url(${IMAGES.ExperienceV3_21})` }}></div>
-          </div>  
+          {!isMobile && <div className="w-[50vw] mb:w-[100vw] mb:h-[80vh]">
+            <div className="bg-cover bg-no-repeat bg-center h-[100%] mb:w-full" style={{ backgroundImage: `url(${IMAGES.ExperienceV3_21})` }}></div>
+          </div>}  
         </div>
       </div>
 
