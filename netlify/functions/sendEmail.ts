@@ -26,6 +26,8 @@ export const handler: Handler = async (event) => {
 
     const { user_email, subject, message, form, filename } = data;
 
+    const pdfFileName = filename ? `${filename}.pdf` : "consimtamant.pdf";
+
     if (!process.env.RESEND_API_KEY) {
       throw new Error("Missing RESEND_API_KEY env variable");
     }
@@ -34,7 +36,7 @@ export const handler: Handler = async (event) => {
     const attachments = form
       ? [
           {
-            filename: filename || "consimtamant.pdf",
+            filename: pdfFileName,
             content: form.replace(/^data:application\/pdf;base64,/, ""),
             encoding: "base64",
           },
