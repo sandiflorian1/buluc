@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import SignatureCanvas from 'react-signature-canvas'
 import { modifyPdf } from '../utils/modifyPdf';
-import { emailHandler } from '../utils/emailHandler';
 import "../../css/form35.css";
+import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
 
 // Regex patterns to allow only letters (without diacritics), numbers and spaces
 const nameRegex = /^[a-zA-Z\s]*$/;
@@ -48,31 +48,28 @@ function Form35() {
 
 			const modifiedPdfBlob = await modifyPdf(params);
 
-			const reader = new FileReader();
-			reader.readAsDataURL(modifiedPdfBlob);
-			reader.onloadend = async () => {
-				const base64pdf = reader.result as string;
-				try {
-					await emailHandler(
-						{
-							to_name: 'Buluc',
-							form: base64pdf,
-							subject: 'Formular 230',
-							message: 'Formular 230 trimis',
-							user_email: data.email,
-							from_name: data.firstName + ' ' + data.lastName,
-							reply_to: data.email,
-						}
-					);
-					// Reset form and signature
-					reset();
-					signatureRef.current?.clear();
-				} catch (error) {
-					console.error(error);
-				} finally {
-					setIsSubmitting(false);
-				}
-			};
+			const base64pdf = await new Promise<string>((resolve, reject) => {
+				const reader = new FileReader();
+				reader.readAsDataURL(modifiedPdfBlob);
+				reader.onloadend = () => {
+				resolve((reader.result as string).split(',')[1]); 
+				};
+				reader.onerror = err => reject(err);
+			});
+
+			const emailHTML = `<p> Buna Buluc, Tocmai ai primit un mesaj de la ${data.lastName} ${data.firstName}, cu email-ul ${data.email}, a trimis formularul 230. Si a primit fisierul atașat.</p>`
+
+			await emailHandlerNetlify({
+				user_email: data.email,
+				subject: "Formular 230",
+				message: emailHTML,
+				form: `data:application/pdf;base64,${base64pdf}`,
+				filename: 'formular230'
+			});
+
+			reset();
+			signatureRef.current?.clear();
+			setIsSubmitting(false);
 		} catch (error) {
 			console.error(error);
 			setIsSubmitting(false);
