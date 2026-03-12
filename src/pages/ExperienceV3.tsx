@@ -246,12 +246,13 @@ const Experience: React.FC = () => {
 
       <div className="bg-white px-20 py-20 mb:px-8 mb:py-20" ref={signupRef}>
          <div className="w-full flex">
-          <div className="bg-red email-btn">
-            <a href="mailto:rezervari.buluc@gmail.com" className="flex items-center">
+          {isMobile ? (<div className="bg-red email-btn">
+            <a href="mailto:rezervari.buluc@gmail.com" rel="noopener noreferrer" className="flex items-center">
               <FaEnvelope size='30px' className="mr-2" />
               <span>SOLICITA OFERTA DETALIATĂ</span>
             </a>
-          </div>
+          </div>) : 
+          (<p className="text-xl">Solicita oferta detaliata la adresa de mail rezervari.buluc@gmail.com</p>)}
         </div>
       </div>
       
