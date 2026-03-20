@@ -214,13 +214,6 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: IMAGES.echipaStefaniaTecher,
-    name: "Ștefania Țecher",
-    role: "artist fotograf",
-    color: 'red',
-  },
-
-  {
     imageSrc: IMAGES.echipaAdreeaD,
     name: "Andreea Preda",
     role: "graphic designer & illustrator",
