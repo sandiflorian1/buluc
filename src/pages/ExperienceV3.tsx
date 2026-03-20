@@ -8,6 +8,7 @@ import ImageWithText from "../components/layouts/ImageWithText";
 import { AnimatedTextLine } from "../components/animations/Animations";
 import SliderHorizontal from "../components/SliderHorizontal"
 import FaqItemRow from '../components/layouts/FaqItemRow';
+import BookingForm from "../components/BookingForm";
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -143,7 +144,6 @@ const Experience: React.FC = () => {
 
       <ImageWithText 
         image={IMAGES.ExperienceV3_6}
-        textRight={true}
         textBoxClass='flex justify-center items-center bg-[#859762]'  
       >
         <div className='text-white px-20 mb:px-8'>
@@ -154,6 +154,20 @@ const Experience: React.FC = () => {
           <p className='text-xl mb:text-[18px]'>Această experiență include momente dedicate liniștii și reconectării cu tine. Te vei bucura de sesiuni de yoga, plimbări prin sat și explorarea împrejurimilor, timp petrecut în livadă sau în bibliotecǎ. Totul într-un ritm blând, care îți permite să te oprești, să respiri și să te reconectezi cu prezentul.</p>
         </div>
       </ImageWithText>
+
+      <ImageWithText 
+        image={IMAGES.ExperienceV3_22}
+				textRight={true}
+        textBoxClass='flex justify-center items-center bg-[#d6b284]'  
+      >
+        <div className='text-white px-20 mb:px-8'>
+        	<h4 className='pb-4 mb:pb-2'>Anca Branovici-Burduhos</h4>
+        	<p className='text-xl mb:text-[18px] pb-4 mb:pb-8'> Instructor de Hatha Yoga, ne invită la o sesiune de yoga & sound healing cu boluri tibetane la apus. </p>
+					<p className='text-xl mb:text-[18px] pb-4 mb:pb-8'>Sesiunea pe care Anca ne-o propune este una de conectare cu corpul și cu natura locului în care vom petrece zilele din Challenge Yourself @ Experience. Prin mișcări blânde adaptabile oricărui nivel, cultivăm împreună o stare de siguranță interioară și prezență.  </p>
+					<p className='text-xl mb:text-[18px]'>Pe această bază, construim, apoi, prin respirație conștientă și posturi care ne scot din zona de confort, curajul și încrederea în forțele proprii. Încheiem sesiunea cu relaxare ghidată și o baie de sunet cu boluri tibetane, care să așeze efectele practicii așa cum este potrivit pentru fiecare.</p>
+				</div>
+      </ImageWithText>
+
 
       <ImageWithText 
         images={[
@@ -245,16 +259,10 @@ const Experience: React.FC = () => {
       </div>
 
       <div className="bg-white px-20 py-20 mb:px-8 mb:py-20" ref={signupRef}>
-         <div className="w-full flex">
-          {isMobile ? (<div className="bg-red email-btn">
-            <a href="mailto:rezervari.buluc@gmail.com" rel="noopener noreferrer" className="flex items-center">
-              <FaEnvelope size='30px' className="mr-2" />
-              <span>SOLICITA OFERTA DETALIATĂ</span>
-            </a>
-          </div>) : 
-          (<p className="text-xl">Solicita oferta detaliata la adresa de mail rezervari.buluc@gmail.com</p>)}
-        </div>
+        <BookingForm />
       </div>
+      
+      
       
       {/* colors */}
       <div>
