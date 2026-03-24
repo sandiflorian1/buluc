@@ -26,7 +26,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
         const emailHTML = `<p> Buna Buluc, Tocmai ai primit un mesaj de la ${formData.name}, cu email-ul ${formData.email}, a solicitat oferta pentru Experince V3 cu mesajul:.</p> <p>${formData.message}</p>`
 
         await emailHandlerCPannel({
-          to: 'florianmaa@gmail.com',
+          to: 'rezervari.buluc@gmail.com',
           subject: "Inscriere Experince V3",
           message: emailHTML,
         });
