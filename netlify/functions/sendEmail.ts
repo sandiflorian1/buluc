@@ -24,7 +24,9 @@ export const handler: Handler = async (event) => {
 
     const data = JSON.parse(event.body);
 
-    const { user_email, subject, message, form, filename } = data;
+    const { user_email, subject, message, form, filename, to_email } = data;
+
+    const toEmail = to_email || "buluc.arhiva@gmail.com";
 
     const pdfFileName = filename ? `${filename}.pdf` : "consimtamant.pdf";
 
@@ -46,7 +48,7 @@ export const handler: Handler = async (event) => {
     // 🔹 Trimitem emailul
     const { data: result, error } = await resend.emails.send({
       from: `Asociatia Buluc <onboarding@resend.dev>`, 
-      to: ['buluc.arhiva@gmail.com'],
+      to: [toEmail],
       subject: subject || "Formular PDF",
       html: `<p>${message}</p>`,
       attachments,

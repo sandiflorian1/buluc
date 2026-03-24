@@ -162,13 +162,13 @@ export default function ChallengeYourself() {
             />
             <TeamMemberCard
               key={2}
-              imageSrc={IMAGES.CYTeam2}
+              imageSrc={IMAGES.CYTeam3}
               name=""
               color="orange"
             />
-            <TeamMemberCard
-              key={1}
-              imageSrc={IMAGES.CYTeam3}
+             <TeamMemberCard
+              key={3}
+              imageSrc={IMAGES.CYTeam2}
               name=""
               color="red"
             />

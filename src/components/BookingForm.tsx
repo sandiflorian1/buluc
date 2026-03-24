@@ -29,6 +29,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
           user_email: formData.email,
           subject: "Inscriere Experince V3",
           message: emailHTML,
+          to_email: 'rezervari.buluc@gmail.com'
         });
   
         setFormData({
@@ -111,7 +112,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
               type="submit"
               className="my-4 text-[1.5rem] border-b-2 flex items-center gap-2 text-orange font-semibold hover:bg-gray-700 transition-colors duration-200"
             >
-              Trimite
+              Solicitǎ
             </button>
           </div>
         </form>
