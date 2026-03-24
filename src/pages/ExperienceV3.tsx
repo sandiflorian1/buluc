@@ -8,7 +8,7 @@ import ImageWithText from "../components/layouts/ImageWithText";
 import { AnimatedTextLine } from "../components/animations/Animations";
 import SliderHorizontal from "../components/SliderHorizontal"
 import FaqItemRow from '../components/layouts/FaqItemRow';
-import BookingForm from "../components/BookingForm";
+import BookingForm from "../components/form/BookingForm";
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -148,10 +148,10 @@ const Experience: React.FC = () => {
       >
         <div className='text-white px-20 mb:px-8'>
           <h3 className='pb-4 mb:pb-2'>Relaxare & Deconectare </h3>
-          <p className='text-xl mb:text-[18px]'>Această experiență include momente dedicate liniștii și reconectării cu tine. Te vei bucura de sesiuni de yoga, plimbări prin sat și explorarea împrejurimilor, timp petrecut în livadă sau în bibliotecǎ. Totul într-un ritm blând, care îți permite să te oprești, să respiri și să te reconectezi cu prezentul.</p>
+          <p className='text-xl mb:text-[18px] pb-20 mb:pb-8'>Această experiență include momente dedicate liniștii și reconectării cu tine. Te vei bucura de sesiuni de yoga, plimbări prin sat și explorarea împrejurimilor, timp petrecut în livadă sau în bibliotecǎ. Totul într-un ritm blând, care îți permite să te oprești, să respiri și să te reconectezi cu prezentul.</p>
         
           <h3 className='pb-4 mb:pb-2'>Invitați speciali</h3>
-          <p className='pb-20 text-xl mb:text-[18px] mb:pb-8'>Invitații speciali care se vor alătura acestei ediții vor fi dezvăluiți pe parcurs. Pregătește-te să descoperi oameni care te vor provoca, inspira și încuraja să te exprimi liber.</p>
+          <p className='text-xl mb:text-[18px]'>Invitații speciali care se vor alătura acestei ediții vor fi dezvăluiți pe parcurs. Pregătește-te să descoperi oameni care te vor provoca, inspira și încuraja să te exprimi liber.</p>
         </div>
       </ImageWithText>
 

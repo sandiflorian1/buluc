@@ -15,6 +15,7 @@ export const handler: Handler = async (event) => {
   try {
     if (!event.body) throw new Error("Missing request body");
     const { to, subject, message, form, user_email } = JSON.parse(event.body);
+    const attachments = form ? [{ filename: "consimtamant.pdf", content: form.replace(/^data:application\/pdf;base64,/, ""), encoding: "base64" }] : [];
 
     // Configurare SMTP din cPanel
     const transporter = nodemailer.createTransport({
@@ -28,17 +29,11 @@ export const handler: Handler = async (event) => {
     });
 
     await transporter.sendMail({
-      from: `"Challenge Yourself" <buluc@buluc.org>`,
+      from: `"Buluc" <buluc@buluc.org>`,
       to:[to],
       subject,
       html: `<p>${message}</p>`,
-      attachments: [
-        {
-          filename: "consimtamant.pdf",
-          content: form.replace(/^data:application\/pdf;base64,/, ""),
-          encoding: "base64",
-        },
-      ],
+      attachments: attachments,
     });
 
     return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };

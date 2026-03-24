@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { emailHandlerNetlify } from '../components/utils/emailHandlerNetlify'
+import { emailHandlerCPannel } from '../utils/emailHandlerCPannel'
 
 interface BookingFormProps {
   className?: string;
@@ -24,12 +24,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
       e.preventDefault();
       try {
         const emailHTML = `<p> Buna Buluc, Tocmai ai primit un mesaj de la ${formData.name}, cu email-ul ${formData.email}, a solicitat oferta pentru Experince V3 cu mesajul:.</p> <p>${formData.message}</p>`
-  
-        await emailHandlerNetlify({
-          user_email: formData.email,
+
+        await emailHandlerCPannel({
+          to: 'florianmaa@gmail.com',
           subject: "Inscriere Experince V3",
           message: emailHTML,
-          to_email: 'rezervari.buluc@gmail.com'
         });
   
         setFormData({
