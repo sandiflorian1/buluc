@@ -150,7 +150,7 @@ export default function ChallengeYourself() {
               Traineri
             </h3>
 
-            <p className=""> Pe Madrid, 4 te vei întâlni cu <span className="font-bold">Robert şi Mella</span>, <span className="font-bold">Valentina şi Victoraş</span> sau <span className="font-bold">Lixi şi Andrei</span>. Cei 4 traineri au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București și în prezent sunt actori și pedagogi teatrali. Cu o experiență de peste 6 ani în cadrul cursurilor de dezvoltare personală pentru adulţi, adolescenți dar şi pentru copii.</p>
+            <p className=""> Pe Madrid, 4 te vei întâlni cu <span className="font-bold">Robert, Mella, Valentina, Victoraş, Lixi şi Andrei</span>.Toți au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București și în prezent sunt actori și pedagogi teatrali. Cu o experiență de peste 6 ani în cadrul cursurilor de dezvoltare personală pentru adulţi, adolescenți dar şi pentru copii.</p>
           </div>
 
           <div id="members" className="flex mb:inline gap-10 mb:gap-20 justify-center my-10">
