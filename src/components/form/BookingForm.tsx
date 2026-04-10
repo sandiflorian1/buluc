@@ -121,7 +121,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
                   }`}
                 />
                 {errors.name && (
-                  <p className="mt-1 text-sm text-red">
+                  <p className="mt-1 text-red">
                     {errors.name}
                   </p>
                 )}
@@ -143,7 +143,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
                 }`}
               />
               {errors.email && (
-                <p className="mt-1 text-sm text-red">
+                <p className="mt-1 text-red">
                   {errors.email}
                 </p>
               )}
@@ -168,7 +168,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ className }) => {
               placeholder="Scrie-ne"
             />
             {errors.message && (
-              <p className="mt-1 text-sm text-red">
+              <p className="mt-1 text-red">
                 {errors.message}
               </p>
             )}

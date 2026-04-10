@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import { copyFileSync, readFileSync, writeFileSync } from 'fs';
+import { copyFileSync, readFileSync, writeFileSync, readdirSync, unlinkSync } from 'fs';
 import { resolve } from 'path';
 
 // https://vitejs.dev/config/
@@ -23,7 +23,7 @@ const injectCSSIntoHTML = () => {
       
       // Caută fișierele CSS generate
       const cssDir = resolve(__dirname, 'dist', 'assets');
-      const cssFiles = require('fs').readdirSync(cssDir).filter(file => file.endsWith('.css'));
+      const cssFiles = readdirSync(cssDir).filter(file => file.endsWith('.css'));
       
       cssFiles.forEach(cssFile => {
         const cssPath = resolve(cssDir, cssFile);
@@ -34,7 +34,7 @@ const injectCSSIntoHTML = () => {
         htmlContent = htmlContent.replace(cssLinkRegex, `<style>${cssContent}</style>`);
         
         // Șterge fișierul CSS
-        require('fs').unlinkSync(cssPath);
+        unlinkSync(cssPath);
       });
       
       writeFileSync(indexPath, htmlContent);
