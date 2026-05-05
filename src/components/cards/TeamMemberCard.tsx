@@ -26,7 +26,7 @@ const TeamMemberCard: React.FC<ITeamMember> = ({ imageSrc, name, role, color, fo
       transition={{ duration: 0.5 }}
     >
       <div className="round-image-container relative">
-        <div className="image-circle bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${imageSrc})` }}>
+        <div className="image-circle bg-cover bg-no-repeat bg-center bg-white" style={{ backgroundImage: `url(${imageSrc})` }}>
           <div className="circle" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={circleRef}>
             <div className={`image-dot bg-${color}`} ref={dotRef}></div>
           </div>
