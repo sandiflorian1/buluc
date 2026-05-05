@@ -145,13 +145,15 @@ export default function ChallengeYourself() {
 
       <div className="mx-[12%] mb:mx-[6%]">
         <FadeInViewPortAnimation className="">
-          <div className="bg-white br shadow-lg p-10 mb:mb-6">
-            <h3 className="text-red">
-              Traineri
-            </h3>
 
+          <BannerTextAbsolute
+            imageURL={IMAGES.CYTeamTrainers}
+            direction="right"
+            className="h-[40vw] mb-20 mb:mb-10 mb:h-auto"
+            title="Traineri"
+          >
             <p className=""> Pe Madrid, 4 te vei întâlni cu <span className="font-bold">Robert, Mella, Valentina, Victoraş, Lixi şi Andrei</span>.Toți au absolvit Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale", București și în prezent sunt actori și pedagogi teatrali. Cu o experiență de peste 6 ani în cadrul cursurilor de dezvoltare personală pentru adulţi, adolescenți dar şi pentru copii.</p>
-          </div>
+          </BannerTextAbsolute>
 
           <div id="members" className="flex mb:inline gap-10 mb:gap-20 justify-center my-10">
             <TeamMemberCard
@@ -247,6 +249,7 @@ export default function ChallengeYourself() {
 
               <ul className="list-star pl-8">
                 <li>modulul de incepatori durează 3 luni: 4 ședințe /lună, câte 1/săptămână</li>
+                <li> plata per ședință, indiferent de numărul de ședințe frecventate (1, 2 sau mai multe), nu este posibilă</li>
                 <li>funcționează ca un abonament: ședințele pierdute nu se pot recupera la o altǎ grupǎ</li>
                 <li>după modulul de incepatori - poți continua la avansați</li>
                 <li>clasele de avansați sunt concepute într-un modul continuu de învățare & explorare</li>

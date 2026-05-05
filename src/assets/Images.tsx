@@ -21,7 +21,6 @@ const IMAGES = {
     echipaRobertCiupitu: new URL('/src/assets/images/culise/echipa/robert.png', import.meta.url).href,
     echipaMarilenaAdam: new URL('/src/assets/images/culise/echipa/mari.png', import.meta.url).href,
     echipaIonutTerteci: new URL('/src/assets/images/culise/echipa/ionut.png', import.meta.url).href,
-    echipaStefaniaTecher: new URL('/src/assets/images/culise/echipa/stefi.png', import.meta.url).href,
     echipaAndreeaIstrate: new URL('/src/assets/images/culise/echipa/andreea.png', import.meta.url).href,
     echipaAlexandraFlorian: new URL('/src/assets/images/culise/echipa/alexandra.png', import.meta.url).href,
     echipaAndrei: new URL('/src/assets/images/culise/echipa/andrei.png', import.meta.url).href,
@@ -30,12 +29,11 @@ const IMAGES = {
     echipaVictoras: new URL('/src/assets/images/culise/echipa/victoras.png', import.meta.url).href,
     echipaValentina: new URL('/src/assets/images/culise/echipa/valentina.png', import.meta.url).href,
     team: new URL('/src/assets/images/culise/team.webp', import.meta.url).href,
-    misiune: new URL('/src/assets/images/culise/misiune.webp', import.meta.url).href,
+    misiune: new URL('/src/assets/images/culise/misiune.jpg', import.meta.url).href,
 
 
     //parteneri
     partener0: new URL('/src/assets/images/culise/parteneri/0.png', import.meta.url).href,
-    partener1: new URL('/src/assets/images/culise/parteneri/1.png', import.meta.url).href,
     partener2: new URL('/src/assets/images/culise/parteneri/2.png', import.meta.url).href,
     partener3: new URL('/src/assets/images/culise/parteneri/3.png', import.meta.url).href,
     partener4: new URL('/src/assets/images/culise/parteneri/4.png', import.meta.url).href,
@@ -43,7 +41,6 @@ const IMAGES = {
     partener6: new URL('/src/assets/images/culise/parteneri/6.png', import.meta.url).href,
     partener7: new URL('/src/assets/images/culise/parteneri/7.png', import.meta.url).href,
     partener8: new URL('/src/assets/images/culise/parteneri/8.png', import.meta.url).href,
-    partener10: new URL('/src/assets/images/culise/parteneri/10.png', import.meta.url).href,
     partener11: new URL('/src/assets/images/culise/parteneri/11.png', import.meta.url).href,
     // in sufragerie
     cover1: new URL('/src/assets/images/in-sufragerie/concerte/cover1.webp', import.meta.url).href,
@@ -62,9 +59,10 @@ const IMAGES = {
     CYImage8: new URL('/src/assets/images/challenge/challenge-yourself/image8.webp', import.meta.url).href,
     CYImage9: new URL('/src/assets/images/challenge/challenge-yourself/image9.webp', import.meta.url).href,
     CYImage10: new URL('/src/assets/images/challenge/challenge-yourself/image10.webp', import.meta.url).href,
-    CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.webp', import.meta.url).href,
-    CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.webp', import.meta.url).href,
+    CYTeam1: new URL('/src/assets/images/challenge/challenge-yourself/team1.jpg', import.meta.url).href,
+    CYTeam2: new URL('/src/assets/images/challenge/challenge-yourself/team2.jpg', import.meta.url).href,
     CYTeam3: new URL('/src/assets/images/challenge/challenge-yourself/team3.jpeg', import.meta.url).href,
+    CYTeamTrainers: new URL('/src/assets/images/challenge/challenge-yourself/team_trainers.jpg', import.meta.url).href,
     CYTeam4: new URL('/src/assets/images/challenge/challenge-yourself/vale.webp', import.meta.url).href,
     CYTeam5: new URL('/src/assets/images/challenge/challenge-yourself/ioana.webp', import.meta.url).href,
     CYTeam6: new URL('/src/assets/images/challenge/challenge-yourself/andrei.webp', import.meta.url).href,

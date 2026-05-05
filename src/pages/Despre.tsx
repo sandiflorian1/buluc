@@ -6,7 +6,7 @@ import Title from "../components/layouts/Title";
 import TeamMemberCard from "../components/cards/TeamMemberCard";
 import { ITeamMember } from "../types/cards/ITeamMember";
 import IMAGES from "../assets/Images";
-import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
+import { FadeInViewPortAnimation } from "../components/animations/Animations";
 import BannerTextAbsolute from "../components/layouts/BannerTextAbsolute";
 
 import "../css/despre.css";
@@ -21,7 +21,7 @@ const MisiuneSection: React.FC = () => {
         <BannerTextAbsolute
           imageURL={IMAGES.team}
           direction="left"
-          className="h-[32vw] mb-20 mb:mb-10 mb:h-auto"
+          className="h-[35vw] mb-20 mb:mb-10 mb:h-auto"
           title="buluc"
         >
           <p className="">
@@ -32,7 +32,7 @@ const MisiuneSection: React.FC = () => {
         <BannerTextAbsolute
           imageURL={IMAGES.misiune}
           direction="right"
-          className="h-[32vw] mb-20 mb:mb-10 mb:h-auto"
+          className="h-[35vw] mb-20 mb:mb-10 mb:h-auto"
           title="misiune"
         >
           <p className="">
@@ -95,7 +95,7 @@ const People = ({ members, title }: { members: ITeamMember[], title: string }) =
         <Title title={title} position="start" />
       </div>
     </motion.div>
-    <div id="members" className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
+    <div id="members" className="grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-8">
       {members.map((member, index) => (
         <TeamMemberCard
           key={index}
@@ -165,6 +165,34 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
+    imageSrc: IMAGES.echipaIonutTerteci,
+    name: "Ionuț Terteci",
+    role: "actor & artist videograf",
+    color: 'orange',
+  },
+
+  {
+    imageSrc: IMAGES.echipaAndreeaIstrate,
+    name: "Andreea Istrate",
+    role: "teatrolog & coordonator event",
+    color: 'orange',
+  },
+
+  {
+    imageSrc: IMAGES.echipaAlexandraFlorian,
+    name: "Alexandra Florian",
+    role: "web developer",
+    color: 'red',
+  },
+
+  {
+    imageSrc: IMAGES.echipaAdreeaD,
+    name: "Andreea Preda",
+    role: "graphic designer & illustrator",
+    color: 'orange',
+  },
+
+  {
     imageSrc: IMAGES.echipaAndrei,
     name: "Andrei Atabay",
     role: "actor",
@@ -179,13 +207,6 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: IMAGES.echipaVictoras,
-    name: "Matei Victoras",
-    role: "actor",
-    color: 'orange',
-  },
-
-    {
     imageSrc: IMAGES.echipaValentina,
     name: "Valentina Boldurescu",
     role: "actriță",
@@ -193,30 +214,9 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: IMAGES.echipaIonutTerteci,
-    name: "Ionuț Terteci",
-    role: "actor & artist videograf",
-    color: 'orange',
-  },
-
-  {
-    imageSrc: IMAGES.echipaAlexandraFlorian,
-    name: "Alexandra Florian",
-    role: "web developer",
-    color: 'red',
-  },
-
-  {
-    imageSrc: IMAGES.echipaAndreeaIstrate,
-    name: "Andreea Istrate",
-    role: "teatrolog & coordonator event",
-    color: 'orange',
-  },
-
-  {
-    imageSrc: IMAGES.echipaAdreeaD,
-    name: "Andreea Preda",
-    role: "graphic designer & illustrator",
+    imageSrc: IMAGES.echipaVictoras,
+    name: "Matei Victoras",
+    role: "actor",
     color: 'orange',
   },
 ];
@@ -231,10 +231,6 @@ const parteneri = [
   {
     id: 1,
     link: 'https://www.moaraghionea.ro/',
-  },
-  {
-    id: 2,
-    link: "https://carolia.ro/",
   },
   {
     id: 3,
@@ -263,10 +259,6 @@ const parteneri = [
   {
     id: 9,
     link: "https://solarisplant.ro/",
-  },
-  {
-    id: 11,
-    link: "https://www.artsafari.ro/",
   },
   {
     id: 12,
