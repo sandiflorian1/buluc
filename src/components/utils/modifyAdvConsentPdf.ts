@@ -26,9 +26,9 @@ export async function modifyAdvConsentPdf(params: ConsentParams) {
   // NOTE: Coordinates are approximate; adjust if template changes.
   // Draw name fields (nume + prenume) on the first page
   const textFields = [
-    { text: name, x: 270, y: 645 },
-    { text: phone, x: 110, y: 629 },
-    { text: email, x: 260, y: 629 },
+    { text: name, x: 240, y: 658 },
+    { text: phone, x: 407, y: 658 },
+    { text: email, x: 100, y: 645 },
   ];
 
   // Page 1
@@ -43,10 +43,10 @@ export async function modifyAdvConsentPdf(params: ConsentParams) {
     }
   });
 
-  page1.drawText(nrDoc, { x: 243, y: 680, size: 10, color: rgb(0, 0, 0)});
+  page1.drawText(nrDoc, { x: 243, y: 685, size: 10, color: rgb(0, 0, 0)});
 
   // Page 2
-  page2.drawText(nrDoc, { x: 248, y: 725, size: 10, color: rgb(0, 0, 0)});
+  page2.drawText(nrDoc, { x: 248, y: 685, size: 10, color: rgb(0, 0, 0)});
 
   // Add signature image if available
   if (signature) {
@@ -57,7 +57,7 @@ export async function modifyAdvConsentPdf(params: ConsentParams) {
     // Place signature near the end of the document
     page2.drawImage(signatureImage, {
       x: 390,
-      y: 240,
+      y: 235,
       width: signatureDims.width,
       height: signatureDims.height,
     });
