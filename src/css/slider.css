@@ -84,6 +84,9 @@
 .slick-arrow.slick-prev {
   top: 25%;
   left: 0;
+}
+
+.slick-prev:before {
   transform: rotate(-180deg);
 }
 
@@ -96,8 +99,9 @@
   content: '→';
   font-family: 'slick';
   font-size: 3.5vw;
-  color: #f05252;
+  color: #f05252 !important;
 }
+
 
 
 /* Animation */

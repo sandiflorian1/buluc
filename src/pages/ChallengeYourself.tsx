@@ -145,7 +145,6 @@ export default function ChallengeYourself() {
 
       <div className="mx-[12%] mb:mx-[6%]">
         <FadeInViewPortAnimation className="">
-
           <BannerTextAbsolute
             imageURL={IMAGES.CYTeamTrainers}
             direction="right"
@@ -159,31 +158,31 @@ export default function ChallengeYourself() {
             <TeamMemberCard
               key={1}
               imageSrc={IMAGES.CYTeam1}
-              name=""
+              name="Mella & Robert"
               color="red"
             />
             <TeamMemberCard
               key={2}
               imageSrc={IMAGES.CYTeam3}
-              name=""
+              name="Valea & Victoraş"
               color="orange"
             />
              <TeamMemberCard
               key={3}
               imageSrc={IMAGES.CYTeam2}
-              name=""
+              name="Atabay & Lixi"
               color="red"
             />
           </div>
         </FadeInViewPortAnimation>
 
-        <FadeInViewPortAnimation className="">
+        <FadeInViewPortAnimation className="py-10">
           <div className="bg-white br shadow-lg p-10 mb:mb-6">
             <h3 className="text-red">
-              Traineri Invitați
+              Sesiuni speciale
             </h3>
 
-            <p className=""> La modulul de avansați vei fi ghidat de trainerii invitați printr-o serie de workshop-uri în care vei explora forme noi de dezvoltare personală și tehnici teatrale specifice, menite să îți extindă expresivitatea si creativitatea. </p>
+            <p className="">  În cadrul modulului de avansați, vei trece printr-o serie de şedințe speciale coordonate de traineri din zone complementare precum dicție, dans, lupte scenice sau lucru cu camera, experiențe care completează procesul de lucru prin noi forme de expresie și explorare.</p>
           </div>
 
           <div id="members" className="flex mb:inline gap-10 mb:gap-20 justify-center my-10">
@@ -207,6 +206,13 @@ export default function ChallengeYourself() {
               name="Andrei Mihail Dominte"
               color="red"
               role="proful de scrimǎ artisticǎ de teatru/film"
+            />
+             <TeamMemberCard
+              key={1}
+              imageSrc={IMAGES.echipaIonutTerteci}
+              name="Ionuț Terteci"
+              color="orange"
+              role="proful de joc pentru camerǎ"
             />
           </div>
         </FadeInViewPortAnimation>

@@ -15,6 +15,7 @@ import TitleBanner from "../components/layouts/TitleBanner";
 export interface IDespreProps { }
 
 const MisiuneSection: React.FC = () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   return (
     <Fragment>
       <div className="mt-20 px-[13%] mb:px-[10%] pb-10">
@@ -31,7 +32,7 @@ const MisiuneSection: React.FC = () => {
 
         <BannerTextAbsolute
           imageURL={IMAGES.misiune}
-          direction="right"
+          direction={isMobile ? "left" : "right"}
           className="h-[35vw] mb-20 mb:mb-10 mb:h-auto"
           title="misiune"
         >
@@ -62,12 +63,11 @@ const LocatieSection: React.FC = () => {
 
 const ParteneriSection: React.FC = () => {
   return (
-    <div className="flex flex-col mx-[20vw] mb:mx-[15vw] pb-10">
-      <div className="">
+    <div className="flex flex-col pb-10">
+      <div className="mx-[20vw] mb:mx-[15vw]">
         <Title title='parteneri' position="start" />
       </div>
-
-      <div className="grid gap-4 grid-cols-2 md:grid-cols-7 my-4">
+      <div className="grid gap-8 grid-cols-3 md:grid-cols-9 md:gap-10 my-6 mx-12 md:mx-4">
         {parteneri.map(({ id, link}) => {
           const imgName = `partener${id-1}` as keyof typeof IMAGES;
           return (
@@ -225,7 +225,7 @@ const colaboratori: ITeamMember[] | null = null;
 
 const LocDeJoacaText = "Ne adunǎm Buluc în sufrageria unei vile interbelice din 1920 amplasatǎ în cartierului Dorobanți. Un spațiu creativ și versatil, cu o terasă primitoare unde ne strângem seară de seară. Locul nostru de joacă cu o atmosferă intimă și călduroasă care inspiră la creativitate."
 const MisiuneText = "Misiunea noastră este să adunăm #buluc oameni ce simt, gândesc și se inspiră reciproc. Ne dorim să creăm conexiuni autentice, să încurajăm creativitatea și să inspirăm creșterea personală și culturală în cadrul unei experiențe de care ți se face dor."
-const MisiuneTextBanner = "este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin producții teatrale cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
+const MisiuneTextBanner = "este o companie independentă de artiști înființată în anul 2021, care își propune să activeze în domeniul artistic atât prin experiențe creative cât și prin activități ce presupun dezvoltarea personală și educația prin artă."
 
 const parteneri = [
   {
