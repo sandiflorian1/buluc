@@ -60,7 +60,7 @@ export default defineConfig({
             return `media/[name]-[hash][extname]`;
           }
           if (/\.(png|jpe?g|gif|svg|webp|avif)(\?.*)?$/i.test(assetInfo.name || '')) {
-            return `images/[name][extname]`;
+            return `images/[name]-[hash][extname]`;
           }
           if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name || '')) {
             return `fonts/[name][extname]`;
