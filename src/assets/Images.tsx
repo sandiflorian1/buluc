@@ -130,6 +130,7 @@ const IMAGES = {
     ExperienceV3_20: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-20.jpeg', import.meta.url).href,
     ExperienceV3_21: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-21.jpeg', import.meta.url).href,
     ExperienceV3_22: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-22.jpeg', import.meta.url).href,
+    ExperienceV3_23: new URL('/src/assets/images/challenge/experince/experienceV3/experienceV3-23.jpg', import.meta.url).href,
 
     ExperienceV3_echipa_1: new URL('/src/assets/images/challenge/experince/experienceV3/echipa1.jpeg', import.meta.url).href,
     ExperienceV3_echipa_2: new URL('/src/assets/images/challenge/experince/experienceV3/echipa2.jpeg', import.meta.url).href,

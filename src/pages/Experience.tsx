@@ -8,7 +8,7 @@ import IMAGES from "../assets/Images";
 import Modal from "../components/Modal";
 import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 import CardContainer from '../components/cards/CardContainer';
-
+import EditionsCarousel from "../components/EditionsCarousel";
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -236,13 +236,9 @@ const Experience: React.FC = () => {
             </div>
           </>
         </FadeInViewPortAnimation>}
-
-        <div className="w-full flex justify-center pb-20">
-          <div className="bg-white border-2 border-orange rounded-lg py-2 px-4">
-            <Link to="/ChyExperience3" className='text-orange'>Vezi cum este în Challenge Yourself @Experience #3</Link>
-          </div>
-        </div>
       </div>
+
+       <EditionsCarousel currentPage="/experience" />
 
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>

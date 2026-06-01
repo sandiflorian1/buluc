@@ -9,6 +9,7 @@ import { AnimatedTextLine } from "../components/animations/Animations";
 import SliderHorizontal from "../components/SliderHorizontal"
 import FaqItemRow from '../components/layouts/FaqItemRow';
 import BookingForm from "../components/form/BookingForm";
+import EditionsCarousel from "../components/EditionsCarousel";
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -168,6 +169,18 @@ const Experience: React.FC = () => {
 				</div>
       </ImageWithText>
 
+      <ImageWithText 
+        image={IMAGES.ExperienceV3_23}
+				textRight={false}
+        textBoxClass='flex justify-center items-center bg-[#859762]'  
+      >
+        <div className='text-white px-20 mb:px-8'>
+        	<h4 className='pb-4 mb:pb-2'>Valentina Bondurescu</h4>
+        	<p className='text-xl mb:text-[18px] pb-4 mb:pb-8'> În cadrul atelierului ‘Shape of Your Nature’, explorăm mișcarea corpului în relație cu structura bio-psiho-socială a omului, pornind de la cele 4 elemente esențiale: aer, apă, foc și pământ. </p>
+					<p className='text-xl mb:text-[18px] pb-4 mb:pb-8'>Este un workshop energic, cu secvențe ghidate de mișcare care activează corpul, dar și cu spațiu de explorare liberă. Vei lucra cu prezența, adaptabilitatea și spontaneitatea si te vei lǎsa dus de acțiune și reacție, iar partea de conștientizare vine abia la final.</p>
+				</div>
+      </ImageWithText>
+
 
       <ImageWithText 
         images={[
@@ -262,7 +275,7 @@ const Experience: React.FC = () => {
         <BookingForm />
       </div>
       
-      
+      <EditionsCarousel currentPage="/ChyExperience3" />
       
       {/* colors */}
       <div>
@@ -298,13 +311,6 @@ const teamMembers = [
     role: "Storyteller",
     color: "[#859762]"
   },
-  {
-    key: "andreea",
-    imageSrc: IMAGES.ExperienceV3_echipa_1,
-    name: "Andreea Istrate",
-    role: "Flow Keeper",
-    color: "[#ed9561]"
-  }
 ];
 
 const questions = [

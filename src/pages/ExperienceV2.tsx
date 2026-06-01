@@ -6,6 +6,7 @@ import IMAGES from "../assets/Images";
 import Modal from "../components/Modal";
 import { FadeInViewPortAnimation, FadeInAnimation } from "../components/animations/Animations";
 import CardContainer from '../components/cards/CardContainer';
+import EditionsCarousel from "../components/EditionsCarousel";
 
 export interface IExperienceProps { }
 const Experience: React.FC = () => {
@@ -222,6 +223,8 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </div> */}
+
+      <EditionsCarousel currentPage="/ChyExperience2" />
 
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} image={currentImage} />
     </MainLayout>

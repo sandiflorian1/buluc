@@ -212,7 +212,7 @@ export default function ChallengeYourself() {
               imageSrc={IMAGES.echipaIonutTerteci}
               name="Ionuț Terteci"
               color="orange"
-              role="proful de joc pentru camerǎ"
+              role="proful de joc la camerǎ"
             />
           </div>
         </FadeInViewPortAnimation>
