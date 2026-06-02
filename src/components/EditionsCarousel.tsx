@@ -9,17 +9,17 @@ interface Edition {
 
 const editions: Edition[] = [
   {
-    title: "Challenge Yourself @Experience #3",
+    title: "Editia #3",
     subtitle: "Experience V3",
     route: "/ChyExperience3"
   },
   {
-    title: "Challenge Yourself @Experience #2",
+    title: "Editia #2",
     subtitle: "Experience V2",
     route: "/ChyExperience2"
   },
   {
-    title: "Challenge Yourself @Experience #1",
+    title: "Editia #1",
     subtitle: "Experience V1",
     route: "/experience"
   },
@@ -45,7 +45,7 @@ const EditionsCarousel: React.FC<EditionsCarouselProps> = ({ currentPage }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             <div>
-              {/* <p className="text-gray-500">Vezi</p> */}
+              <p className="text-gray-500">Vezi</p>
               <h5 className="font-bold">{previousEdition.title}</h5>
             </div>
           </Link>
@@ -65,7 +65,7 @@ const EditionsCarousel: React.FC<EditionsCarouselProps> = ({ currentPage }) => {
         {nextEdition && (
           <Link to={nextEdition.route} className="flex items-center gap-2 text-gray-800 hover:text-gray-600 transition-colors">
             <div className="text-right">
-              {/* <p className="text-gray-500">Vezi</p> */}
+              <p className="text-gray-500">Vezi</p>
               <h5 className="font-bold">{nextEdition.title}</h5>
             </div>
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
