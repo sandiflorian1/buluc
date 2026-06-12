@@ -146,21 +146,21 @@ const teamMembers: ITeamMember[] = [
   {
     imageSrc: IMAGES.echipaMihaelaMardare,
     name: "Mihaela Mardare",
-    role: "fondator, actriță",
+    role: "cofondator, actriță",
     color: 'red',
   },
 
   {
     imageSrc: IMAGES.echipaRobertCiupitu,
     name: "Robert Ciupitu",
-    role: "fondator, actor",
+    role: "cofondator, actor",
     color: 'orange',
   },
 
   {
     imageSrc: IMAGES.echipaMarilenaAdam,
     name: "Marilena Adam",
-    role: "fondator, social media manager",
+    role: "cofondator, social media manager",
     color: 'red',
   },
 
