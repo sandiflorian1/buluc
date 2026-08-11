@@ -186,13 +186,6 @@ const teamMembers: ITeamMember[] = [
   },
 
   {
-    imageSrc: IMAGES.echipaAdreeaD,
-    name: "Andreea Preda",
-    role: "graphic designer & illustrator",
-    color: 'orange',
-  },
-
-  {
     imageSrc: IMAGES.echipaAndrei,
     name: "Andrei Atabay",
     role: "actor",
@@ -258,7 +251,7 @@ const parteneri = [
   },
   {
     id: 9,
-    link: "https://solarisplant.ro/",
+    link: "https://ototo.ro/",
   },
   {
     id: 12,

@@ -41,9 +41,9 @@ export default function Homepage (props: IHomepageProps) {
         </div>
       </div>
 
-      <Link to="/ChyExperience3">
+      {/* <Link to="/ChyExperience3">
         <img src={isMobile ? IMAGES.ExperienceV3MB : IMAGES.ExperienceV3_cover} alt="Experience V3" className='w-[100vw] h-auto mb:h-full' />
-      </Link>
+      </Link> */}
     </div>
   );
 }

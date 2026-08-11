@@ -31,13 +31,15 @@ export default function ChallengeYourself() {
             noAnimation
           >
             <p className="pb-2">
-              Challenge Yourself este așa cum spune și numele -
-              <span className="text-orange"> o provocare, o încercare de a te autodepasi, dar și o relaxare activă care are ca scop formarea unei pauze în viețile noastre. </span>
-              Ne întâlnim o dată pe săptămână într-o casă interbelică unde, cu ajutorul tehnicilor teatrale, încercăm să ne deconectăm de la haosul zilnic și să ne conectăm mai mult cu propria persoană.
+             <span className="text-orange">Challenge Yourself este, așa cum îi spune și numele, o invitație de a te provoca și de a-ți depăși limitele, dar și o formă de relaxare activă, care creează o pauză în ritmul vieții de zi cu zi. </span> Un spațiu în care provocarea și relaxarea coexistă, iar teatrul devine un instrument de explorare personală.
+            </p>
+
+            <p className="pb-2">
+              Ne întâlnim o dată pe săptămână, într-o sufragerie interbelică din 1920, unde ne întoarcem atenția către noi și ne jucăm.
             </p>
 
             <p className="">
-              Modulul de începǎtori se desfășoară pe parcursul a 3 luni, timp în care ne jucăm cu ajutorul unor exerciții teatrale pe care le vei putea folosi în orice situație ce implică emoția, imaginația și creativitatea – atât în relația cu tine însuți, cât și în interacțiunea cu ceilalți.
+            Modulul de începători se desfășoară pe parcursul a trei luni și propune un proces construit în jurul jocului și al tehnicilor teatrale. Explorăm emoția, imaginația și creativitatea și descoperim cum le putem folosi mai liber, atât în relația cu noi înșine, cât și în întâlnirea cu ceilalți.
             </p>
           </BannerTextAbsolute>
 
@@ -127,16 +129,18 @@ export default function ChallengeYourself() {
             ></SimpleSlider>
             <div className="absolute w-[30vw] bottom-0 left-[20vw] pb-20 mb:relative mb:w-full mb:left-0 mb:bg-white mb:p-8">
               <h4 className="title pb-4 text-white mb:text-red" style={textShadow}>
-                Ce urmează după cele
+                Ce urmează după
                 <br />
-                3 luni de curs?
+                modulul de începatori
               </h4>
 
               <p className="pb-4 text-white mb:text-black" style={textShadow}>
-                La finalul modulului, cursanții pun în scenă un show de improvizație construit din exercițiile și jocurile lucrate pe parcursul celor 3 luni. Ne place să spunem că e un curs deschis cu apucǎturi de show pentru că atmosfera este una relaxată și distractivă unde fiecare participant își aduce în public prietenii, familia sau colegii de la birou.
+                La finalul modulului, jocurile și exercițiile explorate în cele trei luni se mută pe scenă, într-un show de improvizație. Nouă ne place să-i spunem „un curs deschis cu apucături de show”: o întâlnire relaxată și distractivă, la care îți poți invita prietenii, familia sau colegii de la birou. 
               </p>
 
-              <p className="pb-4 text-white mb:text-black" style={textShadow}>După acest pas, Challenge Yourself merge mai departe cu modulul pentru avansați – o etapă nouă, în care aprofundăm exercițiile de creativitate, improvizație și spontaneitate. Descoperim cum le putem aplica în viața de zi cu zi și care este legătura lor directă cu teatrul. Ne jucăm cu mai multă intensitate, urcăm pe scenă în spectacole de improvizație „pe bune” și, treptat, ajungem chiar să construim propriile spectacole de teatru.</p>
+              <p className="pb-4 text-white mb:text-black" style={textShadow}>
+                După acest moment, cursul Challenge Yourself continuă cu modulul de avansați, o nouă etapă în care aprofundăm creativitatea, improvizația și spontaneitatea și descoperim legătura lor directă cu teatrul și cu viața de zi cu zi. Jocul capătă mai multă intensitate, urcăm pe scenă în spectacole de improvizație „pe bune” și, treptat, începem să construim propriile spectacole de teatru.
+              </p>
             </div>
 
           </div>
@@ -225,20 +229,21 @@ export default function ChallengeYourself() {
           <div className="flex mb:inline gap-10 justify-center my-4 mx-auto">
             <ScaleViewPortAnimation className="p-10 bg-orange shadow-lg rounded-full mb:mb-10">
               <h5 className="text-center text-white"> VARIANTA 1 </h5>
-              <h5 className="text-center text-white pb-4"> PLATA LUNARA</h5>
-              <p className="text-center text-white"> 4 sedinte/ luna </p>
-              <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <h5 className="text-center text-white font-bold pt-4"> 449 lei/luna </h5>
+              <h5 className="text-center text-white pb-4"> PLATĂ LUNARĂ</h5>
+              <p className="text-center text-white">  4 ședințe / lună </p>
+              <p className="text-center text-white"> 1 ședință / săptămână </p>
+              <h5 className="text-center text-white font-bold pt-4"> 479 lei/lună </h5>
               <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow</b> </p>
             </ScaleViewPortAnimation>
 
             <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
               <h5 className="text-center text-white"> VARIANTA 2 </h5>
-              <h5 className="text-center text-white pb-4"> PLATA INTEGRALA MODUL </h5>
+              <h5 className="text-center text-white pb-4"> PLATĂ INTEGRALĂ </h5>
 
-              <p className="text-center text-white"> 12 sedinte/ 3 luni </p>
-              <p className="text-center text-white"> o sedinta/ saptamana </p>
-              <h5 className="text-center text-white font-bold pt-4">1149 lei </h5>
+              <p className="text-center text-white"> 12 ședințe / 3 luni </p>
+              <p className="text-center text-white"> 1 ședință / săptămână </p>
+              <h5 className="text-center text-white font-bold pt-4">1259 lei </h5>
+              <p className="text-center text-[#efdc90] text-[12px]"> Economisești 178 lei*</p>
               <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow </b> </p>
 
             </ScaleViewPortAnimation>
@@ -254,14 +259,14 @@ export default function ChallengeYourself() {
               </h4>
 
               <ul className="list-star pl-8">
-                <li>modulul de incepatori durează 3 luni: 4 ședințe /lună, câte 1/săptămână</li>
-                <li> plata per ședință, indiferent de numărul de ședințe frecventate (1, 2 sau mai multe), nu este posibilă</li>
-                <li>funcționează ca un abonament: ședințele pierdute nu se pot recupera la o altǎ grupǎ</li>
-                <li>după modulul de incepatori - poți continua la avansați</li>
-                <li>clasele de avansați sunt concepute într-un modul continuu de învățare & explorare</li>
+                <li>modulul pentru începători durează 3 luni și cuprinde 12 ședințe, câte o ședință pe săptămână</li>
+                <li>cursul funcționează sub forma unui abonament, iar plata individuală a ședințelor nu este posibilă</li>
+                <li>ședințele la care nu poți participa nu se pot recupera la o altă grupă</li>
+                <li>după finalizarea modulului pentru începători, poți continua cu modulul pentru avansați</li>
+                <li>clasele pentru avansați sunt construite ca un proces continuu de învățare și explorare</li>
               </ul>
 
-              <p className="mt-2">*Plata integrala a cursului se achita in prima sedinta a fiecarei luni in functie de varianta aleasa</p>
+              <p className="mt-2">*Indiferent de varianta aleasă, plata se face la prima ședință: lunar, la începutul fiecărei luni de curs, sau integral, la începutul modulului.</p>
             </div>
 
             <div>

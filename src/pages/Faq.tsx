@@ -62,7 +62,7 @@ const Faq: React.FC = () => {
         },
         {
           question: 'Trebuie sa platesc tot modulul dintr-o data?',
-          answer: 'Cursul poate fi achitat in doua variante: lunar: in valoare de 449 lei, sau integral, modul complet: in valoare de 1149 lei.'
+          answer: 'Cursul poate fi achitat in doua variante: lunar: in valoare de 479 lei, sau integral, modul complet: in valoare de 1259 lei.'
         },
         {
           question: 'Daca aleg varianta 2 (intregul modul) pot sa platesc in mai multe transe?',
@@ -74,7 +74,7 @@ const Faq: React.FC = () => {
         },
         {
           question: 'Exista reduceri pentru plata integrala a modulului?',
-          answer: 'Da, plata integrala (varianta 2) include o reducere de 15%.'
+          answer: 'Da. Dacă alegi plata integrală a modulului, prețul este de 1.259 lei în loc de 1.437 lei. Astfel, economisești 178 lei.'
         },
         {
           question: 'Pot achita doar sedintele la care stiu ca vin?',
