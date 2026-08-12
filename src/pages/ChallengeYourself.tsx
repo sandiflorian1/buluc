@@ -233,7 +233,7 @@ export default function ChallengeYourself() {
               <p className="text-center text-white">  4 ședințe / lună </p>
               <p className="text-center text-white"> 1 ședință / săptămână </p>
               <h5 className="text-center text-white font-bold pt-4"> 479 lei/lună </h5>
-              <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow</b> </p>
+              <p className="text-center text-white mt-2 px-10"><b>+ ședință bonus: Improshow</b> </p>
             </ScaleViewPortAnimation>
 
             <ScaleViewPortAnimation className="p-10 bg-red shadow-lg rounded-full mb:mb-10">
@@ -243,8 +243,8 @@ export default function ChallengeYourself() {
               <p className="text-center text-white"> 12 ședințe / 3 luni </p>
               <p className="text-center text-white"> 1 ședință / săptămână </p>
               <h5 className="text-center text-white font-bold pt-4">1259 lei </h5>
-              <p className="text-center text-[#efdc90] text-[12px]"> Economisești 178 lei*</p>
-              <p className="text-center text-white mt-2 px-10"> Include <b>1 ședință bonus: Improshow </b> </p>
+              <p className="text-center text-[#efdc90] text-[12px] font-bold"> Economisești 178 lei*</p>
+              <p className="text-center text-white mt-2 px-10"><b> + ședință bonus: Improshow </b> </p>
 
             </ScaleViewPortAnimation>
 
