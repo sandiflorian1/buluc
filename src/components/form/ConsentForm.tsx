@@ -14,6 +14,7 @@ const phoneRegex = /^[0-9+]*$/;
 
 interface ConsentFormData {
   name: string;
+  address: string;
   email: string;
   phone: string;
   period: '1' | '2';
@@ -103,6 +104,17 @@ export default function ConsentForm() {
           </label>
 
           <label className='w-1/3 mb:w-full'>
+            <span>Adresa:*</span>
+            <input
+              type="text"
+              size={25}
+              {...register('address', {
+                required: 'Adresa este obligatorie',
+              })} />
+            {errors.phone && <span className='error'>{errors.phone.message}</span>}
+          </label>
+
+          <label className='w-1/3 mb:w-full'>
             <span>Telefon:*</span>
             <input
               type="text"
@@ -127,20 +139,22 @@ export default function ConsentForm() {
             {errors.email && <span className='error'>{errors.email.message}</span>}
           </label>
         </div>
-        <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - modul începători</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
+        <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - începători</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
 
-        <p className="mb-2">Prin această anexă declar pe propria răspundere că am luat la cunoștință și sunt de acord cu următoarele:</p>
+        <p className="mb-2">Prin acest acord, confirm că am citit, am înțeles și sunt de acord cu următoarele condiții de participare la curs:</p>
+        <p className="font-bold mb-2">Abonament și plată</p>
         <ul className="list-star ml-6 space-y-2">
-          <li> <b>Cursul Challenge Yourself, modulul de începători (3 luni)</b> funcționează sub forma unui abonament în care  <b>ședințele pierdute de către participanți nu se pot recupera la o altă grupă.</b> Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
-          <li>Dacă ai efectuat deja plata pentru una dintre cele două opțiuni de abonament (lunar sau întregul modul), <b>suma achitată nu va putea fi rambursată</b>, indiferent de circumstanțele care pot apărea ulterior.</li>
-          <li><b>Plata cursului se efectuează la prima ședință a fiecărei luni</b>, conform calendarului, și acoperă participarea la toate cele patru ședințe din luna respectivă.</li>
-          <li>Întreruperea cursului se anunță cu cel puțin 14 de zile înainte de următoarea lună.</li>
-          <li><b>Participarea la Improshow-ul final NU este obligatorie.</b></li>
-          <li>Data Improshow-ului poate suferi modificări în funcție de disponibilitatea spațiului.</li>
+          <li> <b>Cursul Challenge Yourself, modulul de începători (3 luni) funcționează sub forma unui abonament în care ședințele pierdute de către participanți nu se pot recupera la o altǎ grupǎ.</b></li>
+          <li>Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților, iar absențele nu modifică valoarea abonamentului.</li>
+          <li><b>Plata cursului se efectuează conform opțiunii de plată alese: lunar, la începutul fiecărei luni de curs, sau integral, la începutul modulului. Plata lunară acoperă cele 4 ședințe programate în luna respectivă, iar plata integrală acoperă toate cele 12 ședințe din cele 3 luni ale modulului.</b></li>
+          <li>Dacă ai efectuat deja plata pentru una dintre cele două opțiuni de abonament (lunar sau întregul modul), suma achitată nu va putea fi rambursată, indiferent de circumstanțele care pot apărea ulterior.</li>
+          <li>Dacă dorești să întrerupi definitiv participarea la curs sau știi că nu vei putea participa într-o anumită lună, te rugăm să ne anunți cu cel puțin 10 zile înainte de începerea lunii respective.</li>
+          <li>Improshowul de la finalul modulului este o sedinta bonus la care participarea nu este obligatorie</li>
+          <li>Data Improshow-ului poate suferi modificări în funcție de disponibilitatea spațiului, a sărbătorilor legale sau a altor situații neprevăzute.</li>
           <li>Pentru perioadele de sărbători (Crăciun, Anul Nou, Paște, etc.) programul cursurilor se poate modifica.</li>
-          <li>Asociația Buluc își rezervă dreptul de a întrerupe colaborarea cu orice participant în cazul apariției unor probleme sau neînțelegeri, fără rambursarea sumelor achitate pentru luna în curs sau pentru întregul modul, conform opțiunii selectate de participant.</li>
-          <li>La cerere, se poate emite factură aferentă serviciilor oferite de Asociația Buluc pe baza datelor de identificare pe care ni le veți comunica. Factura poate circula fără ștampilă și semnătură conform Legii 227/2015 privind Codul Fiscal, Art. 319.</li>
-          <li>Achiziționez cursul Challenge Yourself:
+          <li>Asociația Buluc își rezervă dreptul de a încheia participarea unui cursant în cazul unor comportamente sau situații care afectează în mod semnificativ buna desfășurare a cursului, a activităților sau a relației cu ceilalți participanți și traineri.</li>
+          <li>Pentru plata serviciilor oferite de Asociația Buluc se poate emite factură, pe baza datelor necesare facturării furnizate de participant. Factura poate circula fără ștampilă și semnătură conform Legii 227/2015 privind Codul Fiscal, Art. 319.</li>
+          <li>Opțiuni de plată a cursului:
             <div className="mt-2">
               <label className="flex flex-row mb-2">
                 <input
@@ -149,7 +163,7 @@ export default function ConsentForm() {
                   className="mr-2"
                   {...register('period', { required: 'Vă rugăm să selectați o variantă' })}
                 />
-                <span><b>VARIANTA 1</b> - PLATA LUNARĂ  <b>(449 lei/lună)</b></span>
+                <span><b>VARIANTA 1</b> - PLATA LUNARĂ  <b>(479 lei/lună)</b></span>
               </label>
               <label className="flex flex-row mb-2">
                 <input
@@ -158,12 +172,13 @@ export default function ConsentForm() {
                   className="mr-2"
                   {...register('period', { required: 'Vă rugăm să selectați o variantă' })}
                 />
-                <span><b>VARIANTA 2</b> - PLATA ÎNTREGULUI MODUL <b>(1149 lei/modul 3 luni)</b></span>
+                <span><b>VARIANTA 2</b> - PLATA ÎNTREGULUI MODUL <b>(1259 lei/modul 3 luni)</b></span>
               </label>
               {errors.period && <span className='error mt-2'>{errors.period.message}</span>}
 				    </div>
           </li>
         </ul>
+        <p className='font-thin'>*Opțiunea bifată ne ajută să știm pentru ce variantă de plată optezi inițial și poate fi schimbată ulterior.</p>
 
         <h4 className="mt-6 mb-2 font-semibold">Nota de informare cu privire la protecția datelor personale</h4>
         <p className="mb-2">Având în vedere consimțământul încheiat între părți, vă informăm următoarele: Datele cu caracter personal se vor prelucra în condițiile Regulamentului UE 2016/679 – privind protecția persoanelor fizice în ceea ce privește prelucrarea datelor cu caracter personal și privind libera circulație a acestor date.</p>

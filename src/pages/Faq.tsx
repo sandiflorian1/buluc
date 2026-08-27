@@ -57,8 +57,8 @@ const Faq: React.FC = () => {
       title: 'Plata cursului',
       items: [
         {
-          question: 'Cum se face plata cursului?',
-          answer: 'Plata pentru luna curenta se achita la prima sedinta, conform variantei alese si calendarului intern.'
+          question: 'Când se achită cursul?',
+          answer: 'Plata se face la prima ședință, în funcție de varianta aleasă: lunar sau integral pentru întregul modul.'
         },
         {
           question: 'Trebuie sa platesc tot modulul dintr-o data?',

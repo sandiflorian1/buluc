@@ -3,6 +3,7 @@ import { getCurrentDateTimeAsNumber, getFormattedDate } from './dateUtils';
 
 export interface ConsentParams {
   name: string;
+  address: string;
   email: string;
   phone: string;
   period: '1' | '2';
@@ -10,7 +11,7 @@ export interface ConsentParams {
 }
 
 export async function modifyConsentPdf(params: ConsentParams) {
-  const { name, phone, period, email, signature } = params;
+  const { name, address, phone, period, email, signature } = params;
   const dateNumber = getCurrentDateTimeAsNumber();
   const formattedDate = getFormattedDate();
 
@@ -27,11 +28,12 @@ export async function modifyConsentPdf(params: ConsentParams) {
   // NOTE: Coordinates are approximate; adjust if template changes.
   // Draw name fields (nume + prenume) on the first page
     const textFields = [
-    { text: name, x: 270, y: 650 },
-    { text: phone, x: 110, y: 634 },
-    { text: email, x: 260, y: 634 },
-    { text: period === '1' ? 'X' : ' ', x: 129, y: 108 },
-    { text: period === '2' ? 'X' : ' ', x: 129, y: 86 },
+    { text: name, x: 270, y: 670 },
+    { text: address, x: 110, y: 655 },
+    { text: phone, x: 420, y: 655 },
+    { text: email, x: 120, y: 640 },
+    { text: period === '1' ? 'X' : ' ', x: 129, y: 150 },
+    { text: period === '2' ? 'X' : ' ', x: 129, y: 135 },
 
   ];
 
@@ -41,7 +43,7 @@ export async function modifyConsentPdf(params: ConsentParams) {
       page1.drawText(field.text, {
         x: field.x,
         y: field.y,
-        size: 12,
+        size: 11,
         color: rgb(0, 0, 0),
       });
     }
@@ -50,7 +52,7 @@ export async function modifyConsentPdf(params: ConsentParams) {
   page1.drawText(nrDoc, { x: 243, y: 695, size: 10, color: rgb(0, 0, 0)});
 
   // Page 2
-  page2.drawText(nrDoc, { x: 238, y: 695, size: 10, color: rgb(0, 0, 0)});
+  page2.drawText(nrDoc, { x: 238, y: 745, size: 10, color: rgb(0, 0, 0)});
 
   // Add signature image if available
   if (signature) {
@@ -61,7 +63,7 @@ export async function modifyConsentPdf(params: ConsentParams) {
     // Place signature near the end of the document
     page2.drawImage(signatureImage, {
       x: 390,
-      y: 160,
+      y: 280,
       width: signatureDims.width,
       height: signatureDims.height,
     });
