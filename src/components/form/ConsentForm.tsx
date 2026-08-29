@@ -84,11 +84,11 @@ export default function ConsentForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <SimpleCard>
-        <h3 className="mb-2 font-bold text-center pb-10">Consimțământ</h3>
+        <h6 className="mb-2 font-bold text-center pb-10">Acord de participare la Cursul Challenge Yourself modul incepatori</h6>
 
         <p className="mb-2">Subsemnatul/a:</p>
         <div className='flex gap-4 mb:flex-col'>
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Nume/Prenume*:</span>
             <input
               type="text"
@@ -103,7 +103,7 @@ export default function ConsentForm() {
             {errors.name && <span className='error'>{errors.name.message}</span>}
           </label>
 
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Adresa:*</span>
             <input
               type="text"
@@ -114,7 +114,7 @@ export default function ConsentForm() {
             {errors.phone && <span className='error'>{errors.phone.message}</span>}
           </label>
 
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Telefon:*</span>
             <input
               type="text"
@@ -129,7 +129,7 @@ export default function ConsentForm() {
             {errors.phone && <span className='error'>{errors.phone.message}</span>}
           </label>
 
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Email*:</span>
             <input
               type="email"
@@ -142,7 +142,6 @@ export default function ConsentForm() {
         <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - începători</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
 
         <p className="mb-2">Prin acest acord, confirm că am citit, am înțeles și sunt de acord cu următoarele condiții de participare la curs:</p>
-        <p className="font-bold mb-2">Abonament și plată</p>
         <ul className="list-star ml-6 space-y-2">
           <li> <b>Cursul Challenge Yourself, modulul de începători (3 luni) funcționează sub forma unui abonament în care ședințele pierdute de către participanți nu se pot recupera la o altǎ grupǎ.</b></li>
           <li>Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților, iar absențele nu modifică valoarea abonamentului.</li>
@@ -163,7 +162,7 @@ export default function ConsentForm() {
                   className="mr-2"
                   {...register('period', { required: 'Vă rugăm să selectați o variantă' })}
                 />
-                <span><b>VARIANTA 1</b> - PLATA LUNARĂ  <b>(479 lei/lună)</b></span>
+                <span><b>VARIANTA 1</b> - lunar <b>(479 lei/lună)</b></span>
               </label>
               <label className="flex flex-row mb-2">
                 <input
@@ -172,7 +171,7 @@ export default function ConsentForm() {
                   className="mr-2"
                   {...register('period', { required: 'Vă rugăm să selectați o variantă' })}
                 />
-                <span><b>VARIANTA 2</b> - PLATA ÎNTREGULUI MODUL <b>(1259 lei/modul 3 luni)</b></span>
+                <span><b>VARIANTA 2</b> - modul <b>(1259 lei/modul 3 luni)</b></span>
               </label>
               {errors.period && <span className='error mt-2'>{errors.period.message}</span>}
 				    </div>

@@ -32,8 +32,8 @@ export async function modifyConsentPdf(params: ConsentParams) {
     { text: address, x: 110, y: 655 },
     { text: phone, x: 420, y: 655 },
     { text: email, x: 120, y: 640 },
-    { text: period === '1' ? 'X' : ' ', x: 129, y: 163 },
-    { text: period === '2' ? 'X' : ' ', x: 129, y: 148 },
+    { text: period === '1' ? 'X' : ' ', x: 129, y: 178 },
+    { text: period === '2' ? 'X' : ' ', x: 129, y: 162 },
 
   ];
 

@@ -16,9 +16,9 @@ export default function ConsimtamantPage(props: IConsimtamantProps) {
 
       <div className='pt-[2rem] mb:mt-0'>
         <div className='w-screen flex justify-center'>
-          <div className='px-[13%] mb:px-[10%] pb-10'>
+          <div className='px-[13%] mb:px-0 pb-10'>
             <FadeInAnimation className="container mt-20 mb:mt-10">
-              <div className="flex flex-col m-10 mb:m-0 gap-4">
+              <div className="flex flex-col m-10 mb:m-0 gap-4 text-justify">
                 <ConsentForm />
               </div>
             </FadeInAnimation>
