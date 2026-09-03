@@ -14,6 +14,7 @@ const phoneRegex = /^[0-9+]*$/;
 interface ConsentAdvFormData {
   name: string;
   email: string;
+  address: string;
   phone: string;
   period: '1' | '2';
 }
@@ -40,18 +41,18 @@ export default function ConsentAdvForm() {
         reader.onerror = err => reject(err);
       });
 
-    //   function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
-    //     const url = URL.createObjectURL(pdfBlob);
-    //     const link = document.createElement("a");
-    //     link.href = url;
-    //     link.download = fileName;
-    //     document.body.appendChild(link);
-    //     link.click();
-    //     document.body.removeChild(link);
-    //     URL.revokeObjectURL(url);
-    //   }
+      // function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
+      //   const url = URL.createObjectURL(pdfBlob);
+      //   const link = document.createElement("a");
+      //   link.href = url;
+      //   link.download = fileName;
+      //   document.body.appendChild(link);
+      //   link.click();
+      //   document.body.removeChild(link);
+      //   URL.revokeObjectURL(url);
+      // }
 
-    //   downloadPdf(pdfBlob, "consimtamant-adv.pdf");
+      // downloadPdf(pdfBlob, "consimtamant-adv.pdf");
 
       const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul. Si a primit fisierul atașat.</p>`
 
@@ -82,11 +83,11 @@ export default function ConsentAdvForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <SimpleCard>
-        <h3 className="mb-2 font-bold text-center pb-10">Consimțământ Avansați</h3>
+       <h6 className="mb-2 font-bold text-center pb-10">Acord de participare la Cursul Challenge Yourself modul avansați</h6>
 
         <p className="mb-2">Subsemnatul/a:</p>
         <div className='flex gap-4 mb:flex-col'>
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Nume/Prenume*:</span>
             <input
               type="text"
@@ -101,7 +102,18 @@ export default function ConsentAdvForm() {
             {errors.name && <span className='error'>{errors.name.message}</span>}
           </label>
 
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
+            <span>Adresa:*</span>
+            <input
+              type="text"
+              size={25}
+              {...register('address', {
+                required: 'Adresa este obligatorie',
+              })} />
+            {errors.phone && <span className='error'>{errors.phone.message}</span>}
+          </label>
+
+          <label className='w-1/4 mb:w-full'>
             <span>Telefon:*</span>
             <input
               type="text"
@@ -116,7 +128,7 @@ export default function ConsentAdvForm() {
             {errors.phone && <span className='error'>{errors.phone.message}</span>}
           </label>
 
-          <label className='w-1/3 mb:w-full'>
+          <label className='w-1/4 mb:w-full'>
             <span>Email*:</span>
             <input
               type="email"
@@ -129,23 +141,39 @@ export default function ConsentAdvForm() {
         <p className='mt-4'>în calitate de participant(ă) la cursul <b>Challenge Yourself - avansați</b>, declar că datele de mai sus sunt corecte și complete și am acces la adresa de email.</p>
 
         <p className="mb-2">Prin această anexă declar pe propria răspundere că am luat la cunoștință și sunt de acord cu următoarele:</p>
-        <ul className="list-star ml-6 space-y-2">
-          <li>Participarea la curs se realizează exclusiv pe baza unui abonament lunar, iar <b>plata per ședință, indiferent de numărul de ședințe frecventate (1, 2 sau mai multe), nu este posibilă.</b></li>
-          <li> <b>Cursul Challenge Yourself - avansați</b>  (curs cu frecvență lunară - 4 ședințe/lună), funcționează sub forma unui abonament în care ședințele pierdute de către participanți <b>nu se pot recupera.</b> Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
-          <li> Dacă ai efectuat deja plata pentru abonamentul cursului, suma achitată nu va putea fi rambursată, indiferent de circumstanțele care pot apărea ulterior. </li>
-          <li><b>Plata cursului se efectuează la prima ședință a fiecărei luni,</b> conform calendarului, și acoperă participarea la toate cele patru ședințe din luna respectivă.</li>
-          <li>Modulul de avansați se achită lunar - 449 lei / lună.</li>
-          <li>La cerere, se poate emite factură aferentă serviciilor oferite de Asociația Buluc pe baza datelor de identificare pe care ni le veți comunica. Factura poate circula fără ștampilă și semnătură conform Legii 227/2015 privind Codul Fiscal, Art. 319.</li>
-          <li>Cursul se desfășoară pe perioadă nedeterminată, așadar <b> întreruperea cursului se anunță cu cel puțin 10 de zile înainte de următoarea lună.</b></li>
-          <li>În cazul în care un participant nu poate ajunge într-o anumită lună de curs, el se preocupă să anunțe trainerii cu minim 10 zile înainte de data stabilită. Mai puțin în cazul situațiilor neprevăzute.</li>
-          <li><b>Fiecare cursant are dreptul să lipsească doar 5 luni (din 10) și nu mai mult de 2 luni consecutive.</b> În felul ăsta se asigură o desfășurare mai eficientă a grupei.</li>
-          <li>Accesul la Improshow-urile și producțiile BULUC se face pe baza unei donații minime recomandate sau libere. O parte din donații poate merge către locația care găzduiește evenimentul și către Asociația Buluc (organizare, foto/video), iar restul ajunge la performerii participanți. Procentul exact se stabilește în funcție de costurile și condițiile fiecărei locații.</li>
-          <li>În cazul închirierii unei săli de teatru/spectacol pentru realizarea unui spectacol (producție), prețul chiriei este susținut integral de participanții implicați in producția respectivă, incluzând toate serviciile oferite de spațiu pentru o bună desfășurare a spectacolului.</li>
-          <li>Participarea la improshow-urile și producțiile Buluc NU este obligatorie și se va face în funcție și de prezența la curs.</li>
-          <li>Structura cursului, se poate modifica în funcție de dinamica fiecarei grupe.</li>
-          <li>Componența grupei se poate modifica în funcție de dinamica participanților, de exemplu dacă apar absențe prea multe sau dacă unele activități trebuie reorganizate si implica anularea anumitor evenimente cum ar fi: Improshow, Spectacol de teatru. </li>
-          <li>Asociația Buluc își rezervă dreptul de a întrerupe colaborarea cu orice participant în cazul apariției unor probleme sau neînțelegeri, fără rambursarea sumelor achitate pentru luna în curs sau pentru întregul modul, conform opțiunii selectate de participant.</li>
-          <li>Programul cursurilor se poate modifica în funcție de sărbătorile legale (Crăciun, Anul Nou, Paște etc.) sau alte circumstanțe neprevăzute, inclusiv legate de disponibilitatea spațiului.</li>
+        
+        <p className="mt-4 mb-2 font-bold">Abonament și plată</p>
+        <ul className="list-star ml-6 space-y-2 mb-4">
+          <li>Participarea la curs se realizează exclusiv pe baza unui abonament lunar. Plata per ședință, indiferent de numărul de ședințe la care participă cursantul, nu este posibilă.</li>
+          <li>Ședințele la care cursantul nu poate participa nu se pot recupera la alte grupe, iar absențele nu modifică valoarea abonamentului lunar.</li>
+          <li>Asociația Buluc nu își asumă răspunderea pentru eventualele întârzieri sau anulări din motivele personale ale cursanților.</li>
+          <li>Plata abonamentului se efectuează la începutul fiecărei luni de curs, conform calendarului comunicat de Buluc și acoperă toate cele 4 ședințe programate în luna respectivă.</li>
+          <li>Dacă plata pentru luna respectivă a fost efectuată, suma achitată nu se rambursează, inclusiv în cazul în care cursantul nu mai poate participa la una sau mai multe ședințe din luna respectivă.</li>
+          <li>Pentru plata serviciilor oferite de Asociația Buluc se poate emite factură, pe baza datelor necesare facturării furnizate de participant. Factura poate circula fără ștampilă și semnătură conform Legii 227/2015 privind Codul Fiscal, Art. 319.</li>
+          <li>Dacă dorești să întrerupi definitiv participarea la curs sau știi că nu vei putea participa într-o anumită lună, te rugăm să ne anunți cu cel puțin 10 zile înainte de începerea lunii respective.</li>
+        </ul>
+
+        <p className="mt-4 mb-2 font-bold">Structură / absențe</p>
+        <ul className="list-star ml-6 space-y-2 mb-4">
+          <li>Structura cursului se poate modifica în funcție de dinamica fiecărei grupe, de progresul participanților, de disponibilitatea spațiului și de alți factori care pot influența buna desfășurare a cursului. Acest lucru poate presupune modificarea, înlocuirea sau reprogramarea anumitor activități.</li>
+          <li>Componența grupei, precum și ora de desfășurare a cursului, se pot modifica pe parcursul anului, în funcție de anumite situații care pot influența desfășurarea a cursului. Participanții vor fi informați cu privire la eventualele modificări.</li>
+          <li>Trainerii pot ajusta ponderea și succesiunea diferitelor module și activități, în funcție de parcursul grupei și de obiectivele de lucru stabilite pentru aceasta. Aceste ajustări pot include, de exemplu, alocarea unei perioade mai mari pentru lucrul la improvizație, teatru, monolog, exerciții de grup sau alte formate experiențiale. Deciziile privind structura și desfășurarea activităților aparțin trainerilor, ținând cont de dinamica și obiectivele grupei.</li>
+          <li>Asociația Buluc își rezervă dreptul de a încheia participarea unui cursant în cazul unor comportamente sau situații care afectează în mod semnificativ buna desfășurare a cursului, a activităților sau a relației cu ceilalți participanți și traineri.</li>
+          <li>Programul cursurilor și al activităților asociate acestora, inclusiv Improshow-uri și spectacole, se poate modifica în funcție de sărbătorile legale, disponibilitatea spațiului sau a trainerilor și alte situații neprevăzute care pot afecta desfășurarea programului. Participanții vor fi informați cu privire la eventualele modificări.</li>
+          <li>Anul de curs se desfășoară, în mod obișnuit, pe durata a 10 luni, din septembrie până în iunie. Luna iulie poate avea un program și un format diferit față de cursul obișnuit, iar luna august reprezintă perioada de vacanță și nu face parte din abonamentul obișnuit.</li>
+          <li><b>Pentru a păstra continuitatea grupului și buna desfășurare a cursului, fiecare cursant are dreptul să lipsească doar 5 luni (din 10) și nu mai mult de 2 luni consecutive.</b> În cazul unei absențe mai lungi de 2 luni consecutive, revenirea în grupa inițială nu mai poate fi garantată, deoarece programa și nivelul de lucru al grupei pot evolua în această perioadă. Participantul poate reveni la curs, însă grupa în care va fi reintegrat va fi stabilită în funcție de nivelul și parcursul său la momentul revenirii.</li>
+          <li>Locația în care se desfășoară cursul se poate modifica pe parcursul anului. Participanții vor fi informați în prealabil cu privire la aceste modificări.</li>
+        </ul>
+
+        <p className="mt-4 mb-2 font-bold">Improshow / producții / reprezentații</p>
+        <ul className="list-star ml-6 space-y-2 mb-4">
+          <li>Improshow-urile și producțiile Buluc nu fac parte din cele 4 ședințe lunare incluse în abonamentul cursului și reprezintă activități distincte de curs.</li>
+          <li>Participarea la acestea nu este obligatorie și poate fi condiționată de prezența și implicarea în cadrul cursului.</li>
+          <li>Accesul în cadrul acestor evenimente se realizează pe baza unei donații minime recomandate. Valoarea donației recomandate poate varia în funcție de formatul evenimentului și de costurile asociate organizării acestuia.</li>
+          <li>Donațiile adunate sunt împărțite, în mod obișnuit, între performerii implicați și Asociația Buluc. În situațiile în care evenimentul implică costuri suplimentare, precum închirierea sau utilizarea spațiului, acestea pot fi acoperite din suma colectată înainte de împărțirea acesteia. Modalitatea de distribuire poate varia în funcție de condițiile și costurile fiecărui eveniment.</li>
+          <li>Serviciile de foto/video nu sunt incluse în mod automat în cadrul fiecărui Improshow sau spectacol. În funcție de disponibilitatea fotografilor/videografilor și de formatul evenimentului, pot fi realizate materiale foto și/sau video pentru documentarea și promovarea activităților Buluc.</li>
+          <li>Pentru producțiile realizate în cadrul Modulului de Teatru, costurile aferente închirierii sălii de teatru/spectacol și serviciilor necesare desfășurării spectacolului sunt suportate integral de participanții înscriși în producția respectivă.</li>
+          <li>Evenimentele și reprezentațiile care fac parte din activitatea cursului și implică participarea cursanților, inclusiv cele deschise publicului, pot avea acces pe bază de donație liberă. Donațiile sunt voluntare și sunt destinate susținerii activității Asociației Buluc și acoperirii costurilor asociate organizării și desfășurării acestora.</li>
         </ul>
 
         <h4 className="mt-6 mb-2 font-semibold">Nota de informare cu privire la protecția datelor personale</h4>
