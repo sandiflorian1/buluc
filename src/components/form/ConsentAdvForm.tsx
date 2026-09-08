@@ -54,7 +54,7 @@ export default function ConsentAdvForm() {
         URL.revokeObjectURL(url);
       }
 
-      downloadPdf(pdfBlob, "consimtamant.pdf");
+      downloadPdf(pdfBlob, "Consimtamant Challenge Yourself.pdf");
 
       const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul. Si a primit fisierul atașat.</p>`
 
@@ -82,7 +82,9 @@ export default function ConsentAdvForm() {
     } catch (error) {
       console.error(error);
       setIsSubmitting(false);
-      // Redirect to error page
+      // Store error message and redirect to error page
+      const errorMessage = error instanceof Error ? error.message : 'Eroare necunoscută la trimiterea consimțământului';
+      localStorage.setItem('consentError', errorMessage);
       history.push('/consimtamant-eroare');
     }
   };

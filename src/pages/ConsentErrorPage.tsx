@@ -1,7 +1,28 @@
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import MainLayout from '../components/layouts/MainLayout';
 import { FadeInAnimation } from '../components/animations/Animations';
 
 export default function ConsentErrorPage() {
+  const location = useLocation();
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Get error message from URL params or localStorage
+    const urlParams = new URLSearchParams(location.search);
+    const errorParam = urlParams.get('error');
+    const storedError = localStorage.getItem('consentError');
+    
+    if (errorParam) {
+      setErrorMessage(decodeURIComponent(errorParam));
+      localStorage.removeItem('consentError');
+    } else if (storedError) {
+      setErrorMessage(storedError);
+      localStorage.removeItem('consentError');
+    }
+  }, [location]);
 
   return (
     <MainLayout>
@@ -34,6 +55,14 @@ export default function ConsentErrorPage() {
           <p className="text-lg text-gray-500 mb-8 max-w-2xl">
             Vă rugăm să încercați mai târziu.
           </p>
+
+          {errorMessage && (
+            <div className="mb-8 p-4 bg-red-50 border border-red-200 rounded-lg max-w-2xl">
+              <p className="text-sm text-red-700">
+                <strong>Detalii eroare:</strong> {errorMessage}
+              </p>
+            </div>
+          )}
         </div>
       </FadeInAnimation>
     </MainLayout>
