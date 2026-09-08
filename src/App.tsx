@@ -25,6 +25,8 @@ import Confidentialitate from './pages/Confidentialitate';
 import { ToastContainer } from 'react-toastify';
 import ConsimtamantPage from './pages/ConsimtamantPage';
 import ConsimtamantAvansatiPage from './pages/ConsimtamantAvansatiPage';
+import ConsentSuccessPage from './pages/ConsentSuccessPage';
+import ConsentErrorPage from './pages/ConsentErrorPage';
 import ExperienceV3 from './pages/ExperienceV3';
 import Faq from './pages/Faq';
 
@@ -59,6 +61,8 @@ const App = () => {
         <Route path="/proiecte/zoomtalks" component={Zoomtalks} />
         <Route path="/consimtamant" component={ConsimtamantPage} />
         <Route path="/consimtamant-avansati" component={ConsimtamantAvansatiPage} />
+        <Route path="/consimtamant-success" component={ConsentSuccessPage} />
+        <Route path="/consimtamant-eroare" component={ConsentErrorPage} />
         <Route path="/faq" component={Faq} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>

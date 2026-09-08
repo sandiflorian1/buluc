@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 import SignatureCanvas from 'react-signature-canvas';
 import { modifyAdvConsentPdf } from '../utils/modifyAdvConsentPdf';
 import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
@@ -21,6 +22,7 @@ interface ConsentAdvFormData {
 
 export default function ConsentAdvForm() {
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const history = useHistory();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ConsentAdvFormData>();
   const signatureRef = useRef<SignatureCanvas>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,18 +43,18 @@ export default function ConsentAdvForm() {
         reader.onerror = err => reject(err);
       });
 
-      // function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
-      //   const url = URL.createObjectURL(pdfBlob);
-      //   const link = document.createElement("a");
-      //   link.href = url;
-      //   link.download = fileName;
-      //   document.body.appendChild(link);
-      //   link.click();
-      //   document.body.removeChild(link);
-      //   URL.revokeObjectURL(url);
-      // }
+      function downloadPdf(pdfBlob: Blob, fileName: string = "document.pdf") {
+        const url = URL.createObjectURL(pdfBlob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
 
-      // downloadPdf(pdfBlob, "consimtamant-adv.pdf");
+      downloadPdf(pdfBlob, "consimtamant.pdf");
 
       const emailHTML = `<p> Cursantul ${data.name}, cu email-ul ${data.email}, a semnat consimțământul. Si a primit fisierul atașat.</p>`
 
@@ -63,20 +65,25 @@ export default function ConsentAdvForm() {
         form: `data:application/pdf;base64,${base64pdf}`
       });
 
-      await emailHandlerCPannel({
-        to: data.email,
-        subject: "Consimțământ Challenge Yourself Avansati",
-        message: "Mulțumim ca ai completat acordul de participare și confidențialitate privind participarea la cursurile Buluc. Acest formular nu te obligă la continuarea cursului, dar este necesar si pentru participarea la prima ședință.",
-        form: `data:application/pdf;base64,${base64pdf}`,
-      });
+      // await emailHandlerCPannel({
+      //   to: data.email,
+      //   subject: "Consimțământ Challenge Yourself Avansati",
+      //   message: "Mulțumim ca ai completat acordul de participare și confidențialitate privind participarea la cursurile Buluc. Acest formular nu te obligă la continuarea cursului, dar este necesar si pentru participarea la prima ședință.",
+      //   form: `data:application/pdf;base64,${base64pdf}`,
+      // });
 
       reset();
       signatureRef.current?.clear();
       setIsSubmitting(false);
 
+      // Redirect to success page
+      history.push('/consimtamant-success');
+
     } catch (error) {
       console.error(error);
       setIsSubmitting(false);
+      // Redirect to error page
+      history.push('/consimtamant-eroare');
     }
   };
 
@@ -203,7 +210,7 @@ export default function ConsentAdvForm() {
             className="px-6 py-2 bg-red text-white br disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Se trimite...' : 'Trimite'}
+            {isSubmitting ? 'Se procesează...' : 'Semnează'}
           </button>
         </div>
 
