@@ -1,11 +1,16 @@
 import "../css/footer.css";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+import NewsletterForm from "./form/NewsletterForm";
 
 function Footer() {
 	return (
 		<>
 			<div className="footer bg-red mt-auto relative mb:pb-20">
 				<div className="container mx-auto px-[18vw] mb:px-[4vw] sm:py-10 py-5">
+					<div className="mb-8 pb-6 border-b border-white border-opacity-30">
+						<h6 className="pb-3 text-poppins mb:text-center">ABONEAZĂ-TE LA NEWSLETTER</h6>
+						<NewsletterForm />
+					</div>
 					<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-3 gap-4 mb:text-center">
 						<div>
 							<h6 className="pb-3 text-poppins">CONTACTEAZĂ-NE</h6>
