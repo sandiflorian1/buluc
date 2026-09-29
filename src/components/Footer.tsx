@@ -1,15 +1,20 @@
 import "../css/footer.css";
+import { useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import NewsletterForm from "./form/NewsletterForm";
 
 function Footer() {
+	const { pathname } = useLocation();
+	const showNewsletter = pathname !== '/newsletter-succes';
 	return (
 		<>
 			<div className="footer bg-red mt-auto relative mb:pb-20">
 				<div className="container mx-auto px-[18vw] mb:px-[4vw] sm:py-10 py-5">
-					<div className="mb-10 pb-10 border-b border-white/20 mb:text-center">
-						<NewsletterForm />
-					</div>
+					{showNewsletter && (
+						<div className="mb-10 pb-10 border-b border-white/20 mb:text-center">
+							<NewsletterForm />
+						</div>
+					)}
 					<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-3 gap-4 mb:text-center">
 						<div>
 							<h6 className="pb-3 text-poppins">CONTACTEAZĂ-NE</h6>

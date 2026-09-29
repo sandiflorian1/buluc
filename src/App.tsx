@@ -26,6 +26,7 @@ import { ToastContainer } from 'react-toastify';
 import ConsimtamantPage from './pages/ConsimtamantPage';
 import ConsimtamantAvansatiPage from './pages/ConsimtamantAvansatiPage';
 import ConsentSuccessPage from './pages/ConsentSuccessPage';
+import NewsletterSuccessPage from './pages/NewsletterSuccessPage';
 import ConsentErrorPage from './pages/ConsentErrorPage';
 import ExperienceV3 from './pages/ExperienceV3';
 import Faq from './pages/Faq';
@@ -62,6 +63,7 @@ const App = () => {
         <Route path="/consimtamant" component={ConsimtamantPage} />
         <Route path="/consimtamant-avansati" component={ConsimtamantAvansatiPage} />
         <Route path="/consimtamant-success" component={ConsentSuccessPage} />
+        <Route path="/newsletter-succes" component={NewsletterSuccessPage} />
         <Route path="/consimtamant-eroare" component={ConsentErrorPage} />
         <Route path="/faq" component={Faq} />
         <Route render={() => <Redirect to="/" />} />

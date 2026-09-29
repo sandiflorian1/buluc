@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import { newsletterHandler } from '../utils/newsletterHandler';
 
 const NewsletterForm: React.FC = () => {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState(''); // honeypot anti-spam, invizibil pentru utilizatori
   const [consent, setConsent] = useState(false);
@@ -34,10 +36,11 @@ const NewsletterForm: React.FC = () => {
 
     setLoading(true);
     try {
-      await newsletterHandler({ email, company });
+      await newsletterHandler({ email, company }, { successToast: false });
       setEmail('');
       setConsent(false);
       setError('');
+      history.push('/newsletter-succes');
     } catch (err) {
       console.error(err);
     } finally {
