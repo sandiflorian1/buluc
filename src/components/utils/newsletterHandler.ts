@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 
-export const newsletterHandler = async (params: { name: string; email: string; company?: string }) => {
+export const newsletterHandler = async (params: { email: string; name?: string; company?: string }) => {
   try {
     const response = await fetch("https://buluc.netlify.app/.netlify/functions/subscribeNewsletter", {
       method: "POST",

@@ -4,6 +4,7 @@ import SignatureCanvas from 'react-signature-canvas';
 import { modifyConsentPdf } from '../utils/modifyConsentPdf';
 import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
 import { emailHandlerCPannel } from '../utils/emailHandlerCPannel'
+import { newsletterHandler } from '../utils/newsletterHandler'
 import SimpleCard from '../cards/SimpleCard';
 import '../../css/form35.css';
 
@@ -18,6 +19,7 @@ interface ConsentFormData {
   email: string;
   phone: string;
   period: '1' | '2';
+  newsletter?: boolean;
 }
 
 export default function ConsentForm() {
@@ -70,6 +72,14 @@ export default function ConsentForm() {
         message: "Mulțumim ca ai completat acordul de participare și confidențialitate privind participarea la cursurile Buluc. Acest formular nu te obligă la continuarea cursului, dar este necesar si pentru participarea la prima ședință.",
         form: `data:application/pdf;base64,${base64pdf}`,
       });
+
+      if (data.newsletter) {
+        try {
+          await newsletterHandler({ email: data.email, name: data.name });
+        } catch (e) {
+          console.error('Newsletter subscription failed', e);
+        }
+      }
 
       reset();
       signatureRef.current?.clear();
@@ -187,6 +197,15 @@ export default function ConsentForm() {
         <p className="mb-2">Părțile au obligația de a informa direct, conform art. 12 și 13 din Regulamentul General privind protecția datelor, reprezentanții, salariații sau alte persoane împuternicite în relația cu cealaltă Parte cu privire la prelucrarea datelor lor de către cealaltă parte pentru scopuri de derulare a serviciilor, pentru îndeplinirea unor obligații legale precum și în alte scopuri legitime.</p>
         <p className="mb-2">Părțile se obligă să aplice toate măsurile tehnice și operaționale adecvate în vederea protejării datelor cu caracter personal împotriva oricăror pierderi, modificări, dezvăluiri sau acces neautorizat și împotriva procesării ilegale.</p>
         <p className="mb-4">Părțile se obligă să respecte clauzele de confidențialitate prevăzute în consimțământ.</p>
+
+        <label className="flex flex-row items-center mt-6">
+          <input
+            type="checkbox"
+            className="mr-2"
+            {...register('newsletter')}
+          />
+          <span>Sunt de acord sa primesc ultimele noutati pe email</span>
+        </label>
 
         <div className="mt-6" style={{ width: isMobile ? 200 : 500 }}>
           <p className="mb-4">Am luat la cunoștință,</p>

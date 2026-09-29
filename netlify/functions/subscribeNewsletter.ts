@@ -34,6 +34,9 @@ export const handler: Handler = async (event) => {
     }
 
     const listId = Number(process.env.BREVO_LIST_ID);
+    if (!Number.isFinite(listId)) {
+      throw new Error("Missing or invalid BREVO_LIST_ID env variable");
+    }
 
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",

@@ -1,58 +1,28 @@
 import React, { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { newsletterHandler } from '../utils/newsletterHandler';
 
 const NewsletterForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '', // honeypot anti-spam, invizibil pentru utilizatori
-  });
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState(''); // honeypot anti-spam, invizibil pentru utilizatori
   const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    consent: '',
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    if (errors[name as keyof typeof errors]) {
-      setErrors({
-        ...errors,
-        [name]: '',
-      });
-    }
-  };
+  const [error, setError] = useState('');
 
   const validateForm = () => {
-    const newErrors = {
-      name: '',
-      email: '',
-      consent: '',
-    };
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Te rugăm să ne spui cum te numești';
+    if (!email.trim()) {
+      setError('Avem nevoie de email pentru a te abona');
+      return false;
     }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Avem nevoie de email pentru a te abona';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Acest email nu pare corect... verifică-l te rog';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError('Acest email nu pare corect... verifică-l te rog');
+      return false;
     }
-
     if (!consent) {
-      newErrors.consent = 'Avem nevoie de acordul tău pentru a te abona';
+      setError('Avem nevoie de acordul tău pentru a te abona');
+      return false;
     }
-
-    setErrors(newErrors);
-    return !newErrors.name && !newErrors.email && !newErrors.consent;
+    return true;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -64,96 +34,72 @@ const NewsletterForm: React.FC = () => {
 
     setLoading(true);
     try {
-      await newsletterHandler({
-        name: formData.name,
-        email: formData.email,
-        company: formData.company,
-      });
-
-      setFormData({ name: '', email: '', company: '' });
+      await newsletterHandler({ email, company });
+      setEmail('');
       setConsent(false);
-      setErrors({ name: '', email: '', consent: '' });
-    } catch (error) {
-      console.error(error);
+      setError('');
+    } catch (err) {
+      console.error(err);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full">
-      <div className="flex flex-col sm:flex-row gap-3">
-        <div className="flex-1">
-          <input
-            type="text"
-            id="newsletter-name"
-            name="name"
-            placeholder="Nume"
-            value={formData.name}
-            onChange={handleInputChange}
-            className={`w-full px-4 py-2 border focus:outline-none h-10 text-black ${
-              errors.name ? 'border-yellow-300' : 'border-transparent'
-            }`}
-          />
-        </div>
-        <div className="flex-1">
-          <input
-            type="email"
-            id="newsletter-email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className={`w-full px-4 py-2 border focus:outline-none h-10 text-black ${
-              errors.email ? 'border-yellow-300' : 'border-transparent'
-            }`}
-          />
-        </div>
-        {/* honeypot - ascuns */}
+    <form onSubmit={handleSubmit} className="w-full mb:mx-auto">
+      <div className="flex w-full gap-6 mb:flex-col mb:items-stretch mb:gap-4">
+      <h6 className="text-poppins tracking-wider shrink-0 whitespace-nowrap pt-2">ABONEAZĂ-TE LA NEWSLETTER</h6>
+      <div
+        className={`flex flex-1 items-center gap-3 border-b transition-colors ${
+          error ? 'border-yellow-300' : 'border-white/60 focus-within:border-white'
+        }`}
+      >
+        
         <input
-          type="text"
-          name="company"
-          value={formData.company}
-          onChange={handleInputChange}
-          tabIndex={-1}
-          autoComplete="off"
-          className="hidden"
-          aria-hidden="true"
+          type="email"
+          id="newsletter-email"
+          name="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (error) setError('');
+          }}
+          className="flex-1 min-w-0 bg-transparent py-3 text-white placeholder-white focus:outline-none border-0"
         />
         <button
           type="submit"
           disabled={loading}
-          className="h-10 px-6 border-2 border-white font-semibold hover:bg-white hover:text-red transition-colors duration-200 disabled:opacity-50"
+          aria-label="Abonează-te la newsletter"
+          className="px-2 py-3 text-lg text-white/80 hover:text-white hover:translate-x-1 transition-all disabled:opacity-50"
         >
-          {loading ? 'Se trimite...' : 'Abonează-te'}
+          <FaArrowRight />
         </button>
       </div>
+      </div>
 
-      <div className="mt-3 flex items-start gap-2">
+      <div className="mt-4 flex items-start gap-2 mb:justify-start">
         <input
           type="checkbox"
           id="newsletter-consent"
           checked={consent}
           onChange={(e) => {
             setConsent(e.target.checked);
-            if (e.target.checked) setErrors({ ...errors, consent: '' });
+            if (e.target.checked) setError('');
           }}
           className="mt-1"
         />
-        <label htmlFor="newsletter-consent" className="text-xs leading-tight">
-          Sunt de acord să primesc newsletter-ul Buluc și cu prelucrarea datelor
-          mele în acest scop. Mă pot dezabona oricând.{' '}
-          <a href="/politica-de-confidentialitate" className="underline">
+        <div className='flex flex-col items-start'>
+          <label htmlFor="newsletter-consent" className="text-sm mb:text-[0.85rem] text-white text-justify">
+            Sunt de acord să primesc newsletter-ul Buluc. Mă pot dezabona oricând.{' '}
+          </label>
+          <a href="/politica-de-confidentialitate" className="underline text-sm mb:text-[0.85rem] text-white text-justify">
             Politica de confidențialitate
           </a>
-        </label>
+        </div>
       </div>
 
-      {(errors.name || errors.email || errors.consent) && (
-        <p className="mt-2 text-yellow-300 text-sm">
-          {errors.name || errors.email || errors.consent}
-        </p>
-      )}
+      {error && <p className="mt-2 text-yellow-300 text-sm">{error}</p>}
     </form>
   );
 };

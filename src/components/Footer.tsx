@@ -7,8 +7,7 @@ function Footer() {
 		<>
 			<div className="footer bg-red mt-auto relative mb:pb-20">
 				<div className="container mx-auto px-[18vw] mb:px-[4vw] sm:py-10 py-5">
-					<div className="mb-8 pb-6 border-b border-white border-opacity-30">
-						<h6 className="pb-3 text-poppins mb:text-center">ABONEAZĂ-TE LA NEWSLETTER</h6>
+					<div className="mb-10 pb-10 border-b border-white/20 mb:text-center">
 						<NewsletterForm />
 					</div>
 					<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-3 gap-4 mb:text-center">
@@ -39,7 +38,7 @@ function Footer() {
 						</div>
 
 						<div className="flex items-end mb:justify-center">
-							<div className="text-xs mb:text-[0.5rem]">Ⓒ2024 by Buluc.</div>
+							<div className="text-xs mb:text-[0.5rem]">Ⓒ2026 by Buluc.</div>
 						</div>
 					</div>
 				</div>
