@@ -27,6 +27,7 @@ import ConsimtamantPage from './pages/ConsimtamantPage';
 import ConsimtamantAvansatiPage from './pages/ConsimtamantAvansatiPage';
 import ConsentSuccessPage from './pages/ConsentSuccessPage';
 import NewsletterSuccessPage from './pages/NewsletterSuccessPage';
+import NewsletterPopup from './components/NewsletterPopup';
 import ConsentErrorPage from './pages/ConsentErrorPage';
 import ExperienceV3 from './pages/ExperienceV3';
 import Faq from './pages/Faq';
@@ -68,6 +69,7 @@ const App = () => {
         <Route path="/faq" component={Faq} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
+      <NewsletterPopup />
       <ToastContainer 
         hideProgressBar={true}
         theme="colored"

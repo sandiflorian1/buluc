@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import { newsletterHandler } from '../utils/newsletterHandler';
 
-const NewsletterForm: React.FC = () => {
+const NewsletterForm: React.FC<{ hideTitle?: boolean }> = ({ hideTitle = false }) => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState(''); // honeypot anti-spam, invizibil pentru utilizatori
@@ -51,7 +51,9 @@ const NewsletterForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="w-full mb:mx-auto">
       <div className="flex w-full gap-6 mb:flex-col mb:items-stretch mb:gap-4">
-      <h6 className="text-poppins tracking-wider shrink-0 whitespace-nowrap pt-2">ABONEAZĂ-TE LA NEWSLETTER</h6>
+      {!hideTitle && (
+        <h6 className="text-poppins tracking-wider shrink-0 whitespace-nowrap pt-2">ABONEAZĂ-TE LA NEWSLETTER</h6>
+      )}
       <div
         className={`flex flex-1 items-center gap-3 border-b transition-colors ${
           error ? 'border-yellow-300' : 'border-white/60 focus-within:border-white'
@@ -94,7 +96,7 @@ const NewsletterForm: React.FC = () => {
         />
         <div className='flex flex-col items-start'>
           <label htmlFor="newsletter-consent" className="text-sm mb:text-[0.85rem] text-white text-justify">
-            Sunt de acord să primesc newsletter-ul Buluc. Mă pot dezabona oricând.{' '}
+            Sunt de acord să primesc newsletter-ul Buluc, cu noutăți despre cursuri, ateliere și evenimente.{' '}
           </label>
           <a href="/politica-de-confidentialitate" className="underline text-sm mb:text-[0.85rem] text-white text-justify">
             Politica de confidențialitate
@@ -102,7 +104,7 @@ const NewsletterForm: React.FC = () => {
         </div>
       </div>
 
-      {error && <p className="mt-2 text-yellow-300 text-sm">{error}</p>}
+      {error && <p className="mt-2 text-yellow-300 text-sm mb:text-[0.75rem]">{error}</p>}
     </form>
   );
 };

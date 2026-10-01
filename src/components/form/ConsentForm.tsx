@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
+import { FaEraser } from 'react-icons/fa';
 import SignatureCanvas from 'react-signature-canvas';
 import { modifyConsentPdf } from '../utils/modifyConsentPdf';
 import { emailHandlerNetlify } from '../utils/emailHandlerNetlify'
@@ -23,6 +25,7 @@ interface ConsentFormData {
 }
 
 export default function ConsentForm() {
+  const history = useHistory();
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ConsentFormData>();
   const signatureRef = useRef<SignatureCanvas>(null);
@@ -75,7 +78,7 @@ export default function ConsentForm() {
 
       if (data.newsletter) {
         try {
-          await newsletterHandler({ email: data.email, name: data.name });
+          await newsletterHandler({ email: data.email, name: data.name }, { successToast: false });
         } catch (e) {
           console.error('Newsletter subscription failed', e);
         }
@@ -85,9 +88,16 @@ export default function ConsentForm() {
       signatureRef.current?.clear();
       setIsSubmitting(false);
 
+      // Redirect to success page
+      history.push('/consimtamant-success');
+
     } catch (error) {
       console.error(error);
       setIsSubmitting(false);
+      // Store error message and redirect to error page
+      const errorMessage = error instanceof Error ? error.message : 'Eroare necunoscută la trimiterea consimțământului';
+      localStorage.setItem('consentError', errorMessage);
+      history.push('/consimtamant-eroare');
     }
   };
 
@@ -198,18 +208,31 @@ export default function ConsentForm() {
         <p className="mb-2">Părțile se obligă să aplice toate măsurile tehnice și operaționale adecvate în vederea protejării datelor cu caracter personal împotriva oricăror pierderi, modificări, dezvăluiri sau acces neautorizat și împotriva procesării ilegale.</p>
         <p className="mb-4">Părțile se obligă să respecte clauzele de confidențialitate prevăzute în consimțământ.</p>
 
-        <label className="flex flex-row items-center mt-6">
+         <h5 className="pb-4">Abonare la newsletter </h5>
+        <label className="flex flex-row items-center mb-2">
           <input
             type="checkbox"
-            className="mr-2"
+            className="mr-2 my-2"
             {...register('newsletter')}
           />
-          <span>Sunt de acord sa primesc ultimele noutati pe email</span>
+          <span>Sunt de acors să primesc pe email newsletterul Buluc, cu noutăți despre cursuri, ateliere și alte evenimente</span>
         </label>
+        <p className="pb-2">Abonarea este opțională. Te poți dezabona oricând din linkul inclus în fiecare newsletter.</p>
 
         <div className="mt-6" style={{ width: isMobile ? 200 : 500 }}>
           <p className="mb-4">Am luat la cunoștință,</p>
-          <p className="text"> Semnătura:* </p>
+          <div className="flex justify-between items-end mb-1">
+            <p className="text"> Semnătura:* </p>
+            <button
+              type="button"
+              onClick={() => signatureRef.current?.clear()}
+              className="text-orange text-lg hover:opacity-70"
+              aria-label="Șterge semnătura"
+              title="Șterge semnătura"
+            >
+              <FaEraser />
+            </button>
+          </div>
           <div className="signarure">
             <SignatureCanvas
               ref={signatureRef}

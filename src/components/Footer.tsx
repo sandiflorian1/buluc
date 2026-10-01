@@ -5,7 +5,8 @@ import NewsletterForm from "./form/NewsletterForm";
 
 function Footer() {
 	const { pathname } = useLocation();
-	const showNewsletter = pathname !== '/newsletter-succes';
+	const hideNewsletterOn = ['/newsletter-succes', '/consimtamant', '/consimtamant-success'];
+	const showNewsletter = !hideNewsletterOn.includes(pathname);
 	return (
 		<>
 			<div className="footer bg-red mt-auto relative mb:pb-20">
