@@ -73,8 +73,8 @@ const NewsletterPopup: React.FC = () => {
                 >
                   <FaTimes size={22} />
                 </button>
-                <h6 className="text-poppins tracking-wider mb-2 text-center">ABONEAZĂ-TE LA NEWSLETTER</h6>
-                <p className="text-sm mb:text-[0.75rem] mb-8 text-center">Noutăți despre cursuri, ateliere și evenimente Buluc.</p>
+                <h5 className="my-2 text-center">ABONEAZĂ-TE LA NEWSLETTER</h5>
+                <p className="text-[1.2vw] mb:text-[0.85rem] mb-4 text-center">Noutăți despre cursuri, ateliere și evenimente Buluc.</p>
                 <NewsletterForm hideTitle />
               </div>
             </div>

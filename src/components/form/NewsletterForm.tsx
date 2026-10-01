@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import { newsletterHandler } from '../utils/newsletterHandler';
 
 const NewsletterForm: React.FC<{ hideTitle?: boolean }> = ({ hideTitle = false }) => {
   const history = useHistory();
+  const uid = useId();
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState(''); // honeypot anti-spam, invizibil pentru utilizatori
   const [consent, setConsent] = useState(false);
@@ -62,7 +63,7 @@ const NewsletterForm: React.FC<{ hideTitle?: boolean }> = ({ hideTitle = false }
         
         <input
           type="email"
-          id="newsletter-email"
+          id={`newsletter-email-${uid}`}
           name="email"
           placeholder="Email"
           value={email}
@@ -86,7 +87,7 @@ const NewsletterForm: React.FC<{ hideTitle?: boolean }> = ({ hideTitle = false }
       <div className="mt-4 flex items-start gap-2 mb:justify-start">
         <input
           type="checkbox"
-          id="newsletter-consent"
+          id={`newsletter-consent-${uid}`}
           checked={consent}
           onChange={(e) => {
             setConsent(e.target.checked);
@@ -95,7 +96,7 @@ const NewsletterForm: React.FC<{ hideTitle?: boolean }> = ({ hideTitle = false }
           className="mt-1"
         />
         <div className='flex flex-col items-start'>
-          <label htmlFor="newsletter-consent" className="text-sm mb:text-[0.85rem] text-white text-justify">
+          <label htmlFor={`newsletter-consent-${uid}`} className="text-sm mb:text-[0.85rem] text-white text-justify">
             Sunt de acord să primesc newsletter-ul Buluc, cu noutăți despre cursuri, ateliere și evenimente.{' '}
           </label>
           <a href="/politica-de-confidentialitate" className="underline text-sm mb:text-[0.85rem] text-white text-justify">
